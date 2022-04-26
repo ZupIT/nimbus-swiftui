@@ -1,4 +1,4 @@
-struct Person: Codable {
+struct Person {
   var name: String
   var age: Int
   var company: String

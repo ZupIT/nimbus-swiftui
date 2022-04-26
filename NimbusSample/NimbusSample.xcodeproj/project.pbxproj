@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		930936AD281333020028EA2C /* NimbusSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930936AC281333020028EA2C /* NimbusSampleApp.swift */; };
+		930936AF281333020028EA2C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930936AE281333020028EA2C /* ContentView.swift */; };
+		930936B1281333050028EA2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 930936B0281333050028EA2C /* Assets.xcassets */; };
+		930936B4281333050028EA2C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 930936B3281333050028EA2C /* Preview Assets.xcassets */; };
+		934A468F2817182A005FB5C2 /* NimbusSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 934A468E2817182A005FB5C2 /* NimbusSwiftUI.framework */; };
+		934A46902817182A005FB5C2 /* NimbusSwiftUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 934A468E2817182A005FB5C2 /* NimbusSwiftUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		93A503A72816E98100269B03 /* component-map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A503A12816E98100269B03 /* component-map.swift */; };
+		93A503A82816E98100269B03 /* BeagleContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A503A22816E98100269B03 /* BeagleContainer.swift */; };
+		93A503A92816E98100269B03 /* BeagleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A503A32816E98100269B03 /* BeagleText.swift */; };
+		93A503AA2816E98100269B03 /* PersonCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A503A42816E98100269B03 /* PersonCardComponent.swift */; };
+		93A503AB2816E98100269B03 /* BeagleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A503A52816E98100269B03 /* BeagleButton.swift */; };
+		93A503AC2816E98100269B03 /* map-operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A503A62816E98100269B03 /* map-operations.swift */; };
+		93A503B42816E98D00269B03 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A503AF2816E98D00269B03 /* Address.swift */; };
+		93A503B52816E98D00269B03 /* PersonCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A503B02816E98D00269B03 /* PersonCardModel.swift */; };
+		93A503B62816E98D00269B03 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A503B12816E98D00269B03 /* Person.swift */; };
+		F700AEB568B5442BCDCD393F /* Pods_NimbusSwiftUI_NimbusSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E902DDA788B8620B100D592 /* Pods_NimbusSwiftUI_NimbusSample.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		934A468D28171786005FB5C2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				934A46902817182A005FB5C2 /* NimbusSwiftUI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1E902DDA788B8620B100D592 /* Pods_NimbusSwiftUI_NimbusSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimbusSwiftUI_NimbusSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34496694C06DC8EBBF240F25 /* Pods-NimbusSwiftUI-NimbusSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbusSwiftUI-NimbusSample.release.xcconfig"; path = "Target Support Files/Pods-NimbusSwiftUI-NimbusSample/Pods-NimbusSwiftUI-NimbusSample.release.xcconfig"; sourceTree = "<group>"; };
+		7A70FC89C6BB78BF7EFB86AA /* Pods-NimbusSwiftUI-NimbusSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbusSwiftUI-NimbusSample.debug.xcconfig"; path = "Target Support Files/Pods-NimbusSwiftUI-NimbusSample/Pods-NimbusSwiftUI-NimbusSample.debug.xcconfig"; sourceTree = "<group>"; };
+		930936A9281333020028EA2C /* NimbusSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NimbusSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		930936AC281333020028EA2C /* NimbusSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusSampleApp.swift; sourceTree = "<group>"; };
+		930936AE281333020028EA2C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		930936B0281333050028EA2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		930936B3281333050028EA2C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		934A468E2817182A005FB5C2 /* NimbusSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NimbusSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A503A12816E98100269B03 /* component-map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "component-map.swift"; sourceTree = "<group>"; };
+		93A503A22816E98100269B03 /* BeagleContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeagleContainer.swift; sourceTree = "<group>"; };
+		93A503A32816E98100269B03 /* BeagleText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeagleText.swift; sourceTree = "<group>"; };
+		93A503A42816E98100269B03 /* PersonCardComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCardComponent.swift; sourceTree = "<group>"; };
+		93A503A52816E98100269B03 /* BeagleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeagleButton.swift; sourceTree = "<group>"; };
+		93A503A62816E98100269B03 /* map-operations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "map-operations.swift"; sourceTree = "<group>"; };
+		93A503AF2816E98D00269B03 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		93A503B02816E98D00269B03 /* PersonCardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCardModel.swift; sourceTree = "<group>"; };
+		93A503B12816E98D00269B03 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		930936A6281333020028EA2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				934A468F2817182A005FB5C2 /* NimbusSwiftUI.framework in Frameworks */,
+				F700AEB568B5442BCDCD393F /* Pods_NimbusSwiftUI_NimbusSample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		930936A0281333020028EA2C = {
+			isa = PBXGroup;
+			children = (
+				930936AB281333020028EA2C /* NimbusSample */,
+				930936AA281333020028EA2C /* Products */,
+				FB9403C933951204F79C0E2C /* Frameworks */,
+				AE3928583AB1F2E6024E6350 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		930936AA281333020028EA2C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				930936A9281333020028EA2C /* NimbusSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		930936AB281333020028EA2C /* NimbusSample */ = {
+			isa = PBXGroup;
+			children = (
+				93A503AD2816E98D00269B03 /* model */,
+				93A503A02816E98100269B03 /* components */,
+				930936AC281333020028EA2C /* NimbusSampleApp.swift */,
+				930936AE281333020028EA2C /* ContentView.swift */,
+				930936B0281333050028EA2C /* Assets.xcassets */,
+				930936B2281333050028EA2C /* Preview Content */,
+			);
+			path = NimbusSample;
+			sourceTree = "<group>";
+		};
+		930936B2281333050028EA2C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				930936B3281333050028EA2C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		93A503A02816E98100269B03 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				93A503A52816E98100269B03 /* BeagleButton.swift */,
+				93A503A22816E98100269B03 /* BeagleContainer.swift */,
+				93A503A32816E98100269B03 /* BeagleText.swift */,
+				93A503A12816E98100269B03 /* component-map.swift */,
+				93A503A62816E98100269B03 /* map-operations.swift */,
+				93A503A42816E98100269B03 /* PersonCardComponent.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		93A503AD2816E98D00269B03 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				93A503AF2816E98D00269B03 /* Address.swift */,
+				93A503B12816E98D00269B03 /* Person.swift */,
+				93A503B02816E98D00269B03 /* PersonCardModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		AE3928583AB1F2E6024E6350 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A70FC89C6BB78BF7EFB86AA /* Pods-NimbusSwiftUI-NimbusSample.debug.xcconfig */,
+				34496694C06DC8EBBF240F25 /* Pods-NimbusSwiftUI-NimbusSample.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
+		FB9403C933951204F79C0E2C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				934A468E2817182A005FB5C2 /* NimbusSwiftUI.framework */,
+				1E902DDA788B8620B100D592 /* Pods_NimbusSwiftUI_NimbusSample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		930936A8281333020028EA2C /* NimbusSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 930936B7281333050028EA2C /* Build configuration list for PBXNativeTarget "NimbusSample" */;
+			buildPhases = (
+				AFB8D6A6811EA64C63F75BF1 /* [CP] Check Pods Manifest.lock */,
+				930936A5281333020028EA2C /* Sources */,
+				930936A6281333020028EA2C /* Frameworks */,
+				930936A7281333020028EA2C /* Resources */,
+				934A468D28171786005FB5C2 /* Embed Frameworks */,
+				E2BC0FB2C667643E41D4DE36 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NimbusSample;
+			productName = NimbusSample;
+			productReference = 930936A9281333020028EA2C /* NimbusSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		930936A1281333020028EA2C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					930936A8281333020028EA2C = {
+						CreatedOnToolsVersion = 13.3;
+					};
+				};
+			};
+			buildConfigurationList = 930936A4281333020028EA2C /* Build configuration list for PBXProject "NimbusSample" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 930936A0281333020028EA2C;
+			productRefGroup = 930936AA281333020028EA2C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				930936A8281333020028EA2C /* NimbusSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		930936A7281333020028EA2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				930936B4281333050028EA2C /* Preview Assets.xcassets in Resources */,
+				930936B1281333050028EA2C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AFB8D6A6811EA64C63F75BF1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NimbusSwiftUI-NimbusSample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2BC0FB2C667643E41D4DE36 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NimbusSwiftUI-NimbusSample/Pods-NimbusSwiftUI-NimbusSample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NimbusSwiftUI-NimbusSample/Pods-NimbusSwiftUI-NimbusSample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NimbusSwiftUI-NimbusSample/Pods-NimbusSwiftUI-NimbusSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		930936A5281333020028EA2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93A503AB2816E98100269B03 /* BeagleButton.swift in Sources */,
+				930936AF281333020028EA2C /* ContentView.swift in Sources */,
+				93A503A92816E98100269B03 /* BeagleText.swift in Sources */,
+				93A503AA2816E98100269B03 /* PersonCardComponent.swift in Sources */,
+				93A503B42816E98D00269B03 /* Address.swift in Sources */,
+				930936AD281333020028EA2C /* NimbusSampleApp.swift in Sources */,
+				93A503B62816E98D00269B03 /* Person.swift in Sources */,
+				93A503A72816E98100269B03 /* component-map.swift in Sources */,
+				93A503AC2816E98100269B03 /* map-operations.swift in Sources */,
+				93A503B52816E98D00269B03 /* PersonCardModel.swift in Sources */,
+				93A503A82816E98100269B03 /* BeagleContainer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		930936B5281333050028EA2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		930936B6281333050028EA2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		930936B8281333050028EA2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A70FC89C6BB78BF7EFB86AA /* Pods-NimbusSwiftUI-NimbusSample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"NimbusSample/Preview Content\"";
+				DEVELOPMENT_TEAM = SZSQ274898;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.zup.NimbusSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		930936B9281333050028EA2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34496694C06DC8EBBF240F25 /* Pods-NimbusSwiftUI-NimbusSample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"NimbusSample/Preview Content\"";
+				DEVELOPMENT_TEAM = SZSQ274898;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.zup.NimbusSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		930936A4281333020028EA2C /* Build configuration list for PBXProject "NimbusSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				930936B5281333050028EA2C /* Debug */,
+				930936B6281333050028EA2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		930936B7281333050028EA2C /* Build configuration list for PBXNativeTarget "NimbusSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				930936B8281333050028EA2C /* Debug */,
+				930936B9281333050028EA2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 930936A1281333020028EA2C /* Project object */;
+}

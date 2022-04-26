@@ -3,7 +3,9 @@ import NimbusCore
 
 class MyNavigator: ServerDrivenNavigator {}
 
-struct Beagle: View {
+public var components: [String: (ServerDrivenNode, [AnyView]) -> AnyView] = [:]
+
+public struct Beagle: View {
   private var nimbus = Nimbus(
     config: ServerDrivenConfig(
       baseUrl: "",
@@ -24,12 +26,12 @@ struct Beagle: View {
   private var currentTree: ServerDrivenNode?
   private var view: ServerDrivenView
   
-  init(json: String) {
+  public init(json: String) {
     view = nimbus.createView(navigator: MyNavigator())
     initialTree = nimbus.createNodeFromJson(json: json)
   }
   
-  var body: some View {
+  public var body: some View {
     VStack {
       currentTree == nil ? AnyView(Text("Loading...")) : renderTree(node: currentTree!)
     }.onAppear(perform: {
