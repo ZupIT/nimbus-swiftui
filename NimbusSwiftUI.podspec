@@ -14,24 +14,25 @@
 # limitations under the License.
 #
 
-platform :ios, '13.0'
+Pod::Spec.new do |spec|
 
-workspace './Nimbus.xcworkspace'
+  spec.name         = "NimbusSwiftUI"
+  spec.version      = "0.0.1"
+  spec.summary      = "NimbusSwiftUI."
 
-target 'NimbusSwiftUI' do
-  project './NimbusSwiftUI/NimbusSwiftUI.xcodeproj'
-  
-  pod 'nimbus_core', :path => '../nimbus-core'
+  spec.description  = <<-DESC
+    Nimbus for SwiftUI
+    DESC
 
-  target 'NimbusSample' do
-    project './NimbusSample/NimbusSample.xcodeproj'
-  end
+  spec.homepage     = "http://zup.nimbus-swiftui.com"
+  spec.license      = "Apache License 2.0"
 
-  target 'NimbusSwiftUITests' do
-  end
+  spec.author       = "Zup IT"
+  spec.platform     = :ios, "13.0"
+
+  spec.source       = { :git => "https://github.com/ZupIT/nimbus-swiftui.git", :tag => "#{spec.version}" }
+
+  spec.source_files  = "NimbusSwiftUI", "NimbusSwiftUI/**/*.{h,m}"
+  spec.exclude_files = "NimbusSwiftUITests"
 
 end
-
-
-
-

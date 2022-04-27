@@ -1,0 +1,575 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		93093691281330070028EA2C /* NimbusSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93093686281330070028EA2C /* NimbusSwiftUI.framework */; };
+		93093696281330070028EA2C /* NimbusSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93093695281330070028EA2C /* NimbusSwiftUITests.swift */; };
+		93093697281330070028EA2C /* NimbusSwiftUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 93093689281330070028EA2C /* NimbusSwiftUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		93A5039D2816E92200269B03 /* Beagle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5039C2816E92200269B03 /* Beagle.swift */; };
+		9A96E99F98BF4F484EF2C72E /* Pods_NimbusSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 934A469428171B21005FB5C2 /* Pods_NimbusSwiftUI.framework */; };
+		B1751A55DC003D13BB3E831C /* Pods_NimbusSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECDECDC8967ADBF267DB56B /* Pods_NimbusSwiftUI.framework */; };
+		BADE9A90451A7C38342B8314 /* Pods_NimbusSwiftUI_NimbusSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D9285F1D5383E15F819EABB /* Pods_NimbusSwiftUI_NimbusSwiftUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		93093692281330070028EA2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9309367D281330070028EA2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93093685281330070028EA2C;
+			remoteInfo = NimbusSwiftUI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		001B909BAB97FBA0D60BD746 /* Pods-NimbusSwiftUI-NimbusSwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbusSwiftUI-NimbusSwiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-NimbusSwiftUI-NimbusSwiftUITests/Pods-NimbusSwiftUI-NimbusSwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5D9285F1D5383E15F819EABB /* Pods_NimbusSwiftUI_NimbusSwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimbusSwiftUI_NimbusSwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5ECDECDC8967ADBF267DB56B /* Pods_NimbusSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimbusSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93093686281330070028EA2C /* NimbusSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NimbusSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93093689281330070028EA2C /* NimbusSwiftUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NimbusSwiftUI.h; sourceTree = "<group>"; };
+		93093690281330070028EA2C /* NimbusSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NimbusSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93093695281330070028EA2C /* NimbusSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusSwiftUITests.swift; sourceTree = "<group>"; };
+		934A469428171B21005FB5C2 /* Pods_NimbusSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_NimbusSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A5039C2816E92200269B03 /* Beagle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beagle.swift; sourceTree = "<group>"; };
+		981ED6D461A95650A522AD40 /* Pods-NimbusSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbusSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-NimbusSwiftUI/Pods-NimbusSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
+		DB412E2FDC180D686AE81212 /* Pods-NimbusSwiftUI-NimbusSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbusSwiftUI-NimbusSwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-NimbusSwiftUI-NimbusSwiftUITests/Pods-NimbusSwiftUI-NimbusSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E6C5BC77A9AE24BBAF74130D /* Pods-NimbusSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbusSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-NimbusSwiftUI/Pods-NimbusSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		93093683281330070028EA2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1751A55DC003D13BB3E831C /* Pods_NimbusSwiftUI.framework in Frameworks */,
+				9A96E99F98BF4F484EF2C72E /* Pods_NimbusSwiftUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9309368D281330070028EA2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93093691281330070028EA2C /* NimbusSwiftUI.framework in Frameworks */,
+				BADE9A90451A7C38342B8314 /* Pods_NimbusSwiftUI_NimbusSwiftUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		41CEA9409FF2679BCD65DFA8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				934A469428171B21005FB5C2 /* Pods_NimbusSwiftUI.framework */,
+				5ECDECDC8967ADBF267DB56B /* Pods_NimbusSwiftUI.framework */,
+				5D9285F1D5383E15F819EABB /* Pods_NimbusSwiftUI_NimbusSwiftUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7FEEB0E74C7D12F968BFE880 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E6C5BC77A9AE24BBAF74130D /* Pods-NimbusSwiftUI.debug.xcconfig */,
+				981ED6D461A95650A522AD40 /* Pods-NimbusSwiftUI.release.xcconfig */,
+				001B909BAB97FBA0D60BD746 /* Pods-NimbusSwiftUI-NimbusSwiftUITests.debug.xcconfig */,
+				DB412E2FDC180D686AE81212 /* Pods-NimbusSwiftUI-NimbusSwiftUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
+		9309367C281330070028EA2C = {
+			isa = PBXGroup;
+			children = (
+				93093688281330070028EA2C /* NimbusSwiftUI */,
+				93093694281330070028EA2C /* NimbusSwiftUITests */,
+				93093687281330070028EA2C /* Products */,
+				7FEEB0E74C7D12F968BFE880 /* Pods */,
+				41CEA9409FF2679BCD65DFA8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		93093687281330070028EA2C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93093686281330070028EA2C /* NimbusSwiftUI.framework */,
+				93093690281330070028EA2C /* NimbusSwiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93093688281330070028EA2C /* NimbusSwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				93A5039C2816E92200269B03 /* Beagle.swift */,
+				93093689281330070028EA2C /* NimbusSwiftUI.h */,
+			);
+			path = NimbusSwiftUI;
+			sourceTree = "<group>";
+		};
+		93093694281330070028EA2C /* NimbusSwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				93093695281330070028EA2C /* NimbusSwiftUITests.swift */,
+			);
+			path = NimbusSwiftUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		93093681281330070028EA2C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93093697281330070028EA2C /* NimbusSwiftUI.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		93093685281330070028EA2C /* NimbusSwiftUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9309369A281330070028EA2C /* Build configuration list for PBXNativeTarget "NimbusSwiftUI" */;
+			buildPhases = (
+				BB7669448C5703E9B6C0DC71 /* [CP] Check Pods Manifest.lock */,
+				93093681281330070028EA2C /* Headers */,
+				93093682281330070028EA2C /* Sources */,
+				93093683281330070028EA2C /* Frameworks */,
+				93093684281330070028EA2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NimbusSwiftUI;
+			productName = NimbusSwiftUI;
+			productReference = 93093686281330070028EA2C /* NimbusSwiftUI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9309368F281330070028EA2C /* NimbusSwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9309369D281330070028EA2C /* Build configuration list for PBXNativeTarget "NimbusSwiftUITests" */;
+			buildPhases = (
+				6ECD3F26B7F99BE2536DAA88 /* [CP] Check Pods Manifest.lock */,
+				9309368C281330070028EA2C /* Sources */,
+				9309368D281330070028EA2C /* Frameworks */,
+				9309368E281330070028EA2C /* Resources */,
+				84A0CDFD4BB4483BFFCDFAB6 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93093693281330070028EA2C /* PBXTargetDependency */,
+			);
+			name = NimbusSwiftUITests;
+			productName = NimbusSwiftUITests;
+			productReference = 93093690281330070028EA2C /* NimbusSwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9309367D281330070028EA2C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					93093685281330070028EA2C = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					9309368F281330070028EA2C = {
+						CreatedOnToolsVersion = 13.3;
+					};
+				};
+			};
+			buildConfigurationList = 93093680281330070028EA2C /* Build configuration list for PBXProject "NimbusSwiftUI" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9309367C281330070028EA2C;
+			productRefGroup = 93093687281330070028EA2C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93093685281330070028EA2C /* NimbusSwiftUI */,
+				9309368F281330070028EA2C /* NimbusSwiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		93093684281330070028EA2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9309368E281330070028EA2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6ECD3F26B7F99BE2536DAA88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NimbusSwiftUI-NimbusSwiftUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84A0CDFD4BB4483BFFCDFAB6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NimbusSwiftUI-NimbusSwiftUITests/Pods-NimbusSwiftUI-NimbusSwiftUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NimbusSwiftUI-NimbusSwiftUITests/Pods-NimbusSwiftUI-NimbusSwiftUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NimbusSwiftUI-NimbusSwiftUITests/Pods-NimbusSwiftUI-NimbusSwiftUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB7669448C5703E9B6C0DC71 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NimbusSwiftUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		93093682281330070028EA2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93A5039D2816E92200269B03 /* Beagle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9309368C281330070028EA2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93093696281330070028EA2C /* NimbusSwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		93093693281330070028EA2C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93093685281330070028EA2C /* NimbusSwiftUI */;
+			targetProxy = 93093692281330070028EA2C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		93093698281330070028EA2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		93093699281330070028EA2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9309369B281330070028EA2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6C5BC77A9AE24BBAF74130D /* Pods-NimbusSwiftUI.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = SZSQ274898;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.zup.NimbusSwiftUI;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		9309369C281330070028EA2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 981ED6D461A95650A522AD40 /* Pods-NimbusSwiftUI.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = SZSQ274898;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.zup.NimbusSwiftUI;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		9309369E281330070028EA2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 001B909BAB97FBA0D60BD746 /* Pods-NimbusSwiftUI-NimbusSwiftUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SZSQ274898;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.zup.NimbusSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9309369F281330070028EA2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB412E2FDC180D686AE81212 /* Pods-NimbusSwiftUI-NimbusSwiftUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SZSQ274898;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.zup.NimbusSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		93093680281330070028EA2C /* Build configuration list for PBXProject "NimbusSwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93093698281330070028EA2C /* Debug */,
+				93093699281330070028EA2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9309369A281330070028EA2C /* Build configuration list for PBXNativeTarget "NimbusSwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9309369B281330070028EA2C /* Debug */,
+				9309369C281330070028EA2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9309369D281330070028EA2C /* Build configuration list for PBXNativeTarget "NimbusSwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9309369E281330070028EA2C /* Debug */,
+				9309369F281330070028EA2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9309367D281330070028EA2C /* Project object */;
+}
