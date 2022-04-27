@@ -13,12 +13,11 @@
 		930936B4281333050028EA2C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 930936B3281333050028EA2C /* Preview Assets.xcassets */; };
 		934A468F2817182A005FB5C2 /* NimbusSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 934A468E2817182A005FB5C2 /* NimbusSwiftUI.framework */; };
 		934A46902817182A005FB5C2 /* NimbusSwiftUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 934A468E2817182A005FB5C2 /* NimbusSwiftUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		93A503A72816E98100269B03 /* component-map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A503A12816E98100269B03 /* component-map.swift */; };
-		93A503A82816E98100269B03 /* BeagleContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A503A22816E98100269B03 /* BeagleContainer.swift */; };
-		93A503A92816E98100269B03 /* BeagleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A503A32816E98100269B03 /* BeagleText.swift */; };
+		93A503A72816E98100269B03 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A503A12816E98100269B03 /* Components.swift */; };
+		93A503A82816E98100269B03 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A503A22816E98100269B03 /* Container.swift */; };
+		93A503A92816E98100269B03 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A503A32816E98100269B03 /* Text.swift */; };
 		93A503AA2816E98100269B03 /* PersonCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A503A42816E98100269B03 /* PersonCardComponent.swift */; };
-		93A503AB2816E98100269B03 /* BeagleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A503A52816E98100269B03 /* BeagleButton.swift */; };
-		93A503AC2816E98100269B03 /* map-operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A503A62816E98100269B03 /* map-operations.swift */; };
+		93A503AB2816E98100269B03 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A503A52816E98100269B03 /* Button.swift */; };
 		93A503B42816E98D00269B03 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A503AF2816E98D00269B03 /* Address.swift */; };
 		93A503B52816E98D00269B03 /* PersonCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A503B02816E98D00269B03 /* PersonCardModel.swift */; };
 		93A503B62816E98D00269B03 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A503B12816E98D00269B03 /* Person.swift */; };
@@ -49,12 +48,11 @@
 		930936B0281333050028EA2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		930936B3281333050028EA2C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		934A468E2817182A005FB5C2 /* NimbusSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NimbusSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		93A503A12816E98100269B03 /* component-map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "component-map.swift"; sourceTree = "<group>"; };
-		93A503A22816E98100269B03 /* BeagleContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeagleContainer.swift; sourceTree = "<group>"; };
-		93A503A32816E98100269B03 /* BeagleText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeagleText.swift; sourceTree = "<group>"; };
+		93A503A12816E98100269B03 /* Components.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		93A503A22816E98100269B03 /* Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		93A503A32816E98100269B03 /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		93A503A42816E98100269B03 /* PersonCardComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCardComponent.swift; sourceTree = "<group>"; };
-		93A503A52816E98100269B03 /* BeagleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeagleButton.swift; sourceTree = "<group>"; };
-		93A503A62816E98100269B03 /* map-operations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "map-operations.swift"; sourceTree = "<group>"; };
+		93A503A52816E98100269B03 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		93A503AF2816E98D00269B03 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		93A503B02816E98D00269B03 /* PersonCardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCardModel.swift; sourceTree = "<group>"; };
 		93A503B12816E98D00269B03 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -115,12 +113,11 @@
 		93A503A02816E98100269B03 /* components */ = {
 			isa = PBXGroup;
 			children = (
-				93A503A52816E98100269B03 /* BeagleButton.swift */,
-				93A503A22816E98100269B03 /* BeagleContainer.swift */,
-				93A503A32816E98100269B03 /* BeagleText.swift */,
-				93A503A12816E98100269B03 /* component-map.swift */,
-				93A503A62816E98100269B03 /* map-operations.swift */,
+				93A503A12816E98100269B03 /* Components.swift */,
+				93A503A52816E98100269B03 /* Button.swift */,
+				93A503A22816E98100269B03 /* Container.swift */,
 				93A503A42816E98100269B03 /* PersonCardComponent.swift */,
+				93A503A32816E98100269B03 /* Text.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -269,17 +266,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93A503AB2816E98100269B03 /* BeagleButton.swift in Sources */,
+				93A503AB2816E98100269B03 /* Button.swift in Sources */,
 				930936AF281333020028EA2C /* ContentView.swift in Sources */,
-				93A503A92816E98100269B03 /* BeagleText.swift in Sources */,
+				93A503A92816E98100269B03 /* Text.swift in Sources */,
 				93A503AA2816E98100269B03 /* PersonCardComponent.swift in Sources */,
 				93A503B42816E98D00269B03 /* Address.swift in Sources */,
 				930936AD281333020028EA2C /* NimbusSampleApp.swift in Sources */,
 				93A503B62816E98D00269B03 /* Person.swift in Sources */,
-				93A503A72816E98100269B03 /* component-map.swift in Sources */,
-				93A503AC2816E98100269B03 /* map-operations.swift in Sources */,
+				93A503A72816E98100269B03 /* Components.swift in Sources */,
 				93A503B52816E98D00269B03 /* PersonCardModel.swift in Sources */,
-				93A503A82816E98100269B03 /* BeagleContainer.swift in Sources */,
+				93A503A82816E98100269B03 /* Container.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

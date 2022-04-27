@@ -10,7 +10,8 @@
 		93093691281330070028EA2C /* NimbusSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93093686281330070028EA2C /* NimbusSwiftUI.framework */; };
 		93093696281330070028EA2C /* NimbusSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93093695281330070028EA2C /* NimbusSwiftUITests.swift */; };
 		93093697281330070028EA2C /* NimbusSwiftUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 93093689281330070028EA2C /* NimbusSwiftUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		93A5039D2816E92200269B03 /* Beagle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5039C2816E92200269B03 /* Beagle.swift */; };
+		93A5039D2816E92200269B03 /* Nimbus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5039C2816E92200269B03 /* Nimbus.swift */; };
+		93F1F38028197E5500F55992 /* NimbusConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F1F37F28197E5500F55992 /* NimbusConfig.swift */; };
 		9A96E99F98BF4F484EF2C72E /* Pods_NimbusSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 934A469428171B21005FB5C2 /* Pods_NimbusSwiftUI.framework */; };
 		B1751A55DC003D13BB3E831C /* Pods_NimbusSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECDECDC8967ADBF267DB56B /* Pods_NimbusSwiftUI.framework */; };
 		BADE9A90451A7C38342B8314 /* Pods_NimbusSwiftUI_NimbusSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D9285F1D5383E15F819EABB /* Pods_NimbusSwiftUI_NimbusSwiftUITests.framework */; };
@@ -35,7 +36,8 @@
 		93093690281330070028EA2C /* NimbusSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NimbusSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93093695281330070028EA2C /* NimbusSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusSwiftUITests.swift; sourceTree = "<group>"; };
 		934A469428171B21005FB5C2 /* Pods_NimbusSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_NimbusSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		93A5039C2816E92200269B03 /* Beagle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beagle.swift; sourceTree = "<group>"; };
+		93A5039C2816E92200269B03 /* Nimbus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nimbus.swift; sourceTree = "<group>"; };
+		93F1F37F28197E5500F55992 /* NimbusConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusConfig.swift; sourceTree = "<group>"; };
 		981ED6D461A95650A522AD40 /* Pods-NimbusSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbusSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-NimbusSwiftUI/Pods-NimbusSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 		DB412E2FDC180D686AE81212 /* Pods-NimbusSwiftUI-NimbusSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbusSwiftUI-NimbusSwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-NimbusSwiftUI-NimbusSwiftUITests/Pods-NimbusSwiftUI-NimbusSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E6C5BC77A9AE24BBAF74130D /* Pods-NimbusSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbusSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-NimbusSwiftUI/Pods-NimbusSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
@@ -108,7 +110,8 @@
 		93093688281330070028EA2C /* NimbusSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				93A5039C2816E92200269B03 /* Beagle.swift */,
+				93A5039C2816E92200269B03 /* Nimbus.swift */,
+				93F1F37F28197E5500F55992 /* NimbusConfig.swift */,
 				93093689281330070028EA2C /* NimbusSwiftUI.h */,
 			);
 			path = NimbusSwiftUI;
@@ -298,7 +301,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93A5039D2816E92200269B03 /* Beagle.swift in Sources */,
+				93F1F38028197E5500F55992 /* NimbusConfig.swift in Sources */,
+				93A5039D2816E92200269B03 /* Nimbus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,11 +19,6 @@ import NimbusSwiftUI
 
 @main
 struct NimbusSampleApp: App {
-  
-  init() {
-    NimbusSwiftUI.components = components
-  }
-  
   var body: some Scene {
     WindowGroup {
       ContentView()

@@ -16,9 +16,13 @@
 
 import SwiftUI
 
-struct BeagleText: View {
+struct Text: View {
   var text: String
   var body: some View {
-    Text(text)
+    SwiftUI.Text(text)
+  }
+  
+  init(_ text: String) {
+    self.text = text
   }
 }

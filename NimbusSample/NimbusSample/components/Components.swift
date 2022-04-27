@@ -15,13 +15,15 @@
  */
 
 import SwiftUI
-import NimbusCore
+import NimbusSwiftUI
+
+// TODO: Serialization Task
 
 typealias Function = @convention(block) () -> Void
 
-let components: [String: (ServerDrivenNode, [AnyView]) -> AnyView] = [
-  "material:text": { (element, _) in AnyView(BeagleText(text: getMapProperty(map: element.properties ?? [:], name: "text"))) },
-  "layout:container": { (_, children) in AnyView(BeagleContainer(children: children)) },
+let components: [String: Component] = [
+  "material:text": { (element, _) in AnyView(Text(getMapProperty(map: element.properties ?? [:], name: "text"))) },
+  "layout:container": { (_, children) in AnyView(Container(children: children)) },
   "custom:personCard": { (element, _) in
     var personMap: [String: Any] = getMapProperty(map: element.properties ?? [:], name: "person")
     var addressMap: [String: Any] = getMapProperty(map: element.properties ?? [:], name: "address")
@@ -42,7 +44,7 @@ let components: [String: (ServerDrivenNode, [AnyView]) -> AnyView] = [
   },
   "material:button": { (element, _) in
     AnyView(
-      BeagleButton(
+      Button(
         text: getMapProperty(map: element.properties ?? [:], name: "text"),
         onPress: unsafeBitCast(
           element.properties?["onPress"] as AnyObject,
@@ -52,3 +54,10 @@ let components: [String: (ServerDrivenNode, [AnyView]) -> AnyView] = [
     )
   },
 ]
+
+func getMapProperty<T>(map: [String: Any], name: String) -> T {
+  guard let value = map[name] as? T else {
+    fatalError("Could not find property with name: \(name)")
+  }
+  return value
+}

@@ -19,7 +19,7 @@ import NimbusSwiftUI
 
 struct ContentView: View {
   var body: some View {
-    Beagle(json: """
+    Nimbus(json: """
     {
       "id": "1",
       "component": "layout:container",
@@ -66,6 +66,12 @@ struct ContentView: View {
       ]
     }
     """)
+    .environmentObject(
+      NimbusConfig(
+        baseUrl: "https://localhost:8080",
+        components: components
+      )
+    )
   }
 }
 
