@@ -26,8 +26,6 @@ public struct Nimbus: View {
   private var json: String
   @State
   private var tree: ServerDrivenNode?
-  @State
-  private var view: ServerDrivenView?
   
   public init(json: String) {
     self.json = json
@@ -35,16 +33,20 @@ public struct Nimbus: View {
   
   public var body: some View {
     VStack {
-      tree == nil ? AnyView(Text("Loading...")) : renderTree(node: tree!)
+      if let tree = tree {
+        renderTree(node: tree)
+      } else {
+        Text("Loading...")
+      }
     }
     .onAppear {
       print("Registering view listener")
       let initialTree = config.core.createNodeFromJson(json: json)
-      self.view = config.core.createView(navigator: MyNavigator())
-      view?.onChange { node in
+      let view = config.core.createView(navigator: MyNavigator())
+      view.onChange { node in
         tree = node
       }
-      view?.renderer.paint(tree: initialTree)
+      view.renderer.paint(tree: initialTree)
     }
   }
   
