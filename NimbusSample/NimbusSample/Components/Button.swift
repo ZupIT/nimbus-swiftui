@@ -16,11 +16,11 @@
 
 import SwiftUI
 
-struct BeagleButton: View {
+struct Button: View {
   var text: String
   var onPress: () -> Void
   var body: some View {
-    Button(text) {
+    SwiftUI.Button(text) {
       onPress()
     }
   }

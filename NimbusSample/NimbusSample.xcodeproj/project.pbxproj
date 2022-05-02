@@ -7,32 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		930936AD281333020028EA2C /* NimbusSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930936AC281333020028EA2C /* NimbusSampleApp.swift */; };
-		930936AF281333020028EA2C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930936AE281333020028EA2C /* ContentView.swift */; };
-		930936B1281333050028EA2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 930936B0281333050028EA2C /* Assets.xcassets */; };
-		930936B4281333050028EA2C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 930936B3281333050028EA2C /* Preview Assets.xcassets */; };
-		934A468F2817182A005FB5C2 /* NimbusSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 934A468E2817182A005FB5C2 /* NimbusSwiftUI.framework */; };
-		934A46902817182A005FB5C2 /* NimbusSwiftUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 934A468E2817182A005FB5C2 /* NimbusSwiftUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		93A503A72816E98100269B03 /* component-map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A503A12816E98100269B03 /* component-map.swift */; };
-		93A503A82816E98100269B03 /* BeagleContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A503A22816E98100269B03 /* BeagleContainer.swift */; };
-		93A503A92816E98100269B03 /* BeagleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A503A32816E98100269B03 /* BeagleText.swift */; };
-		93A503AA2816E98100269B03 /* PersonCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A503A42816E98100269B03 /* PersonCardComponent.swift */; };
-		93A503AB2816E98100269B03 /* BeagleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A503A52816E98100269B03 /* BeagleButton.swift */; };
-		93A503AC2816E98100269B03 /* map-operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A503A62816E98100269B03 /* map-operations.swift */; };
-		93A503B42816E98D00269B03 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A503AF2816E98D00269B03 /* Address.swift */; };
-		93A503B52816E98D00269B03 /* PersonCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A503B02816E98D00269B03 /* PersonCardModel.swift */; };
-		93A503B62816E98D00269B03 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A503B12816E98D00269B03 /* Person.swift */; };
-		F700AEB568B5442BCDCD393F /* Pods_NimbusSwiftUI_NimbusSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E902DDA788B8620B100D592 /* Pods_NimbusSwiftUI_NimbusSample.framework */; };
+		75AF8261D770A1365504AEAA /* libPods-NimbusSwiftUI-NimbusSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42ED9AEFFFCBC875D350A8F5 /* libPods-NimbusSwiftUI-NimbusSample.a */; };
+		935262C7281B036D00C0760C /* PersonCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935262C2281B036D00C0760C /* PersonCardComponent.swift */; };
+		935262C8281B036D00C0760C /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935262C3281B036D00C0760C /* Container.swift */; };
+		935262C9281B036D00C0760C /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935262C4281B036D00C0760C /* Text.swift */; };
+		935262CA281B036D00C0760C /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935262C5281B036D00C0760C /* Button.swift */; };
+		935262CB281B036D00C0760C /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935262C6281B036D00C0760C /* Components.swift */; };
+		935262D0281B037A00C0760C /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935262CD281B037A00C0760C /* Address.swift */; };
+		935262D1281B037A00C0760C /* PersonCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935262CE281B037A00C0760C /* PersonCardModel.swift */; };
+		935262D2281B037A00C0760C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935262CF281B037A00C0760C /* Person.swift */; };
+		935262D4281B038700C0760C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935262D3281B038700C0760C /* ContentView.swift */; };
+		935262D6281B044800C0760C /* NimbusSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 935262D5281B044800C0760C /* NimbusSwiftUI.framework */; };
+		935262D7281B044800C0760C /* NimbusSwiftUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 935262D5281B044800C0760C /* NimbusSwiftUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		93F10D9B281AFF400079975D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F10D9A281AFF400079975D /* AppDelegate.swift */; };
+		93F10D9D281AFF400079975D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F10D9C281AFF400079975D /* SceneDelegate.swift */; };
+		93F10DA4281AFF410079975D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93F10DA3281AFF410079975D /* Assets.xcassets */; };
+		93F10DA7281AFF410079975D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F10DA5281AFF410079975D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		934A468D28171786005FB5C2 /* Embed Frameworks */ = {
+		935262D8281B044800C0760C /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				934A46902817182A005FB5C2 /* NimbusSwiftUI.framework in Embed Frameworks */,
+				935262D7281B044800C0760C /* NimbusSwiftUI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -40,133 +40,127 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1E902DDA788B8620B100D592 /* Pods_NimbusSwiftUI_NimbusSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimbusSwiftUI_NimbusSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		34496694C06DC8EBBF240F25 /* Pods-NimbusSwiftUI-NimbusSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbusSwiftUI-NimbusSample.release.xcconfig"; path = "Target Support Files/Pods-NimbusSwiftUI-NimbusSample/Pods-NimbusSwiftUI-NimbusSample.release.xcconfig"; sourceTree = "<group>"; };
-		7A70FC89C6BB78BF7EFB86AA /* Pods-NimbusSwiftUI-NimbusSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbusSwiftUI-NimbusSample.debug.xcconfig"; path = "Target Support Files/Pods-NimbusSwiftUI-NimbusSample/Pods-NimbusSwiftUI-NimbusSample.debug.xcconfig"; sourceTree = "<group>"; };
-		930936A9281333020028EA2C /* NimbusSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NimbusSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		930936AC281333020028EA2C /* NimbusSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusSampleApp.swift; sourceTree = "<group>"; };
-		930936AE281333020028EA2C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		930936B0281333050028EA2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		930936B3281333050028EA2C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		934A468E2817182A005FB5C2 /* NimbusSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NimbusSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		93A503A12816E98100269B03 /* component-map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "component-map.swift"; sourceTree = "<group>"; };
-		93A503A22816E98100269B03 /* BeagleContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeagleContainer.swift; sourceTree = "<group>"; };
-		93A503A32816E98100269B03 /* BeagleText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeagleText.swift; sourceTree = "<group>"; };
-		93A503A42816E98100269B03 /* PersonCardComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCardComponent.swift; sourceTree = "<group>"; };
-		93A503A52816E98100269B03 /* BeagleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeagleButton.swift; sourceTree = "<group>"; };
-		93A503A62816E98100269B03 /* map-operations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "map-operations.swift"; sourceTree = "<group>"; };
-		93A503AF2816E98D00269B03 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
-		93A503B02816E98D00269B03 /* PersonCardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCardModel.swift; sourceTree = "<group>"; };
-		93A503B12816E98D00269B03 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		08EC7072E6DCDBC2381C263D /* Pods-NimbusSwiftUI-NimbusSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbusSwiftUI-NimbusSample.debug.xcconfig"; path = "Target Support Files/Pods-NimbusSwiftUI-NimbusSample/Pods-NimbusSwiftUI-NimbusSample.debug.xcconfig"; sourceTree = "<group>"; };
+		42ED9AEFFFCBC875D350A8F5 /* libPods-NimbusSwiftUI-NimbusSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NimbusSwiftUI-NimbusSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		935262C2281B036D00C0760C /* PersonCardComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCardComponent.swift; sourceTree = "<group>"; };
+		935262C3281B036D00C0760C /* Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		935262C4281B036D00C0760C /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		935262C5281B036D00C0760C /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		935262C6281B036D00C0760C /* Components.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		935262CD281B037A00C0760C /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		935262CE281B037A00C0760C /* PersonCardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCardModel.swift; sourceTree = "<group>"; };
+		935262CF281B037A00C0760C /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		935262D3281B038700C0760C /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		935262D5281B044800C0760C /* NimbusSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NimbusSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93F10D97281AFF400079975D /* NimbusSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NimbusSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		93F10D9A281AFF400079975D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		93F10D9C281AFF400079975D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		93F10DA3281AFF410079975D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		93F10DA6281AFF410079975D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		93F10DA8281AFF410079975D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E915737187E34DEF1FB1A6F0 /* Pods-NimbusSwiftUI-NimbusSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbusSwiftUI-NimbusSample.release.xcconfig"; path = "Target Support Files/Pods-NimbusSwiftUI-NimbusSample/Pods-NimbusSwiftUI-NimbusSample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		930936A6281333020028EA2C /* Frameworks */ = {
+		93F10D94281AFF400079975D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				934A468F2817182A005FB5C2 /* NimbusSwiftUI.framework in Frameworks */,
-				F700AEB568B5442BCDCD393F /* Pods_NimbusSwiftUI_NimbusSample.framework in Frameworks */,
+				935262D6281B044800C0760C /* NimbusSwiftUI.framework in Frameworks */,
+				75AF8261D770A1365504AEAA /* libPods-NimbusSwiftUI-NimbusSample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		930936A0281333020028EA2C = {
+		87366659E605D182A9BC4C44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				930936AB281333020028EA2C /* NimbusSample */,
-				930936AA281333020028EA2C /* Products */,
-				FB9403C933951204F79C0E2C /* Frameworks */,
-				AE3928583AB1F2E6024E6350 /* Pods */,
+				935262D5281B044800C0760C /* NimbusSwiftUI.framework */,
+				42ED9AEFFFCBC875D350A8F5 /* libPods-NimbusSwiftUI-NimbusSample.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		935262C1281B036D00C0760C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				935262C2281B036D00C0760C /* PersonCardComponent.swift */,
+				935262C3281B036D00C0760C /* Container.swift */,
+				935262C4281B036D00C0760C /* Text.swift */,
+				935262C5281B036D00C0760C /* Button.swift */,
+				935262C6281B036D00C0760C /* Components.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		935262CC281B037A00C0760C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				935262CD281B037A00C0760C /* Address.swift */,
+				935262CE281B037A00C0760C /* PersonCardModel.swift */,
+				935262CF281B037A00C0760C /* Person.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		93F10D8E281AFF400079975D = {
+			isa = PBXGroup;
+			children = (
+				93F10D99281AFF400079975D /* NimbusSample */,
+				93F10D98281AFF400079975D /* Products */,
+				C5EA5B0611B8B2EC2430FF05 /* Pods */,
+				87366659E605D182A9BC4C44 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		930936AA281333020028EA2C /* Products */ = {
+		93F10D98281AFF400079975D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				930936A9281333020028EA2C /* NimbusSample.app */,
+				93F10D97281AFF400079975D /* NimbusSample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		930936AB281333020028EA2C /* NimbusSample */ = {
+		93F10D99281AFF400079975D /* NimbusSample */ = {
 			isa = PBXGroup;
 			children = (
-				93A503AD2816E98D00269B03 /* model */,
-				93A503A02816E98100269B03 /* components */,
-				930936AC281333020028EA2C /* NimbusSampleApp.swift */,
-				930936AE281333020028EA2C /* ContentView.swift */,
-				930936B0281333050028EA2C /* Assets.xcassets */,
-				930936B2281333050028EA2C /* Preview Content */,
+				935262CC281B037A00C0760C /* Models */,
+				935262C1281B036D00C0760C /* Components */,
+				93F10D9A281AFF400079975D /* AppDelegate.swift */,
+				935262D3281B038700C0760C /* ContentView.swift */,
+				93F10D9C281AFF400079975D /* SceneDelegate.swift */,
+				93F10DA3281AFF410079975D /* Assets.xcassets */,
+				93F10DA5281AFF410079975D /* LaunchScreen.storyboard */,
+				93F10DA8281AFF410079975D /* Info.plist */,
 			);
 			path = NimbusSample;
 			sourceTree = "<group>";
 		};
-		930936B2281333050028EA2C /* Preview Content */ = {
+		C5EA5B0611B8B2EC2430FF05 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				930936B3281333050028EA2C /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		93A503A02816E98100269B03 /* components */ = {
-			isa = PBXGroup;
-			children = (
-				93A503A52816E98100269B03 /* BeagleButton.swift */,
-				93A503A22816E98100269B03 /* BeagleContainer.swift */,
-				93A503A32816E98100269B03 /* BeagleText.swift */,
-				93A503A12816E98100269B03 /* component-map.swift */,
-				93A503A62816E98100269B03 /* map-operations.swift */,
-				93A503A42816E98100269B03 /* PersonCardComponent.swift */,
-			);
-			path = components;
-			sourceTree = "<group>";
-		};
-		93A503AD2816E98D00269B03 /* model */ = {
-			isa = PBXGroup;
-			children = (
-				93A503AF2816E98D00269B03 /* Address.swift */,
-				93A503B12816E98D00269B03 /* Person.swift */,
-				93A503B02816E98D00269B03 /* PersonCardModel.swift */,
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		AE3928583AB1F2E6024E6350 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7A70FC89C6BB78BF7EFB86AA /* Pods-NimbusSwiftUI-NimbusSample.debug.xcconfig */,
-				34496694C06DC8EBBF240F25 /* Pods-NimbusSwiftUI-NimbusSample.release.xcconfig */,
+				08EC7072E6DCDBC2381C263D /* Pods-NimbusSwiftUI-NimbusSample.debug.xcconfig */,
+				E915737187E34DEF1FB1A6F0 /* Pods-NimbusSwiftUI-NimbusSample.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../Pods;
 			sourceTree = "<group>";
 		};
-		FB9403C933951204F79C0E2C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				934A468E2817182A005FB5C2 /* NimbusSwiftUI.framework */,
-				1E902DDA788B8620B100D592 /* Pods_NimbusSwiftUI_NimbusSample.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		930936A8281333020028EA2C /* NimbusSample */ = {
+		93F10D96281AFF400079975D /* NimbusSample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 930936B7281333050028EA2C /* Build configuration list for PBXNativeTarget "NimbusSample" */;
+			buildConfigurationList = 93F10DAB281AFF410079975D /* Build configuration list for PBXNativeTarget "NimbusSample" */;
 			buildPhases = (
-				AFB8D6A6811EA64C63F75BF1 /* [CP] Check Pods Manifest.lock */,
-				930936A5281333020028EA2C /* Sources */,
-				930936A6281333020028EA2C /* Frameworks */,
-				930936A7281333020028EA2C /* Resources */,
-				934A468D28171786005FB5C2 /* Embed Frameworks */,
-				E2BC0FB2C667643E41D4DE36 /* [CP] Embed Pods Frameworks */,
+				D83F39EB54726E8C2C2B2B85 /* [CP] Check Pods Manifest.lock */,
+				93F10D93281AFF400079975D /* Sources */,
+				93F10D94281AFF400079975D /* Frameworks */,
+				93F10D95281AFF400079975D /* Resources */,
+				39C1AEF630A763BEB8877D3C /* [CP] Embed Pods Frameworks */,
+				935262D8281B044800C0760C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -174,25 +168,25 @@
 			);
 			name = NimbusSample;
 			productName = NimbusSample;
-			productReference = 930936A9281333020028EA2C /* NimbusSample.app */;
+			productReference = 93F10D97281AFF400079975D /* NimbusSample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		930936A1281333020028EA2C /* Project object */ = {
+		93F10D8F281AFF400079975D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
-					930936A8281333020028EA2C = {
+					93F10D96281AFF400079975D = {
 						CreatedOnToolsVersion = 13.3;
 					};
 				};
 			};
-			buildConfigurationList = 930936A4281333020028EA2C /* Build configuration list for PBXProject "NimbusSample" */;
+			buildConfigurationList = 93F10D92281AFF400079975D /* Build configuration list for PBXProject "NimbusSample" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -200,30 +194,47 @@
 				en,
 				Base,
 			);
-			mainGroup = 930936A0281333020028EA2C;
-			productRefGroup = 930936AA281333020028EA2C /* Products */;
+			mainGroup = 93F10D8E281AFF400079975D;
+			productRefGroup = 93F10D98281AFF400079975D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				930936A8281333020028EA2C /* NimbusSample */,
+				93F10D96281AFF400079975D /* NimbusSample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		930936A7281333020028EA2C /* Resources */ = {
+		93F10D95281AFF400079975D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				930936B4281333050028EA2C /* Preview Assets.xcassets in Resources */,
-				930936B1281333050028EA2C /* Assets.xcassets in Resources */,
+				93F10DA7281AFF410079975D /* LaunchScreen.storyboard in Resources */,
+				93F10DA4281AFF410079975D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		AFB8D6A6811EA64C63F75BF1 /* [CP] Check Pods Manifest.lock */ = {
+		39C1AEF630A763BEB8877D3C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NimbusSwiftUI-NimbusSample/Pods-NimbusSwiftUI-NimbusSample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NimbusSwiftUI-NimbusSample/Pods-NimbusSwiftUI-NimbusSample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NimbusSwiftUI-NimbusSample/Pods-NimbusSwiftUI-NimbusSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D83F39EB54726E8C2C2B2B85 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -245,48 +256,42 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E2BC0FB2C667643E41D4DE36 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NimbusSwiftUI-NimbusSample/Pods-NimbusSwiftUI-NimbusSample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NimbusSwiftUI-NimbusSample/Pods-NimbusSwiftUI-NimbusSample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NimbusSwiftUI-NimbusSample/Pods-NimbusSwiftUI-NimbusSample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		930936A5281333020028EA2C /* Sources */ = {
+		93F10D93281AFF400079975D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93A503AB2816E98100269B03 /* BeagleButton.swift in Sources */,
-				930936AF281333020028EA2C /* ContentView.swift in Sources */,
-				93A503A92816E98100269B03 /* BeagleText.swift in Sources */,
-				93A503AA2816E98100269B03 /* PersonCardComponent.swift in Sources */,
-				93A503B42816E98D00269B03 /* Address.swift in Sources */,
-				930936AD281333020028EA2C /* NimbusSampleApp.swift in Sources */,
-				93A503B62816E98D00269B03 /* Person.swift in Sources */,
-				93A503A72816E98100269B03 /* component-map.swift in Sources */,
-				93A503AC2816E98100269B03 /* map-operations.swift in Sources */,
-				93A503B52816E98D00269B03 /* PersonCardModel.swift in Sources */,
-				93A503A82816E98100269B03 /* BeagleContainer.swift in Sources */,
+				935262D0281B037A00C0760C /* Address.swift in Sources */,
+				935262CA281B036D00C0760C /* Button.swift in Sources */,
+				935262D4281B038700C0760C /* ContentView.swift in Sources */,
+				935262CB281B036D00C0760C /* Components.swift in Sources */,
+				935262C7281B036D00C0760C /* PersonCardComponent.swift in Sources */,
+				935262D2281B037A00C0760C /* Person.swift in Sources */,
+				935262C8281B036D00C0760C /* Container.swift in Sources */,
+				93F10D9B281AFF400079975D /* AppDelegate.swift in Sources */,
+				935262C9281B036D00C0760C /* Text.swift in Sources */,
+				935262D1281B037A00C0760C /* PersonCardModel.swift in Sources */,
+				93F10D9D281AFF400079975D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		93F10DA5281AFF410079975D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93F10DA6281AFF410079975D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		930936B5281333050028EA2C /* Debug */ = {
+		93F10DA9281AFF410079975D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -346,7 +351,7 @@
 			};
 			name = Debug;
 		};
-		930936B6281333050028EA2C /* Release */ = {
+		93F10DAA281AFF410079975D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -400,24 +405,22 @@
 			};
 			name = Release;
 		};
-		930936B8281333050028EA2C /* Debug */ = {
+		93F10DAC281AFF410079975D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7A70FC89C6BB78BF7EFB86AA /* Pods-NimbusSwiftUI-NimbusSample.debug.xcconfig */;
+			baseConfigurationReference = 08EC7072E6DCDBC2381C263D /* Pods-NimbusSwiftUI-NimbusSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"NimbusSample/Preview Content\"";
 				DEVELOPMENT_TEAM = SZSQ274898;
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = NimbusSample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -431,24 +434,22 @@
 			};
 			name = Debug;
 		};
-		930936B9281333050028EA2C /* Release */ = {
+		93F10DAD281AFF410079975D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34496694C06DC8EBBF240F25 /* Pods-NimbusSwiftUI-NimbusSample.release.xcconfig */;
+			baseConfigurationReference = E915737187E34DEF1FB1A6F0 /* Pods-NimbusSwiftUI-NimbusSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"NimbusSample/Preview Content\"";
 				DEVELOPMENT_TEAM = SZSQ274898;
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = NimbusSample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,25 +466,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		930936A4281333020028EA2C /* Build configuration list for PBXProject "NimbusSample" */ = {
+		93F10D92281AFF400079975D /* Build configuration list for PBXProject "NimbusSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				930936B5281333050028EA2C /* Debug */,
-				930936B6281333050028EA2C /* Release */,
+				93F10DA9281AFF410079975D /* Debug */,
+				93F10DAA281AFF410079975D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		930936B7281333050028EA2C /* Build configuration list for PBXNativeTarget "NimbusSample" */ = {
+		93F10DAB281AFF410079975D /* Build configuration list for PBXNativeTarget "NimbusSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				930936B8281333050028EA2C /* Debug */,
-				930936B9281333050028EA2C /* Release */,
+				93F10DAC281AFF410079975D /* Debug */,
+				93F10DAD281AFF410079975D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 930936A1281333020028EA2C /* Project object */;
+	rootObject = 93F10D8F281AFF400079975D /* Project object */;
 }

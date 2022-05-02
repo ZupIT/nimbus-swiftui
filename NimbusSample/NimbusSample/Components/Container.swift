@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-/*func getMapProperty<T>(map: [String: Any], name: String) -> T? {
- map[name] as? T
-}*/
+import SwiftUI
 
-func getMapProperty<T>(map: [String: Any], name: String) -> T {
-  guard let value = map[name] as? T else {
-    fatalError("Could not find property with name: \(name)")
+struct Container: View {
+  var children: [AnyView]
+  var body: some View {
+    ForEach(0..<children.count) { index in
+      children[index]
+    }
   }
-  return value
 }

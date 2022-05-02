@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37AC6219077AFC79A2AB8C81 /* libPods-NimbusSwiftUI-NimbusSwiftUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2083B3E425F8FFA8927CC1C2 /* libPods-NimbusSwiftUI-NimbusSwiftUITests.a */; };
 		93093691281330070028EA2C /* NimbusSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93093686281330070028EA2C /* NimbusSwiftUI.framework */; };
 		93093696281330070028EA2C /* NimbusSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93093695281330070028EA2C /* NimbusSwiftUITests.swift */; };
 		93093697281330070028EA2C /* NimbusSwiftUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 93093689281330070028EA2C /* NimbusSwiftUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		93A5039D2816E92200269B03 /* Beagle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5039C2816E92200269B03 /* Beagle.swift */; };
-		9A96E99F98BF4F484EF2C72E /* Pods_NimbusSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 934A469428171B21005FB5C2 /* Pods_NimbusSwiftUI.framework */; };
-		B1751A55DC003D13BB3E831C /* Pods_NimbusSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECDECDC8967ADBF267DB56B /* Pods_NimbusSwiftUI.framework */; };
-		BADE9A90451A7C38342B8314 /* Pods_NimbusSwiftUI_NimbusSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D9285F1D5383E15F819EABB /* Pods_NimbusSwiftUI_NimbusSwiftUITests.framework */; };
+		93A5039D2816E92200269B03 /* Nimbus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5039C2816E92200269B03 /* Nimbus.swift */; };
+		93F1F38028197E5500F55992 /* NimbusConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F1F37F28197E5500F55992 /* NimbusConfig.swift */; };
+		D992F87195FDB4A0F027F9BA /* libPods-NimbusSwiftUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40800ED79D1C386927770D0A /* libPods-NimbusSwiftUI.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +28,14 @@
 
 /* Begin PBXFileReference section */
 		001B909BAB97FBA0D60BD746 /* Pods-NimbusSwiftUI-NimbusSwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbusSwiftUI-NimbusSwiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-NimbusSwiftUI-NimbusSwiftUITests/Pods-NimbusSwiftUI-NimbusSwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		5D9285F1D5383E15F819EABB /* Pods_NimbusSwiftUI_NimbusSwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimbusSwiftUI_NimbusSwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5ECDECDC8967ADBF267DB56B /* Pods_NimbusSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimbusSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2083B3E425F8FFA8927CC1C2 /* libPods-NimbusSwiftUI-NimbusSwiftUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NimbusSwiftUI-NimbusSwiftUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40800ED79D1C386927770D0A /* libPods-NimbusSwiftUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NimbusSwiftUI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93093686281330070028EA2C /* NimbusSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NimbusSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93093689281330070028EA2C /* NimbusSwiftUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NimbusSwiftUI.h; sourceTree = "<group>"; };
 		93093690281330070028EA2C /* NimbusSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NimbusSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93093695281330070028EA2C /* NimbusSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusSwiftUITests.swift; sourceTree = "<group>"; };
-		934A469428171B21005FB5C2 /* Pods_NimbusSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_NimbusSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		93A5039C2816E92200269B03 /* Beagle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beagle.swift; sourceTree = "<group>"; };
+		93A5039C2816E92200269B03 /* Nimbus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nimbus.swift; sourceTree = "<group>"; };
+		93F1F37F28197E5500F55992 /* NimbusConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusConfig.swift; sourceTree = "<group>"; };
 		981ED6D461A95650A522AD40 /* Pods-NimbusSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbusSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-NimbusSwiftUI/Pods-NimbusSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 		DB412E2FDC180D686AE81212 /* Pods-NimbusSwiftUI-NimbusSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbusSwiftUI-NimbusSwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-NimbusSwiftUI-NimbusSwiftUITests/Pods-NimbusSwiftUI-NimbusSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E6C5BC77A9AE24BBAF74130D /* Pods-NimbusSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbusSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-NimbusSwiftUI/Pods-NimbusSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
@@ -46,8 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1751A55DC003D13BB3E831C /* Pods_NimbusSwiftUI.framework in Frameworks */,
-				9A96E99F98BF4F484EF2C72E /* Pods_NimbusSwiftUI.framework in Frameworks */,
+				D992F87195FDB4A0F027F9BA /* libPods-NimbusSwiftUI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +55,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93093691281330070028EA2C /* NimbusSwiftUI.framework in Frameworks */,
-				BADE9A90451A7C38342B8314 /* Pods_NimbusSwiftUI_NimbusSwiftUITests.framework in Frameworks */,
+				37AC6219077AFC79A2AB8C81 /* libPods-NimbusSwiftUI-NimbusSwiftUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,9 +65,8 @@
 		41CEA9409FF2679BCD65DFA8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				934A469428171B21005FB5C2 /* Pods_NimbusSwiftUI.framework */,
-				5ECDECDC8967ADBF267DB56B /* Pods_NimbusSwiftUI.framework */,
-				5D9285F1D5383E15F819EABB /* Pods_NimbusSwiftUI_NimbusSwiftUITests.framework */,
+				40800ED79D1C386927770D0A /* libPods-NimbusSwiftUI.a */,
+				2083B3E425F8FFA8927CC1C2 /* libPods-NimbusSwiftUI-NimbusSwiftUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -108,7 +106,8 @@
 		93093688281330070028EA2C /* NimbusSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				93A5039C2816E92200269B03 /* Beagle.swift */,
+				93A5039C2816E92200269B03 /* Nimbus.swift */,
+				93F1F37F28197E5500F55992 /* NimbusConfig.swift */,
 				93093689281330070028EA2C /* NimbusSwiftUI.h */,
 			);
 			path = NimbusSwiftUI;
@@ -298,7 +297,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93A5039D2816E92200269B03 /* Beagle.swift in Sources */,
+				93F1F38028197E5500F55992 /* NimbusConfig.swift in Sources */,
+				93A5039D2816E92200269B03 /* Nimbus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
