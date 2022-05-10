@@ -18,10 +18,10 @@ import SwiftUI
 
 struct Button: View {
   var text: String
-  var onPress: () -> Void
+  var onPress: (Any?) -> Void
   var body: some View {
     SwiftUI.Button(text) {
-      onPress()
+      onPress(nil)
     }
   }
 }

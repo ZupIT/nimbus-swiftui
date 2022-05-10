@@ -17,7 +17,7 @@
 import SwiftUI
 import NimbusCore
 
-public typealias Action = (ServerDrivenAction, ServerDrivenNode, ServerDrivenView) -> KotlinUnit?
+public typealias Action = @convention(block) (ActionTriggeredEvent) -> KotlinUnit?
 public typealias Operation = ([Any]) -> Any?
 public typealias Component = (ServerDrivenNode, [AnyView]) -> AnyView
 
@@ -29,13 +29,13 @@ public class NimbusConfig: ObservableObject {
   public init(
     baseUrl: String,
     components: [String: Component] = [:],
-    actions: [String : Action] = [:],
-    operations: [String : Operation] = [:],
-    logger: Logger = DefaultLogger(),
+    actions: [String : Action]? = nil,
+    operations: [String : Operation]? = nil,
+    logger: Logger? = nil,
     urlBuilder: UrlBuilder? = nil,
-    httpClient: HttpClient = DefaultHttpClient(),
-    viewClient: ViewClient = DefaultViewClient(),
-    idManager: IdManager = DefaultIdManager()
+    httpClient: HttpClient? = nil,
+    viewClient: ViewClient? = nil,
+    idManager: IdManager? = nil
   ) {
     self.components = components
     self.core = NimbusCore.Nimbus(
@@ -44,9 +44,8 @@ public class NimbusConfig: ObservableObject {
         platform: "iOS",
         actions: actions,
         operations: operations,
-        lifecycleHooks: nil,
         logger: logger,
-        urlBuilder: urlBuilder ?? DefaultUrlBuilder(baseUrl: baseUrl),
+        urlBuilder: urlBuilder,
         httpClient: httpClient,
         viewClient: viewClient,
         idManager: idManager

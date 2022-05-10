@@ -17,36 +17,88 @@
 import SwiftUI
 import NimbusCore
 
-class MyNavigator: ServerDrivenNavigator {}
-
-public struct Nimbus: View {
-  @EnvironmentObject
-  private var config: NimbusConfig
+public struct NimbusNav: View {
+  let mode: Mode
   
-  private var json: String
-  @State
-  private var tree: ServerDrivenNode?
+  enum Mode {
+    case remote(request: ViewRequest)
+    case local(json: String)
+  }
+
+  public init(url: String) {
+    mode = .remote(request: ViewRequest(url: url, method: .get, headers: nil, body: nil, fallback: nil))
+  }
+  
+  public init(request: ViewRequest) {
+    mode = .remote(request: request)
+  }
   
   public init(json: String) {
-    self.json = json
+    mode = .local(json: json)
   }
   
   public var body: some View {
+    NavigationView {
+      Nimbus(mode: mode)
+    }
+    .navigationViewStyle(.stack)
+  }
+}
+
+struct Nimbus: View {
+  
+  @EnvironmentObject
+  private var config: NimbusConfig // components
+  
+//  private var json: String
+  
+  @ObservedObject var viewModel: ViewModel
+  
+  init(mode: NimbusNav.Mode) {
+    switch mode {
+    case .remote(request: let request):
+      viewModel = ViewModel(request: request)
+    case .local(json:):
+      viewModel = ViewModel(request: ViewRequest(url: "", method: .get, headers: nil, body: nil, fallback: nil))
+    }
+  }
+  
+  init(viewModel: ViewModel) {
+    self.viewModel = viewModel
+  }
+  
+  var body: some View {
     VStack {
-      if let tree = tree {
-        renderTree(node: tree)
-      } else {
-        Text("Loading...")
+      NavigationLink(unwrap: $viewModel.next) { viewModel in
+        Nimbus(viewModel: viewModel.wrappedValue)
       }
+      .isDetailLink(false)
+      
+      switch viewModel.state {
+      case .loading:
+        ActivityIndicator(isAnimating: .constant(true))
+      case let .error(description: description):
+        Text(description)
+      case let .view(node: node):
+        renderTree(node: node)
+      }
+    
     }
     .onAppear {
-      print("Registering view listener")
-      let initialTree = config.core.createNodeFromJson(json: json)
-      let view = config.core.createView(navigator: MyNavigator())
-      view.onChange { node in
-        tree = node
-      }
-      view.renderer.paint(tree: initialTree)
+      viewModel.config = config
+      viewModel.load()
+//      print("Registering view listener")
+//      do {
+//        let initialTree = try config.core.createNodeFromJson(json: json)
+//        let view = config.core.createView(navigator: viewModel)
+//        view.onChange { node in
+//          tree = node
+//        }
+//        view.renderer.paint(tree: initialTree, anchor: nil, mode: .replace)
+//      } catch  {
+//        print("")
+//      }
+      
     }
   }
   
@@ -57,5 +109,140 @@ public struct Nimbus: View {
     } else {
       return AnyView(Text("Component with type \(node.component) is not registered"))
     }
+  }
+}
+
+struct ActivityIndicator: UIViewRepresentable {
+  
+  @Binding var isAnimating: Bool
+  let style: UIActivityIndicatorView.Style = .medium
+  
+  func makeUIView(context: UIViewRepresentableContext<ActivityIndicator>) -> UIActivityIndicatorView {
+    return UIActivityIndicatorView(style: style)
+  }
+  
+  func updateUIView(_ uiView: UIActivityIndicatorView, context: UIViewRepresentableContext<ActivityIndicator>) {
+    isAnimating ? uiView.startAnimating() : uiView.stopAnimating()
+  }
+}
+
+class ViewModel: ObservableObject, ServerDrivenNavigator {
+  
+  func push(request: ViewRequest) {
+    next = ViewModel(request: request)
+    next?.prev = self
+    next?.load()
+  }
+
+  func pop() {
+    prev?.next = nil
+  }
+
+  func popTo(url: String) {
+    find(by: url)?.next = nil
+  }
+
+  func present(request: ViewRequest) {
+    // TODO: impl
+  }
+  
+  func dismiss() {
+    
+  }
+  
+  let url: String
+  let request: ViewRequest
+  
+  var config: NimbusConfig?
+  
+  @Published var state: State = .loading
+  enum State {
+    case loading
+    case error(description: String)
+    case view(node: ServerDrivenNode)
+  }
+  
+  func load() {
+    state = .loading
+    config?.core.viewClient.fetch(request: request) { node, error in
+      if let node = node {
+        let view = self.config?.core.createView(navigator: self)
+        view?.onChange { node in
+          self.state = .view(node: node)
+        }
+        view?.renderer.paint(tree: node, anchor: nil, mode: .replace)
+      } else if let error = error {
+        self.state = .error(description: error.localizedDescription)
+      }
+    }
+  }
+  
+  @Published var next: ViewModel?
+  weak var prev: ViewModel?
+  
+  init(request: ViewRequest) {
+    url = request.url
+    self.request = request
+  }
+  
+  private func find(by url: String) -> ViewModel? {
+    if self.url == url || prev == nil { return self }
+    return prev?.find(by: url)
+  }
+}
+
+// Utils
+extension Binding {
+  init?(unwrap binding: Binding<Value?>) {
+    guard let wrappedValue = binding.wrappedValue
+    else { return nil }
+    
+    self.init(
+      get: { wrappedValue },
+      set: { binding.wrappedValue = $0 }
+    )
+  }
+  
+  func isPresent<Wrapped>() -> Binding<Bool> where Value == Wrapped? {
+    .init(
+      get: { self.wrappedValue != nil },
+      set: { isPresented in
+        if !isPresented {
+          self.wrappedValue = nil
+        }
+      }
+    )
+  }
+}
+
+extension NavigationLink {
+  init<Value, WrappedDestination>(
+    unwrap optionalValue: Binding<Value?>,
+    onNavigate: @escaping (Bool) -> Void = { _ in },
+    @ViewBuilder destination: @escaping (Binding<Value>) -> WrappedDestination
+  )
+  where Destination == WrappedDestination?, Label == EmptyView
+  {
+    self.init(
+      isActive: optionalValue.isPresent().didSet(onNavigate),
+      destination: {
+        if let value = Binding(unwrap: optionalValue) {
+          destination(value)
+        }
+      },
+      label: {}
+    )
+  }
+}
+
+extension Binding {
+  func didSet(_ callback: @escaping (Value) -> Void) -> Self {
+    .init(
+      get: { self.wrappedValue },
+      set: {
+        self.wrappedValue = $0
+        callback($0)
+      }
+    )
   }
 }

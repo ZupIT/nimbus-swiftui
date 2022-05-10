@@ -17,12 +17,16 @@
 import SwiftUI
 import NimbusSwiftUI
 
+import NimbusCore
+
 // TODO: Serialization Task
 
-typealias Function = @convention(block) () -> Void
+typealias Function = @convention(block) (Any?) -> Void
 
 let components: [String: Component] = [
-  "material:text": { (element, _) in AnyView(Text(getMapProperty(map: element.properties ?? [:], name: "text"))) },
+  "material:text": { (element, _) in
+    AnyView(Text(getMapProperty(map: element.properties ?? [:], name: "text")))
+  },
   "layout:container": { (_, children) in AnyView(Container(children: children)) },
   "custom:personCard": { (element, _) in
     var personMap: [String: Any] = getMapProperty(map: element.properties ?? [:], name: "person")
@@ -61,3 +65,5 @@ func getMapProperty<T>(map: [String: Any], name: String) -> T {
   }
   return value
 }
+
+

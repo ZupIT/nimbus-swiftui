@@ -19,56 +19,35 @@ import NimbusSwiftUI
 
 struct ContentView: View {
   var body: some View {
-    Nimbus(json: """
-    {
-      "id": "1",
-      "component": "layout:container",
-      "children": [
-        {
-          "id": "2",
-          "component": "material:text",
-          "properties": {
-            "text": "Nimbus App @{counter}"
-          }
-        },
-        {
-          "id": "3",
-          "component": "material:text",
-          "properties": {
-            "text": "Hi There"
-          }
-        },
-        {
-          "id": "4",
-          "component": "custom:personCard",
-          "properties": {
-            "person": {
-              "name": "Fulano da Silva",
-              "age": 28,
-              "company": "ZUP",
-              "document": "014.778.547-56"
-            },
-            "address": {
-              "street": "Rua dos bobos",
-              "number": 0,
-              "zip": "47478-745"
-            }
-          }
-        },
-        {
-          "id": "5",
-          "component": "material:button",
-          "properties": {
-            "text": "Increment counter",
-            "onPress": "[[ACTION:INC_COUNTER]]"
-          }
-        }
-      ]
-    }
-    """)
+//    NimbusNav(json: """
+//    {
+//      "component": "layout:container",
+//      "children": [
+//        {
+//          "component": "material:text",
+//          "properties": {
+//            "text": "Screen 1"
+//          }
+//        },
+//        {
+//          "component": "material:button",
+//          "properties": {
+//            "text": "Next",
+//            "onPress": [{
+//              "action": "push",
+//              "properties": {
+//                "url": "/screen2.json"
+//              }
+//            }]
+//          }
+//        }
+//      ]
+//    }
+//    """)
+    NimbusNav(url: "/screen2.json")
     .environmentObject(
       NimbusConfig(
-        baseUrl: "https://localhost:8080",
+        baseUrl: "https://gist.githubusercontent.com/Tiagoperes/74808ebd7ad7f0645491fc60436223a6/raw/769f73ed6f687f5dd20a8598a020c03e740ce43f",
         components: components
       )
     )
