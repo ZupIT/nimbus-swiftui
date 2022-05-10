@@ -16,6 +16,7 @@
 
 import SwiftUI
 import NimbusSwiftUI
+import NimbusCore
 
 struct ContentView: View {
   var body: some View {
@@ -44,7 +45,7 @@ struct ContentView: View {
 //      ]
 //    }
 //    """)
-    NimbusNav(url: "/screen2.json")
+    NimbusNav(url: "/screen1.json")
     .environmentObject(
       NimbusConfig(
         baseUrl: "https://gist.githubusercontent.com/Tiagoperes/74808ebd7ad7f0645491fc60436223a6/raw/769f73ed6f687f5dd20a8598a020c03e740ce43f",
