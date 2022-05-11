@@ -16,12 +16,16 @@
 
 import SwiftUI
 
-struct Button: View {
-  var text: String
-  var onPress: (Any?) -> Void
-  var body: some View {
-    SwiftUI.Button(text) {
-      onPress(nil)
-    }
+struct ActivityIndicator: UIViewRepresentable {
+  
+  @Binding var isAnimating: Bool
+  let style: UIActivityIndicatorView.Style = .medium
+  
+  func makeUIView(context: UIViewRepresentableContext<ActivityIndicator>) -> UIActivityIndicatorView {
+    return UIActivityIndicatorView(style: style)
+  }
+  
+  func updateUIView(_ uiView: UIActivityIndicatorView, context: UIViewRepresentableContext<ActivityIndicator>) {
+    isAnimating ? uiView.startAnimating() : uiView.stopAnimating()
   }
 }

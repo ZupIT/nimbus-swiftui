@@ -14,14 +14,10 @@
  * limitations under the License.
  */
 
-import SwiftUI
+import NimbusCore
 
-struct Button: View {
-  var text: String
-  var onPress: (Any?) -> Void
-  var body: some View {
-    SwiftUI.Button(text) {
-      onPress(nil)
-    }
+extension ViewRequest {
+  convenience init(_ url: String) {
+    self.init(url: url, method: .get, headers: nil, body: nil, fallback: nil)
   }
 }

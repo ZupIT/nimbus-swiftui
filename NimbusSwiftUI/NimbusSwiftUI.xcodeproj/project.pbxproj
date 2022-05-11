@@ -13,6 +13,11 @@
 		93093697281330070028EA2C /* NimbusSwiftUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 93093689281330070028EA2C /* NimbusSwiftUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		93A5039D2816E92200269B03 /* Nimbus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5039C2816E92200269B03 /* Nimbus.swift */; };
 		93F1F38028197E5500F55992 /* NimbusConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F1F37F28197E5500F55992 /* NimbusConfig.swift */; };
+		93FF9D52282A9AB400C36CE9 /* NavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9D51282A9AB400C36CE9 /* NavigationLink.swift */; };
+		93FF9D54282A9ACA00C36CE9 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9D53282A9ACA00C36CE9 /* Binding.swift */; };
+		93FF9D56282A9B3800C36CE9 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9D55282A9B3800C36CE9 /* ActivityIndicator.swift */; };
+		93FF9D59282ADD2A00C36CE9 /* ViewDidLoadModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9D58282ADD2A00C36CE9 /* ViewDidLoadModifier.swift */; };
+		93FF9D5B282AE06E00C36CE9 /* NimbusCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9D5A282AE06E00C36CE9 /* NimbusCore.swift */; };
 		D992F87195FDB4A0F027F9BA /* libPods-NimbusSwiftUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40800ED79D1C386927770D0A /* libPods-NimbusSwiftUI.a */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +41,11 @@
 		93093695281330070028EA2C /* NimbusSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusSwiftUITests.swift; sourceTree = "<group>"; };
 		93A5039C2816E92200269B03 /* Nimbus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nimbus.swift; sourceTree = "<group>"; };
 		93F1F37F28197E5500F55992 /* NimbusConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusConfig.swift; sourceTree = "<group>"; };
+		93FF9D51282A9AB400C36CE9 /* NavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLink.swift; sourceTree = "<group>"; };
+		93FF9D53282A9ACA00C36CE9 /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
+		93FF9D55282A9B3800C36CE9 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		93FF9D58282ADD2A00C36CE9 /* ViewDidLoadModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDidLoadModifier.swift; sourceTree = "<group>"; };
+		93FF9D5A282AE06E00C36CE9 /* NimbusCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusCore.swift; sourceTree = "<group>"; };
 		981ED6D461A95650A522AD40 /* Pods-NimbusSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbusSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-NimbusSwiftUI/Pods-NimbusSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 		DB412E2FDC180D686AE81212 /* Pods-NimbusSwiftUI-NimbusSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbusSwiftUI-NimbusSwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-NimbusSwiftUI-NimbusSwiftUITests/Pods-NimbusSwiftUI-NimbusSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E6C5BC77A9AE24BBAF74130D /* Pods-NimbusSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbusSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-NimbusSwiftUI/Pods-NimbusSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +116,9 @@
 		93093688281330070028EA2C /* NimbusSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				93FF9D4F282A9A9000C36CE9 /* Extensions */,
+				93FF9D50282A9A9800C36CE9 /* Views */,
+				93FF9D57282ADD0E00C36CE9 /* ViewModifiers */,
 				93A5039C2816E92200269B03 /* Nimbus.swift */,
 				93F1F37F28197E5500F55992 /* NimbusConfig.swift */,
 				93093689281330070028EA2C /* NimbusSwiftUI.h */,
@@ -119,6 +132,32 @@
 				93093695281330070028EA2C /* NimbusSwiftUITests.swift */,
 			);
 			path = NimbusSwiftUITests;
+			sourceTree = "<group>";
+		};
+		93FF9D4F282A9A9000C36CE9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				93FF9D53282A9ACA00C36CE9 /* Binding.swift */,
+				93FF9D51282A9AB400C36CE9 /* NavigationLink.swift */,
+				93FF9D5A282AE06E00C36CE9 /* NimbusCore.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		93FF9D50282A9A9800C36CE9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				93FF9D55282A9B3800C36CE9 /* ActivityIndicator.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		93FF9D57282ADD0E00C36CE9 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				93FF9D58282ADD2A00C36CE9 /* ViewDidLoadModifier.swift */,
+			);
+			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,8 +336,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93FF9D52282A9AB400C36CE9 /* NavigationLink.swift in Sources */,
+				93FF9D56282A9B3800C36CE9 /* ActivityIndicator.swift in Sources */,
 				93F1F38028197E5500F55992 /* NimbusConfig.swift in Sources */,
+				93FF9D59282ADD2A00C36CE9 /* ViewDidLoadModifier.swift in Sources */,
+				93FF9D5B282AE06E00C36CE9 /* NimbusCore.swift in Sources */,
 				93A5039D2816E92200269B03 /* Nimbus.swift in Sources */,
+				93FF9D54282A9ACA00C36CE9 /* Binding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

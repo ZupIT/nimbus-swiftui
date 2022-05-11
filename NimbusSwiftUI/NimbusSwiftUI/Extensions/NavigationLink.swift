@@ -16,12 +16,22 @@
 
 import SwiftUI
 
-struct Button: View {
-  var text: String
-  var onPress: (Any?) -> Void
-  var body: some View {
-    SwiftUI.Button(text) {
-      onPress(nil)
-    }
+extension NavigationLink {
+  init<Value, WrappedDestination>(
+    unwrap optionalValue: Binding<Value?>,
+    onNavigate: @escaping (Bool) -> Void = { _ in },
+    @ViewBuilder destination: @escaping (Binding<Value>) -> WrappedDestination
+  )
+  where Destination == WrappedDestination?, Label == EmptyView
+  {
+    self.init(
+      isActive: optionalValue.isPresent().didSet(onNavigate),
+      destination: {
+        if let value = Binding(unwrap: optionalValue) {
+          destination(value)
+        }
+      },
+      label: {}
+    )
   }
 }
