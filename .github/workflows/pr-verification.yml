@@ -31,13 +31,18 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
+        with:
+          path: nimbus-swiftui
 
       - name: Checkout core
         uses: actions/checkout@v2
         with:
           repository: ZupIT/nimbus-core
-          # path: nimbus-core
+          path: nimbus-core
       
+      - name: cd nimbus-swiftui
+        run: cd nimbus-swiftui
+
       # TODO: Gem Cache
 
       - name: Install gem dependencies
