@@ -31,6 +31,12 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
+
+      - name: Checkout core
+        uses: actions/checkout@v2
+        with:
+          repository: ZupIT/nimbus-core
+          path: nimbus-core
       
       # TODO: Gem Cache
 
