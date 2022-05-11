@@ -17,7 +17,7 @@
 import SwiftUI
 import NimbusCore
 
-/// A View that's describes a server-driven flow.
+/// A View that describes a server-driven flow.
 ///
 /// `NimbusNav` expects a ``NimbusConfig`` passed as an environmentObject somewhere up in the hierarchy. Sample:
 ///
