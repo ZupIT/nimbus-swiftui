@@ -18,6 +18,7 @@
 		93FF9D56282A9B3800C36CE9 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9D55282A9B3800C36CE9 /* ActivityIndicator.swift */; };
 		93FF9D59282ADD2A00C36CE9 /* ViewDidLoadModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9D58282ADD2A00C36CE9 /* ViewDidLoadModifier.swift */; };
 		93FF9D5B282AE06E00C36CE9 /* NimbusCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9D5A282AE06E00C36CE9 /* NimbusCore.swift */; };
+		93FF9D5E282BFF9F00C36CE9 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 93FF9D5D282BFF9F00C36CE9 /* SnapshotTesting */; };
 		D992F87195FDB4A0F027F9BA /* libPods-NimbusSwiftUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40800ED79D1C386927770D0A /* libPods-NimbusSwiftUI.a */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		93FF9D55282A9B3800C36CE9 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		93FF9D58282ADD2A00C36CE9 /* ViewDidLoadModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDidLoadModifier.swift; sourceTree = "<group>"; };
 		93FF9D5A282AE06E00C36CE9 /* NimbusCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusCore.swift; sourceTree = "<group>"; };
+		93FF9D5F282C023600C36CE9 /* __Snapshots__ */ = {isa = PBXFileReference; lastKnownFileType = folder; path = __Snapshots__; sourceTree = "<group>"; };
 		981ED6D461A95650A522AD40 /* Pods-NimbusSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbusSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-NimbusSwiftUI/Pods-NimbusSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 		DB412E2FDC180D686AE81212 /* Pods-NimbusSwiftUI-NimbusSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbusSwiftUI-NimbusSwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-NimbusSwiftUI-NimbusSwiftUITests/Pods-NimbusSwiftUI-NimbusSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E6C5BC77A9AE24BBAF74130D /* Pods-NimbusSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbusSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-NimbusSwiftUI/Pods-NimbusSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93FF9D5E282BFF9F00C36CE9 /* SnapshotTesting in Frameworks */,
 				93093691281330070028EA2C /* NimbusSwiftUI.framework in Frameworks */,
 				37AC6219077AFC79A2AB8C81 /* libPods-NimbusSwiftUI-NimbusSwiftUITests.a in Frameworks */,
 			);
@@ -129,6 +132,7 @@
 		93093694281330070028EA2C /* NimbusSwiftUITests */ = {
 			isa = PBXGroup;
 			children = (
+				93FF9D5F282C023600C36CE9 /* __Snapshots__ */,
 				93093695281330070028EA2C /* NimbusSwiftUITests.swift */,
 			);
 			path = NimbusSwiftUITests;
@@ -209,6 +213,9 @@
 				93093693281330070028EA2C /* PBXTargetDependency */,
 			);
 			name = NimbusSwiftUITests;
+			packageProductDependencies = (
+				93FF9D5D282BFF9F00C36CE9 /* SnapshotTesting */,
+			);
 			productName = NimbusSwiftUITests;
 			productReference = 93093690281330070028EA2C /* NimbusSwiftUITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -240,6 +247,9 @@
 				Base,
 			);
 			mainGroup = 9309367C281330070028EA2C;
+			packageReferences = (
+				93FF9D5C282BFF9F00C36CE9 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
 			productRefGroup = 93093687281330070028EA2C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -614,6 +624,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		93FF9D5C282BFF9F00C36CE9 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		93FF9D5D282BFF9F00C36CE9 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93FF9D5C282BFF9F00C36CE9 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9309367D281330070028EA2C /* Project object */;
 }

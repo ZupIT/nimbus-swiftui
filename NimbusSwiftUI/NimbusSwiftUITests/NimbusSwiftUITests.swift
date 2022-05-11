@@ -15,8 +15,19 @@
  */
 
 import XCTest
+import SnapshotTesting
 @testable import NimbusSwiftUI
 
 class NimbusSwiftUITests: XCTestCase {
-
+  
+  func testNimbus() {
+    assertSnapshot(matching: NimbusNav(json: """
+    {
+      "_:component": "material:text",
+      "properties": {
+        "text": "Hello World!"
+      }
+    }
+    """).environmentObject(NimbusConfig(baseUrl: "baseurl")).frame(width: 200, height: 200), as: .image)
+  }
 }

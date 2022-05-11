@@ -48,7 +48,7 @@ struct ContentView: View {
     NimbusNav(url: "/screen1.json")
     .environmentObject(
       NimbusConfig(
-        baseUrl: "https://gist.githubusercontent.com/Tiagoperes/74808ebd7ad7f0645491fc60436223a6/raw/769f73ed6f687f5dd20a8598a020c03e740ce43f",
+        baseUrl: "https://gist.githubusercontent.com/Tiagoperes/74808ebd7ad7f0645491fc60436223a6/raw/85702801aa8b5c6d62d8d500ef9a262b767ec94c",
         components: components
       )
     )
