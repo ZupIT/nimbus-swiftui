@@ -26,7 +26,7 @@ on:
 jobs:
   pr_verification:
     name: PR Check
-    runs-on: macos-latest
+    runs-on: macos-12
 
     steps:
       - name: Checkout repo
@@ -44,10 +44,10 @@ jobs:
 
       # TODO: Gem Cache
 
-      - name: Install gem dependencies
-        run: |
-          cd nimbus-swiftui
-          bundle config set path '~/.gem' && bundle install
+      # - name: Install gem dependencies
+      #   run: |
+      #     cd nimbus-swiftui
+      #     bundle config set path '~/.gem' && bundle install
 
       # TODO: DerivedData Cache
 
@@ -55,10 +55,10 @@ jobs:
       - name: Cocoapods dependencies
         run: |
           cd nimbus-swiftui  
-          bundle exec pod install
+          pod install
 
       # Run
       - name: Run PR Verification
         run: |
           cd nimbus-swiftui  
-          bundle exec fastlane tests
+          fastlane tests --verbose
