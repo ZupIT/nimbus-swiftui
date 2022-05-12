@@ -51,7 +51,9 @@ jobs:
       # TODO: Gem Cache
 
       - name: Install gem dependencies
-        run: bundle config set path '~/.gem' && bundle install
+        run: |
+            ls -al
+            bundle config set path '~/.gem' && bundle install
 
       # TODO: DerivedData Cache
 
