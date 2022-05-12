@@ -44,10 +44,10 @@ jobs:
 
       # TODO: Gem Cache
 
-      - name: Install gem dependencies
-        run: |
-          cd nimbus-swiftui
-          bundle config set path '~/.gem' && bundle install
+      # - name: Install gem dependencies
+      #   run: |
+      #     cd nimbus-swiftui
+      #     bundle config set path '~/.gem' && bundle install
 
       # TODO: DerivedData Cache
       
@@ -61,19 +61,20 @@ jobs:
       - name: Cocoapods dependencies
         run: |
           cd nimbus-swiftui  
-          bundle exec pod install
+          pod install
+          pod update
 
       # # Gem
       # - name: generate
       #   run: gem install cocoapods-generate
 
-      # Run
-      - name: Run PR Verification
-        run: |
-          cd nimbus-swiftui  
-          bundle exec fastlane tests
-
-      # - name: xcodebuild
+      # # Run
+      # - name: Run PR Verification
       #   run: |
-      #     cd nimbus-swiftui
-      #     xcodebuild test -scheme NimbusSwiftUI -workspace Nimbus.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 13 mini,OS=15.4' -verbose
+      #     cd nimbus-swiftui  
+      #     bundle exec fastlane tests
+
+      - name: xcodebuild
+        run: |
+          cd nimbus-swiftui
+          xcodebuild clean test -scheme NimbusSwiftUI -workspace Nimbus.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 13 mini,OS=15.4' -verbose
