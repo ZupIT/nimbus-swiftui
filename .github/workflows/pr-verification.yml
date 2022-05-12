@@ -44,10 +44,10 @@ jobs:
 
       # TODO: Gem Cache
 
-      # - name: Install gem dependencies
-      #   run: |
-      #     cd nimbus-swiftui
-      #     bundle config set path '~/.gem' && bundle install
+      - name: Install gem dependencies
+        run: |
+          cd nimbus-swiftui
+          bundle config set path '~/.gem' && bundle install
 
       # TODO: DerivedData Cache
 
@@ -55,10 +55,10 @@ jobs:
       - name: Cocoapods dependencies
         run: |
           cd nimbus-swiftui  
-          pod install
+          bundle exec pod install
 
       # Run
       - name: Run PR Verification
         run: |
           cd nimbus-swiftui  
-          fastlane tests
+          bundle exec fastlane tests
