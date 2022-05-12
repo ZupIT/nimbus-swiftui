@@ -64,12 +64,12 @@ jobs:
           pod install
 
       # Run
-      # - name: Run PR Verification
-      #   run: |
-      #     cd nimbus-swiftui  
-      #     bundle exec fastlane tests --verbose
-
-      - name: xcodebuild
+      - name: Run PR Verification
         run: |
-          cd nimbus-swiftui
-          xcodebuild test -scheme NimbusSwiftUI -workspace Nimbus.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 13 mini,OS=15.4' -verbose
+          cd nimbus-swiftui  
+          fastlane tests
+
+      # - name: xcodebuild
+      #   run: |
+      #     cd nimbus-swiftui
+      #     xcodebuild test -scheme NimbusSwiftUI -workspace Nimbus.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 13 mini,OS=15.4' -verbose
