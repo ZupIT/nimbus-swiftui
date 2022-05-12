@@ -41,22 +41,18 @@ jobs:
           ref: main
           token: ${{ secrets.GIT_PAT }}
           path: nimbus-core
-      
-      - name: cd nimbus-swiftui
-        run: |
-              ls -al
-              cd nimbus-swiftui
-              ls -al
 
       # TODO: Gem Cache
 
       - name: Install gem dependencies
         run: |
-            ls -al
-            bundle config set path '~/.gem' && bundle install
+          cd nimbus-swiftui
+          bundle config set path '~/.gem' && bundle install
 
       # TODO: DerivedData Cache
 
       # Run
       - name: Run PR Verification
-        run: bundle exec fastlane tests
+        run: |
+          cd nimbus-swiftui  
+          bundle exec fastlane tests
