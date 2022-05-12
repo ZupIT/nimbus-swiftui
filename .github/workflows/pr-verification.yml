@@ -43,7 +43,10 @@ jobs:
           path: nimbus-core
       
       - name: cd nimbus-swiftui
-        run: cd nimbus-swiftui
+        run: |
+              ls -al
+              cd nimbus-swiftui
+              ls -al
 
       # TODO: Gem Cache
 
