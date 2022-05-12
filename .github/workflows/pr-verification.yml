@@ -66,4 +66,4 @@ jobs:
       - name: xcodebuild
         run: |
           cd nimbus-swiftui
-          xcodebuild test -scheme NimbusSwiftUI -workspace Nimbus.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 13 mini,OS=15.4' | xcpretty && exit ${PIPESTATUS[0]}
+          xcodebuild test -scheme NimbusSwiftUI -workspace Nimbus.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 13 mini,OS=15.4' --verbose
