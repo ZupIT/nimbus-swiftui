@@ -16,11 +16,17 @@
 
 import SwiftUI
 
-struct Container: View {
-  var children: [AnyView]
-  var body: some View {
-    ForEach(0..<children.count, id: \.self) { index in
-      children[index]
+extension View {
+  func sheet<Value, Content>(
+    unwrap optionalValue: Binding<Value?>,
+    @ViewBuilder content: @escaping (Binding<Value>) -> Content
+  ) -> some View where Content: View {
+    self.sheet(
+      isPresented: optionalValue.isPresent()
+    ) {
+      if let value = Binding(unwrap: optionalValue) {
+        content(value)
+      }
     }
   }
 }

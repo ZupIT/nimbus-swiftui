@@ -17,8 +17,6 @@
 import SwiftUI
 import NimbusSwiftUI
 
-import NimbusCore
-
 // TODO: Serialization Task
 
 typealias Function = @convention(block) (Any?) -> Void

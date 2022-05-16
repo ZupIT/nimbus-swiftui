@@ -15,12 +15,16 @@
  */
 
 import SwiftUI
+import NimbusCore
 
-struct Container: View {
-  var children: [AnyView]
-  var body: some View {
-    ForEach(0..<children.count, id: \.self) { index in
-      children[index]
-    }
-  }
-}
+// MARK: - public
+
+public typealias Action = @convention(block) (ActionTriggeredEvent) -> KotlinUnit?
+public typealias Operation = ([Any]) -> Any?
+public typealias Component = (NimbusCore.ServerDrivenNode, [AnyView]) -> AnyView
+
+public typealias ViewRequest = NimbusCore.ViewRequest
+
+// MARK: - internal
+
+typealias ServerDrivenNode = NimbusCore.ServerDrivenNode
