@@ -19,7 +19,7 @@ import NimbusCore
 
 // MARK: - public
 
-public typealias Action = @convention(block) (ActionTriggeredEvent) -> KotlinUnit?
+public typealias Action = @convention(block) (ActionEvent) -> KotlinUnit?
 public typealias Operation = ([Any]) -> Any?
 public typealias Component = (NimbusCore.ServerDrivenNode, [AnyView]) -> AnyView
 

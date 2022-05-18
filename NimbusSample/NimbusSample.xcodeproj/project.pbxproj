@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		75AF8261D770A1365504AEAA /* libPods-NimbusSwiftUI-NimbusSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42ED9AEFFFCBC875D350A8F5 /* libPods-NimbusSwiftUI-NimbusSample.a */; };
 		935262C7281B036D00C0760C /* PersonCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935262C2281B036D00C0760C /* PersonCardComponent.swift */; };
 		935262C8281B036D00C0760C /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935262C3281B036D00C0760C /* Container.swift */; };
 		935262C9281B036D00C0760C /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935262C4281B036D00C0760C /* Text.swift */; };
@@ -40,8 +39,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		08EC7072E6DCDBC2381C263D /* Pods-NimbusSwiftUI-NimbusSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbusSwiftUI-NimbusSample.debug.xcconfig"; path = "Target Support Files/Pods-NimbusSwiftUI-NimbusSample/Pods-NimbusSwiftUI-NimbusSample.debug.xcconfig"; sourceTree = "<group>"; };
-		42ED9AEFFFCBC875D350A8F5 /* libPods-NimbusSwiftUI-NimbusSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NimbusSwiftUI-NimbusSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		935262C2281B036D00C0760C /* PersonCardComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCardComponent.swift; sourceTree = "<group>"; };
 		935262C3281B036D00C0760C /* Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		935262C4281B036D00C0760C /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
@@ -58,7 +55,6 @@
 		93F10DA3281AFF410079975D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93F10DA6281AFF410079975D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93F10DA8281AFF410079975D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E915737187E34DEF1FB1A6F0 /* Pods-NimbusSwiftUI-NimbusSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbusSwiftUI-NimbusSample.release.xcconfig"; path = "Target Support Files/Pods-NimbusSwiftUI-NimbusSample/Pods-NimbusSwiftUI-NimbusSample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +63,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				935262D6281B044800C0760C /* NimbusSwiftUI.framework in Frameworks */,
-				75AF8261D770A1365504AEAA /* libPods-NimbusSwiftUI-NimbusSample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				935262D5281B044800C0760C /* NimbusSwiftUI.framework */,
-				42ED9AEFFFCBC875D350A8F5 /* libPods-NimbusSwiftUI-NimbusSample.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -110,7 +104,6 @@
 			children = (
 				93F10D99281AFF400079975D /* NimbusSample */,
 				93F10D98281AFF400079975D /* Products */,
-				C5EA5B0611B8B2EC2430FF05 /* Pods */,
 				87366659E605D182A9BC4C44 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -138,16 +131,6 @@
 			path = NimbusSample;
 			sourceTree = "<group>";
 		};
-		C5EA5B0611B8B2EC2430FF05 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				08EC7072E6DCDBC2381C263D /* Pods-NimbusSwiftUI-NimbusSample.debug.xcconfig */,
-				E915737187E34DEF1FB1A6F0 /* Pods-NimbusSwiftUI-NimbusSample.release.xcconfig */,
-			);
-			name = Pods;
-			path = ../Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,11 +138,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93F10DAB281AFF410079975D /* Build configuration list for PBXNativeTarget "NimbusSample" */;
 			buildPhases = (
-				D83F39EB54726E8C2C2B2B85 /* [CP] Check Pods Manifest.lock */,
 				93F10D93281AFF400079975D /* Sources */,
 				93F10D94281AFF400079975D /* Frameworks */,
 				93F10D95281AFF400079975D /* Resources */,
-				39C1AEF630A763BEB8877D3C /* [CP] Embed Pods Frameworks */,
 				935262D8281B044800C0760C /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -215,48 +196,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		39C1AEF630A763BEB8877D3C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NimbusSwiftUI-NimbusSample/Pods-NimbusSwiftUI-NimbusSample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NimbusSwiftUI-NimbusSample/Pods-NimbusSwiftUI-NimbusSample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NimbusSwiftUI-NimbusSample/Pods-NimbusSwiftUI-NimbusSample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D83F39EB54726E8C2C2B2B85 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NimbusSwiftUI-NimbusSample-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		93F10D93281AFF400079975D /* Sources */ = {
@@ -407,7 +346,6 @@
 		};
 		93F10DAC281AFF410079975D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 08EC7072E6DCDBC2381C263D /* Pods-NimbusSwiftUI-NimbusSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -436,7 +374,6 @@
 		};
 		93F10DAD281AFF410079975D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E915737187E34DEF1FB1A6F0 /* Pods-NimbusSwiftUI-NimbusSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
