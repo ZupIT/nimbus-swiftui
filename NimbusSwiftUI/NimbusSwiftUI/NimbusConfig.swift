@@ -17,13 +17,18 @@
 import SwiftUI
 import NimbusCore
 
-public class Nimbus: ObservableObject {
+public class NimbusConfig: ObservableObject {
   
+  var error: (Error, @escaping () -> Void) -> AnyView
+  var loading: () -> AnyView
   var components: [String: Component]
+  
   var core: NimbusCore.Nimbus
   
-  public init(
+  public init<ErrorView: View, LoadingView: View>(
     baseUrl: String,
+    @ViewBuilder error: @escaping (Error, @escaping () -> Void) -> ErrorView,
+    @ViewBuilder loading: @escaping () -> LoadingView,
     components: [String: Component] = [:],
     actions: [String : Action]? = nil,
     operations: [String : Operation]? = nil,
@@ -33,6 +38,15 @@ public class Nimbus: ObservableObject {
     viewClient: ViewClient? = nil,
     idManager: IdManager? = nil
   ) {
+    
+    self.error = { (errorParam, retry) in
+      AnyView(error(errorParam, retry))
+    }
+    
+    self.loading = {
+      AnyView(loading())
+    }
+    
     self.components = components
     self.core = NimbusCore.Nimbus(
       config: ServerDrivenConfig(
@@ -46,6 +60,41 @@ public class Nimbus: ObservableObject {
         viewClient: viewClient,
         idManager: idManager
       )
+    )
+  }
+}
+
+extension NimbusConfig {
+  public convenience init(
+    baseUrl: String,
+    components: [String: Component] = [:],
+    actions: [String : Action]? = nil,
+    operations: [String : Operation]? = nil,
+    logger: Logger? = nil,
+    urlBuilder: UrlBuilder? = nil,
+    httpClient: HttpClient? = nil,
+    viewClient: ViewClient? = nil,
+    idManager: IdManager? = nil
+  ) {
+    self.init(
+      baseUrl: baseUrl,
+      error: { error, retry in
+        Text(error.localizedDescription)
+        Button("retry") {
+          retry()
+        }
+      },
+      loading: {
+        ActivityIndicator(isAnimating: .constant(true))
+      },
+      components: components,
+      actions: actions,
+      operations: operations,
+      logger: logger,
+      urlBuilder: urlBuilder,
+      httpClient: httpClient,
+      viewClient: viewClient,
+      idManager: idManager
     )
   }
 }

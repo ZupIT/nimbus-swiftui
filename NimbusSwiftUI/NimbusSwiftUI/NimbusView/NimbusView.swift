@@ -18,7 +18,7 @@ import SwiftUI
 
 struct NimbusView: View {
   
-  @EnvironmentObject private var nimbus: Nimbus
+  @EnvironmentObject private var nimbus: NimbusConfig
   
   @ObservedObject private var viewModel: ViewModel
   
@@ -35,9 +35,9 @@ struct NimbusView: View {
       
       switch viewModel.state {
       case .loading:
-        ActivityIndicator(isAnimating: .constant(true))
-      case let .error(description: description):
-        Text(description)
+        nimbus.loading()
+      case let .error(error):
+        nimbus.error(error, retry)
       case let .view(node: node):
         renderTree(node: node)
       }
@@ -51,6 +51,10 @@ struct NimbusView: View {
     .onLoad {
       viewModel.load()
     }
+  }
+  
+  func retry() {
+    viewModel.load()
   }
   
   private func renderTree(node: ServerDrivenNode) -> AnyView {

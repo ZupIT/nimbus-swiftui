@@ -21,8 +21,8 @@ class ViewModel: ObservableObject {
   @Published var state: State = .loading
   enum State {
     case loading
-    case error(description: String)
-    case view(node: ServerDrivenNode)
+    case error(Error)
+    case view(ServerDrivenNode)
   }
   
   private weak var prev: ViewModel?
@@ -56,7 +56,7 @@ class ViewModel: ObservableObject {
   private lazy var view: ServerDrivenView = {
     let view = core.createView(navigator: self)
     view.onChange { node in
-      self.state = .view(node: node)
+      self.state = .view(node)
     }
     return view
   }()
@@ -85,7 +85,7 @@ extension ViewModel {
       let node = try core.createNodeFromJson(json: json)
       view.renderer.paint(tree: node, anchor: nil, mode: .replace)
     } catch {
-      state = .error(description: error.localizedDescription)
+      state = .error(error)
     }
   }
   
@@ -94,7 +94,7 @@ extension ViewModel {
       if let node = node {
         self.view.renderer.paint(tree: node, anchor: nil, mode: .replace)
       } else if let error = error {
-        self.state = .error(description: error.localizedDescription)
+        self.state = .error(error)
       }
     }
   }
@@ -104,11 +104,11 @@ extension ViewModel {
 
 extension ViewModel: ServerDrivenNavigator {
   func push(request: ViewRequest) {
-    next = .push(ViewModel(mode: .remote(request: request), core: core))
+    next = .push(ViewModel(mode: .remote(request), core: core))
   }
   
   func present(request: ViewRequest) {
-    next = .present(ViewModel(mode: .remote(request: request), core: core))
+    next = .present(ViewModel(mode: .remote(request), core: core))
   }
 
   func pop() {

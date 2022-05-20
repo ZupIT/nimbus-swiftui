@@ -17,7 +17,7 @@
 		9323D5CE282EF29E002EB6ED /* Aliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9323D5CD282EF29E002EB6ED /* Aliases.swift */; };
 		93A5039D2816E92200269B03 /* NimbusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5039C2816E92200269B03 /* NimbusView.swift */; };
 		93B907442835941E000299DD /* NimbusCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93B907432835941E000299DD /* NimbusCore.xcframework */; };
-		93F1F38028197E5500F55992 /* Nimbus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F1F37F28197E5500F55992 /* Nimbus.swift */; };
+		93F1F38028197E5500F55992 /* NimbusConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F1F37F28197E5500F55992 /* NimbusConfig.swift */; };
 		93FF9D52282A9AB400C36CE9 /* NavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9D51282A9AB400C36CE9 /* NavigationLink.swift */; };
 		93FF9D54282A9ACA00C36CE9 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9D53282A9ACA00C36CE9 /* Binding.swift */; };
 		93FF9D56282A9B3800C36CE9 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9D55282A9B3800C36CE9 /* ActivityIndicator.swift */; };
@@ -47,7 +47,7 @@
 		9323D5CD282EF29E002EB6ED /* Aliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aliases.swift; sourceTree = "<group>"; };
 		93A5039C2816E92200269B03 /* NimbusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NimbusView.swift; sourceTree = "<group>"; };
 		93B907432835941E000299DD /* NimbusCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = NimbusCore.xcframework; path = ../NimbusCore/NimbusCore.xcframework; sourceTree = "<group>"; };
-		93F1F37F28197E5500F55992 /* Nimbus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nimbus.swift; sourceTree = "<group>"; };
+		93F1F37F28197E5500F55992 /* NimbusConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusConfig.swift; sourceTree = "<group>"; };
 		93FF9D51282A9AB400C36CE9 /* NavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLink.swift; sourceTree = "<group>"; };
 		93FF9D53282A9ACA00C36CE9 /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
 		93FF9D55282A9B3800C36CE9 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 				93FF9D57282ADD0E00C36CE9 /* ViewModifiers */,
 				93FF9D50282A9A9800C36CE9 /* Views */,
 				9323D5CD282EF29E002EB6ED /* Aliases.swift */,
-				93F1F37F28197E5500F55992 /* Nimbus.swift */,
+				93F1F37F28197E5500F55992 /* NimbusConfig.swift */,
 				9323D5C9282EEF86002EB6ED /* NimbusNavigator.swift */,
 				93093689281330070028EA2C /* NimbusSwiftUI.h */,
 			);
@@ -285,7 +285,7 @@
 				9323D5CC282EF0E6002EB6ED /* ViewModel.swift in Sources */,
 				9323D5C7282EEDB4002EB6ED /* CasePath.swift in Sources */,
 				93FF9D56282A9B3800C36CE9 /* ActivityIndicator.swift in Sources */,
-				93F1F38028197E5500F55992 /* Nimbus.swift in Sources */,
+				93F1F38028197E5500F55992 /* NimbusConfig.swift in Sources */,
 				9323D5CE282EF29E002EB6ED /* Aliases.swift in Sources */,
 				93FF9D59282ADD2A00C36CE9 /* ViewDidLoadModifier.swift in Sources */,
 				93FF9D5B282AE06E00C36CE9 /* NimbusCore.swift in Sources */,

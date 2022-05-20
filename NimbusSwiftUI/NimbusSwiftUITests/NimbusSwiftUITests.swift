@@ -20,9 +20,8 @@ import XCTest
 class NimbusSwiftUITests: XCTestCase {
   
   func testNimbus() {
-    let view = NimbusNavigator(url: "initial").environmentObject(Nimbus(baseUrl: "base"))
+    let view = NimbusNavigator(url: "initial").environmentObject(NimbusConfig(baseUrl: "base"))
     XCTAssertNotNil(view)
   }
-  
-  
+
 }

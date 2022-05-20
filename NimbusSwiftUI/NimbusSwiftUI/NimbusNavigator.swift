@@ -18,14 +18,14 @@ import SwiftUI
 
 /// A View that describes a server-driven flow.
 ///
-/// `NimbusNavigator` expects a ``Nimbus`` passed as an environmentObject somewhere up in the hierarchy. Sample:
+/// `NimbusNavigator` expects a ``NimbusConfig`` passed as an environmentObject somewhere up in the hierarchy. Sample:
 ///
 /// ```swift
 /// struct ContentView: View {
 ///   var body: some View {
 ///     NimbusNavigator(url: "/screen1.json")
 ///     .environmentObject(
-///       Nimbus(
+///       NimbusConfig(
 ///         baseUrl: "https://baseurlhost",
 ///         components: components
 ///       )
@@ -36,19 +36,18 @@ import SwiftUI
 ///
 public struct NimbusNavigator: View {
   
-  @EnvironmentObject private var config: Nimbus
-  
+  @EnvironmentObject private var config: NimbusConfig
   private let mode: Mode
   
   enum Mode {
-    case remote(request: ViewRequest)
-    case local(json: String)
+    case remote(ViewRequest)
+    case local(String)
   }
   
   /// Creates a `NimbusNavigator` and starts with a url as initial server-driven view.
   /// - Parameter url: initial url
   public init(url: String) {
-    mode = .remote(request: ViewRequest(url))
+    mode = .remote(ViewRequest(url))
   }
   
   /// Creates a `NimbusNavigator` and starts with a custom request.
@@ -68,7 +67,7 @@ public struct NimbusNavigator: View {
   /// ```
   ///
   public init(request: ViewRequest) {
-    mode = .remote(request: request)
+    mode = .remote(request)
   }
   
   /// Creates a `NimbusNavigator` and starts with a json `String`.
@@ -87,7 +86,7 @@ public struct NimbusNavigator: View {
   /// ```
   ///
   public init(json: String) {
-    mode = .local(json: json)
+    mode = .local(json)
   }
   
   public var body: some View {
