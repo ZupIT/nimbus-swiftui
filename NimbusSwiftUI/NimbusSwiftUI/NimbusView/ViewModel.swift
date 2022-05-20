@@ -46,24 +46,22 @@ class ViewModel: ObservableObject {
   var url: String {
     switch mode {
     case .local(json:):
-      return "root"
+      return "json"
     case let .remote(request: request):
       return request.url
     }
   }
   
   private let core: NimbusCore.Nimbus
-  private lazy var view: ServerDrivenView = {
-    let view = core.createView(navigator: self)
-    view.onChange { node in
-      self.state = .view(node)
-    }
-    return view
-  }()
+  private weak var view: ServerDrivenView?
   
   init(mode: NimbusNavigator.Mode, core: NimbusCore.Nimbus) {
     self.mode = mode
     self.core = core
+  }
+  
+  deinit {
+    view?.destroy()
   }
 }
 
@@ -72,6 +70,18 @@ class ViewModel: ObservableObject {
 extension ViewModel {
   func load() {
     state = .loading
+    
+    if view == nil {
+//      TODO: Verify lifecycle
+      view = core.createView(
+        getNavigator: { [unowned self] in self },
+        description: url
+      )
+      view?.onChange { [weak self] node in
+        self?.state = .view(node)
+      }
+    }
+    
     switch mode {
     case let .remote(request: request):
       load(from: request)
@@ -83,18 +93,18 @@ extension ViewModel {
   private func load(from json: String) {
     do {
       let node = try core.createNodeFromJson(json: json)
-      view.renderer.paint(tree: node, anchor: nil, mode: .replace)
+      view?.renderer.paint(tree: node, anchor: nil, mode: .replace)
     } catch {
       state = .error(error)
     }
   }
   
   private func load(from request: ViewRequest) {
-    core.viewClient.fetch(request: request) { node, error in
+    core.viewClient.fetch(request: request) { [weak self] node, error in
       if let node = node {
-        self.view.renderer.paint(tree: node, anchor: nil, mode: .replace)
+        self?.view?.renderer.paint(tree: node, anchor: nil, mode: .replace)
       } else if let error = error {
-        self.state = .error(error)
+        self?.state = .error(error)
       }
     }
   }
