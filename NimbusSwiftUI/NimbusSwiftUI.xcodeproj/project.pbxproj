@@ -15,8 +15,12 @@
 		9323D5CA282EEF86002EB6ED /* NimbusNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9323D5C9282EEF86002EB6ED /* NimbusNavigator.swift */; };
 		9323D5CC282EF0E6002EB6ED /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9323D5CB282EF0E6002EB6ED /* ViewModel.swift */; };
 		9323D5CE282EF29E002EB6ED /* Aliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9323D5CD282EF29E002EB6ED /* Aliases.swift */; };
+		93417C2B283D4E34007A014F /* NimbusCoreExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93417C2A283D4E34007A014F /* NimbusCoreExtensions.swift */; };
+		93417C2E283D4FBC007A014F /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 93417C2D283D4FBC007A014F /* SnapshotTesting */; };
 		93A5039D2816E92200269B03 /* NimbusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5039C2816E92200269B03 /* NimbusView.swift */; };
 		93B907442835941E000299DD /* NimbusCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93B907432835941E000299DD /* NimbusCore.xcframework */; };
+		93B90747283C1EA7000299DD /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B90746283C1EA7000299DD /* ViewModelTests.swift */; };
+		93B90749283C224F000299DD /* NimbusViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B90748283C224F000299DD /* NimbusViewTests.swift */; };
 		93F1F38028197E5500F55992 /* NimbusConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F1F37F28197E5500F55992 /* NimbusConfig.swift */; };
 		93FF9D52282A9AB400C36CE9 /* NavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9D51282A9AB400C36CE9 /* NavigationLink.swift */; };
 		93FF9D54282A9ACA00C36CE9 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9D53282A9ACA00C36CE9 /* Binding.swift */; };
@@ -45,8 +49,13 @@
 		9323D5C9282EEF86002EB6ED /* NimbusNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusNavigator.swift; sourceTree = "<group>"; };
 		9323D5CB282EF0E6002EB6ED /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		9323D5CD282EF29E002EB6ED /* Aliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aliases.swift; sourceTree = "<group>"; };
+		93417C2A283D4E34007A014F /* NimbusCoreExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusCoreExtensions.swift; sourceTree = "<group>"; };
 		93A5039C2816E92200269B03 /* NimbusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NimbusView.swift; sourceTree = "<group>"; };
 		93B907432835941E000299DD /* NimbusCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = NimbusCore.xcframework; path = ../NimbusCore/NimbusCore.xcframework; sourceTree = "<group>"; };
+		93B90746283C1EA7000299DD /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTests.swift; sourceTree = "<group>"; };
+		93B90748283C224F000299DD /* NimbusViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusViewTests.swift; sourceTree = "<group>"; };
+		93CCDB91283D65F10091B86A /* __Snapshots__ */ = {isa = PBXFileReference; lastKnownFileType = folder; path = __Snapshots__; sourceTree = "<group>"; };
+		93CCDB92283D679B0091B86A /* __Snapshots__ */ = {isa = PBXFileReference; lastKnownFileType = folder; path = __Snapshots__; sourceTree = "<group>"; };
 		93F1F37F28197E5500F55992 /* NimbusConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusConfig.swift; sourceTree = "<group>"; };
 		93FF9D51282A9AB400C36CE9 /* NavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLink.swift; sourceTree = "<group>"; };
 		93FF9D53282A9ACA00C36CE9 /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
@@ -69,6 +78,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93093691281330070028EA2C /* NimbusSwiftUI.framework in Frameworks */,
+				93417C2E283D4FBC007A014F /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +123,9 @@
 		93093694281330070028EA2C /* NimbusSwiftUITests */ = {
 			isa = PBXGroup;
 			children = (
+				93CCDB91283D65F10091B86A /* __Snapshots__ */,
+				93B90745283C1E83000299DD /* NimbusView */,
+				93417C2A283D4E34007A014F /* NimbusCoreExtensions.swift */,
 				93093695281330070028EA2C /* NimbusSwiftUITests.swift */,
 			);
 			path = NimbusSwiftUITests;
@@ -141,6 +154,16 @@
 				93B907432835941E000299DD /* NimbusCore.xcframework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		93B90745283C1E83000299DD /* NimbusView */ = {
+			isa = PBXGroup;
+			children = (
+				93CCDB92283D679B0091B86A /* __Snapshots__ */,
+				93B90748283C224F000299DD /* NimbusViewTests.swift */,
+				93B90746283C1EA7000299DD /* ViewModelTests.swift */,
+			);
+			path = NimbusView;
 			sourceTree = "<group>";
 		};
 		93FF9D4F282A9A9000C36CE9 /* Extensions */ = {
@@ -216,6 +239,9 @@
 				93093693281330070028EA2C /* PBXTargetDependency */,
 			);
 			name = NimbusSwiftUITests;
+			packageProductDependencies = (
+				93417C2D283D4FBC007A014F /* SnapshotTesting */,
+			);
 			productName = NimbusSwiftUITests;
 			productReference = 93093690281330070028EA2C /* NimbusSwiftUITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -247,6 +273,9 @@
 				Base,
 			);
 			mainGroup = 9309367C281330070028EA2C;
+			packageReferences = (
+				93417C2C283D4FBC007A014F /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
 			productRefGroup = 93093687281330070028EA2C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -298,7 +327,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93417C2B283D4E34007A014F /* NimbusCoreExtensions.swift in Sources */,
+				93B90747283C1EA7000299DD /* ViewModelTests.swift in Sources */,
 				93093696281330070028EA2C /* NimbusSwiftUITests.swift in Sources */,
+				93B90749283C224F000299DD /* NimbusViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,6 +593,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		93417C2C283D4FBC007A014F /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		93417C2D283D4FBC007A014F /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93417C2C283D4FBC007A014F /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9309367D281330070028EA2C /* Project object */;
 }

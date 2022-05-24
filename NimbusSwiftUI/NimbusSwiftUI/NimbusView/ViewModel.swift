@@ -25,7 +25,7 @@ class ViewModel: ObservableObject {
     case view(ServerDrivenNode)
   }
   
-  private weak var prev: ViewModel?
+  weak var prev: ViewModel?
   @Published var next: Navigation? {
     didSet {
       switch next {
@@ -42,7 +42,7 @@ class ViewModel: ObservableObject {
     case present(ViewModel)
   }
   
-  private let mode: NimbusNavigator.Mode
+  let mode: NimbusNavigator.Mode
   var url: String {
     switch mode {
     case .local(json:):
@@ -52,8 +52,8 @@ class ViewModel: ObservableObject {
     }
   }
   
-  private let core: NimbusCore.Nimbus
-  private weak var view: ServerDrivenView?
+  let core: NimbusCore.Nimbus
+  var view: ServerDrivenView?
   
   init(mode: NimbusNavigator.Mode, core: NimbusCore.Nimbus) {
     self.mode = mode
@@ -74,7 +74,9 @@ extension ViewModel {
     if view == nil {
 //      TODO: Verify lifecycle
       view = core.createView(
-        getNavigator: { [unowned self] in self },
+        getNavigator: {
+          [unowned self] in self
+        },
         description: url
       )
       view?.onChange { [weak self] node in
@@ -101,10 +103,12 @@ extension ViewModel {
   
   private func load(from request: ViewRequest) {
     core.viewClient.fetch(request: request) { [weak self] node, error in
-      if let node = node {
-        self?.view?.renderer.paint(tree: node, anchor: nil, mode: .replace)
-      } else if let error = error {
-        self?.state = .error(error)
+      DispatchQueue.main.async {
+        if let node = node {
+          self?.view?.renderer.paint(tree: node, anchor: nil, mode: .replace)
+        } else if let error = error {
+          self?.state = .error(error)
+        }
       }
     }
   }

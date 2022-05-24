@@ -15,13 +15,31 @@
  */
 
 import XCTest
-@testable import NimbusSwiftUI
+import SwiftUI
+import SnapshotTesting
+import NimbusSwiftUI
 
 class NimbusSwiftUITests: XCTestCase {
   
   func testNimbus() {
-    let view = NimbusNavigator(url: "initial").environmentObject(NimbusConfig(baseUrl: "base"))
-    XCTAssertNotNil(view)
+    let view = NimbusNavigator(json: """
+      {
+        "_:component": "material:text",
+        "properties": {
+          "text": "hello!"
+        }
+      }
+    """)
+      .environmentObject(NimbusConfig(baseUrl: "base", components: components))
+      .frame(width: 100, height: 100)
+    
+    assertSnapshot(matching: view, as: .image)
   }
 
 }
+
+let components: [String: Component] = [
+  "material:text": { (element, _) in
+    AnyView(Text(getMapProperty(map: element.properties ?? [:], name: "text") as String))
+  }
+]
