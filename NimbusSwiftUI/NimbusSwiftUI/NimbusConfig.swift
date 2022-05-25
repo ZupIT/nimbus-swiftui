@@ -17,6 +17,8 @@
 import SwiftUI
 import NimbusCore
 
+import Combine
+
 public class NimbusConfig: ObservableObject {
   
   var error: (Error, @escaping () -> Void) -> AnyView
