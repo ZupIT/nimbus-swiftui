@@ -19,7 +19,7 @@ import SwiftUI
 struct Container: View {
   var children: [AnyView]
   var body: some View {
-    ForEach(0..<children.count) { index in
+    ForEach(0..<children.count, id: \.self) { index in
       children[index]
     }
   }
