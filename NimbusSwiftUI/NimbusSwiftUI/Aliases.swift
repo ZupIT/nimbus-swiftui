@@ -21,7 +21,7 @@ import NimbusCore
 
 public typealias Action = @convention(block) (ActionEvent) -> KotlinUnit?
 public typealias Operation = ([Any]) -> Any?
-public typealias Component = (NimbusCore.ServerDrivenNode, [AnyView]) -> AnyView
+public typealias Component = (NimbusCore.ServerDrivenNode, [AnyComponent]) -> AnyComponent
 
 public typealias ViewRequest = NimbusCore.ViewRequest
 
@@ -36,4 +36,20 @@ public func getMapProperty<T>(map: [String: Any], name: String) -> T {
     fatalError("Could not find property with name: \(name)")
   }
   return value
+}
+
+// MARK: - AnyComponent
+
+public struct AnyComponent: View {
+  let view: AnyView
+  public let component: Any
+  
+  public init<Content: View>(_ content: Content) {
+    self.view = AnyView(content)
+    self.component = content
+  }
+  
+  public var body: some View {
+    view
+  }
 }

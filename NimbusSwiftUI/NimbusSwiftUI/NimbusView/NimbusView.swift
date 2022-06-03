@@ -57,12 +57,12 @@ struct NimbusView: View {
     viewModel.load()
   }
   
-  private func renderTree(node: ServerDrivenNode) -> AnyView {
+  private func renderTree(node: ServerDrivenNode) -> AnyComponent {
     if let function = nimbus.components[node.component] {
-      let children: [AnyView] = node.children?.map { renderTree(node: $0) } ?? []
+      let children: [AnyComponent] = node.children?.map { renderTree(node: $0) } ?? []
       return function(node, children)
     } else {
-      return AnyView(Text("Component with type \(node.component) is not registered"))
+      return AnyComponent(Text("Component with type \(node.component) is not registered"))
     }
   }
 }

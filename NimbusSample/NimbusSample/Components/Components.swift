@@ -23,9 +23,9 @@ typealias Function = @convention(block) (Any?) -> Void
 
 let components: [String: Component] = [
   "material:text": { (element, _) in
-    AnyView(Text(getMapProperty(map: element.properties ?? [:], name: "text")))
+    AnyComponent(Text(getMapProperty(map: element.properties ?? [:], name: "text")))
   },
-  "layout:container": { (_, children) in AnyView(Container(children: children)) },
+  "layout:container": { (_, children) in AnyComponent(Container(children: children)) },
   "custom:personCard": { (element, _) in
     var personMap: [String: Any] = getMapProperty(map: element.properties ?? [:], name: "person")
     var addressMap: [String: Any] = getMapProperty(map: element.properties ?? [:], name: "address")
@@ -42,10 +42,10 @@ let components: [String: Component] = [
       number: getMapProperty(map: addressMap, name: "number")
     )
     var personCard = PersonCardModel(person: person, address: address)
-    return AnyView(PersonCardComponent(params: personCard))
+    return AnyComponent(PersonCardComponent(params: personCard))
   },
   "material:button": { (element, _) in
-    AnyView(
+    AnyComponent(
       Button(
         text: getMapProperty(map: element.properties ?? [:], name: "text"),
         onPress: unsafeBitCast(
