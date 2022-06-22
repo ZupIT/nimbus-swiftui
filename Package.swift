@@ -1,4 +1,4 @@
-// swift-tools-version: 5.6
+// swift-tools-version: 5.5
 
 /*
  * Copyright 2022 ZUP IT SERVICOS EM TECNOLOGIA E INOVACAO SA
