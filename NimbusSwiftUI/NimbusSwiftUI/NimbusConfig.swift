@@ -50,12 +50,15 @@ public class NimbusConfig: ObservableObject {
       AnyView(loading())
     }
     
+    var allActions = ["openUrl": openUrl]
+    allActions.merge(actions ?? [:]) { first, _ in first }
+    
     self.components = components
     self.core = NimbusCore.Nimbus(
       config: ServerDrivenConfig(
         baseUrl: baseUrl,
         platform: "iOS",
-        actions: actions,
+        actions: allActions,
         actionObservers: actionObservers,
         operations: operations,
         logger: logger,
