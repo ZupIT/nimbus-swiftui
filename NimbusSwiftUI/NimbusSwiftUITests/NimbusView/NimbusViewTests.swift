@@ -25,10 +25,7 @@ class NimbusViewTests: XCTestCase {
   
   let viewModel = ViewModel(
     mode: .local("{}"),
-    core: NimbusConfig(
-      baseUrl: "base",
-      components: components
-    ).core
+    core: CoreKey.defaultValue
   )
   
   let nextView = """
@@ -79,11 +76,11 @@ class NimbusViewTests: XCTestCase {
     line: UInt = #line,
     onAppear: @escaping () -> Void
   ) {
-    let view = NavigationView { NimbusView(viewModel: viewModel)
-      .environmentObject(NimbusConfig(
-        baseUrl: "base",
-        components: components
-      ))
+    let view = NavigationView {
+      Nimbus(baseUrl: "base") {
+        NimbusView(viewModel: viewModel)
+      }
+      .components(components)
       .onAppear {
         onAppear()
       }

@@ -18,7 +18,7 @@ import SwiftUI
 
 struct NimbusView: View {
   
-  @EnvironmentObject private var nimbus: NimbusConfig
+  @Environment(\.dependencies) private var dependencies: Dependencies
   
   @ObservedObject private var viewModel: ViewModel
   
@@ -35,9 +35,9 @@ struct NimbusView: View {
       
       switch viewModel.state {
       case .loading:
-        nimbus.loading()
+        dependencies.loading()
       case let .error(error):
-        nimbus.error(error, retry)
+        dependencies.error(error, retry)
       case let .view(node: node):
         renderTree(node: node)
       }
@@ -58,7 +58,7 @@ struct NimbusView: View {
   }
   
   private func renderTree(node: ServerDrivenNode) -> AnyComponent {
-    if let function = nimbus.components[node.component] {
+    if let function = dependencies.components[node.component] {
       let children: [AnyComponent] = node.children?.map { renderTree(node: $0) } ?? []
       return function(node, children)
     } else {

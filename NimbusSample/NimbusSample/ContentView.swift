@@ -45,13 +45,14 @@ struct ContentView: View {
 //    }
 //    """)
     
-    NimbusNavigator(url: "/present.json")
-      .environmentObject(
-        NimbusConfig(
-          baseUrl: "https://gist.githubusercontent.com/Tiagoperes/74808ebd7ad7f0645491fc60436223a6/raw/85702801aa8b5c6d62d8d500ef9a262b767ec94c",
-          components: components
-        )
-      )
+    Nimbus(baseUrl: "https://gist.githubusercontent.com/Tiagoperes/74808ebd7ad7f0645491fc60436223a6/raw/85702801aa8b5c6d62d8d500ef9a262b767ec94c") {
+      NimbusNavigator(url: "/present.json")
+    }
+    .components(components)
+    .error { _, _ in
+      Text("customError")
+    }
+    
   }
 }
 
