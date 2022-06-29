@@ -95,7 +95,7 @@ extension ViewModel {
   private func load(from json: String) {
     do {
       let node = try core.createNodeFromJson(json: json)
-      view?.renderer.paint(tree: node, anchor: nil, mode: .replace)
+      try view?.renderer.paint(tree: node, anchor: nil, mode: .replace)
     } catch {
       state = .error(error)
     }
@@ -105,7 +105,11 @@ extension ViewModel {
     core.viewClient.fetch(request: request) { [weak self] node, error in
       DispatchQueue.main.async {
         if let node = node {
-          self?.view?.renderer.paint(tree: node, anchor: nil, mode: .replace)
+          do {
+            try self?.view?.renderer.paint(tree: node, anchor: nil, mode: .replace)
+          } catch {
+            self?.state = .error(error)
+          }
         } else if let error = error {
           self?.state = .error(error)
         }

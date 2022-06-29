@@ -6,9 +6,9 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class NimbusCoreServerDrivenConfig, NimbusCoreKotlinUnit, NimbusCoreActionEvent, NimbusCoreRenderNode, NimbusCoreServerDrivenView, NimbusCoreObservableState, NimbusCoreViewRequest, NimbusCoreKotlinThrowable, NimbusCoreKotlinArray<T>, NimbusCoreKotlinError, NimbusCoreRenderingError, NimbusCoreTransition, NimbusCoreServerDrivenState, NimbusCoreTreeUpdateMode, NimbusCoreNimbus, NimbusCoreRenderer, NimbusCoreKotlinRegex, NimbusCoreServerDrivenRequest, NimbusCoreServerDrivenResponse, NimbusCoreNetworkError, NimbusCoreKotlinEnumCompanion, NimbusCoreKotlinEnum<E>, NimbusCoreServerDrivenHttpMethod, NimbusCoreKotlinByteArray, NimbusCoreMalformedJsonError, NimbusCoreRenderActionCompanion, NimbusCoreRenderAction, NimbusCoreRenderNodeCompanion, NimbusCoreKotlinx_serialization_jsonJsonElement, NimbusCoreLogLevel, NimbusCoreKotlinx_serialization_jsonJsonPrimitive, NimbusCoreKotlinRegexOption, NimbusCoreKotlinRegexCompanion, NimbusCoreKotlinException, NimbusCoreKotlinRuntimeException, NimbusCoreKotlinIllegalStateException, NimbusCoreKtor_client_coreHttpRequestData, NimbusCoreKtor_client_coreHttpResponseData, NimbusCoreKtor_client_coreHttpClient, NimbusCoreKtor_client_coreHttpClientEngineConfig, NimbusCoreKotlinx_coroutines_coreCoroutineDispatcher, NimbusCoreKotlinByteIterator, NimbusCoreKotlinx_serialization_jsonJsonElementCompanion, NimbusCoreKotlinx_serialization_jsonJsonPrimitiveCompanion, NimbusCoreKotlinMatchResultDestructured, NimbusCoreKotlinIntRange, NimbusCoreKtor_httpUrl, NimbusCoreKtor_httpHttpMethod, NimbusCoreKtor_httpOutgoingContent, NimbusCoreKtor_httpHttpStatusCode, NimbusCoreKtor_utilsGMTDate, NimbusCoreKtor_httpHttpProtocolVersion, NimbusCoreKtor_client_coreHttpClientConfig<T>, NimbusCoreKtor_eventsEvents, NimbusCoreKtor_client_coreHttpReceivePipeline, NimbusCoreKtor_client_coreHttpRequestPipeline, NimbusCoreKtor_client_coreHttpResponsePipeline, NimbusCoreKtor_client_coreHttpSendPipeline, NimbusCoreKtor_client_coreProxyConfig, NimbusCoreKotlinAbstractCoroutineContextElement, NimbusCoreKotlinx_coroutines_coreCoroutineDispatcherKey, NimbusCoreKotlinMatchGroup, NimbusCoreKotlinIntProgressionCompanion, NimbusCoreKotlinIntIterator, NimbusCoreKotlinIntProgression, NimbusCoreKotlinIntRangeCompanion, NimbusCoreKtor_httpUrlCompanion, NimbusCoreKtor_httpURLProtocol, NimbusCoreKtor_httpHttpMethodCompanion, NimbusCoreKtor_utilsAttributeKey<T>, NimbusCoreKtor_httpContentType, NimbusCoreKotlinCancellationException, NimbusCoreKtor_httpHttpStatusCodeCompanion, NimbusCoreKtor_utilsGMTDateCompanion, NimbusCoreKtor_utilsWeekDay, NimbusCoreKtor_utilsMonth, NimbusCoreKtor_httpHttpProtocolVersionCompanion, NimbusCoreKtor_eventsEventDefinition<T>, NimbusCoreKtor_utilsPipelinePhase, NimbusCoreKtor_utilsPipeline<TSubject, TContext>, NimbusCoreKtor_client_coreHttpReceivePipelinePhases, NimbusCoreKtor_client_coreHttpResponse, NimbusCoreKtor_client_coreHttpRequestPipelinePhases, NimbusCoreKtor_client_coreHttpRequestBuilder, NimbusCoreKtor_client_coreHttpResponsePipelinePhases, NimbusCoreKtor_client_coreHttpResponseContainer, NimbusCoreKtor_client_coreHttpClientCall, NimbusCoreKtor_client_coreHttpSendPipelinePhases, NimbusCoreKotlinAbstractCoroutineContextKey<B, E>, NimbusCoreKtor_httpURLProtocolCompanion, NimbusCoreKtor_httpHeaderValueParam, NimbusCoreKtor_httpHeaderValueWithParametersCompanion, NimbusCoreKtor_httpHeaderValueWithParameters, NimbusCoreKtor_httpContentTypeCompanion, NimbusCoreKtor_utilsWeekDayCompanion, NimbusCoreKtor_utilsMonthCompanion, NimbusCoreKtor_httpHeadersBuilder, NimbusCoreKtor_client_coreHttpRequestBuilderCompanion, NimbusCoreKtor_httpURLBuilder, NimbusCoreKtor_utilsTypeInfo, NimbusCoreKtor_client_coreHttpClientCallCompanion, NimbusCoreKotlinx_serialization_coreSerializersModule, NimbusCoreKotlinx_serialization_coreSerialKind, NimbusCoreKotlinNothing, NimbusCoreKotlinx_coroutines_coreAtomicDesc, NimbusCoreKotlinx_coroutines_coreLockFreeLinkedListNodePrepareOp, NimbusCoreKtor_ioMemory, NimbusCoreKtor_ioChunkBuffer, NimbusCoreKtor_ioBuffer, NimbusCoreKtor_ioByteReadPacket, NimbusCoreKtor_utilsStringValuesBuilderImpl, NimbusCoreKtor_httpURLBuilderCompanion, NimbusCoreKotlinx_coroutines_coreAtomicOp<__contravariant T>, NimbusCoreKotlinx_coroutines_coreOpDescriptor, NimbusCoreKotlinx_coroutines_coreLockFreeLinkedListNode, NimbusCoreKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc, NimbusCoreKtor_ioMemoryCompanion, NimbusCoreKtor_ioBufferCompanion, NimbusCoreKtor_ioChunkBufferCompanion, NimbusCoreKtor_ioInputCompanion, NimbusCoreKtor_ioInput, NimbusCoreKtor_ioByteReadPacketCompanion, NimbusCoreKotlinKTypeProjection, NimbusCoreKotlinx_coroutines_coreLockFreeLinkedListNodeAddLastDesc<T>, NimbusCoreKotlinx_coroutines_coreLockFreeLinkedListNodeRemoveFirstDesc<T>, NimbusCoreKotlinKVariance, NimbusCoreKotlinKTypeProjectionCompanion;
+@class NimbusCoreServerDrivenConfig, NimbusCoreKotlinUnit, NimbusCoreActionEvent, NimbusCoreKotlinArray<T>, NimbusCoreRenderNode, NimbusCoreServerDrivenView, NimbusCoreObservableState, NimbusCoreViewRequest, NimbusCoreKotlinThrowable, NimbusCoreKotlinError, NimbusCoreRenderingError, NimbusCoreTransition, NimbusCoreServerDrivenState, NimbusCoreTreeUpdateMode, NimbusCoreNimbus, NimbusCoreRenderer, NimbusCoreKotlinRegex, NimbusCoreKotlinException, NimbusCoreKotlinRuntimeException, NimbusCoreKotlinIllegalArgumentException, NimbusCoreComponentStructureError, NimbusCoreMalformedJsonError, NimbusCoreRenderActionCompanion, NimbusCoreRenderAction, NimbusCoreRenderNodeCompanion, NimbusCoreKotlinx_serialization_jsonJsonElement, NimbusCoreKotlinEnumCompanion, NimbusCoreKotlinEnum<E>, NimbusCoreServerDrivenRequest, NimbusCoreServerDrivenResponse, NimbusCoreNetworkError, NimbusCoreServerDrivenHttpMethod, NimbusCoreKotlinByteArray, NimbusCoreLogLevel, NimbusCoreKotlinNumber, NimbusCoreKotlinx_serialization_jsonJsonPrimitive, NimbusCoreKotlinRegexOption, NimbusCoreKotlinRegexCompanion, NimbusCoreKotlinx_serialization_jsonJsonElementCompanion, NimbusCoreKotlinIllegalStateException, NimbusCoreKtor_client_coreHttpRequestData, NimbusCoreKtor_client_coreHttpResponseData, NimbusCoreKtor_client_coreHttpClient, NimbusCoreKtor_client_coreHttpClientEngineConfig, NimbusCoreKotlinx_coroutines_coreCoroutineDispatcher, NimbusCoreKotlinByteIterator, NimbusCoreKotlinx_serialization_jsonJsonPrimitiveCompanion, NimbusCoreKotlinMatchResultDestructured, NimbusCoreKotlinIntRange, NimbusCoreKtor_httpUrl, NimbusCoreKtor_httpHttpMethod, NimbusCoreKtor_httpOutgoingContent, NimbusCoreKtor_httpHttpStatusCode, NimbusCoreKtor_utilsGMTDate, NimbusCoreKtor_httpHttpProtocolVersion, NimbusCoreKtor_client_coreHttpClientConfig<T>, NimbusCoreKtor_eventsEvents, NimbusCoreKtor_client_coreHttpReceivePipeline, NimbusCoreKtor_client_coreHttpRequestPipeline, NimbusCoreKtor_client_coreHttpResponsePipeline, NimbusCoreKtor_client_coreHttpSendPipeline, NimbusCoreKtor_client_coreProxyConfig, NimbusCoreKotlinAbstractCoroutineContextElement, NimbusCoreKotlinx_coroutines_coreCoroutineDispatcherKey, NimbusCoreKotlinMatchGroup, NimbusCoreKotlinIntProgressionCompanion, NimbusCoreKotlinIntIterator, NimbusCoreKotlinIntProgression, NimbusCoreKotlinIntRangeCompanion, NimbusCoreKtor_httpUrlCompanion, NimbusCoreKtor_httpURLProtocol, NimbusCoreKtor_httpHttpMethodCompanion, NimbusCoreKtor_utilsAttributeKey<T>, NimbusCoreKtor_httpContentType, NimbusCoreKotlinCancellationException, NimbusCoreKtor_httpHttpStatusCodeCompanion, NimbusCoreKtor_utilsGMTDateCompanion, NimbusCoreKtor_utilsWeekDay, NimbusCoreKtor_utilsMonth, NimbusCoreKtor_httpHttpProtocolVersionCompanion, NimbusCoreKtor_eventsEventDefinition<T>, NimbusCoreKtor_utilsPipelinePhase, NimbusCoreKtor_utilsPipeline<TSubject, TContext>, NimbusCoreKtor_client_coreHttpReceivePipelinePhases, NimbusCoreKtor_client_coreHttpResponse, NimbusCoreKtor_client_coreHttpRequestPipelinePhases, NimbusCoreKtor_client_coreHttpRequestBuilder, NimbusCoreKtor_client_coreHttpResponsePipelinePhases, NimbusCoreKtor_client_coreHttpResponseContainer, NimbusCoreKtor_client_coreHttpClientCall, NimbusCoreKtor_client_coreHttpSendPipelinePhases, NimbusCoreKotlinAbstractCoroutineContextKey<B, E>, NimbusCoreKotlinx_serialization_coreSerializersModule, NimbusCoreKotlinx_serialization_coreSerialKind, NimbusCoreKotlinNothing, NimbusCoreKtor_httpURLProtocolCompanion, NimbusCoreKtor_httpHeaderValueParam, NimbusCoreKtor_httpHeaderValueWithParametersCompanion, NimbusCoreKtor_httpHeaderValueWithParameters, NimbusCoreKtor_httpContentTypeCompanion, NimbusCoreKtor_utilsWeekDayCompanion, NimbusCoreKtor_utilsMonthCompanion, NimbusCoreKtor_httpHeadersBuilder, NimbusCoreKtor_client_coreHttpRequestBuilderCompanion, NimbusCoreKtor_httpURLBuilder, NimbusCoreKtor_utilsTypeInfo, NimbusCoreKtor_client_coreHttpClientCallCompanion, NimbusCoreKotlinx_coroutines_coreAtomicDesc, NimbusCoreKotlinx_coroutines_coreLockFreeLinkedListNodePrepareOp, NimbusCoreKtor_ioMemory, NimbusCoreKtor_ioChunkBuffer, NimbusCoreKtor_ioBuffer, NimbusCoreKtor_ioByteReadPacket, NimbusCoreKtor_utilsStringValuesBuilderImpl, NimbusCoreKtor_httpURLBuilderCompanion, NimbusCoreKotlinx_coroutines_coreAtomicOp<__contravariant T>, NimbusCoreKotlinx_coroutines_coreOpDescriptor, NimbusCoreKotlinx_coroutines_coreLockFreeLinkedListNode, NimbusCoreKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc, NimbusCoreKtor_ioMemoryCompanion, NimbusCoreKtor_ioBufferCompanion, NimbusCoreKtor_ioChunkBufferCompanion, NimbusCoreKtor_ioInputCompanion, NimbusCoreKtor_ioInput, NimbusCoreKtor_ioByteReadPacketCompanion, NimbusCoreKotlinKTypeProjection, NimbusCoreKotlinx_coroutines_coreLockFreeLinkedListNodeAddLastDesc<T>, NimbusCoreKotlinx_coroutines_coreLockFreeLinkedListNodeRemoveFirstDesc<T>, NimbusCoreKotlinKVariance, NimbusCoreKotlinKTypeProjectionCompanion;
 
-@protocol NimbusCoreServerDrivenNavigator, NimbusCoreHttpClient, NimbusCoreIdManager, NimbusCoreLogger, NimbusCoreUrlBuilder, NimbusCoreViewClient, NimbusCoreServerDrivenAction, NimbusCoreServerDrivenNode, NimbusCoreKotlinKClass, NimbusCoreKtor_client_coreHttpClientEngine, NimbusCoreKotlinComparable, NimbusCoreKotlinMapEntry, NimbusCoreKotlinIterator, NimbusCoreKotlinMatchResult, NimbusCoreKotlinSequence, NimbusCoreKotlinKDeclarationContainer, NimbusCoreKotlinKAnnotatedElement, NimbusCoreKotlinKClassifier, NimbusCoreKtor_client_coreHttpClientEngineCapability, NimbusCoreKotlinCoroutineContext, NimbusCoreKotlinx_coroutines_coreCoroutineScope, NimbusCoreKtor_ioCloseable, NimbusCoreKotlinMatchGroupCollection, NimbusCoreKtor_httpHeaders, NimbusCoreKotlinx_coroutines_coreJob, NimbusCoreKtor_utilsAttributes, NimbusCoreKotlinCoroutineContextKey, NimbusCoreKotlinCoroutineContextElement, NimbusCoreKotlinContinuation, NimbusCoreKotlinContinuationInterceptor, NimbusCoreKotlinx_coroutines_coreRunnable, NimbusCoreKotlinx_serialization_coreKSerializer, NimbusCoreKotlinIterable, NimbusCoreKotlinCollection, NimbusCoreKotlinClosedRange, NimbusCoreKtor_httpParameters, NimbusCoreKtor_utilsStringValues, NimbusCoreKotlinx_coroutines_coreChildHandle, NimbusCoreKotlinx_coroutines_coreChildJob, NimbusCoreKotlinx_coroutines_coreDisposableHandle, NimbusCoreKotlinx_coroutines_coreSelectClause0, NimbusCoreKtor_client_coreHttpClientPlugin, NimbusCoreKotlinSuspendFunction2, NimbusCoreKotlinx_serialization_coreEncoder, NimbusCoreKotlinx_serialization_coreSerialDescriptor, NimbusCoreKotlinx_serialization_coreSerializationStrategy, NimbusCoreKotlinx_serialization_coreDecoder, NimbusCoreKotlinx_serialization_coreDeserializationStrategy, NimbusCoreKotlinx_coroutines_coreParentJob, NimbusCoreKotlinx_coroutines_coreSelectInstance, NimbusCoreKotlinSuspendFunction0, NimbusCoreKotlinFunction, NimbusCoreKtor_httpHttpMessage, NimbusCoreKtor_ioByteReadChannel, NimbusCoreKtor_httpHttpMessageBuilder, NimbusCoreKtor_client_coreHttpRequest, NimbusCoreKotlinx_serialization_coreCompositeEncoder, NimbusCoreKotlinAnnotation, NimbusCoreKotlinx_serialization_coreCompositeDecoder, NimbusCoreKtor_ioReadSession, NimbusCoreKotlinSuspendFunction1, NimbusCoreKotlinAppendable, NimbusCoreKtor_utilsStringValuesBuilder, NimbusCoreKtor_httpParametersBuilder, NimbusCoreKotlinKType, NimbusCoreKotlinx_serialization_coreSerializersModuleCollector, NimbusCoreKtor_ioObjectPool;
+@protocol NimbusCoreServerDrivenNavigator, NimbusCoreHttpClient, NimbusCoreIdManager, NimbusCoreLogger, NimbusCoreUrlBuilder, NimbusCoreViewClient, NimbusCoreServerDrivenAction, NimbusCoreServerDrivenNode, NimbusCoreKotlinKClass, NimbusCoreKotlinComparable, NimbusCoreKtor_client_coreHttpClientEngine, NimbusCoreKotlinMapEntry, NimbusCoreKotlinIterator, NimbusCoreKotlinMatchResult, NimbusCoreKotlinSequence, NimbusCoreKotlinKDeclarationContainer, NimbusCoreKotlinKAnnotatedElement, NimbusCoreKotlinKClassifier, NimbusCoreKtor_client_coreHttpClientEngineCapability, NimbusCoreKotlinCoroutineContext, NimbusCoreKotlinx_coroutines_coreCoroutineScope, NimbusCoreKtor_ioCloseable, NimbusCoreKotlinMatchGroupCollection, NimbusCoreKotlinx_serialization_coreKSerializer, NimbusCoreKtor_httpHeaders, NimbusCoreKotlinx_coroutines_coreJob, NimbusCoreKtor_utilsAttributes, NimbusCoreKotlinCoroutineContextKey, NimbusCoreKotlinCoroutineContextElement, NimbusCoreKotlinContinuation, NimbusCoreKotlinContinuationInterceptor, NimbusCoreKotlinx_coroutines_coreRunnable, NimbusCoreKotlinIterable, NimbusCoreKotlinCollection, NimbusCoreKotlinClosedRange, NimbusCoreKotlinx_serialization_coreEncoder, NimbusCoreKotlinx_serialization_coreSerialDescriptor, NimbusCoreKotlinx_serialization_coreSerializationStrategy, NimbusCoreKotlinx_serialization_coreDecoder, NimbusCoreKotlinx_serialization_coreDeserializationStrategy, NimbusCoreKtor_httpParameters, NimbusCoreKtor_utilsStringValues, NimbusCoreKotlinx_coroutines_coreChildHandle, NimbusCoreKotlinx_coroutines_coreChildJob, NimbusCoreKotlinx_coroutines_coreDisposableHandle, NimbusCoreKotlinx_coroutines_coreSelectClause0, NimbusCoreKtor_client_coreHttpClientPlugin, NimbusCoreKotlinSuspendFunction2, NimbusCoreKotlinx_serialization_coreCompositeEncoder, NimbusCoreKotlinAnnotation, NimbusCoreKotlinx_serialization_coreCompositeDecoder, NimbusCoreKotlinx_coroutines_coreParentJob, NimbusCoreKotlinx_coroutines_coreSelectInstance, NimbusCoreKotlinSuspendFunction0, NimbusCoreKotlinFunction, NimbusCoreKtor_httpHttpMessage, NimbusCoreKtor_ioByteReadChannel, NimbusCoreKtor_httpHttpMessageBuilder, NimbusCoreKtor_client_coreHttpRequest, NimbusCoreKotlinx_serialization_coreSerializersModuleCollector, NimbusCoreKtor_ioReadSession, NimbusCoreKotlinSuspendFunction1, NimbusCoreKotlinAppendable, NimbusCoreKtor_utilsStringValuesBuilder, NimbusCoreKtor_httpParametersBuilder, NimbusCoreKotlinKType, NimbusCoreKtor_ioObjectPool;
 
 NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic push
@@ -150,7 +150,7 @@ __attribute__((swift_name("Nimbus")))
 - (instancetype)initWithConfig:(NimbusCoreServerDrivenConfig *)config __attribute__((swift_name("init(config:)"))) __attribute__((objc_designated_initializer));
 - (void)addActionObserversObservers:(NSArray<NimbusCoreKotlinUnit *(^)(NimbusCoreActionEvent *)> *)observers __attribute__((swift_name("addActionObservers(observers:)")));
 - (void)addActionsNewActions:(NSDictionary<NSString *, NimbusCoreKotlinUnit *(^)(NimbusCoreActionEvent *)> *)newActions __attribute__((swift_name("addActions(newActions:)")));
-- (void)addOperationsNewOperations:(NSDictionary<NSString *, id (^)(NSArray<id> *)> *)newOperations __attribute__((swift_name("addOperations(newOperations:)")));
+- (void)addOperationsNewOperations:(NSDictionary<NSString *, id _Nullable (^)(NimbusCoreKotlinArray<id> *)> *)newOperations __attribute__((swift_name("addOperations(newOperations:)")));
 
 /**
  @note This method converts instances of MalformedJsonError, MalformedComponentError to errors.
@@ -165,8 +165,7 @@ __attribute__((swift_name("Nimbus")))
 @property (readonly) id<NimbusCoreHttpClient> httpClient __attribute__((swift_name("httpClient")));
 @property (readonly) id<NimbusCoreIdManager> idManager __attribute__((swift_name("idManager")));
 @property (readonly) id<NimbusCoreLogger> logger __attribute__((swift_name("logger")));
-@property (readonly) NSDictionary<NSString *, NimbusCoreKotlinUnit *(^)(NimbusCoreActionEvent *)> *onActionRendered __attribute__((swift_name("onActionRendered")));
-@property (readonly) NimbusCoreMutableDictionary<NSString *, id (^)(NSArray<id> *)> *operations __attribute__((swift_name("operations")));
+@property (readonly) NimbusCoreMutableDictionary<NSString *, id _Nullable (^)(NimbusCoreKotlinArray<id> *)> *operations __attribute__((swift_name("operations")));
 @property (readonly) NSString *platform __attribute__((swift_name("platform")));
 @property (readonly) id<NimbusCoreUrlBuilder> urlBuilder __attribute__((swift_name("urlBuilder")));
 @property (readonly) id<NimbusCoreViewClient> viewClient __attribute__((swift_name("viewClient")));
@@ -175,18 +174,18 @@ __attribute__((swift_name("Nimbus")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ServerDrivenConfig")))
 @interface NimbusCoreServerDrivenConfig : NimbusCoreBase
-- (instancetype)initWithBaseUrl:(NSString *)baseUrl platform:(NSString *)platform actions:(NSDictionary<NSString *, NimbusCoreKotlinUnit *(^)(NimbusCoreActionEvent *)> * _Nullable)actions actionObservers:(NSArray<NimbusCoreKotlinUnit *(^)(NimbusCoreActionEvent *)> * _Nullable)actionObservers operations:(NSDictionary<NSString *, id (^)(NSArray<id> *)> * _Nullable)operations logger:(id<NimbusCoreLogger> _Nullable)logger urlBuilder:(id<NimbusCoreUrlBuilder> _Nullable)urlBuilder httpClient:(id<NimbusCoreHttpClient> _Nullable)httpClient viewClient:(id<NimbusCoreViewClient> _Nullable)viewClient idManager:(id<NimbusCoreIdManager> _Nullable)idManager __attribute__((swift_name("init(baseUrl:platform:actions:actionObservers:operations:logger:urlBuilder:httpClient:viewClient:idManager:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithBaseUrl:(NSString *)baseUrl platform:(NSString *)platform actions:(NSDictionary<NSString *, NimbusCoreKotlinUnit *(^)(NimbusCoreActionEvent *)> * _Nullable)actions actionObservers:(NSArray<NimbusCoreKotlinUnit *(^)(NimbusCoreActionEvent *)> * _Nullable)actionObservers operations:(NSDictionary<NSString *, id _Nullable (^)(NimbusCoreKotlinArray<id> *)> * _Nullable)operations logger:(id<NimbusCoreLogger> _Nullable)logger urlBuilder:(id<NimbusCoreUrlBuilder> _Nullable)urlBuilder httpClient:(id<NimbusCoreHttpClient> _Nullable)httpClient viewClient:(id<NimbusCoreViewClient> _Nullable)viewClient idManager:(id<NimbusCoreIdManager> _Nullable)idManager __attribute__((swift_name("init(baseUrl:platform:actions:actionObservers:operations:logger:urlBuilder:httpClient:viewClient:idManager:)"))) __attribute__((objc_designated_initializer));
 - (NSString *)component1 __attribute__((swift_name("component1()")));
 - (id<NimbusCoreIdManager> _Nullable)component10 __attribute__((swift_name("component10()")));
 - (NSString *)component2 __attribute__((swift_name("component2()")));
 - (NSDictionary<NSString *, NimbusCoreKotlinUnit *(^)(NimbusCoreActionEvent *)> * _Nullable)component3 __attribute__((swift_name("component3()")));
 - (NSArray<NimbusCoreKotlinUnit *(^)(NimbusCoreActionEvent *)> * _Nullable)component4 __attribute__((swift_name("component4()")));
-- (NSDictionary<NSString *, id (^)(NSArray<id> *)> * _Nullable)component5 __attribute__((swift_name("component5()")));
+- (NSDictionary<NSString *, id _Nullable (^)(NimbusCoreKotlinArray<id> *)> * _Nullable)component5 __attribute__((swift_name("component5()")));
 - (id<NimbusCoreLogger> _Nullable)component6 __attribute__((swift_name("component6()")));
 - (id<NimbusCoreUrlBuilder> _Nullable)component7 __attribute__((swift_name("component7()")));
 - (id<NimbusCoreHttpClient> _Nullable)component8 __attribute__((swift_name("component8()")));
 - (id<NimbusCoreViewClient> _Nullable)component9 __attribute__((swift_name("component9()")));
-- (NimbusCoreServerDrivenConfig *)doCopyBaseUrl:(NSString *)baseUrl platform:(NSString *)platform actions:(NSDictionary<NSString *, NimbusCoreKotlinUnit *(^)(NimbusCoreActionEvent *)> * _Nullable)actions actionObservers:(NSArray<NimbusCoreKotlinUnit *(^)(NimbusCoreActionEvent *)> * _Nullable)actionObservers operations:(NSDictionary<NSString *, id (^)(NSArray<id> *)> * _Nullable)operations logger:(id<NimbusCoreLogger> _Nullable)logger urlBuilder:(id<NimbusCoreUrlBuilder> _Nullable)urlBuilder httpClient:(id<NimbusCoreHttpClient> _Nullable)httpClient viewClient:(id<NimbusCoreViewClient> _Nullable)viewClient idManager:(id<NimbusCoreIdManager> _Nullable)idManager __attribute__((swift_name("doCopy(baseUrl:platform:actions:actionObservers:operations:logger:urlBuilder:httpClient:viewClient:idManager:)")));
+- (NimbusCoreServerDrivenConfig *)doCopyBaseUrl:(NSString *)baseUrl platform:(NSString *)platform actions:(NSDictionary<NSString *, NimbusCoreKotlinUnit *(^)(NimbusCoreActionEvent *)> * _Nullable)actions actionObservers:(NSArray<NimbusCoreKotlinUnit *(^)(NimbusCoreActionEvent *)> * _Nullable)actionObservers operations:(NSDictionary<NSString *, id _Nullable (^)(NimbusCoreKotlinArray<id> *)> * _Nullable)operations logger:(id<NimbusCoreLogger> _Nullable)logger urlBuilder:(id<NimbusCoreUrlBuilder> _Nullable)urlBuilder httpClient:(id<NimbusCoreHttpClient> _Nullable)httpClient viewClient:(id<NimbusCoreViewClient> _Nullable)viewClient idManager:(id<NimbusCoreIdManager> _Nullable)idManager __attribute__((swift_name("doCopy(baseUrl:platform:actions:actionObservers:operations:logger:urlBuilder:httpClient:viewClient:idManager:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
@@ -196,7 +195,7 @@ __attribute__((swift_name("ServerDrivenConfig")))
 @property (readonly) id<NimbusCoreHttpClient> _Nullable httpClient __attribute__((swift_name("httpClient")));
 @property (readonly) id<NimbusCoreIdManager> _Nullable idManager __attribute__((swift_name("idManager")));
 @property (readonly) id<NimbusCoreLogger> _Nullable logger __attribute__((swift_name("logger")));
-@property (readonly) NSDictionary<NSString *, id (^)(NSArray<id> *)> * _Nullable operations __attribute__((swift_name("operations")));
+@property (readonly) NSDictionary<NSString *, id _Nullable (^)(NimbusCoreKotlinArray<id> *)> * _Nullable operations __attribute__((swift_name("operations")));
 @property (readonly) NSString *platform __attribute__((swift_name("platform")));
 @property (readonly) id<NimbusCoreUrlBuilder> _Nullable urlBuilder __attribute__((swift_name("urlBuilder")));
 @property (readonly) id<NimbusCoreViewClient> _Nullable viewClient __attribute__((swift_name("viewClient")));
@@ -303,12 +302,25 @@ __attribute__((swift_name("InvalidTreeError")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("NoStateHierarchyError")))
+@interface NimbusCoreNoStateHierarchyError : NimbusCoreRenderingError
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+- (instancetype)initWithMessage:(NSString *)message illegal:(BOOL)illegal __attribute__((swift_name("init(message:illegal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
+@end;
+
+__attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Renderer")))
 @interface NimbusCoreRenderer : NimbusCoreBase
 - (instancetype)initWithView:(NimbusCoreServerDrivenView *)view detachedStates:(NSArray<NimbusCoreServerDrivenState *> *)detachedStates getCurrentTree:(NimbusCoreRenderNode * _Nullable (^)(void))getCurrentTree replaceCurrentTree:(void (^)(NimbusCoreRenderNode *))replaceCurrentTree onFinish:(void (^)(void))onFinish __attribute__((swift_name("init(view:detachedStates:getCurrentTree:replaceCurrentTree:onFinish:)"))) __attribute__((objc_designated_initializer));
-- (void)paintTree:(NimbusCoreRenderNode *)tree anchor:(NSString * _Nullable)anchor mode:(NimbusCoreTreeUpdateMode *)mode __attribute__((swift_name("paint(tree:anchor:mode:)")));
+
+/**
+ @note This method converts instances of UnexpectedRootStructuralComponent to errors.
+ Other uncaught Kotlin exceptions are fatal.
+*/
+- (BOOL)paintTree:(NimbusCoreRenderNode *)tree anchor:(NSString * _Nullable)anchor mode:(NimbusCoreTreeUpdateMode *)mode error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("paint(tree:anchor:mode:)")));
 - (void)refresh __attribute__((swift_name("refresh()")));
-- (void)setStateSourceNode:(NimbusCoreRenderNode *)sourceNode path:(NSString *)path newValue:(id)newValue __attribute__((swift_name("setState(sourceNode:path:newValue:)")));
+- (void)setStateSourceNode:(NimbusCoreRenderNode *)sourceNode path:(NSString *)path newValue:(id _Nullable)newValue __attribute__((swift_name("setState(sourceNode:path:newValue:)")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -344,6 +356,14 @@ __attribute__((swift_name("Transition")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UnexpectedRootStructuralComponent")))
+@interface NimbusCoreUnexpectedRootStructuralComponent : NimbusCoreRenderingError
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+- (instancetype)initWithMessage:(NSString *)message illegal:(BOOL)illegal __attribute__((swift_name("init(message:illegal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
+@end;
+
+__attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("InvalidDataPathError")))
 @interface NimbusCoreInvalidDataPathError : NimbusCoreKotlinError
 - (instancetype)initWithPath:(NSString *)path cause:(NSString *)cause __attribute__((swift_name("init(path:cause:)"))) __attribute__((objc_designated_initializer));
@@ -370,162 +390,52 @@ __attribute__((swift_name("UnexpectedDataTypeError")))
 @property (readonly) id _Nullable valueFound __attribute__((swift_name("valueFound")));
 @end;
 
-__attribute__((swift_name("HttpClient")))
-@protocol NimbusCoreHttpClient
-@required
-
-/**
- @note This method converts instances of CancellationException to errors.
- Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)sendRequestRequest:(NimbusCoreServerDrivenRequest *)request completionHandler:(void (^)(NimbusCoreServerDrivenResponse * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("sendRequest(request:completionHandler:)")));
+__attribute__((swift_name("KotlinException")))
+@interface NimbusCoreKotlinException : NimbusCoreKotlinThrowable
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+- (instancetype)initWithMessage:(NSString * _Nullable)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithMessage:(NSString * _Nullable)message cause:(NimbusCoreKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(message:cause:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithCause:(NimbusCoreKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(cause:)"))) __attribute__((objc_designated_initializer));
 @end;
 
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("DefaultHttpClient")))
-@interface NimbusCoreDefaultHttpClient : NimbusCoreBase <NimbusCoreHttpClient>
-- (instancetype)initWithEngine:(id<NimbusCoreKtor_client_coreHttpClientEngine> _Nullable)engine __attribute__((swift_name("init(engine:)"))) __attribute__((objc_designated_initializer));
-
-/**
- @note This method converts instances of CancellationException to errors.
- Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)sendRequestRequest:(NimbusCoreServerDrivenRequest *)request completionHandler:(void (^)(NimbusCoreServerDrivenResponse * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("sendRequest(request:completionHandler:)")));
+__attribute__((swift_name("KotlinRuntimeException")))
+@interface NimbusCoreKotlinRuntimeException : NimbusCoreKotlinException
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+- (instancetype)initWithMessage:(NSString * _Nullable)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithMessage:(NSString * _Nullable)message cause:(NimbusCoreKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(message:cause:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithCause:(NimbusCoreKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(cause:)"))) __attribute__((objc_designated_initializer));
 @end;
 
-__attribute__((swift_name("UrlBuilder")))
-@protocol NimbusCoreUrlBuilder
-@required
-- (NSString *)buildPath:(NSString *)path __attribute__((swift_name("build(path:)")));
+__attribute__((swift_name("KotlinIllegalArgumentException")))
+@interface NimbusCoreKotlinIllegalArgumentException : NimbusCoreKotlinRuntimeException
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+- (instancetype)initWithMessage:(NSString * _Nullable)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithMessage:(NSString * _Nullable)message cause:(NimbusCoreKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(message:cause:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithCause:(NimbusCoreKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(cause:)"))) __attribute__((objc_designated_initializer));
 @end;
 
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("DefaultUrlBuilder")))
-@interface NimbusCoreDefaultUrlBuilder : NimbusCoreBase <NimbusCoreUrlBuilder>
-- (instancetype)initWithBaseUrl:(NSString *)baseUrl __attribute__((swift_name("init(baseUrl:)"))) __attribute__((objc_designated_initializer));
-- (NSString *)buildPath:(NSString *)path __attribute__((swift_name("build(path:)")));
-@end;
-
-__attribute__((swift_name("ViewClient")))
-@protocol NimbusCoreViewClient
-@required
-
-/**
- @note This method converts instances of RequestError, ResponseError, MalformedJsonError, MalformedComponentError, CancellationException to errors.
- Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)fetchRequest:(NimbusCoreViewRequest *)request completionHandler:(void (^)(NimbusCoreRenderNode * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("fetch(request:completionHandler:)")));
-- (void)preFetchRequest:(NimbusCoreViewRequest *)request __attribute__((swift_name("preFetch(request:)")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("DefaultViewClient")))
-@interface NimbusCoreDefaultViewClient : NimbusCoreBase <NimbusCoreViewClient>
-- (instancetype)initWithHttpClient:(id<NimbusCoreHttpClient>)httpClient urlBuilder:(id<NimbusCoreUrlBuilder>)urlBuilder idManager:(id<NimbusCoreIdManager>)idManager logger:(id<NimbusCoreLogger>)logger platform:(NSString *)platform __attribute__((swift_name("init(httpClient:urlBuilder:idManager:logger:platform:)"))) __attribute__((objc_designated_initializer));
-
-/**
- @note This method converts instances of RequestError, ResponseError, MalformedJsonError, MalformedComponentError, CancellationException to errors.
- Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)fetchRequest:(NimbusCoreViewRequest *)request completionHandler:(void (^)(NimbusCoreRenderNode * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("fetch(request:completionHandler:)")));
-- (void)preFetchRequest:(NimbusCoreViewRequest *)request __attribute__((swift_name("preFetch(request:)")));
-@end;
-
-__attribute__((swift_name("NetworkError")))
-@interface NimbusCoreNetworkError : NimbusCoreKotlinError
+__attribute__((swift_name("ComponentStructureError")))
+@interface NimbusCoreComponentStructureError : NimbusCoreKotlinIllegalArgumentException
 - (instancetype)initWithMessage:(NSString *)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
 + (instancetype)new __attribute__((unavailable));
 - (instancetype)initWithMessage:(NSString * _Nullable)message cause:(NimbusCoreKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(message:cause:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
 - (instancetype)initWithCause:(NimbusCoreKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(cause:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-@property (readonly) NSString *message __attribute__((swift_name("message")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("RequestError")))
-@interface NimbusCoreRequestError : NimbusCoreNetworkError
-- (instancetype)initWithMessage:(NSString * _Nullable)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
+__attribute__((swift_name("MissingComponentError")))
+@interface NimbusCoreMissingComponentError : NimbusCoreComponentStructureError
+- (instancetype)initWithMessage:(NSString *)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("ResponseError")))
-@interface NimbusCoreResponseError : NimbusCoreNetworkError
-- (instancetype)initWithStatus:(int32_t)status body:(NSString * _Nullable)body __attribute__((swift_name("init(status:body:)"))) __attribute__((objc_designated_initializer));
-- (instancetype)initWithMessage:(NSString *)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-@property (readonly) NSString * _Nullable body __attribute__((swift_name("body")));
-@property (readonly) int32_t status __attribute__((swift_name("status")));
-@end;
-
-__attribute__((swift_name("KotlinComparable")))
-@protocol NimbusCoreKotlinComparable
-@required
-- (int32_t)compareToOther:(id _Nullable)other __attribute__((swift_name("compareTo(other:)")));
-@end;
-
-__attribute__((swift_name("KotlinEnum")))
-@interface NimbusCoreKotlinEnum<E> : NimbusCoreBase <NimbusCoreKotlinComparable>
-- (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) NimbusCoreKotlinEnumCompanion *companion __attribute__((swift_name("companion")));
-- (int32_t)compareToOther:(E)other __attribute__((swift_name("compareTo(other:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSString *name __attribute__((swift_name("name")));
-@property (readonly) int32_t ordinal __attribute__((swift_name("ordinal")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("ServerDrivenHttpMethod")))
-@interface NimbusCoreServerDrivenHttpMethod : NimbusCoreKotlinEnum<NimbusCoreServerDrivenHttpMethod *>
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-- (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-@property (class, readonly) NimbusCoreServerDrivenHttpMethod *post __attribute__((swift_name("post")));
-@property (class, readonly) NimbusCoreServerDrivenHttpMethod *get __attribute__((swift_name("get")));
-@property (class, readonly) NimbusCoreServerDrivenHttpMethod *put __attribute__((swift_name("put")));
-@property (class, readonly) NimbusCoreServerDrivenHttpMethod *patch __attribute__((swift_name("patch")));
-@property (class, readonly) NimbusCoreServerDrivenHttpMethod *delete_ __attribute__((swift_name("delete_")));
-+ (NimbusCoreKotlinArray<NimbusCoreServerDrivenHttpMethod *> *)values __attribute__((swift_name("values()")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("ServerDrivenRequest")))
-@interface NimbusCoreServerDrivenRequest : NimbusCoreBase
-- (instancetype)initWithUrl:(NSString *)url method:(NimbusCoreServerDrivenHttpMethod * _Nullable)method headers:(NSDictionary<NSString *, NSString *> * _Nullable)headers body:(NSString * _Nullable)body __attribute__((swift_name("init(url:method:headers:body:)"))) __attribute__((objc_designated_initializer));
-@property (readonly) NSString * _Nullable body __attribute__((swift_name("body")));
-@property (readonly) NSDictionary<NSString *, NSString *> * _Nullable headers __attribute__((swift_name("headers")));
-@property (readonly) NimbusCoreServerDrivenHttpMethod * _Nullable method __attribute__((swift_name("method")));
-@property (readonly) NSString *url __attribute__((swift_name("url")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("ServerDrivenResponse")))
-@interface NimbusCoreServerDrivenResponse : NimbusCoreBase
-- (instancetype)initWithStatus:(int32_t)status body:(NSString *)body headers:(NSDictionary<NSString *, NSString *> *)headers bodyBytes:(NimbusCoreKotlinByteArray *)bodyBytes __attribute__((swift_name("init(status:body:headers:bodyBytes:)"))) __attribute__((objc_designated_initializer));
-@property (readonly) NSString *body __attribute__((swift_name("body")));
-@property (readonly) NimbusCoreKotlinByteArray *bodyBytes __attribute__((swift_name("bodyBytes")));
-@property (readonly) NSDictionary<NSString *, NSString *> *headers __attribute__((swift_name("headers")));
-@property (readonly) int32_t status __attribute__((swift_name("status")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("ViewRequest")))
-@interface NimbusCoreViewRequest : NimbusCoreBase
-- (instancetype)initWithUrl:(NSString *)url method:(NimbusCoreServerDrivenHttpMethod *)method headers:(NSDictionary<NSString *, NSString *> * _Nullable)headers body:(id _Nullable)body fallback:(NimbusCoreRenderNode * _Nullable)fallback __attribute__((swift_name("init(url:method:headers:body:fallback:)"))) __attribute__((objc_designated_initializer));
-- (NSString *)component1 __attribute__((swift_name("component1()")));
-- (NimbusCoreServerDrivenHttpMethod *)component2 __attribute__((swift_name("component2()")));
-- (NSDictionary<NSString *, NSString *> * _Nullable)component3 __attribute__((swift_name("component3()")));
-- (id _Nullable)component4 __attribute__((swift_name("component4()")));
-- (NimbusCoreRenderNode * _Nullable)component5 __attribute__((swift_name("component5()")));
-- (NimbusCoreViewRequest *)doCopyUrl:(NSString *)url method:(NimbusCoreServerDrivenHttpMethod *)method headers:(NSDictionary<NSString *, NSString *> * _Nullable)headers body:(id _Nullable)body fallback:(NimbusCoreRenderNode * _Nullable)fallback __attribute__((swift_name("doCopy(url:method:headers:body:fallback:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) id _Nullable body __attribute__((swift_name("body")));
-@property (readonly) NimbusCoreRenderNode * _Nullable fallback __attribute__((swift_name("fallback")));
-@property (readonly) NSDictionary<NSString *, NSString *> * _Nullable headers __attribute__((swift_name("headers")));
-@property (readonly) NimbusCoreServerDrivenHttpMethod *method __attribute__((swift_name("method")));
-@property (readonly) NSString *url __attribute__((swift_name("url")));
+__attribute__((swift_name("UnexpectedComponentError")))
+@interface NimbusCoreUnexpectedComponentError : NimbusCoreComponentStructureError
+- (instancetype)initWithMessage:(NSString *)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
 @end;
 
 __attribute__((swift_name("IdManager")))
@@ -638,16 +548,18 @@ __attribute__((swift_name("ServerDrivenNode")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("RenderNode")))
 @interface NimbusCoreRenderNode : NimbusCoreBase <NimbusCoreServerDrivenNode>
-- (instancetype)initWithId:(NSString *)id component:(NSString *)component properties:(NSDictionary<NSString *, id> * _Nullable)properties children:(NSArray<NimbusCoreRenderNode *> * _Nullable)children rawProperties:(NimbusCoreMutableDictionary<NSString *, id> * _Nullable)rawProperties stateHierarchy:(NSArray<NimbusCoreServerDrivenState *> * _Nullable)stateHierarchy stateId:(NSString * _Nullable)stateId stateValue:(id _Nullable)stateValue __attribute__((swift_name("init(id:component:properties:children:rawProperties:stateHierarchy:stateId:stateValue:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithId:(NSString *)id component:(NSString *)component properties:(NSDictionary<NSString *, id> * _Nullable)properties rawChildren:(NSArray<NimbusCoreRenderNode *> * _Nullable)rawChildren children:(NSArray<NimbusCoreRenderNode *> * _Nullable)children rawProperties:(NSDictionary<NSString *, id> * _Nullable)rawProperties stateHierarchy:(NSArray<NimbusCoreServerDrivenState *> * _Nullable)stateHierarchy implicitStates:(NSDictionary<NSString *, id> * _Nullable)implicitStates stateId:(NSString * _Nullable)stateId stateValue:(id _Nullable)stateValue __attribute__((swift_name("init(id:component:properties:rawChildren:children:rawProperties:stateHierarchy:implicitStates:stateId:stateValue:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) NimbusCoreRenderNodeCompanion *companion __attribute__((swift_name("companion")));
 - (NimbusCoreRenderNode * _Nullable)findByIdId:(NSString *)id __attribute__((swift_name("findById(id:)")));
 - (NimbusCoreRenderNode * _Nullable)updateNewNode:(NimbusCoreRenderNode *)newNode anchor:(NSString *)anchor mode:(NimbusCoreTreeUpdateMode *)mode __attribute__((swift_name("update(newNode:anchor:mode:)")));
 @property NSArray<NimbusCoreRenderNode *> * _Nullable children __attribute__((swift_name("children")));
 @property (readonly) NSString *component __attribute__((swift_name("component")));
 @property (readonly) NSString *id __attribute__((swift_name("id")));
+@property (readonly) NSArray<NimbusCoreServerDrivenState *> * _Nullable implicitStates __attribute__((swift_name("implicitStates")));
 @property BOOL isRendered __attribute__((swift_name("isRendered")));
 @property NSDictionary<NSString *, id> * _Nullable properties __attribute__((swift_name("properties")));
-@property NimbusCoreMutableDictionary<NSString *, id> * _Nullable rawProperties __attribute__((swift_name("rawProperties")));
+@property NSArray<NimbusCoreRenderNode *> * _Nullable rawChildren __attribute__((swift_name("rawChildren")));
+@property NSDictionary<NSString *, id> * _Nullable rawProperties __attribute__((swift_name("rawProperties")));
 @property (readonly) NimbusCoreServerDrivenState * _Nullable state __attribute__((swift_name("state")));
 @property NSArray<NimbusCoreServerDrivenState *> * _Nullable stateHierarchy __attribute__((swift_name("stateHierarchy")));
 @end;
@@ -681,6 +593,24 @@ __attribute__((swift_name("RenderNode.Companion")))
 - (BOOL)isServerDrivenNodeMaybeNode:(id _Nullable)maybeNode __attribute__((swift_name("isServerDrivenNode(maybeNode:)")));
 @end;
 
+__attribute__((swift_name("KotlinComparable")))
+@protocol NimbusCoreKotlinComparable
+@required
+- (int32_t)compareToOther:(id _Nullable)other __attribute__((swift_name("compareTo(other:)")));
+@end;
+
+__attribute__((swift_name("KotlinEnum")))
+@interface NimbusCoreKotlinEnum<E> : NimbusCoreBase <NimbusCoreKotlinComparable>
+- (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) NimbusCoreKotlinEnumCompanion *companion __attribute__((swift_name("companion")));
+- (int32_t)compareToOther:(E)other __attribute__((swift_name("compareTo(other:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString *name __attribute__((swift_name("name")));
+@property (readonly) int32_t ordinal __attribute__((swift_name("ordinal")));
+@end;
+
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("TreeUpdateMode")))
 @interface NimbusCoreTreeUpdateMode : NimbusCoreKotlinEnum<NimbusCoreTreeUpdateMode *>
@@ -692,6 +622,146 @@ __attribute__((swift_name("TreeUpdateMode")))
 @property (class, readonly) NimbusCoreTreeUpdateMode *replace __attribute__((swift_name("replace")));
 @property (class, readonly) NimbusCoreTreeUpdateMode *replaceitself __attribute__((swift_name("replaceitself")));
 + (NimbusCoreKotlinArray<NimbusCoreTreeUpdateMode *> *)values __attribute__((swift_name("values()")));
+@end;
+
+__attribute__((swift_name("HttpClient")))
+@protocol NimbusCoreHttpClient
+@required
+
+/**
+ @note This method converts instances of CancellationException to errors.
+ Other uncaught Kotlin exceptions are fatal.
+*/
+- (void)sendRequestRequest:(NimbusCoreServerDrivenRequest *)request completionHandler:(void (^)(NimbusCoreServerDrivenResponse * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("sendRequest(request:completionHandler:)")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("DefaultHttpClient")))
+@interface NimbusCoreDefaultHttpClient : NimbusCoreBase <NimbusCoreHttpClient>
+- (instancetype)initWithEngine:(id<NimbusCoreKtor_client_coreHttpClientEngine> _Nullable)engine __attribute__((swift_name("init(engine:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ @note This method converts instances of CancellationException to errors.
+ Other uncaught Kotlin exceptions are fatal.
+*/
+- (void)sendRequestRequest:(NimbusCoreServerDrivenRequest *)request completionHandler:(void (^)(NimbusCoreServerDrivenResponse * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("sendRequest(request:completionHandler:)")));
+@end;
+
+__attribute__((swift_name("UrlBuilder")))
+@protocol NimbusCoreUrlBuilder
+@required
+- (NSString *)buildPath:(NSString *)path __attribute__((swift_name("build(path:)")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("DefaultUrlBuilder")))
+@interface NimbusCoreDefaultUrlBuilder : NimbusCoreBase <NimbusCoreUrlBuilder>
+- (instancetype)initWithBaseUrl:(NSString *)baseUrl __attribute__((swift_name("init(baseUrl:)"))) __attribute__((objc_designated_initializer));
+- (NSString *)buildPath:(NSString *)path __attribute__((swift_name("build(path:)")));
+@end;
+
+__attribute__((swift_name("ViewClient")))
+@protocol NimbusCoreViewClient
+@required
+
+/**
+ @note This method converts instances of RequestError, ResponseError, MalformedJsonError, MalformedComponentError, CancellationException to errors.
+ Other uncaught Kotlin exceptions are fatal.
+*/
+- (void)fetchRequest:(NimbusCoreViewRequest *)request completionHandler:(void (^)(NimbusCoreRenderNode * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("fetch(request:completionHandler:)")));
+- (void)preFetchRequest:(NimbusCoreViewRequest *)request __attribute__((swift_name("preFetch(request:)")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("DefaultViewClient")))
+@interface NimbusCoreDefaultViewClient : NimbusCoreBase <NimbusCoreViewClient>
+- (instancetype)initWithHttpClient:(id<NimbusCoreHttpClient>)httpClient urlBuilder:(id<NimbusCoreUrlBuilder>)urlBuilder idManager:(id<NimbusCoreIdManager>)idManager logger:(id<NimbusCoreLogger>)logger platform:(NSString *)platform __attribute__((swift_name("init(httpClient:urlBuilder:idManager:logger:platform:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ @note This method converts instances of RequestError, ResponseError, MalformedJsonError, MalformedComponentError, CancellationException to errors.
+ Other uncaught Kotlin exceptions are fatal.
+*/
+- (void)fetchRequest:(NimbusCoreViewRequest *)request completionHandler:(void (^)(NimbusCoreRenderNode * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("fetch(request:completionHandler:)")));
+- (void)preFetchRequest:(NimbusCoreViewRequest *)request __attribute__((swift_name("preFetch(request:)")));
+@end;
+
+__attribute__((swift_name("NetworkError")))
+@interface NimbusCoreNetworkError : NimbusCoreKotlinError
+- (instancetype)initWithMessage:(NSString *)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+- (instancetype)initWithMessage:(NSString * _Nullable)message cause:(NimbusCoreKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(message:cause:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
+- (instancetype)initWithCause:(NimbusCoreKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(cause:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
+@property (readonly) NSString *message __attribute__((swift_name("message")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("RequestError")))
+@interface NimbusCoreRequestError : NimbusCoreNetworkError
+- (instancetype)initWithMessage:(NSString * _Nullable)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ResponseError")))
+@interface NimbusCoreResponseError : NimbusCoreNetworkError
+- (instancetype)initWithStatus:(int32_t)status body:(NSString * _Nullable)body __attribute__((swift_name("init(status:body:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithMessage:(NSString *)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
+@property (readonly) NSString * _Nullable body __attribute__((swift_name("body")));
+@property (readonly) int32_t status __attribute__((swift_name("status")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ServerDrivenHttpMethod")))
+@interface NimbusCoreServerDrivenHttpMethod : NimbusCoreKotlinEnum<NimbusCoreServerDrivenHttpMethod *>
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
+- (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
+@property (class, readonly) NimbusCoreServerDrivenHttpMethod *post __attribute__((swift_name("post")));
+@property (class, readonly) NimbusCoreServerDrivenHttpMethod *get __attribute__((swift_name("get")));
+@property (class, readonly) NimbusCoreServerDrivenHttpMethod *put __attribute__((swift_name("put")));
+@property (class, readonly) NimbusCoreServerDrivenHttpMethod *patch __attribute__((swift_name("patch")));
+@property (class, readonly) NimbusCoreServerDrivenHttpMethod *delete_ __attribute__((swift_name("delete_")));
++ (NimbusCoreKotlinArray<NimbusCoreServerDrivenHttpMethod *> *)values __attribute__((swift_name("values()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ServerDrivenRequest")))
+@interface NimbusCoreServerDrivenRequest : NimbusCoreBase
+- (instancetype)initWithUrl:(NSString *)url method:(NimbusCoreServerDrivenHttpMethod * _Nullable)method headers:(NSDictionary<NSString *, NSString *> * _Nullable)headers body:(NSString * _Nullable)body __attribute__((swift_name("init(url:method:headers:body:)"))) __attribute__((objc_designated_initializer));
+@property (readonly) NSString * _Nullable body __attribute__((swift_name("body")));
+@property (readonly) NSDictionary<NSString *, NSString *> * _Nullable headers __attribute__((swift_name("headers")));
+@property (readonly) NimbusCoreServerDrivenHttpMethod * _Nullable method __attribute__((swift_name("method")));
+@property (readonly) NSString *url __attribute__((swift_name("url")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ServerDrivenResponse")))
+@interface NimbusCoreServerDrivenResponse : NimbusCoreBase
+- (instancetype)initWithStatus:(int32_t)status body:(NSString *)body headers:(NSDictionary<NSString *, NSString *> *)headers bodyBytes:(NimbusCoreKotlinByteArray *)bodyBytes __attribute__((swift_name("init(status:body:headers:bodyBytes:)"))) __attribute__((objc_designated_initializer));
+@property (readonly) NSString *body __attribute__((swift_name("body")));
+@property (readonly) NimbusCoreKotlinByteArray *bodyBytes __attribute__((swift_name("bodyBytes")));
+@property (readonly) NSDictionary<NSString *, NSString *> *headers __attribute__((swift_name("headers")));
+@property (readonly) int32_t status __attribute__((swift_name("status")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ViewRequest")))
+@interface NimbusCoreViewRequest : NimbusCoreBase
+- (instancetype)initWithUrl:(NSString *)url method:(NimbusCoreServerDrivenHttpMethod *)method headers:(NSDictionary<NSString *, NSString *> * _Nullable)headers body:(id _Nullable)body fallback:(NimbusCoreRenderNode * _Nullable)fallback __attribute__((swift_name("init(url:method:headers:body:fallback:)"))) __attribute__((objc_designated_initializer));
+- (NSString *)component1 __attribute__((swift_name("component1()")));
+- (NimbusCoreServerDrivenHttpMethod *)component2 __attribute__((swift_name("component2()")));
+- (NSDictionary<NSString *, NSString *> * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (id _Nullable)component4 __attribute__((swift_name("component4()")));
+- (NimbusCoreRenderNode * _Nullable)component5 __attribute__((swift_name("component5()")));
+- (NimbusCoreViewRequest *)doCopyUrl:(NSString *)url method:(NimbusCoreServerDrivenHttpMethod *)method headers:(NSDictionary<NSString *, NSString *> * _Nullable)headers body:(id _Nullable)body fallback:(NimbusCoreRenderNode * _Nullable)fallback __attribute__((swift_name("doCopy(url:method:headers:body:fallback:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) id _Nullable body __attribute__((swift_name("body")));
+@property (readonly) NimbusCoreRenderNode * _Nullable fallback __attribute__((swift_name("fallback")));
+@property (readonly) NSDictionary<NSString *, NSString *> * _Nullable headers __attribute__((swift_name("headers")));
+@property (readonly) NimbusCoreServerDrivenHttpMethod *method __attribute__((swift_name("method")));
+@property (readonly) NSString *url __attribute__((swift_name("url")));
 @end;
 
 __attribute__((swift_name("Logger")))
@@ -730,6 +800,33 @@ __attribute__((swift_name("LogLevel")))
 + (NimbusCoreKotlinArray<NimbusCoreLogLevel *> *)values __attribute__((swift_name("values()")));
 @end;
 
+__attribute__((swift_name("KotlinNumber")))
+@interface NimbusCoreKotlinNumber : NimbusCoreBase
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+- (int8_t)toByte __attribute__((swift_name("toByte()")));
+- (unichar)toChar __attribute__((swift_name("toChar()")));
+- (double)toDouble __attribute__((swift_name("toDouble()")));
+- (float)toFloat __attribute__((swift_name("toFloat()")));
+- (int32_t)toInt __attribute__((swift_name("toInt()")));
+- (int64_t)toLong __attribute__((swift_name("toLong()")));
+- (int16_t)toShort __attribute__((swift_name("toShort()")));
+@end;
+
+@interface NimbusCoreKotlinNumber (Extensions)
+- (int32_t)compareToNumber:(id)number __attribute__((swift_name("compareTo(number:)")));
+- (id)divNumber:(id)number __attribute__((swift_name("div(number:)")));
+- (void)divAssignNumber:(id)number __attribute__((swift_name("divAssign(number:)")));
+- (id)minusNumber:(id)number __attribute__((swift_name("minus(number:)")));
+- (void)minusAssignNumber:(id)number __attribute__((swift_name("minusAssign(number:)")));
+- (id)plusNumber:(id)number __attribute__((swift_name("plus(number:)")));
+- (void)plusAssignNumber:(id)number __attribute__((swift_name("plusAssign(number:)")));
+- (id)remNumber:(id)number __attribute__((swift_name("rem(number:)")));
+- (void)remAssignNumber:(id)number __attribute__((swift_name("remAssign(number:)")));
+- (id)timesNumber:(id)number __attribute__((swift_name("times(number:)")));
+- (void)timesAssignNumber:(id)number __attribute__((swift_name("timesAssign(number:)")));
+@end;
+
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("AutomatonKt")))
 @interface NimbusCoreAutomatonKt : NimbusCoreBase
@@ -740,7 +837,7 @@ __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ExpressionKt")))
 @interface NimbusCoreExpressionKt : NimbusCoreBase
 + (BOOL)containsExpressionValue:(NSString *)value __attribute__((swift_name("containsExpression(value:)")));
-+ (id _Nullable)resolveExpressionsValue:(NSString *)value stateHierarchy:(NSArray<NimbusCoreServerDrivenState *> *)stateHierarchy operationHandlers:(NSDictionary<NSString *, id (^)(NSArray<id> *)> *)operationHandlers logger:(id<NimbusCoreLogger>)logger __attribute__((swift_name("resolveExpressions(value:stateHierarchy:operationHandlers:logger:)")));
++ (id _Nullable)resolveExpressionsValue:(NSString *)value stateHierarchy:(NSArray<NimbusCoreServerDrivenState *> *)stateHierarchy operationHandlers:(NimbusCoreMutableDictionary<NSString *, id _Nullable (^)(NimbusCoreKotlinArray<id> *)> *)operationHandlers logger:(id<NimbusCoreLogger>)logger __attribute__((swift_name("resolveExpressions(value:stateHierarchy:operationHandlers:logger:)")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -749,6 +846,7 @@ __attribute__((swift_name("AnyKt")))
 + (id _Nullable)deepCopyValue:(id _Nullable)value __attribute__((swift_name("deepCopy(value:)")));
 + (id _Nullable)extractValueOfArrayData:(id)data accessor:(NSString *)accessor path:(NSString *)path __attribute__((swift_name("extractValueOfArray(data:accessor:path:)")));
 + (id _Nullable)extractValueOfMapData:(id)data accessor:(NSString *)accessor __attribute__((swift_name("extractValueOfMap(data:accessor:)")));
++ (id _Nullable)untypedValueOfData:(id _Nullable)data path:(NSString *)path __attribute__((swift_name("untypedValueOf(data:path:)")));
 
 /**
  @note This method converts instances of InvalidDataPathError, UnexpectedDataTypeError to errors.
@@ -783,7 +881,7 @@ __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("MapKt")))
 @interface NimbusCoreMapKt : NimbusCoreBase
 + (NimbusCoreMutableDictionary<id, id> *)mapValuesToMutableMapMap:(NSDictionary<id, id> *)map iteratee:(id _Nullable (^)(id<NimbusCoreKotlinMapEntry>))iteratee __attribute__((swift_name("mapValuesToMutableMap(map:iteratee:)")));
-+ (void)setMapValueMap:(NimbusCoreMutableDictionary<id, id> *)map path:(NSString *)path newValue:(id _Nullable)newValue __attribute__((swift_name("setMapValue(map:path:newValue:)")));
++ (void)setMapValueMap:(NimbusCoreMutableDictionary<NSString *, id> *)map path:(NSString *)path newValue:(id _Nullable)newValue __attribute__((swift_name("setMapValue(map:path:newValue:)")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -806,6 +904,14 @@ __attribute__((swift_name("IndexKt")))
 @interface NimbusCoreIndexKt : NimbusCoreBase
 @property (class, readonly) NSDictionary<NSString *, NimbusCoreKotlinUnit *(^)(NimbusCoreActionEvent *)> *coreActions __attribute__((swift_name("coreActions")));
 @property (class, readonly) NSDictionary<NSString *, NimbusCoreKotlinUnit *(^)(NimbusCoreActionEvent *)> *onCoreActionRendered __attribute__((swift_name("onCoreActionRendered")));
+@property (class, readonly) NSDictionary<NSString *, NSArray<NimbusCoreRenderNode *> *(^)(NimbusCoreRenderNode *)> *coreComponents __attribute__((swift_name("coreComponents")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ConditionKt")))
+@interface NimbusCoreConditionKt : NimbusCoreBase
++ (void)conditionEvent:(NimbusCoreActionEvent *)event __attribute__((swift_name("condition(event:)")));
+@property (class, readonly) id _Nullable (^condition)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("condition")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -829,6 +935,204 @@ __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("SendRequestKt")))
 @interface NimbusCoreSendRequestKt : NimbusCoreBase
 + (void)sendRequestEvent:(NimbusCoreActionEvent *)event __attribute__((swift_name("sendRequest(event:)")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("SetContentKt")))
+@interface NimbusCoreSetContentKt : NimbusCoreBase
++ (void)setContentEvent:(NimbusCoreActionEvent *)event __attribute__((swift_name("setContent(event:)")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("SetStateKt")))
+@interface NimbusCoreSetStateKt : NimbusCoreBase
++ (void)setStateEvent:(NimbusCoreActionEvent *)event __attribute__((swift_name("setState(event:)")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ForEachKt")))
+@interface NimbusCoreForEachKt : NimbusCoreBase
++ (NSArray<NimbusCoreRenderNode *> *)forEachComponentNode:(NimbusCoreRenderNode *)node __attribute__((swift_name("forEachComponent(node:)")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("IfKt")))
+@interface NimbusCoreIfKt : NimbusCoreBase
++ (NSArray<NimbusCoreRenderNode *> *)ifComponentNode:(NimbusCoreRenderNode *)node __attribute__((swift_name("ifComponent(node:)")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("SwitchKt")))
+@interface NimbusCoreSwitchKt : NimbusCoreBase
++ (NSArray<NimbusCoreRenderNode *> *)switchComponentNode:(NimbusCoreRenderNode *)node __attribute__((swift_name("switchComponent(node:)")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("AndKt")))
+@interface NimbusCoreAndKt : NimbusCoreBase
+@property (class, readonly, getter=and) id _Nullable (^and_)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("and_")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("CapitalizeKt")))
+@interface NimbusCoreCapitalizeKt : NimbusCoreBase
+@property (class, readonly) id _Nullable (^capitalize)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("capitalize")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ConcatKt")))
+@interface NimbusCoreConcatKt : NimbusCoreBase
+@property (class, readonly) id _Nullable (^concat)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("concat")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ContainsKt")))
+@interface NimbusCoreContainsKt : NimbusCoreBase
+@property (class, readonly) id _Nullable (^contains)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("contains")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("DefaultOperationsKt")))
+@interface NimbusCoreDefaultOperationsKt : NimbusCoreBase
+@property (class, readonly) NimbusCoreMutableDictionary<NSString *, id _Nullable (^)(NimbusCoreKotlinArray<id> *)> *defaultOperations __attribute__((swift_name("defaultOperations")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("DivideKt")))
+@interface NimbusCoreDivideKt : NimbusCoreBase
+@property (class, readonly) id _Nullable (^divide)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("divide")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("EqKt")))
+@interface NimbusCoreEqKt : NimbusCoreBase
+@property (class, readonly) id _Nullable (^eq)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("eq")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GtKt")))
+@interface NimbusCoreGtKt : NimbusCoreBase
+@property (class, readonly) id _Nullable (^gt)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("gt")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GteKt")))
+@interface NimbusCoreGteKt : NimbusCoreBase
+@property (class, readonly) id _Nullable (^gte)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("gte")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("InsertKt")))
+@interface NimbusCoreInsertKt : NimbusCoreBase
+@property (class, readonly) id _Nullable (^insert)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("insert")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("IsEmptyKt")))
+@interface NimbusCoreIsEmptyKt : NimbusCoreBase
+@property (class, readonly) id _Nullable (^isEmpty)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("isEmpty")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("IsNullKt")))
+@interface NimbusCoreIsNullKt : NimbusCoreBase
+@property (class, readonly) id _Nullable (^isNull)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("isNull")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("LengthKt")))
+@interface NimbusCoreLengthKt : NimbusCoreBase
+@property (class, readonly) id _Nullable (^length)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("length")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("LowercaseKt")))
+@interface NimbusCoreLowercaseKt : NimbusCoreBase
+@property (class, readonly) id _Nullable (^lowercase)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("lowercase")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("LtKt")))
+@interface NimbusCoreLtKt : NimbusCoreBase
+@property (class, readonly) id _Nullable (^lt)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("lt")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("LteKt")))
+@interface NimbusCoreLteKt : NimbusCoreBase
+@property (class, readonly) id _Nullable (^lte)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("lte")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("MatchKt")))
+@interface NimbusCoreMatchKt : NimbusCoreBase
+@property (class, readonly) id _Nullable (^match)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("match")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("MultiplyKt")))
+@interface NimbusCoreMultiplyKt : NimbusCoreBase
+@property (class, readonly) id _Nullable (^multiply)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("multiply")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("NotKt")))
+@interface NimbusCoreNotKt : NimbusCoreBase
+@property (class, readonly, getter=not) id _Nullable (^not_)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("not_")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("OrKt")))
+@interface NimbusCoreOrKt : NimbusCoreBase
+@property (class, readonly, getter=or) id _Nullable (^or_)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("or_")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("RemoveKt")))
+@interface NimbusCoreRemoveKt : NimbusCoreBase
+@property (class, readonly) id _Nullable (^remove)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("remove")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("RemoveIndexKt")))
+@interface NimbusCoreRemoveIndexKt : NimbusCoreBase
+@property (class, readonly) id _Nullable (^removeIndex)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("removeIndex")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ReplaceKt")))
+@interface NimbusCoreReplaceKt : NimbusCoreBase
+@property (class, readonly) id _Nullable (^replace)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("replace")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("SubstrKt")))
+@interface NimbusCoreSubstrKt : NimbusCoreBase
+@property (class, readonly) id _Nullable (^substr)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("substr")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("SubtractKt")))
+@interface NimbusCoreSubtractKt : NimbusCoreBase
+@property (class, readonly) id _Nullable (^subtract)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("subtract")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("SumKt")))
+@interface NimbusCoreSumKt : NimbusCoreBase
+@property (class, readonly) id _Nullable (^sum)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("sum")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UnionKt")))
+@interface NimbusCoreUnionKt : NimbusCoreBase
+@property (class, readonly, getter=union) id _Nullable (^union_)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("union_")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UppercaseKt")))
+@interface NimbusCoreUppercaseKt : NimbusCoreBase
+@property (class, readonly) id _Nullable (^uppercase)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("uppercase")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -906,22 +1210,18 @@ __attribute__((swift_name("KotlinKClass")))
 @property (readonly) NSString * _Nullable simpleName __attribute__((swift_name("simpleName")));
 @end;
 
-__attribute__((swift_name("KotlinException")))
-@interface NimbusCoreKotlinException : NimbusCoreKotlinThrowable
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
-+ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-- (instancetype)initWithMessage:(NSString * _Nullable)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
-- (instancetype)initWithMessage:(NSString * _Nullable)message cause:(NimbusCoreKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(message:cause:)"))) __attribute__((objc_designated_initializer));
-- (instancetype)initWithCause:(NimbusCoreKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(cause:)"))) __attribute__((objc_designated_initializer));
+__attribute__((swift_name("Kotlinx_serialization_jsonJsonElement")))
+@interface NimbusCoreKotlinx_serialization_jsonJsonElement : NimbusCoreBase
+@property (class, readonly, getter=companion) NimbusCoreKotlinx_serialization_jsonJsonElementCompanion *companion __attribute__((swift_name("companion")));
 @end;
 
-__attribute__((swift_name("KotlinRuntimeException")))
-@interface NimbusCoreKotlinRuntimeException : NimbusCoreKotlinException
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
-+ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-- (instancetype)initWithMessage:(NSString * _Nullable)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
-- (instancetype)initWithMessage:(NSString * _Nullable)message cause:(NimbusCoreKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(message:cause:)"))) __attribute__((objc_designated_initializer));
-- (instancetype)initWithCause:(NimbusCoreKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(cause:)"))) __attribute__((objc_designated_initializer));
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("KotlinEnumCompanion")))
+@interface NimbusCoreKotlinEnumCompanion : NimbusCoreBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) NimbusCoreKotlinEnumCompanion *shared __attribute__((swift_name("shared")));
 @end;
 
 __attribute__((swift_name("KotlinIllegalStateException")))
@@ -970,15 +1270,6 @@ __attribute__((swift_name("Ktor_client_coreHttpClientEngine")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("KotlinEnumCompanion")))
-@interface NimbusCoreKotlinEnumCompanion : NimbusCoreBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) NimbusCoreKotlinEnumCompanion *shared __attribute__((swift_name("shared")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("KotlinByteArray")))
 @interface NimbusCoreKotlinByteArray : NimbusCoreBase
 + (instancetype)arrayWithSize:(int32_t)size __attribute__((swift_name("init(size:)")));
@@ -989,11 +1280,6 @@ __attribute__((swift_name("KotlinByteArray")))
 - (NimbusCoreKotlinByteIterator *)iterator __attribute__((swift_name("iterator()")));
 - (void)setIndex:(int32_t)index value:(int8_t)value __attribute__((swift_name("set(index:value:)")));
 @property (readonly) int32_t size __attribute__((swift_name("size")));
-@end;
-
-__attribute__((swift_name("Kotlinx_serialization_jsonJsonElement")))
-@interface NimbusCoreKotlinx_serialization_jsonJsonElement : NimbusCoreBase
-@property (class, readonly, getter=companion) NimbusCoreKotlinx_serialization_jsonJsonElementCompanion *companion __attribute__((swift_name("companion")));
 @end;
 
 __attribute__((swift_name("KotlinMapEntry")))
@@ -1063,6 +1349,16 @@ __attribute__((swift_name("KotlinSequence")))
 @protocol NimbusCoreKotlinSequence
 @required
 - (id<NimbusCoreKotlinIterator>)iterator __attribute__((swift_name("iterator()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Kotlinx_serialization_jsonJsonElement.Companion")))
+@interface NimbusCoreKotlinx_serialization_jsonJsonElementCompanion : NimbusCoreBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) NimbusCoreKotlinx_serialization_jsonJsonElementCompanion *shared __attribute__((swift_name("shared")));
+- (id<NimbusCoreKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -1179,16 +1475,6 @@ __attribute__((swift_name("KotlinByteIterator")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Kotlinx_serialization_jsonJsonElement.Companion")))
-@interface NimbusCoreKotlinx_serialization_jsonJsonElementCompanion : NimbusCoreBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) NimbusCoreKotlinx_serialization_jsonJsonElementCompanion *shared __attribute__((swift_name("shared")));
-- (id<NimbusCoreKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Kotlinx_serialization_jsonJsonPrimitive.Companion")))
 @interface NimbusCoreKotlinx_serialization_jsonJsonPrimitiveCompanion : NimbusCoreBase
 + (instancetype)alloc __attribute__((unavailable));
@@ -1270,6 +1556,25 @@ __attribute__((swift_name("KotlinIntRange")))
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NimbusCoreInt *endInclusive __attribute__((swift_name("endInclusive")));
 @property (readonly) NimbusCoreInt *start __attribute__((swift_name("start")));
+@end;
+
+__attribute__((swift_name("Kotlinx_serialization_coreSerializationStrategy")))
+@protocol NimbusCoreKotlinx_serialization_coreSerializationStrategy
+@required
+- (void)serializeEncoder:(id<NimbusCoreKotlinx_serialization_coreEncoder>)encoder value:(id _Nullable)value __attribute__((swift_name("serialize(encoder:value:)")));
+@property (readonly) id<NimbusCoreKotlinx_serialization_coreSerialDescriptor> descriptor __attribute__((swift_name("descriptor")));
+@end;
+
+__attribute__((swift_name("Kotlinx_serialization_coreDeserializationStrategy")))
+@protocol NimbusCoreKotlinx_serialization_coreDeserializationStrategy
+@required
+- (id _Nullable)deserializeDecoder:(id<NimbusCoreKotlinx_serialization_coreDecoder>)decoder __attribute__((swift_name("deserialize(decoder:)")));
+@property (readonly) id<NimbusCoreKotlinx_serialization_coreSerialDescriptor> descriptor __attribute__((swift_name("descriptor")));
+@end;
+
+__attribute__((swift_name("Kotlinx_serialization_coreKSerializer")))
+@protocol NimbusCoreKotlinx_serialization_coreKSerializer <NimbusCoreKotlinx_serialization_coreSerializationStrategy, NimbusCoreKotlinx_serialization_coreDeserializationStrategy>
+@required
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -1572,25 +1877,6 @@ __attribute__((swift_name("Kotlinx_coroutines_coreRunnable")))
 - (void)run __attribute__((swift_name("run()")));
 @end;
 
-__attribute__((swift_name("Kotlinx_serialization_coreSerializationStrategy")))
-@protocol NimbusCoreKotlinx_serialization_coreSerializationStrategy
-@required
-- (void)serializeEncoder:(id<NimbusCoreKotlinx_serialization_coreEncoder>)encoder value:(id _Nullable)value __attribute__((swift_name("serialize(encoder:value:)")));
-@property (readonly) id<NimbusCoreKotlinx_serialization_coreSerialDescriptor> descriptor __attribute__((swift_name("descriptor")));
-@end;
-
-__attribute__((swift_name("Kotlinx_serialization_coreDeserializationStrategy")))
-@protocol NimbusCoreKotlinx_serialization_coreDeserializationStrategy
-@required
-- (id _Nullable)deserializeDecoder:(id<NimbusCoreKotlinx_serialization_coreDecoder>)decoder __attribute__((swift_name("deserialize(decoder:)")));
-@property (readonly) id<NimbusCoreKotlinx_serialization_coreSerialDescriptor> descriptor __attribute__((swift_name("descriptor")));
-@end;
-
-__attribute__((swift_name("Kotlinx_serialization_coreKSerializer")))
-@protocol NimbusCoreKotlinx_serialization_coreKSerializer <NimbusCoreKotlinx_serialization_coreSerializationStrategy, NimbusCoreKotlinx_serialization_coreDeserializationStrategy>
-@required
-@end;
-
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("KotlinMatchGroup")))
 @interface NimbusCoreKotlinMatchGroup : NimbusCoreBase
@@ -1631,6 +1917,67 @@ __attribute__((swift_name("KotlinIntRange.Companion")))
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) NimbusCoreKotlinIntRangeCompanion *shared __attribute__((swift_name("shared")));
 @property (readonly) NimbusCoreKotlinIntRange *EMPTY __attribute__((swift_name("EMPTY")));
+@end;
+
+__attribute__((swift_name("Kotlinx_serialization_coreEncoder")))
+@protocol NimbusCoreKotlinx_serialization_coreEncoder
+@required
+- (id<NimbusCoreKotlinx_serialization_coreCompositeEncoder>)beginCollectionDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor collectionSize:(int32_t)collectionSize __attribute__((swift_name("beginCollection(descriptor:collectionSize:)")));
+- (id<NimbusCoreKotlinx_serialization_coreCompositeEncoder>)beginStructureDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor __attribute__((swift_name("beginStructure(descriptor:)")));
+- (void)encodeBooleanValue:(BOOL)value __attribute__((swift_name("encodeBoolean(value:)")));
+- (void)encodeByteValue:(int8_t)value __attribute__((swift_name("encodeByte(value:)")));
+- (void)encodeCharValue:(unichar)value __attribute__((swift_name("encodeChar(value:)")));
+- (void)encodeDoubleValue:(double)value __attribute__((swift_name("encodeDouble(value:)")));
+- (void)encodeEnumEnumDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)enumDescriptor index:(int32_t)index __attribute__((swift_name("encodeEnum(enumDescriptor:index:)")));
+- (void)encodeFloatValue:(float)value __attribute__((swift_name("encodeFloat(value:)")));
+- (id<NimbusCoreKotlinx_serialization_coreEncoder>)encodeInlineInlineDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)inlineDescriptor __attribute__((swift_name("encodeInline(inlineDescriptor:)")));
+- (void)encodeIntValue:(int32_t)value __attribute__((swift_name("encodeInt(value:)")));
+- (void)encodeLongValue:(int64_t)value __attribute__((swift_name("encodeLong(value:)")));
+- (void)encodeNotNullMark __attribute__((swift_name("encodeNotNullMark()")));
+- (void)encodeNull __attribute__((swift_name("encodeNull()")));
+- (void)encodeNullableSerializableValueSerializer:(id<NimbusCoreKotlinx_serialization_coreSerializationStrategy>)serializer value:(id _Nullable)value __attribute__((swift_name("encodeNullableSerializableValue(serializer:value:)")));
+- (void)encodeSerializableValueSerializer:(id<NimbusCoreKotlinx_serialization_coreSerializationStrategy>)serializer value:(id _Nullable)value __attribute__((swift_name("encodeSerializableValue(serializer:value:)")));
+- (void)encodeShortValue:(int16_t)value __attribute__((swift_name("encodeShort(value:)")));
+- (void)encodeStringValue:(NSString *)value __attribute__((swift_name("encodeString(value:)")));
+@property (readonly) NimbusCoreKotlinx_serialization_coreSerializersModule *serializersModule __attribute__((swift_name("serializersModule")));
+@end;
+
+__attribute__((swift_name("Kotlinx_serialization_coreSerialDescriptor")))
+@protocol NimbusCoreKotlinx_serialization_coreSerialDescriptor
+@required
+- (NSArray<id<NimbusCoreKotlinAnnotation>> *)getElementAnnotationsIndex:(int32_t)index __attribute__((swift_name("getElementAnnotations(index:)")));
+- (id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)getElementDescriptorIndex:(int32_t)index __attribute__((swift_name("getElementDescriptor(index:)")));
+- (int32_t)getElementIndexName:(NSString *)name __attribute__((swift_name("getElementIndex(name:)")));
+- (NSString *)getElementNameIndex:(int32_t)index __attribute__((swift_name("getElementName(index:)")));
+- (BOOL)isElementOptionalIndex:(int32_t)index __attribute__((swift_name("isElementOptional(index:)")));
+@property (readonly) NSArray<id<NimbusCoreKotlinAnnotation>> *annotations __attribute__((swift_name("annotations")));
+@property (readonly) int32_t elementsCount __attribute__((swift_name("elementsCount")));
+@property (readonly) BOOL isInline __attribute__((swift_name("isInline")));
+@property (readonly) BOOL isNullable __attribute__((swift_name("isNullable")));
+@property (readonly) NimbusCoreKotlinx_serialization_coreSerialKind *kind __attribute__((swift_name("kind")));
+@property (readonly) NSString *serialName __attribute__((swift_name("serialName")));
+@end;
+
+__attribute__((swift_name("Kotlinx_serialization_coreDecoder")))
+@protocol NimbusCoreKotlinx_serialization_coreDecoder
+@required
+- (id<NimbusCoreKotlinx_serialization_coreCompositeDecoder>)beginStructureDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor __attribute__((swift_name("beginStructure(descriptor:)")));
+- (BOOL)decodeBoolean __attribute__((swift_name("decodeBoolean()")));
+- (int8_t)decodeByte __attribute__((swift_name("decodeByte()")));
+- (unichar)decodeChar __attribute__((swift_name("decodeChar()")));
+- (double)decodeDouble __attribute__((swift_name("decodeDouble()")));
+- (int32_t)decodeEnumEnumDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)enumDescriptor __attribute__((swift_name("decodeEnum(enumDescriptor:)")));
+- (float)decodeFloat __attribute__((swift_name("decodeFloat()")));
+- (id<NimbusCoreKotlinx_serialization_coreDecoder>)decodeInlineInlineDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)inlineDescriptor __attribute__((swift_name("decodeInline(inlineDescriptor:)")));
+- (int32_t)decodeInt __attribute__((swift_name("decodeInt()")));
+- (int64_t)decodeLong __attribute__((swift_name("decodeLong()")));
+- (BOOL)decodeNotNullMark __attribute__((swift_name("decodeNotNullMark()")));
+- (NimbusCoreKotlinNothing * _Nullable)decodeNull __attribute__((swift_name("decodeNull()")));
+- (id _Nullable)decodeNullableSerializableValueDeserializer:(id<NimbusCoreKotlinx_serialization_coreDeserializationStrategy>)deserializer __attribute__((swift_name("decodeNullableSerializableValue(deserializer:)")));
+- (id _Nullable)decodeSerializableValueDeserializer:(id<NimbusCoreKotlinx_serialization_coreDeserializationStrategy>)deserializer __attribute__((swift_name("decodeSerializableValue(deserializer:)")));
+- (int16_t)decodeShort __attribute__((swift_name("decodeShort()")));
+- (NSString *)decodeString __attribute__((swift_name("decodeString()")));
+@property (readonly) NimbusCoreKotlinx_serialization_coreSerializersModule *serializersModule __attribute__((swift_name("serializersModule")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -2050,65 +2397,70 @@ __attribute__((swift_name("Ktor_client_coreHttpSendPipeline.Phases")))
 @property (readonly) NimbusCoreKtor_utilsPipelinePhase *State __attribute__((swift_name("State")));
 @end;
 
-__attribute__((swift_name("Kotlinx_serialization_coreEncoder")))
-@protocol NimbusCoreKotlinx_serialization_coreEncoder
+__attribute__((swift_name("Kotlinx_serialization_coreCompositeEncoder")))
+@protocol NimbusCoreKotlinx_serialization_coreCompositeEncoder
 @required
-- (id<NimbusCoreKotlinx_serialization_coreCompositeEncoder>)beginCollectionDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor collectionSize:(int32_t)collectionSize __attribute__((swift_name("beginCollection(descriptor:collectionSize:)")));
-- (id<NimbusCoreKotlinx_serialization_coreCompositeEncoder>)beginStructureDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor __attribute__((swift_name("beginStructure(descriptor:)")));
-- (void)encodeBooleanValue:(BOOL)value __attribute__((swift_name("encodeBoolean(value:)")));
-- (void)encodeByteValue:(int8_t)value __attribute__((swift_name("encodeByte(value:)")));
-- (void)encodeCharValue:(unichar)value __attribute__((swift_name("encodeChar(value:)")));
-- (void)encodeDoubleValue:(double)value __attribute__((swift_name("encodeDouble(value:)")));
-- (void)encodeEnumEnumDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)enumDescriptor index:(int32_t)index __attribute__((swift_name("encodeEnum(enumDescriptor:index:)")));
-- (void)encodeFloatValue:(float)value __attribute__((swift_name("encodeFloat(value:)")));
-- (id<NimbusCoreKotlinx_serialization_coreEncoder>)encodeInlineInlineDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)inlineDescriptor __attribute__((swift_name("encodeInline(inlineDescriptor:)")));
-- (void)encodeIntValue:(int32_t)value __attribute__((swift_name("encodeInt(value:)")));
-- (void)encodeLongValue:(int64_t)value __attribute__((swift_name("encodeLong(value:)")));
-- (void)encodeNotNullMark __attribute__((swift_name("encodeNotNullMark()")));
-- (void)encodeNull __attribute__((swift_name("encodeNull()")));
-- (void)encodeNullableSerializableValueSerializer:(id<NimbusCoreKotlinx_serialization_coreSerializationStrategy>)serializer value:(id _Nullable)value __attribute__((swift_name("encodeNullableSerializableValue(serializer:value:)")));
-- (void)encodeSerializableValueSerializer:(id<NimbusCoreKotlinx_serialization_coreSerializationStrategy>)serializer value:(id _Nullable)value __attribute__((swift_name("encodeSerializableValue(serializer:value:)")));
-- (void)encodeShortValue:(int16_t)value __attribute__((swift_name("encodeShort(value:)")));
-- (void)encodeStringValue:(NSString *)value __attribute__((swift_name("encodeString(value:)")));
+- (void)encodeBooleanElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index value:(BOOL)value __attribute__((swift_name("encodeBooleanElement(descriptor:index:value:)")));
+- (void)encodeByteElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index value:(int8_t)value __attribute__((swift_name("encodeByteElement(descriptor:index:value:)")));
+- (void)encodeCharElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index value:(unichar)value __attribute__((swift_name("encodeCharElement(descriptor:index:value:)")));
+- (void)encodeDoubleElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index value:(double)value __attribute__((swift_name("encodeDoubleElement(descriptor:index:value:)")));
+- (void)encodeFloatElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index value:(float)value __attribute__((swift_name("encodeFloatElement(descriptor:index:value:)")));
+- (id<NimbusCoreKotlinx_serialization_coreEncoder>)encodeInlineElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index __attribute__((swift_name("encodeInlineElement(descriptor:index:)")));
+- (void)encodeIntElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index value:(int32_t)value __attribute__((swift_name("encodeIntElement(descriptor:index:value:)")));
+- (void)encodeLongElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index value:(int64_t)value __attribute__((swift_name("encodeLongElement(descriptor:index:value:)")));
+- (void)encodeNullableSerializableElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index serializer:(id<NimbusCoreKotlinx_serialization_coreSerializationStrategy>)serializer value:(id _Nullable)value __attribute__((swift_name("encodeNullableSerializableElement(descriptor:index:serializer:value:)")));
+- (void)encodeSerializableElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index serializer:(id<NimbusCoreKotlinx_serialization_coreSerializationStrategy>)serializer value:(id _Nullable)value __attribute__((swift_name("encodeSerializableElement(descriptor:index:serializer:value:)")));
+- (void)encodeShortElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index value:(int16_t)value __attribute__((swift_name("encodeShortElement(descriptor:index:value:)")));
+- (void)encodeStringElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index value:(NSString *)value __attribute__((swift_name("encodeStringElement(descriptor:index:value:)")));
+- (void)endStructureDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor __attribute__((swift_name("endStructure(descriptor:)")));
+- (BOOL)shouldEncodeElementDefaultDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index __attribute__((swift_name("shouldEncodeElementDefault(descriptor:index:)")));
 @property (readonly) NimbusCoreKotlinx_serialization_coreSerializersModule *serializersModule __attribute__((swift_name("serializersModule")));
 @end;
 
-__attribute__((swift_name("Kotlinx_serialization_coreSerialDescriptor")))
-@protocol NimbusCoreKotlinx_serialization_coreSerialDescriptor
-@required
-- (NSArray<id<NimbusCoreKotlinAnnotation>> *)getElementAnnotationsIndex:(int32_t)index __attribute__((swift_name("getElementAnnotations(index:)")));
-- (id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)getElementDescriptorIndex:(int32_t)index __attribute__((swift_name("getElementDescriptor(index:)")));
-- (int32_t)getElementIndexName:(NSString *)name __attribute__((swift_name("getElementIndex(name:)")));
-- (NSString *)getElementNameIndex:(int32_t)index __attribute__((swift_name("getElementName(index:)")));
-- (BOOL)isElementOptionalIndex:(int32_t)index __attribute__((swift_name("isElementOptional(index:)")));
-@property (readonly) NSArray<id<NimbusCoreKotlinAnnotation>> *annotations __attribute__((swift_name("annotations")));
-@property (readonly) int32_t elementsCount __attribute__((swift_name("elementsCount")));
-@property (readonly) BOOL isInline __attribute__((swift_name("isInline")));
-@property (readonly) BOOL isNullable __attribute__((swift_name("isNullable")));
-@property (readonly) NimbusCoreKotlinx_serialization_coreSerialKind *kind __attribute__((swift_name("kind")));
-@property (readonly) NSString *serialName __attribute__((swift_name("serialName")));
+__attribute__((swift_name("Kotlinx_serialization_coreSerializersModule")))
+@interface NimbusCoreKotlinx_serialization_coreSerializersModule : NimbusCoreBase
+- (void)dumpToCollector:(id<NimbusCoreKotlinx_serialization_coreSerializersModuleCollector>)collector __attribute__((swift_name("dumpTo(collector:)")));
+- (id<NimbusCoreKotlinx_serialization_coreKSerializer> _Nullable)getContextualKClass:(id<NimbusCoreKotlinKClass>)kClass typeArgumentsSerializers:(NSArray<id<NimbusCoreKotlinx_serialization_coreKSerializer>> *)typeArgumentsSerializers __attribute__((swift_name("getContextual(kClass:typeArgumentsSerializers:)")));
+- (id<NimbusCoreKotlinx_serialization_coreSerializationStrategy> _Nullable)getPolymorphicBaseClass:(id<NimbusCoreKotlinKClass>)baseClass value:(id)value __attribute__((swift_name("getPolymorphic(baseClass:value:)")));
+- (id<NimbusCoreKotlinx_serialization_coreDeserializationStrategy> _Nullable)getPolymorphicBaseClass:(id<NimbusCoreKotlinKClass>)baseClass serializedClassName:(NSString * _Nullable)serializedClassName __attribute__((swift_name("getPolymorphic(baseClass:serializedClassName:)")));
 @end;
 
-__attribute__((swift_name("Kotlinx_serialization_coreDecoder")))
-@protocol NimbusCoreKotlinx_serialization_coreDecoder
+__attribute__((swift_name("KotlinAnnotation")))
+@protocol NimbusCoreKotlinAnnotation
 @required
-- (id<NimbusCoreKotlinx_serialization_coreCompositeDecoder>)beginStructureDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor __attribute__((swift_name("beginStructure(descriptor:)")));
-- (BOOL)decodeBoolean __attribute__((swift_name("decodeBoolean()")));
-- (int8_t)decodeByte __attribute__((swift_name("decodeByte()")));
-- (unichar)decodeChar __attribute__((swift_name("decodeChar()")));
-- (double)decodeDouble __attribute__((swift_name("decodeDouble()")));
-- (int32_t)decodeEnumEnumDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)enumDescriptor __attribute__((swift_name("decodeEnum(enumDescriptor:)")));
-- (float)decodeFloat __attribute__((swift_name("decodeFloat()")));
-- (id<NimbusCoreKotlinx_serialization_coreDecoder>)decodeInlineInlineDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)inlineDescriptor __attribute__((swift_name("decodeInline(inlineDescriptor:)")));
-- (int32_t)decodeInt __attribute__((swift_name("decodeInt()")));
-- (int64_t)decodeLong __attribute__((swift_name("decodeLong()")));
-- (BOOL)decodeNotNullMark __attribute__((swift_name("decodeNotNullMark()")));
-- (NimbusCoreKotlinNothing * _Nullable)decodeNull __attribute__((swift_name("decodeNull()")));
-- (id _Nullable)decodeNullableSerializableValueDeserializer:(id<NimbusCoreKotlinx_serialization_coreDeserializationStrategy>)deserializer __attribute__((swift_name("decodeNullableSerializableValue(deserializer:)")));
-- (id _Nullable)decodeSerializableValueDeserializer:(id<NimbusCoreKotlinx_serialization_coreDeserializationStrategy>)deserializer __attribute__((swift_name("decodeSerializableValue(deserializer:)")));
-- (int16_t)decodeShort __attribute__((swift_name("decodeShort()")));
-- (NSString *)decodeString __attribute__((swift_name("decodeString()")));
+@end;
+
+__attribute__((swift_name("Kotlinx_serialization_coreSerialKind")))
+@interface NimbusCoreKotlinx_serialization_coreSerialKind : NimbusCoreBase
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@end;
+
+__attribute__((swift_name("Kotlinx_serialization_coreCompositeDecoder")))
+@protocol NimbusCoreKotlinx_serialization_coreCompositeDecoder
+@required
+- (BOOL)decodeBooleanElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index __attribute__((swift_name("decodeBooleanElement(descriptor:index:)")));
+- (int8_t)decodeByteElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index __attribute__((swift_name("decodeByteElement(descriptor:index:)")));
+- (unichar)decodeCharElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index __attribute__((swift_name("decodeCharElement(descriptor:index:)")));
+- (int32_t)decodeCollectionSizeDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor __attribute__((swift_name("decodeCollectionSize(descriptor:)")));
+- (double)decodeDoubleElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index __attribute__((swift_name("decodeDoubleElement(descriptor:index:)")));
+- (int32_t)decodeElementIndexDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor __attribute__((swift_name("decodeElementIndex(descriptor:)")));
+- (float)decodeFloatElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index __attribute__((swift_name("decodeFloatElement(descriptor:index:)")));
+- (id<NimbusCoreKotlinx_serialization_coreDecoder>)decodeInlineElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index __attribute__((swift_name("decodeInlineElement(descriptor:index:)")));
+- (int32_t)decodeIntElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index __attribute__((swift_name("decodeIntElement(descriptor:index:)")));
+- (int64_t)decodeLongElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index __attribute__((swift_name("decodeLongElement(descriptor:index:)")));
+- (id _Nullable)decodeNullableSerializableElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index deserializer:(id<NimbusCoreKotlinx_serialization_coreDeserializationStrategy>)deserializer previousValue:(id _Nullable)previousValue __attribute__((swift_name("decodeNullableSerializableElement(descriptor:index:deserializer:previousValue:)")));
+- (BOOL)decodeSequentially __attribute__((swift_name("decodeSequentially()")));
+- (id _Nullable)decodeSerializableElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index deserializer:(id<NimbusCoreKotlinx_serialization_coreDeserializationStrategy>)deserializer previousValue:(id _Nullable)previousValue __attribute__((swift_name("decodeSerializableElement(descriptor:index:deserializer:previousValue:)")));
+- (int16_t)decodeShortElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index __attribute__((swift_name("decodeShortElement(descriptor:index:)")));
+- (NSString *)decodeStringElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index __attribute__((swift_name("decodeStringElement(descriptor:index:)")));
+- (void)endStructureDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor __attribute__((swift_name("endStructure(descriptor:)")));
 @property (readonly) NimbusCoreKotlinx_serialization_coreSerializersModule *serializersModule __attribute__((swift_name("serializersModule")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("KotlinNothing")))
+@interface NimbusCoreKotlinNothing : NimbusCoreBase
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -2493,70 +2845,15 @@ __attribute__((swift_name("Ktor_client_coreHttpRequest")))
 @property (readonly) NimbusCoreKtor_httpUrl *url __attribute__((swift_name("url")));
 @end;
 
-__attribute__((swift_name("Kotlinx_serialization_coreCompositeEncoder")))
-@protocol NimbusCoreKotlinx_serialization_coreCompositeEncoder
+__attribute__((swift_name("Kotlinx_serialization_coreSerializersModuleCollector")))
+@protocol NimbusCoreKotlinx_serialization_coreSerializersModuleCollector
 @required
-- (void)encodeBooleanElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index value:(BOOL)value __attribute__((swift_name("encodeBooleanElement(descriptor:index:value:)")));
-- (void)encodeByteElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index value:(int8_t)value __attribute__((swift_name("encodeByteElement(descriptor:index:value:)")));
-- (void)encodeCharElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index value:(unichar)value __attribute__((swift_name("encodeCharElement(descriptor:index:value:)")));
-- (void)encodeDoubleElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index value:(double)value __attribute__((swift_name("encodeDoubleElement(descriptor:index:value:)")));
-- (void)encodeFloatElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index value:(float)value __attribute__((swift_name("encodeFloatElement(descriptor:index:value:)")));
-- (id<NimbusCoreKotlinx_serialization_coreEncoder>)encodeInlineElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index __attribute__((swift_name("encodeInlineElement(descriptor:index:)")));
-- (void)encodeIntElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index value:(int32_t)value __attribute__((swift_name("encodeIntElement(descriptor:index:value:)")));
-- (void)encodeLongElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index value:(int64_t)value __attribute__((swift_name("encodeLongElement(descriptor:index:value:)")));
-- (void)encodeNullableSerializableElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index serializer:(id<NimbusCoreKotlinx_serialization_coreSerializationStrategy>)serializer value:(id _Nullable)value __attribute__((swift_name("encodeNullableSerializableElement(descriptor:index:serializer:value:)")));
-- (void)encodeSerializableElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index serializer:(id<NimbusCoreKotlinx_serialization_coreSerializationStrategy>)serializer value:(id _Nullable)value __attribute__((swift_name("encodeSerializableElement(descriptor:index:serializer:value:)")));
-- (void)encodeShortElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index value:(int16_t)value __attribute__((swift_name("encodeShortElement(descriptor:index:value:)")));
-- (void)encodeStringElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index value:(NSString *)value __attribute__((swift_name("encodeStringElement(descriptor:index:value:)")));
-- (void)endStructureDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor __attribute__((swift_name("endStructure(descriptor:)")));
-- (BOOL)shouldEncodeElementDefaultDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index __attribute__((swift_name("shouldEncodeElementDefault(descriptor:index:)")));
-@property (readonly) NimbusCoreKotlinx_serialization_coreSerializersModule *serializersModule __attribute__((swift_name("serializersModule")));
-@end;
-
-__attribute__((swift_name("Kotlinx_serialization_coreSerializersModule")))
-@interface NimbusCoreKotlinx_serialization_coreSerializersModule : NimbusCoreBase
-- (void)dumpToCollector:(id<NimbusCoreKotlinx_serialization_coreSerializersModuleCollector>)collector __attribute__((swift_name("dumpTo(collector:)")));
-- (id<NimbusCoreKotlinx_serialization_coreKSerializer> _Nullable)getContextualKClass:(id<NimbusCoreKotlinKClass>)kClass typeArgumentsSerializers:(NSArray<id<NimbusCoreKotlinx_serialization_coreKSerializer>> *)typeArgumentsSerializers __attribute__((swift_name("getContextual(kClass:typeArgumentsSerializers:)")));
-- (id<NimbusCoreKotlinx_serialization_coreSerializationStrategy> _Nullable)getPolymorphicBaseClass:(id<NimbusCoreKotlinKClass>)baseClass value:(id)value __attribute__((swift_name("getPolymorphic(baseClass:value:)")));
-- (id<NimbusCoreKotlinx_serialization_coreDeserializationStrategy> _Nullable)getPolymorphicBaseClass:(id<NimbusCoreKotlinKClass>)baseClass serializedClassName:(NSString * _Nullable)serializedClassName __attribute__((swift_name("getPolymorphic(baseClass:serializedClassName:)")));
-@end;
-
-__attribute__((swift_name("KotlinAnnotation")))
-@protocol NimbusCoreKotlinAnnotation
-@required
-@end;
-
-__attribute__((swift_name("Kotlinx_serialization_coreSerialKind")))
-@interface NimbusCoreKotlinx_serialization_coreSerialKind : NimbusCoreBase
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@end;
-
-__attribute__((swift_name("Kotlinx_serialization_coreCompositeDecoder")))
-@protocol NimbusCoreKotlinx_serialization_coreCompositeDecoder
-@required
-- (BOOL)decodeBooleanElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index __attribute__((swift_name("decodeBooleanElement(descriptor:index:)")));
-- (int8_t)decodeByteElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index __attribute__((swift_name("decodeByteElement(descriptor:index:)")));
-- (unichar)decodeCharElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index __attribute__((swift_name("decodeCharElement(descriptor:index:)")));
-- (int32_t)decodeCollectionSizeDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor __attribute__((swift_name("decodeCollectionSize(descriptor:)")));
-- (double)decodeDoubleElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index __attribute__((swift_name("decodeDoubleElement(descriptor:index:)")));
-- (int32_t)decodeElementIndexDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor __attribute__((swift_name("decodeElementIndex(descriptor:)")));
-- (float)decodeFloatElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index __attribute__((swift_name("decodeFloatElement(descriptor:index:)")));
-- (id<NimbusCoreKotlinx_serialization_coreDecoder>)decodeInlineElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index __attribute__((swift_name("decodeInlineElement(descriptor:index:)")));
-- (int32_t)decodeIntElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index __attribute__((swift_name("decodeIntElement(descriptor:index:)")));
-- (int64_t)decodeLongElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index __attribute__((swift_name("decodeLongElement(descriptor:index:)")));
-- (id _Nullable)decodeNullableSerializableElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index deserializer:(id<NimbusCoreKotlinx_serialization_coreDeserializationStrategy>)deserializer previousValue:(id _Nullable)previousValue __attribute__((swift_name("decodeNullableSerializableElement(descriptor:index:deserializer:previousValue:)")));
-- (BOOL)decodeSequentially __attribute__((swift_name("decodeSequentially()")));
-- (id _Nullable)decodeSerializableElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index deserializer:(id<NimbusCoreKotlinx_serialization_coreDeserializationStrategy>)deserializer previousValue:(id _Nullable)previousValue __attribute__((swift_name("decodeSerializableElement(descriptor:index:deserializer:previousValue:)")));
-- (int16_t)decodeShortElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index __attribute__((swift_name("decodeShortElement(descriptor:index:)")));
-- (NSString *)decodeStringElementDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor index:(int32_t)index __attribute__((swift_name("decodeStringElement(descriptor:index:)")));
-- (void)endStructureDescriptor:(id<NimbusCoreKotlinx_serialization_coreSerialDescriptor>)descriptor __attribute__((swift_name("endStructure(descriptor:)")));
-@property (readonly) NimbusCoreKotlinx_serialization_coreSerializersModule *serializersModule __attribute__((swift_name("serializersModule")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("KotlinNothing")))
-@interface NimbusCoreKotlinNothing : NimbusCoreBase
+- (void)contextualKClass:(id<NimbusCoreKotlinKClass>)kClass provider:(id<NimbusCoreKotlinx_serialization_coreKSerializer> (^)(NSArray<id<NimbusCoreKotlinx_serialization_coreKSerializer>> *))provider __attribute__((swift_name("contextual(kClass:provider:)")));
+- (void)contextualKClass:(id<NimbusCoreKotlinKClass>)kClass serializer:(id<NimbusCoreKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("contextual(kClass:serializer:)")));
+- (void)polymorphicBaseClass:(id<NimbusCoreKotlinKClass>)baseClass actualClass:(id<NimbusCoreKotlinKClass>)actualClass actualSerializer:(id<NimbusCoreKotlinx_serialization_coreKSerializer>)actualSerializer __attribute__((swift_name("polymorphic(baseClass:actualClass:actualSerializer:)")));
+- (void)polymorphicDefaultBaseClass:(id<NimbusCoreKotlinKClass>)baseClass defaultDeserializerProvider:(id<NimbusCoreKotlinx_serialization_coreDeserializationStrategy> _Nullable (^)(NSString * _Nullable))defaultDeserializerProvider __attribute__((swift_name("polymorphicDefault(baseClass:defaultDeserializerProvider:)")));
+- (void)polymorphicDefaultDeserializerBaseClass:(id<NimbusCoreKotlinKClass>)baseClass defaultDeserializerProvider:(id<NimbusCoreKotlinx_serialization_coreDeserializationStrategy> _Nullable (^)(NSString * _Nullable))defaultDeserializerProvider __attribute__((swift_name("polymorphicDefaultDeserializer(baseClass:defaultDeserializerProvider:)")));
+- (void)polymorphicDefaultSerializerBaseClass:(id<NimbusCoreKotlinKClass>)baseClass defaultSerializerProvider:(id<NimbusCoreKotlinx_serialization_coreSerializationStrategy> _Nullable (^)(id))defaultSerializerProvider __attribute__((swift_name("polymorphicDefaultSerializer(baseClass:defaultSerializerProvider:)")));
 @end;
 
 __attribute__((swift_name("Kotlinx_coroutines_coreAtomicDesc")))
@@ -2744,17 +3041,6 @@ __attribute__((swift_name("KotlinKType")))
 @property (readonly) NSArray<NimbusCoreKotlinKTypeProjection *> *arguments __attribute__((swift_name("arguments")));
 @property (readonly) id<NimbusCoreKotlinKClassifier> _Nullable classifier __attribute__((swift_name("classifier")));
 @property (readonly) BOOL isMarkedNullable __attribute__((swift_name("isMarkedNullable")));
-@end;
-
-__attribute__((swift_name("Kotlinx_serialization_coreSerializersModuleCollector")))
-@protocol NimbusCoreKotlinx_serialization_coreSerializersModuleCollector
-@required
-- (void)contextualKClass:(id<NimbusCoreKotlinKClass>)kClass provider:(id<NimbusCoreKotlinx_serialization_coreKSerializer> (^)(NSArray<id<NimbusCoreKotlinx_serialization_coreKSerializer>> *))provider __attribute__((swift_name("contextual(kClass:provider:)")));
-- (void)contextualKClass:(id<NimbusCoreKotlinKClass>)kClass serializer:(id<NimbusCoreKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("contextual(kClass:serializer:)")));
-- (void)polymorphicBaseClass:(id<NimbusCoreKotlinKClass>)baseClass actualClass:(id<NimbusCoreKotlinKClass>)actualClass actualSerializer:(id<NimbusCoreKotlinx_serialization_coreKSerializer>)actualSerializer __attribute__((swift_name("polymorphic(baseClass:actualClass:actualSerializer:)")));
-- (void)polymorphicDefaultBaseClass:(id<NimbusCoreKotlinKClass>)baseClass defaultDeserializerProvider:(id<NimbusCoreKotlinx_serialization_coreDeserializationStrategy> _Nullable (^)(NSString * _Nullable))defaultDeserializerProvider __attribute__((swift_name("polymorphicDefault(baseClass:defaultDeserializerProvider:)")));
-- (void)polymorphicDefaultDeserializerBaseClass:(id<NimbusCoreKotlinKClass>)baseClass defaultDeserializerProvider:(id<NimbusCoreKotlinx_serialization_coreDeserializationStrategy> _Nullable (^)(NSString * _Nullable))defaultDeserializerProvider __attribute__((swift_name("polymorphicDefaultDeserializer(baseClass:defaultDeserializerProvider:)")));
-- (void)polymorphicDefaultSerializerBaseClass:(id<NimbusCoreKotlinKClass>)baseClass defaultSerializerProvider:(id<NimbusCoreKotlinx_serialization_coreSerializationStrategy> _Nullable (^)(id))defaultSerializerProvider __attribute__((swift_name("polymorphicDefaultSerializer(baseClass:defaultSerializerProvider:)")));
 @end;
 
 __attribute__((swift_name("Kotlinx_coroutines_coreAtomicOp")))
