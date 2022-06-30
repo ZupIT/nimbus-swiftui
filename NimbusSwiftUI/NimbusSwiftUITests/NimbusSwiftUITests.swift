@@ -22,15 +22,17 @@ import NimbusSwiftUI
 class NimbusSwiftUITests: XCTestCase {
   
   func testNimbus() {
-    let view = NimbusNavigator(json: """
+    let view = Nimbus(baseUrl: "base") {
+      NimbusNavigator(json: """
       {
         "_:component": "material:text",
         "properties": {
           "text": "hello!"
         }
       }
-    """)
-      .environmentObject(NimbusConfig(baseUrl: "base", components: components))
+      """)
+    }
+      .components(components)
       .frame(width: 100, height: 100)
     
     assertSnapshot(matching: view, as: .image)

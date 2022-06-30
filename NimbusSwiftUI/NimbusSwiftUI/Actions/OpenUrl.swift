@@ -15,8 +15,9 @@
  */
 
 import UIKit
+import SwiftUI
 
-// TODO: Dependencies structure
+// TODO: Actions dependency structure
 var opener: UrlOpener = UIApplication.shared
 
 let openUrl: Action = { event in

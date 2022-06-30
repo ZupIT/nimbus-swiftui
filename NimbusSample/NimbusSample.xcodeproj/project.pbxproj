@@ -7,14 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		935262C7281B036D00C0760C /* PersonCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935262C2281B036D00C0760C /* PersonCardComponent.swift */; };
 		935262C8281B036D00C0760C /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935262C3281B036D00C0760C /* Container.swift */; };
 		935262C9281B036D00C0760C /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935262C4281B036D00C0760C /* Text.swift */; };
 		935262CA281B036D00C0760C /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935262C5281B036D00C0760C /* Button.swift */; };
 		935262CB281B036D00C0760C /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935262C6281B036D00C0760C /* Components.swift */; };
-		935262D0281B037A00C0760C /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935262CD281B037A00C0760C /* Address.swift */; };
-		935262D1281B037A00C0760C /* PersonCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935262CE281B037A00C0760C /* PersonCardModel.swift */; };
-		935262D2281B037A00C0760C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935262CF281B037A00C0760C /* Person.swift */; };
 		935262D4281B038700C0760C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935262D3281B038700C0760C /* ContentView.swift */; };
 		935262D6281B044800C0760C /* NimbusSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 935262D5281B044800C0760C /* NimbusSwiftUI.framework */; };
 		935262D7281B044800C0760C /* NimbusSwiftUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 935262D5281B044800C0760C /* NimbusSwiftUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -39,14 +35,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		935262C2281B036D00C0760C /* PersonCardComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCardComponent.swift; sourceTree = "<group>"; };
 		935262C3281B036D00C0760C /* Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		935262C4281B036D00C0760C /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		935262C5281B036D00C0760C /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		935262C6281B036D00C0760C /* Components.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
-		935262CD281B037A00C0760C /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
-		935262CE281B037A00C0760C /* PersonCardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCardModel.swift; sourceTree = "<group>"; };
-		935262CF281B037A00C0760C /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		935262D3281B038700C0760C /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		935262D5281B044800C0760C /* NimbusSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NimbusSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93F10D97281AFF400079975D /* NimbusSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NimbusSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,23 +72,12 @@
 		935262C1281B036D00C0760C /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				935262C2281B036D00C0760C /* PersonCardComponent.swift */,
 				935262C3281B036D00C0760C /* Container.swift */,
 				935262C4281B036D00C0760C /* Text.swift */,
 				935262C5281B036D00C0760C /* Button.swift */,
 				935262C6281B036D00C0760C /* Components.swift */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		935262CC281B037A00C0760C /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				935262CD281B037A00C0760C /* Address.swift */,
-				935262CE281B037A00C0760C /* PersonCardModel.swift */,
-				935262CF281B037A00C0760C /* Person.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		93F10D8E281AFF400079975D = {
@@ -119,7 +100,6 @@
 		93F10D99281AFF400079975D /* NimbusSample */ = {
 			isa = PBXGroup;
 			children = (
-				935262CC281B037A00C0760C /* Models */,
 				935262C1281B036D00C0760C /* Components */,
 				93F10D9A281AFF400079975D /* AppDelegate.swift */,
 				935262D3281B038700C0760C /* ContentView.swift */,
@@ -202,16 +182,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				935262D0281B037A00C0760C /* Address.swift in Sources */,
 				935262CA281B036D00C0760C /* Button.swift in Sources */,
 				935262D4281B038700C0760C /* ContentView.swift in Sources */,
 				935262CB281B036D00C0760C /* Components.swift in Sources */,
-				935262C7281B036D00C0760C /* PersonCardComponent.swift in Sources */,
-				935262D2281B037A00C0760C /* Person.swift in Sources */,
 				935262C8281B036D00C0760C /* Container.swift in Sources */,
 				93F10D9B281AFF400079975D /* AppDelegate.swift in Sources */,
 				935262C9281B036D00C0760C /* Text.swift in Sources */,
-				935262D1281B037A00C0760C /* PersonCardModel.swift in Sources */,
 				93F10D9D281AFF400079975D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

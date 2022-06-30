@@ -15,6 +15,7 @@
  */
 
 import SwiftUI
+import NimbusCore
 
 /// A View that describes a server-driven flow.
 ///
@@ -36,7 +37,7 @@ import SwiftUI
 ///
 public struct NimbusNavigator: View {
   
-  @EnvironmentObject private var config: NimbusConfig
+  @Environment(\.core) private var core: Core
   private let mode: Mode
   
   enum Mode {
@@ -91,7 +92,7 @@ public struct NimbusNavigator: View {
   
   public var body: some View {
     NavigationView {
-      NimbusView(viewModel: ViewModel(mode: mode, core: config.core))
+      NimbusView(viewModel: ViewModel(mode: mode, core: core))
     }
     .navigationViewStyle(.stack)
   }
