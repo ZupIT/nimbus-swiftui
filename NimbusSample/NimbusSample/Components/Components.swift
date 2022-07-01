@@ -23,18 +23,10 @@ typealias Function = @convention(block) (Any?) -> Void
 
 let components: [String: Component] = [
   "material:text": { (element, _) in
-    AnyComponent(Text(getMapProperty(map: element.properties ?? [:], name: "text")))
+    AnyComponent(Text(try getMapProperty(map: element.properties, name: "text")))
   },
   "layout:container": { (_, children) in AnyComponent(Container(children: children)) },
-  "material:button": { (element, _) in
-    AnyComponent(
-      Button(
-        text: getMapProperty(map: element.properties ?? [:], name: "text"),
-        onPress: unsafeBitCast(
-          element.properties?["onPress"] as AnyObject,
-          to: Function.self
-        )
-      )
-    )
-  },
+  "material:button": { (element, children) in
+    AnyComponent(try CustomButton(from: element.properties, children: children))
+  }
 ]

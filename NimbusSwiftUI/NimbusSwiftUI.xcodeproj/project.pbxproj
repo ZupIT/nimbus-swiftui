@@ -21,6 +21,7 @@
 		9323D5CE282EF29E002EB6ED /* Aliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9323D5CD282EF29E002EB6ED /* Aliases.swift */; };
 		93417C2B283D4E34007A014F /* NimbusCoreExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93417C2A283D4E34007A014F /* NimbusCoreExtensions.swift */; };
 		93417C2E283D4FBC007A014F /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 93417C2D283D4FBC007A014F /* SnapshotTesting */; };
+		938ABB18286F3FDA004872A0 /* Deserialize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938ABB17286F3FDA004872A0 /* Deserialize.swift */; };
 		93A5039D2816E92200269B03 /* NimbusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5039C2816E92200269B03 /* NimbusView.swift */; };
 		93B907442835941E000299DD /* NimbusCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93B907432835941E000299DD /* NimbusCore.xcframework */; };
 		93B90747283C1EA7000299DD /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B90746283C1EA7000299DD /* ViewModelTests.swift */; };
@@ -57,6 +58,7 @@
 		9323D5CB282EF0E6002EB6ED /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		9323D5CD282EF29E002EB6ED /* Aliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aliases.swift; sourceTree = "<group>"; };
 		93417C2A283D4E34007A014F /* NimbusCoreExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusCoreExtensions.swift; sourceTree = "<group>"; };
+		938ABB17286F3FDA004872A0 /* Deserialize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deserialize.swift; sourceTree = "<group>"; };
 		93A5039C2816E92200269B03 /* NimbusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NimbusView.swift; sourceTree = "<group>"; };
 		93B907432835941E000299DD /* NimbusCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = NimbusCore.xcframework; path = ../NimbusCore/NimbusCore.xcframework; sourceTree = "<group>"; };
 		93B90746283C1EA7000299DD /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTests.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				93FF9D57282ADD0E00C36CE9 /* ViewModifiers */,
 				93FF9D50282A9A9800C36CE9 /* Views */,
 				9323D5CD282EF29E002EB6ED /* Aliases.swift */,
+				938ABB17286F3FDA004872A0 /* Deserialize.swift */,
 				931B066A286B6E550005C249 /* Nimbus.swift */,
 				931B066C286B6E670005C249 /* Dependencies.swift */,
 				9323D5C9282EEF86002EB6ED /* NimbusNavigator.swift */,
@@ -339,6 +342,7 @@
 				931B066D286B6E670005C249 /* Dependencies.swift in Sources */,
 				93FF9D52282A9AB400C36CE9 /* NavigationLink.swift in Sources */,
 				9323D5CC282EF0E6002EB6ED /* ViewModel.swift in Sources */,
+				938ABB18286F3FDA004872A0 /* Deserialize.swift in Sources */,
 				9323D5C7282EEDB4002EB6ED /* CasePath.swift in Sources */,
 				93FF9D56282A9B3800C36CE9 /* ActivityIndicator.swift in Sources */,
 				931B066B286B6E550005C249 /* Nimbus.swift in Sources */,

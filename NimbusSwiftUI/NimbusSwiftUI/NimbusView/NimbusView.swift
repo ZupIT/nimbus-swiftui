@@ -60,9 +60,20 @@ struct NimbusView: View {
   private func renderTree(node: ServerDrivenNode) -> AnyComponent {
     if let function = dependencies.components[node.component] {
       let children: [AnyComponent] = node.children?.map { renderTree(node: $0) } ?? []
-      return function(node, children)
+      do {
+        // TODO: create a map [String: Deserializable.Type]
+        return try function(node, children)
+      } catch {
+        viewModel.state = .error(error)
+        return AnyComponent(EmptyView())
+      }
     } else {
-      return AnyComponent(Text("Component with type \(node.component) is not registered"))
+      viewModel.state = .error(RenderingError.notRegistered(node.component))
+      return AnyComponent(EmptyView())
     }
   }
+}
+
+enum RenderingError: Error {
+  case notRegistered(String)
 }

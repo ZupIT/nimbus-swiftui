@@ -19,40 +19,25 @@ import NimbusSwiftUI
 
 struct ContentView: View {
   var body: some View {
-//    NimbusNavigator(json: """
-//    {
-//      "component": "layout:container",
-//      "children": [
-//        {
-//          "component": "material:text",
-//          "properties": {
-//            "text": "Screen 1"
-//          }
-//        },
-//        {
-//          "component": "material:button",
-//          "properties": {
-//            "text": "Next",
-//            "onPress": [{
-//              "action": "push",
-//              "properties": {
-//                "url": "/screen2.json"
-//              }
-//            }]
-//          }
-//        }
-//      ]
-//    }
-//    """)
-    
-    Nimbus(baseUrl: "https://gist.githubusercontent.com/Tiagoperes/74808ebd7ad7f0645491fc60436223a6/raw/85702801aa8b5c6d62d8d500ef9a262b767ec94c") {
-      NimbusNavigator(url: "/present.json")
+    Nimbus(baseUrl: "base") {
+      NimbusNavigator(json: """
+      {
+        "_:component": "material:button",
+        "properties": {
+          "text": "Button",
+          "onPress": [
+            {
+              "_:action": "openUrl",
+              "properties": {
+                "url": "https://apple.com"
+              }
+            }
+          ]
+        }
+      }
+      """)
     }
     .components(components)
-    .error { _, _ in
-      Text("customError")
-    }
-    
   }
 }
 

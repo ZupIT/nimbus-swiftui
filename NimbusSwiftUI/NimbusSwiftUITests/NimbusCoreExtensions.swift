@@ -48,9 +48,11 @@ extension RenderNode {
       id: id,
       component: component,
       properties: properties,
+      rawChildren: nil,
       children: nil,
       rawProperties: nil,
       stateHierarchy: nil,
+      implicitStates: nil,
       stateId: nil,
       stateValue: nil
     )

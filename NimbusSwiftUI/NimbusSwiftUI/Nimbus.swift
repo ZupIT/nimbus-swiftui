@@ -25,7 +25,7 @@ public struct Nimbus<Content: View>: View {
   var content: Content
   
   public init(baseUrl: String, @ViewBuilder content: () -> Content) {
-    coreDependencies = CoreDependencies(baseUrl: baseUrl)
+    coreDependencies = CoreDependencies(baseUrl: baseUrl, actions: ["openUrl": openUrl])
     self.content = content()
   }
     
