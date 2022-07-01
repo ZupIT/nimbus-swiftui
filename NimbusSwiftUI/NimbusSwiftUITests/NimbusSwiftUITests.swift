@@ -42,6 +42,6 @@ class NimbusSwiftUITests: XCTestCase {
 
 let components: [String: Component] = [
   "material:text": { (element, _) in
-    AnyComponent(Text(getMapProperty(map: element.properties ?? [:], name: "text") as String))
+    AnyComponent(Text(try getMapProperty(map: element.properties, name: "text") as String))
   }
 ]

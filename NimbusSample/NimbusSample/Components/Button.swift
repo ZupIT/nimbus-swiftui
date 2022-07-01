@@ -15,13 +15,26 @@
  */
 
 import SwiftUI
+import NimbusSwiftUI
 
-struct Button: View {
+struct CustomButton: View {
   var text: String
-  var onPress: (Any?) -> Void
+  var enabled: Bool = true
+  var onPress: () -> Void
+  
   var body: some View {
-    SwiftUI.Button(text) {
-      onPress(nil)
+    Button(text) {
+      onPress()
     }
+    .disabled(!enabled)
+  }
+}
+
+extension CustomButton: Deserializable {
+  init(from map: [String : Any]?, children: [AnyComponent]) throws {
+    self.text = try getMapProperty(map: map, name: "text")
+    self.enabled = try getMapPropertyDefault(map: map, name: "enabled", default: true)
+    let function = getMapFunction(map: map, name: "onPress")
+    self.onPress = { function(nil) }
   }
 }

@@ -21,22 +21,13 @@ import NimbusCore
 
 public typealias Action = @convention(block) (ActionEvent) -> KotlinUnit?
 public typealias Operation = @convention(block) (KotlinArray<AnyObject>) -> Any?
-public typealias Component = (NimbusCore.ServerDrivenNode, [AnyComponent]) -> AnyComponent
+public typealias Component = (NimbusCore.ServerDrivenNode, [AnyComponent]) throws -> AnyComponent
 
 public typealias ViewRequest = NimbusCore.ViewRequest
 
 // MARK: - internal
 
 typealias ServerDrivenNode = NimbusCore.ServerDrivenNode
-
-
-// TODO: deserialize feature
-public func getMapProperty<T>(map: [String: Any], name: String) -> T {
-  guard let value = map[name] as? T else {
-    fatalError("Could not find property with name: \(name)")
-  }
-  return value
-}
 
 // MARK: - AnyComponent
 
