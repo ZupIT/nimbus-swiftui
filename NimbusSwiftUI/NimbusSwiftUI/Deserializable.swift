@@ -12,6 +12,12 @@ public protocol Deserializable {
   init(from map: [String : Any]?, children: [AnyComponent]) throws
 }
 
+extension Deserializable {
+  public init(from map: [String : Any]?) throws {
+    try self.init(from: map, children: [])
+  }
+}
+
 enum DeserializationError: Error {
   case propertyNotFound(String)
 }
@@ -33,7 +39,8 @@ enum DeserializationError: Error {
 /// ```
 ///
 public func getMapProperty<T>(map: [String: Any]?, name: String) throws -> T {
-  guard let map = map, let value = map[name] as? T else {
+  let map: [String: Any] = map ?? [:]
+  guard let value = map[name] as? T else {
     throw DeserializationError.propertyNotFound(name)
   }
   return value
