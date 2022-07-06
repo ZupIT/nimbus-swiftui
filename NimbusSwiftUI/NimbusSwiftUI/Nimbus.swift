@@ -78,7 +78,7 @@ extension Nimbus {
 
 extension Nimbus {
   public func actions(_ actions: [String : Action]) -> Nimbus {
-    let mergedActions = coreDependencies.actions?.merging(actions) { $1 }
+    let mergedActions = coreDependencies.actions.merging(actions) { $1 }
     return set(keypath: \.coreDependencies.actions, value: mergedActions)
   }
   
@@ -87,7 +87,7 @@ extension Nimbus {
   }
   
   public func operations(_ operations: [String : Operation]) -> Nimbus {
-    let mergedOperations = coreDependencies.operations?.merging(operations) { $1 }
+    let mergedOperations = coreDependencies.operations.merging(operations) { $1 }
     return set(keypath: \.coreDependencies.operations, value: mergedOperations)
   }
   

@@ -1,9 +1,18 @@
-//
-//  Deserialize.swift
-//  NimbusSwiftUI
-//
-//  Created by Daniel Tes on 01/07/22.
-//
+/*
+ * Copyright 2022 ZUP IT SERVICOS EM TECNOLOGIA E INOVACAO SA
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
 import Foundation
 
@@ -67,7 +76,7 @@ public typealias CoreFunction = @convention(block) (Any?) -> Void
 public func getMapFunction(map: [String: Any]?, name: String) -> CoreFunction {
   // TODO: refactor this to a safe cast
   unsafeBitCast(
-    map?["onPress"] as AnyObject,
+    map?[name] as AnyObject,
     to: CoreFunction.self
   )
 }
