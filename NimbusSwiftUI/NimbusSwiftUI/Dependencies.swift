@@ -53,9 +53,9 @@ typealias Core = NimbusCore.Nimbus
 
 struct CoreDependencies {
   var baseUrl: String
-  var actions: [String : Action]?
+  var actions: [String : Action] = [:]
   var actionObservers: [Action]?
-  var operations: [String : Operation]?
+  var operations: [String : Operation] = [:]
   var logger: Logger?
   var urlBuilder: UrlBuilder?
   var httpClient: HttpClient?
