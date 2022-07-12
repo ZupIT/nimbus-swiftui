@@ -40,6 +40,8 @@ public struct NimbusNavigator: View {
   @Environment(\.core) private var core: Core
   private let mode: Mode
   
+  @State var viewModel: ViewModel?
+  
   enum Mode {
     case remote(ViewRequest)
     case local(String)
@@ -92,8 +94,13 @@ public struct NimbusNavigator: View {
   
   public var body: some View {
     NavigationView {
-      NimbusView(viewModel: ViewModel(mode: mode, core: core))
+      if let viewModel = viewModel {
+        NimbusView(viewModel: viewModel)
+      }
     }
     .navigationViewStyle(.stack)
+    .onLoad {
+      viewModel = ViewModel(mode: mode, core: core)
+    }
   }
 }

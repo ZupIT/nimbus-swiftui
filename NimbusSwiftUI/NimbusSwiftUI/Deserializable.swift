@@ -55,6 +55,14 @@ public func getMapProperty<T>(map: [String: Any]?, name: String) throws -> T {
   return value
 }
 
+public func getMapProperty(map: [String: Any]?, name: String) throws -> String {
+  let map: [String: Any] = map ?? [:]
+  guard let value = map[name] else {
+    throw DeserializationError.propertyNotFound(name)
+  }
+  return "\(value)"
+}
+
 public typealias CoreFunction = @convention(block) (Any?) -> Void
 
 

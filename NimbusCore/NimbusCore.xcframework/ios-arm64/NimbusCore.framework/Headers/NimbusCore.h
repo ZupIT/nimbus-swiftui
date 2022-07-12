@@ -6,7 +6,7 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class NimbusCoreServerDrivenConfig, NimbusCoreKotlinUnit, NimbusCoreActionEvent, NimbusCoreKotlinArray<T>, NimbusCoreRenderNode, NimbusCoreServerDrivenView, NimbusCoreObservableState, NimbusCoreViewRequest, NimbusCoreKotlinThrowable, NimbusCoreKotlinError, NimbusCoreRenderingError, NimbusCoreTransition, NimbusCoreServerDrivenState, NimbusCoreTreeUpdateMode, NimbusCoreNimbus, NimbusCoreRenderer, NimbusCoreKotlinRegex, NimbusCoreKotlinException, NimbusCoreKotlinRuntimeException, NimbusCoreKotlinIllegalArgumentException, NimbusCoreComponentStructureError, NimbusCoreMalformedJsonError, NimbusCoreRenderActionCompanion, NimbusCoreRenderAction, NimbusCoreRenderNodeCompanion, NimbusCoreKotlinx_serialization_jsonJsonElement, NimbusCoreKotlinEnumCompanion, NimbusCoreKotlinEnum<E>, NimbusCoreServerDrivenRequest, NimbusCoreServerDrivenResponse, NimbusCoreNetworkError, NimbusCoreServerDrivenHttpMethod, NimbusCoreKotlinByteArray, NimbusCoreLogLevel, NimbusCoreKotlinNumber, NimbusCoreKotlinx_serialization_jsonJsonPrimitive, NimbusCoreKotlinRegexOption, NimbusCoreKotlinRegexCompanion, NimbusCoreKotlinx_serialization_jsonJsonElementCompanion, NimbusCoreKotlinIllegalStateException, NimbusCoreKtor_client_coreHttpRequestData, NimbusCoreKtor_client_coreHttpResponseData, NimbusCoreKtor_client_coreHttpClient, NimbusCoreKtor_client_coreHttpClientEngineConfig, NimbusCoreKotlinx_coroutines_coreCoroutineDispatcher, NimbusCoreKotlinByteIterator, NimbusCoreKotlinx_serialization_jsonJsonPrimitiveCompanion, NimbusCoreKotlinMatchResultDestructured, NimbusCoreKotlinIntRange, NimbusCoreKtor_httpUrl, NimbusCoreKtor_httpHttpMethod, NimbusCoreKtor_httpOutgoingContent, NimbusCoreKtor_httpHttpStatusCode, NimbusCoreKtor_utilsGMTDate, NimbusCoreKtor_httpHttpProtocolVersion, NimbusCoreKtor_client_coreHttpClientConfig<T>, NimbusCoreKtor_eventsEvents, NimbusCoreKtor_client_coreHttpReceivePipeline, NimbusCoreKtor_client_coreHttpRequestPipeline, NimbusCoreKtor_client_coreHttpResponsePipeline, NimbusCoreKtor_client_coreHttpSendPipeline, NimbusCoreKtor_client_coreProxyConfig, NimbusCoreKotlinAbstractCoroutineContextElement, NimbusCoreKotlinx_coroutines_coreCoroutineDispatcherKey, NimbusCoreKotlinMatchGroup, NimbusCoreKotlinIntProgressionCompanion, NimbusCoreKotlinIntIterator, NimbusCoreKotlinIntProgression, NimbusCoreKotlinIntRangeCompanion, NimbusCoreKtor_httpUrlCompanion, NimbusCoreKtor_httpURLProtocol, NimbusCoreKtor_httpHttpMethodCompanion, NimbusCoreKtor_utilsAttributeKey<T>, NimbusCoreKtor_httpContentType, NimbusCoreKotlinCancellationException, NimbusCoreKtor_httpHttpStatusCodeCompanion, NimbusCoreKtor_utilsGMTDateCompanion, NimbusCoreKtor_utilsWeekDay, NimbusCoreKtor_utilsMonth, NimbusCoreKtor_httpHttpProtocolVersionCompanion, NimbusCoreKtor_eventsEventDefinition<T>, NimbusCoreKtor_utilsPipelinePhase, NimbusCoreKtor_utilsPipeline<TSubject, TContext>, NimbusCoreKtor_client_coreHttpReceivePipelinePhases, NimbusCoreKtor_client_coreHttpResponse, NimbusCoreKtor_client_coreHttpRequestPipelinePhases, NimbusCoreKtor_client_coreHttpRequestBuilder, NimbusCoreKtor_client_coreHttpResponsePipelinePhases, NimbusCoreKtor_client_coreHttpResponseContainer, NimbusCoreKtor_client_coreHttpClientCall, NimbusCoreKtor_client_coreHttpSendPipelinePhases, NimbusCoreKotlinAbstractCoroutineContextKey<B, E>, NimbusCoreKotlinx_serialization_coreSerializersModule, NimbusCoreKotlinx_serialization_coreSerialKind, NimbusCoreKotlinNothing, NimbusCoreKtor_httpURLProtocolCompanion, NimbusCoreKtor_httpHeaderValueParam, NimbusCoreKtor_httpHeaderValueWithParametersCompanion, NimbusCoreKtor_httpHeaderValueWithParameters, NimbusCoreKtor_httpContentTypeCompanion, NimbusCoreKtor_utilsWeekDayCompanion, NimbusCoreKtor_utilsMonthCompanion, NimbusCoreKtor_httpHeadersBuilder, NimbusCoreKtor_client_coreHttpRequestBuilderCompanion, NimbusCoreKtor_httpURLBuilder, NimbusCoreKtor_utilsTypeInfo, NimbusCoreKtor_client_coreHttpClientCallCompanion, NimbusCoreKotlinx_coroutines_coreAtomicDesc, NimbusCoreKotlinx_coroutines_coreLockFreeLinkedListNodePrepareOp, NimbusCoreKtor_ioMemory, NimbusCoreKtor_ioChunkBuffer, NimbusCoreKtor_ioBuffer, NimbusCoreKtor_ioByteReadPacket, NimbusCoreKtor_utilsStringValuesBuilderImpl, NimbusCoreKtor_httpURLBuilderCompanion, NimbusCoreKotlinx_coroutines_coreAtomicOp<__contravariant T>, NimbusCoreKotlinx_coroutines_coreOpDescriptor, NimbusCoreKotlinx_coroutines_coreLockFreeLinkedListNode, NimbusCoreKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc, NimbusCoreKtor_ioMemoryCompanion, NimbusCoreKtor_ioBufferCompanion, NimbusCoreKtor_ioChunkBufferCompanion, NimbusCoreKtor_ioInputCompanion, NimbusCoreKtor_ioInput, NimbusCoreKtor_ioByteReadPacketCompanion, NimbusCoreKotlinKTypeProjection, NimbusCoreKotlinx_coroutines_coreLockFreeLinkedListNodeAddLastDesc<T>, NimbusCoreKotlinx_coroutines_coreLockFreeLinkedListNodeRemoveFirstDesc<T>, NimbusCoreKotlinKVariance, NimbusCoreKotlinKTypeProjectionCompanion;
+@class NimbusCoreServerDrivenConfig, NimbusCoreKotlinUnit, NimbusCoreActionEvent, NimbusCoreKotlinArray<T>, NimbusCoreRenderNode, NimbusCoreServerDrivenView, NimbusCoreObservableState, NimbusCoreViewRequest, NimbusCoreKotlinThrowable, NimbusCoreKotlinError, NimbusCoreRenderingError, NimbusCoreTransition, NimbusCoreDPASymbols, NimbusCoreServerDrivenState, NimbusCoreTreeUpdateMode, NimbusCoreNimbus, NimbusCoreRenderer, NimbusCoreKotlinRegex, NimbusCoreKotlinException, NimbusCoreKotlinRuntimeException, NimbusCoreKotlinIllegalArgumentException, NimbusCoreComponentStructureError, NimbusCoreMalformedJsonError, NimbusCoreRenderActionCompanion, NimbusCoreRenderAction, NimbusCoreRenderNodeCompanion, NimbusCoreKotlinx_serialization_jsonJsonElement, NimbusCoreKotlinEnumCompanion, NimbusCoreKotlinEnum<E>, NimbusCoreServerDrivenRequest, NimbusCoreServerDrivenResponse, NimbusCoreNetworkError, NimbusCoreServerDrivenHttpMethod, NimbusCoreKotlinByteArray, NimbusCoreLogLevel, NimbusCoreKotlinNumber, NimbusCoreKotlinx_serialization_jsonJsonPrimitive, NimbusCoreKotlinRegexOption, NimbusCoreKotlinRegexCompanion, NimbusCoreKotlinx_serialization_jsonJsonElementCompanion, NimbusCoreKotlinIllegalStateException, NimbusCoreKtor_client_coreHttpRequestData, NimbusCoreKtor_client_coreHttpResponseData, NimbusCoreKtor_client_coreHttpClient, NimbusCoreKtor_client_coreHttpClientEngineConfig, NimbusCoreKotlinx_coroutines_coreCoroutineDispatcher, NimbusCoreKotlinByteIterator, NimbusCoreKotlinx_serialization_jsonJsonPrimitiveCompanion, NimbusCoreKotlinMatchResultDestructured, NimbusCoreKotlinIntRange, NimbusCoreKtor_httpUrl, NimbusCoreKtor_httpHttpMethod, NimbusCoreKtor_httpOutgoingContent, NimbusCoreKtor_httpHttpStatusCode, NimbusCoreKtor_utilsGMTDate, NimbusCoreKtor_httpHttpProtocolVersion, NimbusCoreKtor_client_coreHttpClientConfig<T>, NimbusCoreKtor_eventsEvents, NimbusCoreKtor_client_coreHttpReceivePipeline, NimbusCoreKtor_client_coreHttpRequestPipeline, NimbusCoreKtor_client_coreHttpResponsePipeline, NimbusCoreKtor_client_coreHttpSendPipeline, NimbusCoreKtor_client_coreProxyConfig, NimbusCoreKotlinAbstractCoroutineContextElement, NimbusCoreKotlinx_coroutines_coreCoroutineDispatcherKey, NimbusCoreKotlinMatchGroup, NimbusCoreKotlinIntProgressionCompanion, NimbusCoreKotlinIntIterator, NimbusCoreKotlinIntProgression, NimbusCoreKotlinIntRangeCompanion, NimbusCoreKtor_httpUrlCompanion, NimbusCoreKtor_httpURLProtocol, NimbusCoreKtor_httpHttpMethodCompanion, NimbusCoreKtor_utilsAttributeKey<T>, NimbusCoreKtor_httpContentType, NimbusCoreKotlinCancellationException, NimbusCoreKtor_httpHttpStatusCodeCompanion, NimbusCoreKtor_utilsGMTDateCompanion, NimbusCoreKtor_utilsWeekDay, NimbusCoreKtor_utilsMonth, NimbusCoreKtor_httpHttpProtocolVersionCompanion, NimbusCoreKtor_eventsEventDefinition<T>, NimbusCoreKtor_utilsPipelinePhase, NimbusCoreKtor_utilsPipeline<TSubject, TContext>, NimbusCoreKtor_client_coreHttpReceivePipelinePhases, NimbusCoreKtor_client_coreHttpResponse, NimbusCoreKtor_client_coreHttpRequestPipelinePhases, NimbusCoreKtor_client_coreHttpRequestBuilder, NimbusCoreKtor_client_coreHttpResponsePipelinePhases, NimbusCoreKtor_client_coreHttpResponseContainer, NimbusCoreKtor_client_coreHttpClientCall, NimbusCoreKtor_client_coreHttpSendPipelinePhases, NimbusCoreKotlinAbstractCoroutineContextKey<B, E>, NimbusCoreKotlinx_serialization_coreSerializersModule, NimbusCoreKotlinx_serialization_coreSerialKind, NimbusCoreKotlinNothing, NimbusCoreKtor_httpURLProtocolCompanion, NimbusCoreKtor_httpHeaderValueParam, NimbusCoreKtor_httpHeaderValueWithParametersCompanion, NimbusCoreKtor_httpHeaderValueWithParameters, NimbusCoreKtor_httpContentTypeCompanion, NimbusCoreKtor_utilsWeekDayCompanion, NimbusCoreKtor_utilsMonthCompanion, NimbusCoreKtor_httpHeadersBuilder, NimbusCoreKtor_client_coreHttpRequestBuilderCompanion, NimbusCoreKtor_httpURLBuilder, NimbusCoreKtor_utilsTypeInfo, NimbusCoreKtor_client_coreHttpClientCallCompanion, NimbusCoreKotlinx_coroutines_coreAtomicDesc, NimbusCoreKotlinx_coroutines_coreLockFreeLinkedListNodePrepareOp, NimbusCoreKtor_ioMemory, NimbusCoreKtor_ioChunkBuffer, NimbusCoreKtor_ioBuffer, NimbusCoreKtor_ioByteReadPacket, NimbusCoreKtor_utilsStringValuesBuilderImpl, NimbusCoreKtor_httpURLBuilderCompanion, NimbusCoreKotlinx_coroutines_coreAtomicOp<__contravariant T>, NimbusCoreKotlinx_coroutines_coreOpDescriptor, NimbusCoreKotlinx_coroutines_coreLockFreeLinkedListNode, NimbusCoreKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc, NimbusCoreKtor_ioMemoryCompanion, NimbusCoreKtor_ioBufferCompanion, NimbusCoreKtor_ioChunkBufferCompanion, NimbusCoreKtor_ioInputCompanion, NimbusCoreKtor_ioInput, NimbusCoreKtor_ioByteReadPacketCompanion, NimbusCoreKotlinKTypeProjection, NimbusCoreKotlinx_coroutines_coreLockFreeLinkedListNodeAddLastDesc<T>, NimbusCoreKotlinx_coroutines_coreLockFreeLinkedListNodeRemoveFirstDesc<T>, NimbusCoreKotlinKVariance, NimbusCoreKotlinKTypeProjectionCompanion;
 
 @protocol NimbusCoreServerDrivenNavigator, NimbusCoreHttpClient, NimbusCoreIdManager, NimbusCoreLogger, NimbusCoreUrlBuilder, NimbusCoreViewClient, NimbusCoreServerDrivenAction, NimbusCoreServerDrivenNode, NimbusCoreKotlinKClass, NimbusCoreKotlinComparable, NimbusCoreKtor_client_coreHttpClientEngine, NimbusCoreKotlinMapEntry, NimbusCoreKotlinIterator, NimbusCoreKotlinMatchResult, NimbusCoreKotlinSequence, NimbusCoreKotlinKDeclarationContainer, NimbusCoreKotlinKAnnotatedElement, NimbusCoreKotlinKClassifier, NimbusCoreKtor_client_coreHttpClientEngineCapability, NimbusCoreKotlinCoroutineContext, NimbusCoreKotlinx_coroutines_coreCoroutineScope, NimbusCoreKtor_ioCloseable, NimbusCoreKotlinMatchGroupCollection, NimbusCoreKotlinx_serialization_coreKSerializer, NimbusCoreKtor_httpHeaders, NimbusCoreKotlinx_coroutines_coreJob, NimbusCoreKtor_utilsAttributes, NimbusCoreKotlinCoroutineContextKey, NimbusCoreKotlinCoroutineContextElement, NimbusCoreKotlinContinuation, NimbusCoreKotlinContinuationInterceptor, NimbusCoreKotlinx_coroutines_coreRunnable, NimbusCoreKotlinIterable, NimbusCoreKotlinCollection, NimbusCoreKotlinClosedRange, NimbusCoreKotlinx_serialization_coreEncoder, NimbusCoreKotlinx_serialization_coreSerialDescriptor, NimbusCoreKotlinx_serialization_coreSerializationStrategy, NimbusCoreKotlinx_serialization_coreDecoder, NimbusCoreKotlinx_serialization_coreDeserializationStrategy, NimbusCoreKtor_httpParameters, NimbusCoreKtor_utilsStringValues, NimbusCoreKotlinx_coroutines_coreChildHandle, NimbusCoreKotlinx_coroutines_coreChildJob, NimbusCoreKotlinx_coroutines_coreDisposableHandle, NimbusCoreKotlinx_coroutines_coreSelectClause0, NimbusCoreKtor_client_coreHttpClientPlugin, NimbusCoreKotlinSuspendFunction2, NimbusCoreKotlinx_serialization_coreCompositeEncoder, NimbusCoreKotlinAnnotation, NimbusCoreKotlinx_serialization_coreCompositeDecoder, NimbusCoreKotlinx_coroutines_coreParentJob, NimbusCoreKotlinx_coroutines_coreSelectInstance, NimbusCoreKotlinSuspendFunction0, NimbusCoreKotlinFunction, NimbusCoreKtor_httpHttpMessage, NimbusCoreKtor_ioByteReadChannel, NimbusCoreKtor_httpHttpMessageBuilder, NimbusCoreKtor_client_coreHttpRequest, NimbusCoreKotlinx_serialization_coreSerializersModuleCollector, NimbusCoreKtor_ioReadSession, NimbusCoreKotlinSuspendFunction1, NimbusCoreKotlinAppendable, NimbusCoreKtor_utilsStringValuesBuilder, NimbusCoreKtor_httpParametersBuilder, NimbusCoreKotlinKType, NimbusCoreKtor_ioObjectPool;
 
@@ -166,7 +166,6 @@ __attribute__((swift_name("Nimbus")))
 @property (readonly) id<NimbusCoreIdManager> idManager __attribute__((swift_name("idManager")));
 @property (readonly) id<NimbusCoreLogger> logger __attribute__((swift_name("logger")));
 @property (readonly) NimbusCoreMutableDictionary<NSString *, id _Nullable (^)(NimbusCoreKotlinArray<id> *)> *operations __attribute__((swift_name("operations")));
-@property (readonly) NSString *platform __attribute__((swift_name("platform")));
 @property (readonly) id<NimbusCoreUrlBuilder> urlBuilder __attribute__((swift_name("urlBuilder")));
 @property (readonly) id<NimbusCoreViewClient> viewClient __attribute__((swift_name("viewClient")));
 @end;
@@ -175,16 +174,16 @@ __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ServerDrivenConfig")))
 @interface NimbusCoreServerDrivenConfig : NimbusCoreBase
 - (instancetype)initWithBaseUrl:(NSString *)baseUrl platform:(NSString *)platform actions:(NSDictionary<NSString *, NimbusCoreKotlinUnit *(^)(NimbusCoreActionEvent *)> * _Nullable)actions actionObservers:(NSArray<NimbusCoreKotlinUnit *(^)(NimbusCoreActionEvent *)> * _Nullable)actionObservers operations:(NSDictionary<NSString *, id _Nullable (^)(NimbusCoreKotlinArray<id> *)> * _Nullable)operations logger:(id<NimbusCoreLogger> _Nullable)logger urlBuilder:(id<NimbusCoreUrlBuilder> _Nullable)urlBuilder httpClient:(id<NimbusCoreHttpClient> _Nullable)httpClient viewClient:(id<NimbusCoreViewClient> _Nullable)viewClient idManager:(id<NimbusCoreIdManager> _Nullable)idManager __attribute__((swift_name("init(baseUrl:platform:actions:actionObservers:operations:logger:urlBuilder:httpClient:viewClient:idManager:)"))) __attribute__((objc_designated_initializer));
-- (NSString *)component1 __attribute__((swift_name("component1()")));
-- (id<NimbusCoreIdManager> _Nullable)component10 __attribute__((swift_name("component10()")));
-- (NSString *)component2 __attribute__((swift_name("component2()")));
-- (NSDictionary<NSString *, NimbusCoreKotlinUnit *(^)(NimbusCoreActionEvent *)> * _Nullable)component3 __attribute__((swift_name("component3()")));
-- (NSArray<NimbusCoreKotlinUnit *(^)(NimbusCoreActionEvent *)> * _Nullable)component4 __attribute__((swift_name("component4()")));
-- (NSDictionary<NSString *, id _Nullable (^)(NimbusCoreKotlinArray<id> *)> * _Nullable)component5 __attribute__((swift_name("component5()")));
-- (id<NimbusCoreLogger> _Nullable)component6 __attribute__((swift_name("component6()")));
-- (id<NimbusCoreUrlBuilder> _Nullable)component7 __attribute__((swift_name("component7()")));
-- (id<NimbusCoreHttpClient> _Nullable)component8 __attribute__((swift_name("component8()")));
-- (id<NimbusCoreViewClient> _Nullable)component9 __attribute__((swift_name("component9()")));
+- (NSString *)component1 __attribute__((swift_name("component1()"))) __attribute__((deprecated("use corresponding property instead")));
+- (id<NimbusCoreIdManager> _Nullable)component10 __attribute__((swift_name("component10()"))) __attribute__((deprecated("use corresponding property instead")));
+- (NSString *)component2 __attribute__((swift_name("component2()"))) __attribute__((deprecated("use corresponding property instead")));
+- (NSDictionary<NSString *, NimbusCoreKotlinUnit *(^)(NimbusCoreActionEvent *)> * _Nullable)component3 __attribute__((swift_name("component3()"))) __attribute__((deprecated("use corresponding property instead")));
+- (NSArray<NimbusCoreKotlinUnit *(^)(NimbusCoreActionEvent *)> * _Nullable)component4 __attribute__((swift_name("component4()"))) __attribute__((deprecated("use corresponding property instead")));
+- (NSDictionary<NSString *, id _Nullable (^)(NimbusCoreKotlinArray<id> *)> * _Nullable)component5 __attribute__((swift_name("component5()"))) __attribute__((deprecated("use corresponding property instead")));
+- (id<NimbusCoreLogger> _Nullable)component6 __attribute__((swift_name("component6()"))) __attribute__((deprecated("use corresponding property instead")));
+- (id<NimbusCoreUrlBuilder> _Nullable)component7 __attribute__((swift_name("component7()"))) __attribute__((deprecated("use corresponding property instead")));
+- (id<NimbusCoreHttpClient> _Nullable)component8 __attribute__((swift_name("component8()"))) __attribute__((deprecated("use corresponding property instead")));
+- (id<NimbusCoreViewClient> _Nullable)component9 __attribute__((swift_name("component9()"))) __attribute__((deprecated("use corresponding property instead")));
 - (NimbusCoreServerDrivenConfig *)doCopyBaseUrl:(NSString *)baseUrl platform:(NSString *)platform actions:(NSDictionary<NSString *, NimbusCoreKotlinUnit *(^)(NimbusCoreActionEvent *)> * _Nullable)actions actionObservers:(NSArray<NimbusCoreKotlinUnit *(^)(NimbusCoreActionEvent *)> * _Nullable)actionObservers operations:(NSDictionary<NSString *, id _Nullable (^)(NimbusCoreKotlinArray<id> *)> * _Nullable)operations logger:(id<NimbusCoreLogger> _Nullable)logger urlBuilder:(id<NimbusCoreUrlBuilder> _Nullable)urlBuilder httpClient:(id<NimbusCoreHttpClient> _Nullable)httpClient viewClient:(id<NimbusCoreViewClient> _Nullable)viewClient idManager:(id<NimbusCoreIdManager> _Nullable)idManager __attribute__((swift_name("doCopy(baseUrl:platform:actions:actionObservers:operations:logger:urlBuilder:httpClient:viewClient:idManager:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
@@ -215,10 +214,10 @@ __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ActionEvent")))
 @interface NimbusCoreActionEvent : NimbusCoreBase
 - (instancetype)initWithAction:(id<NimbusCoreServerDrivenAction>)action name:(NSString *)name node:(NimbusCoreRenderNode *)node view:(NimbusCoreServerDrivenView *)view __attribute__((swift_name("init(action:name:node:view:)"))) __attribute__((objc_designated_initializer));
-- (id<NimbusCoreServerDrivenAction>)component1 __attribute__((swift_name("component1()")));
-- (NSString *)component2 __attribute__((swift_name("component2()")));
-- (NimbusCoreRenderNode *)component3 __attribute__((swift_name("component3()")));
-- (NimbusCoreServerDrivenView *)component4 __attribute__((swift_name("component4()")));
+- (id<NimbusCoreServerDrivenAction>)component1 __attribute__((swift_name("component1()"))) __attribute__((deprecated("use corresponding property instead")));
+- (NSString *)component2 __attribute__((swift_name("component2()"))) __attribute__((deprecated("use corresponding property instead")));
+- (NimbusCoreRenderNode *)component3 __attribute__((swift_name("component3()"))) __attribute__((deprecated("use corresponding property instead")));
+- (NimbusCoreServerDrivenView *)component4 __attribute__((swift_name("component4()"))) __attribute__((deprecated("use corresponding property instead")));
 - (NimbusCoreActionEvent *)doCopyAction:(id<NimbusCoreServerDrivenAction>)action name:(NSString *)name node:(NimbusCoreRenderNode *)node view:(NimbusCoreServerDrivenView *)view __attribute__((swift_name("doCopy(action:name:node:view:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
@@ -276,6 +275,16 @@ __attribute__((swift_name("DPA")))
 @interface NimbusCoreDPA : NimbusCoreBase
 - (instancetype)initWithInitial:(NSString *)initial final:(NSString *)final transitions:(NSDictionary<NSString *, NSArray<NimbusCoreTransition *> *> *)transitions __attribute__((swift_name("init(initial:final:transitions:)"))) __attribute__((objc_designated_initializer));
 - (NSString * _Nullable)matchInput:(NSString *)input __attribute__((swift_name("match(input:)")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("DPA.Symbols")))
+@interface NimbusCoreDPASymbols : NimbusCoreBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)symbols __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) NimbusCoreDPASymbols *shared __attribute__((swift_name("shared")));
+@property (readonly) NSString *EMPTY __attribute__((swift_name("EMPTY")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -509,11 +518,11 @@ __attribute__((swift_name("RenderAction")))
 @interface NimbusCoreRenderAction : NimbusCoreBase <NimbusCoreServerDrivenAction>
 - (instancetype)initWithAction:(NSString *)action properties:(NSDictionary<NSString *, id> * _Nullable)properties rawProperties:(NSDictionary<NSString *, id> * _Nullable)rawProperties rawMetadata:(NSDictionary<NSString *, id> * _Nullable)rawMetadata metadata:(NSDictionary<NSString *, id> * _Nullable)metadata __attribute__((swift_name("init(action:properties:rawProperties:rawMetadata:metadata:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) NimbusCoreRenderActionCompanion *companion __attribute__((swift_name("companion")));
-- (NSString *)component1 __attribute__((swift_name("component1()")));
-- (NSDictionary<NSString *, id> * _Nullable)component2 __attribute__((swift_name("component2()")));
-- (NSDictionary<NSString *, id> * _Nullable)component3 __attribute__((swift_name("component3()")));
-- (NSDictionary<NSString *, id> * _Nullable)component4 __attribute__((swift_name("component4()")));
-- (NSDictionary<NSString *, id> * _Nullable)component5 __attribute__((swift_name("component5()")));
+- (NSString *)component1 __attribute__((swift_name("component1()"))) __attribute__((deprecated("use corresponding property instead")));
+- (NSDictionary<NSString *, id> * _Nullable)component2 __attribute__((swift_name("component2()"))) __attribute__((deprecated("use corresponding property instead")));
+- (NSDictionary<NSString *, id> * _Nullable)component3 __attribute__((swift_name("component3()"))) __attribute__((deprecated("use corresponding property instead")));
+- (NSDictionary<NSString *, id> * _Nullable)component4 __attribute__((swift_name("component4()"))) __attribute__((deprecated("use corresponding property instead")));
+- (NSDictionary<NSString *, id> * _Nullable)component5 __attribute__((swift_name("component5()"))) __attribute__((deprecated("use corresponding property instead")));
 - (NimbusCoreRenderAction *)doCopyAction:(NSString *)action properties:(NSDictionary<NSString *, id> * _Nullable)properties rawProperties:(NSDictionary<NSString *, id> * _Nullable)rawProperties rawMetadata:(NSDictionary<NSString *, id> * _Nullable)rawMetadata metadata:(NSDictionary<NSString *, id> * _Nullable)metadata __attribute__((swift_name("doCopy(action:properties:rawProperties:rawMetadata:metadata:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
@@ -748,11 +757,11 @@ __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ViewRequest")))
 @interface NimbusCoreViewRequest : NimbusCoreBase
 - (instancetype)initWithUrl:(NSString *)url method:(NimbusCoreServerDrivenHttpMethod *)method headers:(NSDictionary<NSString *, NSString *> * _Nullable)headers body:(id _Nullable)body fallback:(NimbusCoreRenderNode * _Nullable)fallback __attribute__((swift_name("init(url:method:headers:body:fallback:)"))) __attribute__((objc_designated_initializer));
-- (NSString *)component1 __attribute__((swift_name("component1()")));
-- (NimbusCoreServerDrivenHttpMethod *)component2 __attribute__((swift_name("component2()")));
-- (NSDictionary<NSString *, NSString *> * _Nullable)component3 __attribute__((swift_name("component3()")));
-- (id _Nullable)component4 __attribute__((swift_name("component4()")));
-- (NimbusCoreRenderNode * _Nullable)component5 __attribute__((swift_name("component5()")));
+- (NSString *)component1 __attribute__((swift_name("component1()"))) __attribute__((deprecated("use corresponding property instead")));
+- (NimbusCoreServerDrivenHttpMethod *)component2 __attribute__((swift_name("component2()"))) __attribute__((deprecated("use corresponding property instead")));
+- (NSDictionary<NSString *, NSString *> * _Nullable)component3 __attribute__((swift_name("component3()"))) __attribute__((deprecated("use corresponding property instead")));
+- (id _Nullable)component4 __attribute__((swift_name("component4()"))) __attribute__((deprecated("use corresponding property instead")));
+- (NimbusCoreRenderNode * _Nullable)component5 __attribute__((swift_name("component5()"))) __attribute__((deprecated("use corresponding property instead")));
 - (NimbusCoreViewRequest *)doCopyUrl:(NSString *)url method:(NimbusCoreServerDrivenHttpMethod *)method headers:(NSDictionary<NSString *, NSString *> * _Nullable)headers body:(id _Nullable)body fallback:(NimbusCoreRenderNode * _Nullable)fallback __attribute__((swift_name("doCopy(url:method:headers:body:fallback:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
@@ -828,16 +837,18 @@ __attribute__((swift_name("KotlinNumber")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("AutomatonKt")))
-@interface NimbusCoreAutomatonKt : NimbusCoreBase
-@property (class, readonly) NSString *EMPTY __attribute__((swift_name("EMPTY")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ExpressionKt")))
 @interface NimbusCoreExpressionKt : NimbusCoreBase
 + (BOOL)containsExpressionValue:(NSString *)value __attribute__((swift_name("containsExpression(value:)")));
-+ (id _Nullable)resolveExpressionsValue:(NSString *)value stateHierarchy:(NSArray<NimbusCoreServerDrivenState *> *)stateHierarchy operationHandlers:(NimbusCoreMutableDictionary<NSString *, id _Nullable (^)(NimbusCoreKotlinArray<id> *)> *)operationHandlers logger:(id<NimbusCoreLogger>)logger __attribute__((swift_name("resolveExpressions(value:stateHierarchy:operationHandlers:logger:)")));
++ (id _Nullable)resolveExpressionsValue:(NSString *)value stateHierarchy:(NSArray<NimbusCoreServerDrivenState *> *)stateHierarchy operationHandlers:(NSDictionary<NSString *, id _Nullable (^)(NimbusCoreKotlinArray<id> *)> *)operationHandlers logger:(id<NimbusCoreLogger>)logger __attribute__((swift_name("resolveExpressions(value:stateHierarchy:operationHandlers:logger:)")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("StringKt")))
+@interface NimbusCoreStringKt : NimbusCoreBase
++ (NSString *)addPrefixStr:(NSString *)str prefix:(NSString *)prefix __attribute__((swift_name("addPrefix(str:prefix:)")));
++ (NSString *)removePrefixStr:(NSString *)str prefix:(NSString *)prefix __attribute__((swift_name("removePrefix(str:prefix:)")));
++ (NSString *)removeSuffixStr:(NSString *)str suffix:(NSString *)suffix __attribute__((swift_name("removeSuffix(str:suffix:)")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -859,16 +870,6 @@ __attribute__((swift_name("AnyKt")))
  Other uncaught Kotlin exceptions are fatal.
 */
 + (NimbusCoreKotlinEnum * _Nullable)valueOfEnumData:(id _Nullable)data path:(NSString *)path defaultValue:(NimbusCoreKotlinEnum * _Nullable)defaultValue error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("valueOfEnum(data:path:defaultValue:)")));
-@property (class, readonly) NimbusCoreKotlinRegex *dataPathRegex __attribute__((swift_name("dataPathRegex")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("StringKt")))
-@interface NimbusCoreStringKt : NimbusCoreBase
-+ (NSString *)addPrefixStr:(NSString *)str prefix:(NSString *)prefix __attribute__((swift_name("addPrefix(str:prefix:)")));
-+ (NSString *)capitalizeFirstLetterStr:(NSString *)str __attribute__((swift_name("capitalizeFirstLetter(str:)")));
-+ (NSString *)removePrefixStr:(NSString *)str prefix:(NSString *)prefix __attribute__((swift_name("removePrefix(str:prefix:)")));
-+ (NSString *)removeSuffixStr:(NSString *)str suffix:(NSString *)suffix __attribute__((swift_name("removeSuffix(str:suffix:)")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -902,237 +903,7 @@ __attribute__((swift_name("BooleanKt")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("IndexKt")))
 @interface NimbusCoreIndexKt : NimbusCoreBase
-@property (class, readonly) NSDictionary<NSString *, NimbusCoreKotlinUnit *(^)(NimbusCoreActionEvent *)> *coreActions __attribute__((swift_name("coreActions")));
-@property (class, readonly) NSDictionary<NSString *, NimbusCoreKotlinUnit *(^)(NimbusCoreActionEvent *)> *onCoreActionRendered __attribute__((swift_name("onCoreActionRendered")));
-@property (class, readonly) NSDictionary<NSString *, NSArray<NimbusCoreRenderNode *> *(^)(NimbusCoreRenderNode *)> *coreComponents __attribute__((swift_name("coreComponents")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("ConditionKt")))
-@interface NimbusCoreConditionKt : NimbusCoreBase
-+ (void)conditionEvent:(NimbusCoreActionEvent *)event __attribute__((swift_name("condition(event:)")));
-@property (class, readonly) id _Nullable (^condition)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("condition")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("NavigationKt")))
-@interface NimbusCoreNavigationKt : NimbusCoreBase
-+ (void)dismissEvent:(NimbusCoreActionEvent *)event __attribute__((swift_name("dismiss(event:)")));
-+ (void)onPushOrPresentRenderedEvent:(NimbusCoreActionEvent *)event __attribute__((swift_name("onPushOrPresentRendered(event:)")));
-+ (void)popEvent:(NimbusCoreActionEvent *)event __attribute__((swift_name("pop(event:)")));
-+ (void)popToEvent:(NimbusCoreActionEvent *)event __attribute__((swift_name("popTo(event:)")));
-+ (void)presentEvent:(NimbusCoreActionEvent *)event __attribute__((swift_name("present(event:)")));
-+ (void)pushEvent:(NimbusCoreActionEvent *)event __attribute__((swift_name("push(event:)")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("LogKt")))
-@interface NimbusCoreLogKt : NimbusCoreBase
-+ (void)logEvent:(NimbusCoreActionEvent *)event __attribute__((swift_name("log(event:)")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("SendRequestKt")))
-@interface NimbusCoreSendRequestKt : NimbusCoreBase
-+ (void)sendRequestEvent:(NimbusCoreActionEvent *)event __attribute__((swift_name("sendRequest(event:)")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("SetContentKt")))
-@interface NimbusCoreSetContentKt : NimbusCoreBase
-+ (void)setContentEvent:(NimbusCoreActionEvent *)event __attribute__((swift_name("setContent(event:)")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("SetStateKt")))
-@interface NimbusCoreSetStateKt : NimbusCoreBase
-+ (void)setStateEvent:(NimbusCoreActionEvent *)event __attribute__((swift_name("setState(event:)")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("ForEachKt")))
-@interface NimbusCoreForEachKt : NimbusCoreBase
-+ (NSArray<NimbusCoreRenderNode *> *)forEachComponentNode:(NimbusCoreRenderNode *)node __attribute__((swift_name("forEachComponent(node:)")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("IfKt")))
-@interface NimbusCoreIfKt : NimbusCoreBase
-+ (NSArray<NimbusCoreRenderNode *> *)ifComponentNode:(NimbusCoreRenderNode *)node __attribute__((swift_name("ifComponent(node:)")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("SwitchKt")))
-@interface NimbusCoreSwitchKt : NimbusCoreBase
-+ (NSArray<NimbusCoreRenderNode *> *)switchComponentNode:(NimbusCoreRenderNode *)node __attribute__((swift_name("switchComponent(node:)")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("AndKt")))
-@interface NimbusCoreAndKt : NimbusCoreBase
-@property (class, readonly, getter=and) id _Nullable (^and_)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("and_")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("CapitalizeKt")))
-@interface NimbusCoreCapitalizeKt : NimbusCoreBase
-@property (class, readonly) id _Nullable (^capitalize)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("capitalize")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("ConcatKt")))
-@interface NimbusCoreConcatKt : NimbusCoreBase
-@property (class, readonly) id _Nullable (^concat)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("concat")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("ContainsKt")))
-@interface NimbusCoreContainsKt : NimbusCoreBase
-@property (class, readonly) id _Nullable (^contains)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("contains")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("DefaultOperationsKt")))
-@interface NimbusCoreDefaultOperationsKt : NimbusCoreBase
-@property (class, readonly) NimbusCoreMutableDictionary<NSString *, id _Nullable (^)(NimbusCoreKotlinArray<id> *)> *defaultOperations __attribute__((swift_name("defaultOperations")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("DivideKt")))
-@interface NimbusCoreDivideKt : NimbusCoreBase
-@property (class, readonly) id _Nullable (^divide)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("divide")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("EqKt")))
-@interface NimbusCoreEqKt : NimbusCoreBase
-@property (class, readonly) id _Nullable (^eq)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("eq")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("GtKt")))
-@interface NimbusCoreGtKt : NimbusCoreBase
-@property (class, readonly) id _Nullable (^gt)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("gt")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("GteKt")))
-@interface NimbusCoreGteKt : NimbusCoreBase
-@property (class, readonly) id _Nullable (^gte)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("gte")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("InsertKt")))
-@interface NimbusCoreInsertKt : NimbusCoreBase
-@property (class, readonly) id _Nullable (^insert)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("insert")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("IsEmptyKt")))
-@interface NimbusCoreIsEmptyKt : NimbusCoreBase
-@property (class, readonly) id _Nullable (^isEmpty)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("isEmpty")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("IsNullKt")))
-@interface NimbusCoreIsNullKt : NimbusCoreBase
-@property (class, readonly) id _Nullable (^isNull)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("isNull")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("LengthKt")))
-@interface NimbusCoreLengthKt : NimbusCoreBase
-@property (class, readonly) id _Nullable (^length)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("length")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("LowercaseKt")))
-@interface NimbusCoreLowercaseKt : NimbusCoreBase
-@property (class, readonly) id _Nullable (^lowercase)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("lowercase")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("LtKt")))
-@interface NimbusCoreLtKt : NimbusCoreBase
-@property (class, readonly) id _Nullable (^lt)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("lt")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("LteKt")))
-@interface NimbusCoreLteKt : NimbusCoreBase
-@property (class, readonly) id _Nullable (^lte)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("lte")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("MatchKt")))
-@interface NimbusCoreMatchKt : NimbusCoreBase
-@property (class, readonly) id _Nullable (^match)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("match")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("MultiplyKt")))
-@interface NimbusCoreMultiplyKt : NimbusCoreBase
-@property (class, readonly) id _Nullable (^multiply)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("multiply")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("NotKt")))
-@interface NimbusCoreNotKt : NimbusCoreBase
-@property (class, readonly, getter=not) id _Nullable (^not_)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("not_")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("OrKt")))
-@interface NimbusCoreOrKt : NimbusCoreBase
-@property (class, readonly, getter=or) id _Nullable (^or_)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("or_")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("RemoveKt")))
-@interface NimbusCoreRemoveKt : NimbusCoreBase
-@property (class, readonly) id _Nullable (^remove)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("remove")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("RemoveIndexKt")))
-@interface NimbusCoreRemoveIndexKt : NimbusCoreBase
-@property (class, readonly) id _Nullable (^removeIndex)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("removeIndex")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("ReplaceKt")))
-@interface NimbusCoreReplaceKt : NimbusCoreBase
-@property (class, readonly) id _Nullable (^replace)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("replace")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("SubstrKt")))
-@interface NimbusCoreSubstrKt : NimbusCoreBase
-@property (class, readonly) id _Nullable (^substr)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("substr")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("SubtractKt")))
-@interface NimbusCoreSubtractKt : NimbusCoreBase
-@property (class, readonly) id _Nullable (^subtract)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("subtract")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("SumKt")))
-@interface NimbusCoreSumKt : NimbusCoreBase
-@property (class, readonly) id _Nullable (^sum)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("sum")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UnionKt")))
-@interface NimbusCoreUnionKt : NimbusCoreBase
-@property (class, readonly, getter=union) id _Nullable (^union_)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("union_")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UppercaseKt")))
-@interface NimbusCoreUppercaseKt : NimbusCoreBase
-@property (class, readonly) id _Nullable (^uppercase)(NimbusCoreKotlinArray<id> *) __attribute__((swift_name("uppercase")));
++ (NSDictionary<NSString *, NSArray<NimbusCoreRenderNode *> *(^)(NimbusCoreRenderNode *)> *)getCoreComponents __attribute__((swift_name("getCoreComponents()")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -1607,7 +1378,7 @@ __attribute__((swift_name("Ktor_httpHttpMethod")))
 @interface NimbusCoreKtor_httpHttpMethod : NimbusCoreBase
 - (instancetype)initWithValue:(NSString *)value __attribute__((swift_name("init(value:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) NimbusCoreKtor_httpHttpMethodCompanion *companion __attribute__((swift_name("companion")));
-- (NSString *)component1 __attribute__((swift_name("component1()")));
+- (NSString *)component1 __attribute__((swift_name("component1()"))) __attribute__((deprecated("use corresponding property instead")));
 - (NimbusCoreKtor_httpHttpMethod *)doCopyValue:(NSString *)value __attribute__((swift_name("doCopy(value:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
@@ -1658,7 +1429,7 @@ __attribute__((swift_name("Kotlinx_coroutines_coreJob")))
  @note This method converts instances of CancellationException to errors.
  Other uncaught Kotlin exceptions are fatal.
 */
-- (void)joinWithCompletionHandler:(void (^)(NimbusCoreKotlinUnit * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("join(completionHandler:)")));
+- (void)joinWithCompletionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("join(completionHandler:)")));
 - (id<NimbusCoreKotlinx_coroutines_coreJob>)plusOther_:(id<NimbusCoreKotlinx_coroutines_coreJob>)other __attribute__((swift_name("plus(other_:)"))) __attribute__((unavailable("Operator '+' on two Job objects is meaningless. Job is a coroutine context element and `+` is a set-sum operator for coroutine contexts. The job to the right of `+` just replaces the job the left of `+`.")));
 - (BOOL)start_ __attribute__((swift_name("start()")));
 @property (readonly) id<NimbusCoreKotlinSequence> children __attribute__((swift_name("children")));
@@ -1687,8 +1458,8 @@ __attribute__((swift_name("Ktor_httpHttpStatusCode")))
 @interface NimbusCoreKtor_httpHttpStatusCode : NimbusCoreBase
 - (instancetype)initWithValue:(int32_t)value description:(NSString *)description __attribute__((swift_name("init(value:description:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) NimbusCoreKtor_httpHttpStatusCodeCompanion *companion __attribute__((swift_name("companion")));
-- (int32_t)component1 __attribute__((swift_name("component1()")));
-- (NSString *)component2 __attribute__((swift_name("component2()")));
+- (int32_t)component1 __attribute__((swift_name("component1()"))) __attribute__((deprecated("use corresponding property instead")));
+- (NSString *)component2 __attribute__((swift_name("component2()"))) __attribute__((deprecated("use corresponding property instead")));
 - (NimbusCoreKtor_httpHttpStatusCode *)doCopyValue:(int32_t)value description:(NSString *)description __attribute__((swift_name("doCopy(value:description:)")));
 - (NimbusCoreKtor_httpHttpStatusCode *)descriptionValue:(NSString *)value __attribute__((swift_name("description(value:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
@@ -1703,15 +1474,15 @@ __attribute__((swift_name("Ktor_utilsGMTDate")))
 @interface NimbusCoreKtor_utilsGMTDate : NimbusCoreBase <NimbusCoreKotlinComparable>
 @property (class, readonly, getter=companion) NimbusCoreKtor_utilsGMTDateCompanion *companion __attribute__((swift_name("companion")));
 - (int32_t)compareToOther:(NimbusCoreKtor_utilsGMTDate *)other __attribute__((swift_name("compareTo(other:)")));
-- (int32_t)component1 __attribute__((swift_name("component1()")));
-- (int32_t)component2 __attribute__((swift_name("component2()")));
-- (int32_t)component3 __attribute__((swift_name("component3()")));
-- (NimbusCoreKtor_utilsWeekDay *)component4 __attribute__((swift_name("component4()")));
-- (int32_t)component5 __attribute__((swift_name("component5()")));
-- (int32_t)component6 __attribute__((swift_name("component6()")));
-- (NimbusCoreKtor_utilsMonth *)component7 __attribute__((swift_name("component7()")));
-- (int32_t)component8 __attribute__((swift_name("component8()")));
-- (int64_t)component9 __attribute__((swift_name("component9()")));
+- (int32_t)component1 __attribute__((swift_name("component1()"))) __attribute__((deprecated("use corresponding property instead")));
+- (int32_t)component2 __attribute__((swift_name("component2()"))) __attribute__((deprecated("use corresponding property instead")));
+- (int32_t)component3 __attribute__((swift_name("component3()"))) __attribute__((deprecated("use corresponding property instead")));
+- (NimbusCoreKtor_utilsWeekDay *)component4 __attribute__((swift_name("component4()"))) __attribute__((deprecated("use corresponding property instead")));
+- (int32_t)component5 __attribute__((swift_name("component5()"))) __attribute__((deprecated("use corresponding property instead")));
+- (int32_t)component6 __attribute__((swift_name("component6()"))) __attribute__((deprecated("use corresponding property instead")));
+- (NimbusCoreKtor_utilsMonth *)component7 __attribute__((swift_name("component7()"))) __attribute__((deprecated("use corresponding property instead")));
+- (int32_t)component8 __attribute__((swift_name("component8()"))) __attribute__((deprecated("use corresponding property instead")));
+- (int64_t)component9 __attribute__((swift_name("component9()"))) __attribute__((deprecated("use corresponding property instead")));
 - (NimbusCoreKtor_utilsGMTDate *)doCopySeconds:(int32_t)seconds minutes:(int32_t)minutes hours:(int32_t)hours dayOfWeek:(NimbusCoreKtor_utilsWeekDay *)dayOfWeek dayOfMonth:(int32_t)dayOfMonth dayOfYear:(int32_t)dayOfYear month:(NimbusCoreKtor_utilsMonth *)month year:(int32_t)year timestamp:(int64_t)timestamp __attribute__((swift_name("doCopy(seconds:minutes:hours:dayOfWeek:dayOfMonth:dayOfYear:month:year:timestamp:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
@@ -1732,9 +1503,9 @@ __attribute__((swift_name("Ktor_httpHttpProtocolVersion")))
 @interface NimbusCoreKtor_httpHttpProtocolVersion : NimbusCoreBase
 - (instancetype)initWithName:(NSString *)name major:(int32_t)major minor:(int32_t)minor __attribute__((swift_name("init(name:major:minor:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) NimbusCoreKtor_httpHttpProtocolVersionCompanion *companion __attribute__((swift_name("companion")));
-- (NSString *)component1 __attribute__((swift_name("component1()")));
-- (int32_t)component2 __attribute__((swift_name("component2()")));
-- (int32_t)component3 __attribute__((swift_name("component3()")));
+- (NSString *)component1 __attribute__((swift_name("component1()"))) __attribute__((deprecated("use corresponding property instead")));
+- (int32_t)component2 __attribute__((swift_name("component2()"))) __attribute__((deprecated("use corresponding property instead")));
+- (int32_t)component3 __attribute__((swift_name("component3()"))) __attribute__((deprecated("use corresponding property instead")));
 - (NimbusCoreKtor_httpHttpProtocolVersion *)doCopyName:(NSString *)name major:(int32_t)major minor:(int32_t)minor __attribute__((swift_name("doCopy(name:major:minor:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
@@ -1881,8 +1652,8 @@ __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("KotlinMatchGroup")))
 @interface NimbusCoreKotlinMatchGroup : NimbusCoreBase
 - (instancetype)initWithValue:(NSString *)value range:(NimbusCoreKotlinIntRange *)range __attribute__((swift_name("init(value:range:)"))) __attribute__((objc_designated_initializer));
-- (NSString *)component1 __attribute__((swift_name("component1()")));
-- (NimbusCoreKotlinIntRange *)component2 __attribute__((swift_name("component2()")));
+- (NSString *)component1 __attribute__((swift_name("component1()"))) __attribute__((deprecated("use corresponding property instead")));
+- (NimbusCoreKotlinIntRange *)component2 __attribute__((swift_name("component2()"))) __attribute__((deprecated("use corresponding property instead")));
 - (NimbusCoreKotlinMatchGroup *)doCopyValue:(NSString *)value range:(NimbusCoreKotlinIntRange *)range __attribute__((swift_name("doCopy(value:range:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
@@ -1999,8 +1770,8 @@ __attribute__((swift_name("Ktor_httpURLProtocol")))
 @interface NimbusCoreKtor_httpURLProtocol : NimbusCoreBase
 - (instancetype)initWithName:(NSString *)name defaultPort:(int32_t)defaultPort __attribute__((swift_name("init(name:defaultPort:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) NimbusCoreKtor_httpURLProtocolCompanion *companion __attribute__((swift_name("companion")));
-- (NSString *)component1 __attribute__((swift_name("component1()")));
-- (int32_t)component2 __attribute__((swift_name("component2()")));
+- (NSString *)component1 __attribute__((swift_name("component1()"))) __attribute__((deprecated("use corresponding property instead")));
+- (int32_t)component2 __attribute__((swift_name("component2()"))) __attribute__((deprecated("use corresponding property instead")));
 - (NimbusCoreKtor_httpURLProtocol *)doCopyName:(NSString *)name defaultPort:(int32_t)defaultPort __attribute__((swift_name("doCopy(name:defaultPort:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
@@ -2347,8 +2118,8 @@ __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Ktor_client_coreHttpResponseContainer")))
 @interface NimbusCoreKtor_client_coreHttpResponseContainer : NimbusCoreBase
 - (instancetype)initWithExpectedType:(NimbusCoreKtor_utilsTypeInfo *)expectedType response:(id)response __attribute__((swift_name("init(expectedType:response:)"))) __attribute__((objc_designated_initializer));
-- (NimbusCoreKtor_utilsTypeInfo *)component1 __attribute__((swift_name("component1()")));
-- (id)component2 __attribute__((swift_name("component2()")));
+- (NimbusCoreKtor_utilsTypeInfo *)component1 __attribute__((swift_name("component1()"))) __attribute__((deprecated("use corresponding property instead")));
+- (id)component2 __attribute__((swift_name("component2()"))) __attribute__((deprecated("use corresponding property instead")));
 - (NimbusCoreKtor_client_coreHttpResponseContainer *)doCopyExpectedType:(NimbusCoreKtor_utilsTypeInfo *)expectedType response:(id)response __attribute__((swift_name("doCopy(expectedType:response:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
@@ -2483,8 +2254,8 @@ __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Ktor_httpHeaderValueParam")))
 @interface NimbusCoreKtor_httpHeaderValueParam : NimbusCoreBase
 - (instancetype)initWithName:(NSString *)name value:(NSString *)value __attribute__((swift_name("init(name:value:)"))) __attribute__((objc_designated_initializer));
-- (NSString *)component1 __attribute__((swift_name("component1()")));
-- (NSString *)component2 __attribute__((swift_name("component2()")));
+- (NSString *)component1 __attribute__((swift_name("component1()"))) __attribute__((deprecated("use corresponding property instead")));
+- (NSString *)component2 __attribute__((swift_name("component2()"))) __attribute__((deprecated("use corresponding property instead")));
 - (NimbusCoreKtor_httpHeaderValueParam *)doCopyName:(NSString *)name value:(NSString *)value __attribute__((swift_name("doCopy(name:value:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
@@ -2573,7 +2344,7 @@ __attribute__((swift_name("Ktor_ioByteReadChannel")))
  @note This method converts instances of CancellationException to errors.
  Other uncaught Kotlin exceptions are fatal.
 */
-- (void)awaitContentWithCompletionHandler:(void (^)(NimbusCoreKotlinUnit * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("awaitContent(completionHandler:)")));
+- (void)awaitContentWithCompletionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("awaitContent(completionHandler:)")));
 - (BOOL)cancelCause_:(NimbusCoreKotlinThrowable * _Nullable)cause __attribute__((swift_name("cancel(cause_:)")));
 
 /**
@@ -2641,25 +2412,25 @@ __attribute__((swift_name("Ktor_ioByteReadChannel")))
  @note This method converts instances of CancellationException to errors.
  Other uncaught Kotlin exceptions are fatal.
 */
-- (void)readFullyDst:(NimbusCoreKtor_ioChunkBuffer *)dst n:(int32_t)n completionHandler:(void (^)(NimbusCoreKotlinUnit * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("readFully(dst:n:completionHandler:)")));
+- (void)readFullyDst:(NimbusCoreKtor_ioChunkBuffer *)dst n:(int32_t)n completionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("readFully(dst:n:completionHandler:)")));
 
 /**
  @note This method converts instances of CancellationException to errors.
  Other uncaught Kotlin exceptions are fatal.
 */
-- (void)readFullyDst:(NimbusCoreKotlinByteArray *)dst offset:(int32_t)offset length:(int32_t)length completionHandler:(void (^)(NimbusCoreKotlinUnit * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("readFully(dst:offset:length:completionHandler:)")));
+- (void)readFullyDst:(NimbusCoreKotlinByteArray *)dst offset:(int32_t)offset length:(int32_t)length completionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("readFully(dst:offset:length:completionHandler:)")));
 
 /**
  @note This method converts instances of CancellationException to errors.
  Other uncaught Kotlin exceptions are fatal.
 */
-- (void)readFullyDst:(void *)dst offset:(int32_t)offset length:(int32_t)length completionHandler_:(void (^)(NimbusCoreKotlinUnit * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("readFully(dst:offset:length:completionHandler_:)")));
+- (void)readFullyDst:(void *)dst offset:(int32_t)offset length:(int32_t)length completionHandler_:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("readFully(dst:offset:length:completionHandler_:)")));
 
 /**
  @note This method converts instances of CancellationException to errors.
  Other uncaught Kotlin exceptions are fatal.
 */
-- (void)readFullyDst:(void *)dst offset:(int64_t)offset length:(int64_t)length completionHandler__:(void (^)(NimbusCoreKotlinUnit * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("readFully(dst:offset:length:completionHandler__:)")));
+- (void)readFullyDst:(void *)dst offset:(int64_t)offset length:(int64_t)length completionHandler__:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("readFully(dst:offset:length:completionHandler__:)")));
 
 /**
  @note This method converts instances of CancellationException to errors.
@@ -2696,7 +2467,7 @@ __attribute__((swift_name("Ktor_ioByteReadChannel")))
  @note This method converts instances of CancellationException to errors.
  Other uncaught Kotlin exceptions are fatal.
 */
-- (void)readSuspendableSessionConsumer:(id<NimbusCoreKotlinSuspendFunction1>)consumer completionHandler:(void (^)(NimbusCoreKotlinUnit * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("readSuspendableSession(consumer:completionHandler:)"))) __attribute__((deprecated("Use read { } instead.")));
+- (void)readSuspendableSessionConsumer:(id<NimbusCoreKotlinSuspendFunction1>)consumer completionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("readSuspendableSession(consumer:completionHandler:)"))) __attribute__((deprecated("Use read { } instead.")));
 
 /**
  @note This method converts instances of CancellationException to errors.
@@ -2813,9 +2584,9 @@ __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Ktor_utilsTypeInfo")))
 @interface NimbusCoreKtor_utilsTypeInfo : NimbusCoreBase
 - (instancetype)initWithType:(id<NimbusCoreKotlinKClass>)type reifiedType:(id<NimbusCoreKotlinKType>)reifiedType kotlinType:(id<NimbusCoreKotlinKType> _Nullable)kotlinType __attribute__((swift_name("init(type:reifiedType:kotlinType:)"))) __attribute__((objc_designated_initializer));
-- (id<NimbusCoreKotlinKClass>)component1 __attribute__((swift_name("component1()")));
-- (id<NimbusCoreKotlinKType>)component2 __attribute__((swift_name("component2()")));
-- (id<NimbusCoreKotlinKType> _Nullable)component3 __attribute__((swift_name("component3()")));
+- (id<NimbusCoreKotlinKClass>)component1 __attribute__((swift_name("component1()"))) __attribute__((deprecated("use corresponding property instead")));
+- (id<NimbusCoreKotlinKType>)component2 __attribute__((swift_name("component2()"))) __attribute__((deprecated("use corresponding property instead")));
+- (id<NimbusCoreKotlinKType> _Nullable)component3 __attribute__((swift_name("component3()"))) __attribute__((deprecated("use corresponding property instead")));
 - (NimbusCoreKtor_utilsTypeInfo *)doCopyType:(id<NimbusCoreKotlinKClass>)type reifiedType:(id<NimbusCoreKotlinKType>)reifiedType kotlinType:(id<NimbusCoreKotlinKType> _Nullable)kotlinType __attribute__((swift_name("doCopy(type:reifiedType:kotlinType:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
@@ -3164,8 +2935,8 @@ __attribute__((swift_name("KotlinKTypeProjection")))
 @interface NimbusCoreKotlinKTypeProjection : NimbusCoreBase
 - (instancetype)initWithVariance:(NimbusCoreKotlinKVariance * _Nullable)variance type:(id<NimbusCoreKotlinKType> _Nullable)type __attribute__((swift_name("init(variance:type:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) NimbusCoreKotlinKTypeProjectionCompanion *companion __attribute__((swift_name("companion")));
-- (NimbusCoreKotlinKVariance * _Nullable)component1 __attribute__((swift_name("component1()")));
-- (id<NimbusCoreKotlinKType> _Nullable)component2 __attribute__((swift_name("component2()")));
+- (NimbusCoreKotlinKVariance * _Nullable)component1 __attribute__((swift_name("component1()"))) __attribute__((deprecated("use corresponding property instead")));
+- (id<NimbusCoreKotlinKType> _Nullable)component2 __attribute__((swift_name("component2()"))) __attribute__((deprecated("use corresponding property instead")));
 - (NimbusCoreKotlinKTypeProjection *)doCopyVariance:(NimbusCoreKotlinKVariance * _Nullable)variance type:(id<NimbusCoreKotlinKType> _Nullable)type __attribute__((swift_name("doCopy(variance:type:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
