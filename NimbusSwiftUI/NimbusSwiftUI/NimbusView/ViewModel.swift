@@ -80,7 +80,10 @@ extension ViewModel {
         description: url
       )
       view?.onChange { [weak self] node in
-        self?.state = .view(node)
+//      TODO: Fix dispatch main on nimbus core
+//        DispatchQueue.main.async {
+          self?.state = .view(node)
+//        }
       }
     }
     

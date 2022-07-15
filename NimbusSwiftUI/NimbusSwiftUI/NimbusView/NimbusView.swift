@@ -27,7 +27,9 @@ struct NimbusView: View {
   }
   
   var body: some View {
-    VStack {
+    ZStack(alignment: .topLeading) {
+      Color.clear
+      
       NavigationLink(unwrap: $viewModel.next.case(ViewModel.Navigation.pushCasePath)) { viewModel in
         NimbusView(viewModel: viewModel.wrappedValue)
       }
@@ -74,6 +76,13 @@ struct NimbusView: View {
   }
 }
 
-enum RenderingError: Error {
+enum RenderingError: LocalizedError {
   case notRegistered(String)
+  
+  var errorDescription: String? {
+    switch self {
+    case .notRegistered(let string):
+      return "\(string) not registered!"
+    }
+  }
 }

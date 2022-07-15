@@ -96,9 +96,11 @@ public struct NimbusNavigator: View {
     NavigationView {
       if let viewModel = viewModel {
         NimbusView(viewModel: viewModel)
+          .navigationBarTitle(Text(""), displayMode: .inline)
       }
     }
     .navigationViewStyle(.stack)
+    .preference(key: CorePreferenceKey.self, value: core)
     .onLoad {
       viewModel = ViewModel(mode: mode, core: core)
     }
