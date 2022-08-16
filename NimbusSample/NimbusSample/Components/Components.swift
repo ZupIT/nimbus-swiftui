@@ -21,12 +21,12 @@ import NimbusSwiftUI
 
 typealias Function = @convention(block) (Any?) -> Void
 
-let components: [String: Component] = [
-  "material:text": { (element, _) in
-    AnyComponent(Text(try getMapProperty(map: element.properties, name: "text")))
+let components: [String: ComponentBuilder] = [
+  "material:text": { element, _ in
+    AnyView(Text(try getMapProperty(map: element.properties, name: "text")))
   },
-  "layout:container": { (_, children) in AnyComponent(Container(children: children)) },
-  "material:button": { (element, children) in
-    AnyComponent(try CustomButton(from: element.properties, children: children))
+  "layout:container": { (_, children) in AnyView(Container(children: children)) },
+  "material:button": { (element, _) in
+    AnyView(try CustomButton(from: element.properties))
   }
 ]

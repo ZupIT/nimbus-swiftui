@@ -18,12 +18,12 @@ import Foundation
 
 /// Used for component mapping
 public protocol Deserializable {
-  init(from map: [String : Any]?, children: [AnyComponent]) throws
+  init(from map: [String : Any]?) throws
 }
 
 extension Deserializable {
   public init(from map: [String : Any]?) throws {
-    try self.init(from: map, children: [])
+    try self.init(from: map)
   }
 }
 

@@ -31,7 +31,7 @@ struct CustomButton: View {
 }
 
 extension CustomButton: Deserializable {
-  init(from map: [String : Any]?, children: [AnyComponent]) throws {
+  init(from map: [String : Any]?) throws {
     self.text = try getMapProperty(map: map, name: "text")
     self.enabled = try getMapPropertyDefault(map: map, name: "enabled", default: true)
     let function = getMapFunction(map: map, name: "onPress")

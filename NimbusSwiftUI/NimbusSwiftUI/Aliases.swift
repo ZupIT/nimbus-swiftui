@@ -24,10 +24,9 @@ public typealias Operation = @convention(block) (KotlinArray<AnyObject>) -> Any?
 public typealias Component = (NimbusCore.ServerDrivenNode, [AnyComponent]) throws -> AnyComponent
 
 public typealias ViewRequest = NimbusCore.ViewRequest
+public typealias ServerDrivenNode = NimbusCore.ServerDrivenNode
 
-// MARK: - internal
 
-typealias ServerDrivenNode = NimbusCore.ServerDrivenNode
 
 // MARK: - AnyComponent
 
