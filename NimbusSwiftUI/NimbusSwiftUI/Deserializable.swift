@@ -15,6 +15,7 @@
  */
 
 import Foundation
+import SwiftUI
 
 /// Used for component mapping
 public protocol Deserializable {
@@ -27,8 +28,21 @@ extension Deserializable {
   }
 }
 
-enum DeserializationError: Error {
+/*/// fixme: using "children" is not great since most of the times Deserializable is not used on a View.
+public protocol Deserializable {
+  associatedtype Content: View
+  init(from map: [String : Any]?, @ViewBuilder children: () -> Content) throws
+}
+
+extension Deserializable {
+  public init(from map: [String : Any]?, @ViewBuilder children: () -> Content) throws {
+    try self.init(from: map, children: children)
+  }
+}*/
+
+public enum DeserializationError: Error {
   case propertyNotFound(String)
+  case invalidType(String)
 }
 
 /// This is the general case for property deserialization, can be used for optional properties too.
