@@ -22,29 +22,18 @@ struct ContentView: View {
     Nimbus(baseUrl: "base") {
       NimbusNavigator(json: """
       {
-        "_:component": "layout:container",
-        "children": [
-          {
-            "_:component": "material:text",
-            "properties": {
-              "text": "Hello World!"
+        "_:component": "material:button",
+        "properties": {
+          "text": "Button",
+          "onPress": [
+            {
+              "_:action": "openUrl",
+              "properties": {
+                "url": "https://apple.com"
+              }
             }
-          },
-          {
-            "_:component": "material:button",
-            "properties": {
-              "text": "Open Apple Website",
-              "onPress": [
-                {
-                  "_:action": "openUrl",
-                  "properties": {
-                    "url": "https://apple.com"
-                  }
-                }
-              ]
-            }
-          }
-        ]
+          ]
+        }
       }
       """)
     }

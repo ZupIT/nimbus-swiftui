@@ -17,11 +17,6 @@
 import SwiftUI
 import NimbusCore
 
-public typealias ComponentBuilder = (
-  ServerDrivenNode,
-  @escaping () -> ForEach<[ServerDrivenNode], String, AnyView>
-) throws -> AnyView
-
 // MARK: - Dependencies
 
 struct Dependencies {
