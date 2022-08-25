@@ -27,9 +27,7 @@ struct NimbusView: View {
   }
   
   var body: some View {
-    ZStack() {
-      Color.clear
-      
+    VStack {
       NavigationLink(unwrap: $viewModel.next.case(ViewModel.Navigation.pushCasePath)) { viewModel in
         NimbusView(viewModel: viewModel.wrappedValue)
       }
@@ -41,7 +39,7 @@ struct NimbusView: View {
       case let .error(error):
         dependencies.error(error, retry)
       case let .view(node: node):
-        components(node: node)
+        renderTree(node: node)
       }
     }
     .sheet(unwrap: $viewModel.next.case(ViewModel.Navigation.presentCasePath)) { viewModel in
@@ -59,41 +57,12 @@ struct NimbusView: View {
     viewModel.load()
   }
   
-  func components(node: ServerDrivenNode) -> AnyComponent {
-    nodeHasUpdates = [:]
-    let component = renderTree(node: node)
-    return component
-  }
-  
   private func renderTree(node: ServerDrivenNode) -> AnyComponent {
     if let function = dependencies.components[node.component] {
       let children: [AnyComponent] = node.children?.map { renderTree(node: $0) } ?? []
-      
       do {
         // TODO: create a map [String: Deserializable.Type]
-        let component = try function(node, children)
-        guard let id = component.id else {
-          return component
-        }
-        
-        // compare last node properties if change set nodeHasUpdates
-        let properties = NodeProperties(node.properties)
-        if lastNodeProperties[id] == nil {
-          nodeHasUpdates[id] = true
-        } else if let lastComponent = lastNodeProperties[id], properties != lastComponent {
-          nodeHasUpdates[id] = true
-        } else {
-          for child in children {
-            if let childrenId = child.id, nodeHasUpdates[childrenId] ?? false {
-              nodeHasUpdates[id] = true
-              break
-            }
-          }
-        }
-        
-        lastNodeProperties[id] = properties
-        return component
-        
+        return try function(node, children)
       } catch {
         viewModel.state = .error(error)
         return AnyComponent(EmptyView())
@@ -105,44 +74,6 @@ struct NimbusView: View {
   }
 }
 
-var nodeHasUpdates: [String: Bool] = [:]
-var lastNodeProperties: [String: NodeProperties] = [:]
-
-enum NodeProperties: Equatable {
-  case null
-  case bool(Bool)
-  case int(Int)
-  case double(Double)
-  case string(String)
-  case array([NodeProperties])
-  case dictionary([String: NodeProperties])
-
-  public init(_ object: Any?) {
-    if let bool = object as? Bool {
-      self = .bool(bool)
-    } else if let int = object as? Int {
-      self = .int(int)
-    } else if let double = object as? Double {
-      self = .double(double)
-    } else if let string = object as? String {
-      self = .string(string)
-    } else if let array = object as? [Any] {
-      self = .array(array.map { .init($0) })
-    } else if let dictionary = object as? [String: Any] {
-      self = .dictionary(dictionary.mapValues { .init($0) })
-    } else {
-      self = .null
-    }
-  }
-}
-
-enum RenderingError: LocalizedError {
+enum RenderingError: Error {
   case notRegistered(String)
-  
-  var errorDescription: String? {
-    switch self {
-    case .notRegistered(let string):
-      return "\(string) not registered!"
-    }
-  }
 }

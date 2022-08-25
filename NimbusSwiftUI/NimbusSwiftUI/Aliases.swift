@@ -32,30 +32,15 @@ typealias ServerDrivenNode = NimbusCore.ServerDrivenNode
 // MARK: - AnyComponent
 
 public struct AnyComponent: View {
-  
-  // used in forEach
-  public var id: String?
-  
   let view: AnyView
   public let component: Any
   
-  public init<Content: View>(_ content: Content,_ id: String? = nil) {
+  public init<Content: View>(_ content: Content) {
     self.view = AnyView(content)
     self.component = content
-    self.id = id
   }
   
   public var body: some View {
     view
-  }
-  
-}
-
-extension AnyComponent: Equatable {
-  public static func == (lhs: AnyComponent, rhs: AnyComponent) -> Bool {
-    if let lhsid = lhs.id, let rhsid = rhs.id, lhsid == rhsid {
-      return !(nodeHasUpdates[lhsid] ?? false)
-    }
-    return false
   }
 }
