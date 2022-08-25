@@ -17,11 +17,14 @@
 import SwiftUI
 import NimbusSwiftUI
 
-struct Container: View {
-  var children: [AnyComponent]
+struct Container<Content> : View where Content : View {
+  private let children: () -> Content
+  
+  init(@ViewBuilder children: @escaping () -> Content) {
+    self.children = children
+  }
+  
   var body: some View {
-    ForEach(0..<children.count, id: \.self) { index in
-      children[index]
-    }
+    children()
   }
 }

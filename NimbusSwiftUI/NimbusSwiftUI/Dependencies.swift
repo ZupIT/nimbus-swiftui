@@ -33,7 +33,7 @@ struct Dependencies {
     AnyView(ActivityIndicator(isAnimating: .constant(true)))
   }
   
-  var components: [String: Component] = [:]
+  var components: [String: ComponentBuilder] = [:]
 }
 
 struct DependenciesKey: EnvironmentKey {

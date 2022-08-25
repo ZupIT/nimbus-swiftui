@@ -57,19 +57,23 @@ struct NimbusView: View {
     viewModel.load()
   }
   
-  private func renderTree(node: ServerDrivenNode) -> AnyComponent {
+  private func renderTree(node: ServerDrivenNode) -> AnyView {
     if let function = dependencies.components[node.component] {
-      let children: [AnyComponent] = node.children?.map { renderTree(node: $0) } ?? []
+      let children = {
+        ForEach(node.children ?? [], id: \.id) { child in
+          renderTree(node: child)
+        }
+      }
       do {
         // TODO: create a map [String: Deserializable.Type]
         return try function(node, children)
       } catch {
         viewModel.state = .error(error)
-        return AnyComponent(EmptyView())
+        return AnyView(EmptyView())
       }
     } else {
       viewModel.state = .error(RenderingError.notRegistered(node.component))
-      return AnyComponent(EmptyView())
+      return AnyView(EmptyView())
     }
   }
 }

@@ -21,26 +21,10 @@ import NimbusCore
 
 public typealias Action = @convention(block) (ActionEvent) -> KotlinUnit?
 public typealias Operation = @convention(block) (KotlinArray<AnyObject>) -> Any?
-public typealias Component = (NimbusCore.ServerDrivenNode, [AnyComponent]) throws -> AnyComponent
+public typealias ServerDrivenNode = NimbusCore.ServerDrivenNode
+public typealias ComponentBuilder = (
+  ServerDrivenNode,
+  @escaping () -> ForEach<[ServerDrivenNode], String, AnyView>
+) throws -> AnyView
 
 public typealias ViewRequest = NimbusCore.ViewRequest
-
-// MARK: - internal
-
-typealias ServerDrivenNode = NimbusCore.ServerDrivenNode
-
-// MARK: - AnyComponent
-
-public struct AnyComponent: View {
-  let view: AnyView
-  public let component: Any
-  
-  public init<Content: View>(_ content: Content) {
-    self.view = AnyView(content)
-    self.component = content
-  }
-  
-  public var body: some View {
-    view
-  }
-}

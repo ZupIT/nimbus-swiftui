@@ -58,7 +58,7 @@ public struct Nimbus<Content: View>: View {
 // MARK: - Dependencies
 
 extension Nimbus {
-  public func components(_ components: [String: Component]) -> Nimbus {
+  public func components(_ components: [String: ComponentBuilder]) -> Nimbus {
     let mergedComponents = dependencies.components.merging(components) { $1 }
     return set(keypath: \.dependencies.components, value: mergedComponents)
   }

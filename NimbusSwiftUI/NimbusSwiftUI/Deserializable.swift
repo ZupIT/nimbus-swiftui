@@ -15,15 +15,16 @@
  */
 
 import Foundation
+import SwiftUI
 
 /// Used for component mapping
 public protocol Deserializable {
-  init(from map: [String : Any]?, children: [AnyComponent]) throws
+  init(from map: [String : Any]?) throws
 }
 
 extension Deserializable {
   public init(from map: [String : Any]?) throws {
-    try self.init(from: map, children: [])
+    try self.init(from: map)
   }
 }
 
@@ -47,7 +48,7 @@ enum DeserializationError: LocalizedError {
 ///   var text: String
 ///   var number: Double?
 ///
-///   init(from map: [String : Any]?, children: [AnyComponent]) throws {
+///   init(from map: [String : Any]?) throws {
 ///     self.text = try getMapProperty(map: map, name: "text")
 ///     self.number = try getMapProperty(map: map, name: "number")
 ///   }
@@ -84,7 +85,7 @@ public typealias CoreFunction = @convention(block) (Any?) -> Void
 /// struct Component: Deserializable {
 ///   var onPress: () -> Void
 ///
-///   init(from map: [String : Any]?, children: [AnyComponent]) throws {
+///   init(from map: [String : Any]?) throws {
 ///     let function = getMapFunction(map: map, name: "onPress")
 ///     self.onPress = { function(nil) }
 ///   }
@@ -107,7 +108,7 @@ public func getMapFunction(map: [String: Any]?, name: String) -> CoreFunction {
 /// struct Component: Deserializable {
 ///   var text = "default text"
 ///
-///   init(from map: [String : Any]?, children: [AnyComponent]) throws {
+///   init(from map: [String : Any]?) throws {
 ///     self.text = getMapPropertyDefault(map: map, name: "text", default: "default text")
 ///   }
 /// }
@@ -130,7 +131,7 @@ public func getMapPropertyDefault<T>(map: [String: Any]?, name: String, default:
 ///     case off
 ///   }
 ///
-///   init(from map: [String : Any]?, children: [AnyComponent]) throws {
+///   init(from map: [String : Any]?) throws {
 ///     self.state = getMapEnumDefault(map: map, name: "state", default: .on)
 ///   }
 /// }
