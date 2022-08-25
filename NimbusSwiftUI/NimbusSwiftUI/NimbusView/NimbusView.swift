@@ -78,6 +78,13 @@ struct NimbusView: View {
   }
 }
 
-enum RenderingError: Error {
+enum RenderingError: LocalizedError {
   case notRegistered(String)
+  
+  var errorDescription: String? {
+    switch self {
+    case .notRegistered(let string):
+      return "\(string) not registered!"
+    }
+  }
 }
