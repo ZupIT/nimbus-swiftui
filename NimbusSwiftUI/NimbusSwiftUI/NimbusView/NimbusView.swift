@@ -27,7 +27,7 @@ struct NimbusView: View {
   }
   
   var body: some View {
-    ZStack(alignment: .topLeading) {
+    ZStack() {
       Color.clear
       
       NavigationLink(unwrap: $viewModel.next.case(ViewModel.Navigation.pushCasePath)) { viewModel in

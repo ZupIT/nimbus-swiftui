@@ -94,9 +94,9 @@ extension ViewModel {
       )
       view?.onChange { [weak self] node in
 //      TODO: Fix dispatch main on nimbus core
-        DispatchQueue.main.async {
+//        DispatchQueue.main.async {
           self?.state = .view(node)
-        }
+//        }
       }
     }
     
