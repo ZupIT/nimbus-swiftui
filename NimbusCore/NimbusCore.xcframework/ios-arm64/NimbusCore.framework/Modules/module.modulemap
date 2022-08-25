@@ -3,4 +3,6 @@ framework module NimbusCore {
 
     export *
     module * { export * }
+
+    use Foundation
 }

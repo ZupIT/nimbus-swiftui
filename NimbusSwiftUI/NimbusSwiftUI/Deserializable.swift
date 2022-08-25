@@ -28,9 +28,15 @@ extension Deserializable {
   }
 }
 
-public enum DeserializationError: Error {
-  case propertyNotFound(String)
-  case invalidType(String)
+enum DeserializationError: LocalizedError {
+  case propertyOfType(String, type: String)
+  
+  var errorDescription: String? {
+    switch self {
+    case .propertyOfType(let string, let type):
+      return "property \(string) of \(type) not found"
+    }
+  }
 }
 
 /// This is the general case for property deserialization, can be used for optional properties too.
@@ -52,9 +58,20 @@ public enum DeserializationError: Error {
 public func getMapProperty<T>(map: [String: Any]?, name: String) throws -> T {
   let map: [String: Any] = map ?? [:]
   guard let value = map[name] as? T else {
-    throw DeserializationError.propertyNotFound(name)
+    throw DeserializationError.propertyOfType(name, type: String(describing: T.self))
   }
   return value
+}
+
+public func getMapProperty(map: [String: Any]?, name: String) throws -> String {
+  let map: [String: Any] = map ?? [:]
+  guard let value = map[name] else {
+    throw DeserializationError.propertyOfType(name, type: String(describing: String.self))
+  }
+  if value is NSNull {
+    return ""
+  }
+  return "\(value)"
 }
 
 public typealias CoreFunction = @convention(block) (Any?) -> Void

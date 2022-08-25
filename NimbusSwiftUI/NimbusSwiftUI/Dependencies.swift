@@ -63,7 +63,6 @@ struct CoreDependencies {
   var idManager: IdManager?
 }
 
-
 struct CoreKey: EnvironmentKey {
   static var defaultValue = Core(
     config: ServerDrivenConfig(
@@ -84,5 +83,18 @@ extension EnvironmentValues {
   var core: Core {
     get { self[CoreKey.self] }
     set { self[CoreKey.self] = newValue }
+  }
+}
+
+struct CorePreferenceKey: PreferenceKey {
+  static var defaultValue: Core = CoreKey.defaultValue
+  static func reduce(value: inout Core, nextValue: () -> Core) {
+    value = nextValue()
+  }
+}
+
+extension View {
+  public func core(perform: @escaping (NimbusCore.Nimbus) -> Void) -> some View {
+    onPreferenceChange(CorePreferenceKey.self, perform: perform)
   }
 }
