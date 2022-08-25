@@ -20,7 +20,7 @@ import NimbusCore
 // MARK: - public
 
 public typealias Action = @convention(block) (ActionEvent) -> KotlinUnit?
-public typealias Operation = @convention(block) (KotlinArray<AnyObject>) -> Any?
+public typealias Operation = @convention(block) ([Any]) -> Any?
 public typealias ServerDrivenNode = NimbusCore.ServerDrivenNode
 public typealias ComponentBuilder = (
   ServerDrivenNode,
