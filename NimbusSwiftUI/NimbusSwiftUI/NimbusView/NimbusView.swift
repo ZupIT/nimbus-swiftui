@@ -20,10 +20,19 @@ struct NimbusView: View {
   
   @Environment(\.dependencies) private var dependencies: Dependencies
   
-  @ObservedObject private var viewModel: ViewModel
+  @ObservedObject var viewModel: ViewModel
+  
+  @StateObject var update = ForcefulUpdate()
+  
+  @State private var memoizedRenderNode = MemoizedView<RenderedNode>()
   
   init(viewModel: ViewModel) {
     self.viewModel = viewModel
+  }
+  
+  func onError(error: Error) -> AnyView {
+    viewModel.state = .error(error)
+    return AnyView(EmptyView())
   }
   
   var body: some View {
@@ -39,7 +48,9 @@ struct NimbusView: View {
       case let .error(error):
         dependencies.error(error, retry)
       case let .view(node: node):
-        renderTree(node: node)
+        memoizedRenderNode.remember {
+          RenderedNode(node: node, onError: onError)
+        }
       }
     }
     .sheet(unwrap: $viewModel.next.case(ViewModel.Navigation.presentCasePath)) { viewModel in
@@ -51,30 +62,51 @@ struct NimbusView: View {
     .onLoad {
       viewModel.load()
     }
+    .onReceive(viewModel.objectWillChange) {
+      update.force()
+    }
+    .environmentObject(update)
   }
   
   func retry() {
     viewModel.load()
   }
+}
+
+public struct RenderedNode: View {
+  var node: ServerDrivenNode
+  var onError: (Error) -> AnyView
   
-  private func renderTree(node: ServerDrivenNode) -> AnyView {
+  @Environment(\.dependencies) private var dependencies: Dependencies
+  @EnvironmentObject var forcefulUpdate: ForcefulUpdate
+  @State private var memoizedView = MemoizedView<AnyView>()
+  
+  func render() -> AnyView {
     if let function = dependencies.components[node.component] {
-      let children = {
-        ForEach(node.children ?? [], id: \.id) { child in
-          renderTree(node: child)
-        }
-      }
       do {
+        let children = {
+          ForEach(node.children ?? [], id: \.id) { child in
+            RenderedNode(node: child, onError: onError)
+          }
+        }
         // TODO: create a map [String: Deserializable.Type]
         return try function(node, children)
       } catch {
-        viewModel.state = .error(error)
-        return AnyView(EmptyView())
+        return onError(error)
       }
     } else {
-      viewModel.state = .error(RenderingError.notRegistered(node.component))
-      return AnyView(EmptyView())
+      return onError(RenderingError.notRegistered(node.component))
     }
+  }
+  
+  public var body: AnyView {
+    // we only update the view if we have never calculated it before or if the ServerDrivenNode is dirty,
+    // i.e., needs to be rerendered.
+    if (node.dirty) {
+      memoizedView.invalidate()
+      node.dirty = false
+    }
+    return memoizedView.remember(builder: render)
   }
 }
 

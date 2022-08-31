@@ -550,6 +550,7 @@ __attribute__((swift_name("ServerDrivenNode")))
 @required
 @property (readonly) NSArray<id<NimbusCoreServerDrivenNode>> * _Nullable children __attribute__((swift_name("children")));
 @property (readonly) NSString *component __attribute__((swift_name("component")));
+@property BOOL dirty __attribute__((swift_name("dirty")));
 @property (readonly) NSString *id __attribute__((swift_name("id")));
 @property (readonly) NSDictionary<NSString *, id> * _Nullable properties __attribute__((swift_name("properties")));
 @end;
@@ -557,12 +558,13 @@ __attribute__((swift_name("ServerDrivenNode")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("RenderNode")))
 @interface NimbusCoreRenderNode : NimbusCoreBase <NimbusCoreServerDrivenNode>
-- (instancetype)initWithId:(NSString *)id component:(NSString *)component properties:(NSDictionary<NSString *, id> * _Nullable)properties rawChildren:(NSArray<NimbusCoreRenderNode *> * _Nullable)rawChildren children:(NSArray<NimbusCoreRenderNode *> * _Nullable)children rawProperties:(NSDictionary<NSString *, id> * _Nullable)rawProperties stateHierarchy:(NSArray<NimbusCoreServerDrivenState *> * _Nullable)stateHierarchy implicitStates:(NSDictionary<NSString *, id> * _Nullable)implicitStates stateId:(NSString * _Nullable)stateId stateValue:(id _Nullable)stateValue __attribute__((swift_name("init(id:component:properties:rawChildren:children:rawProperties:stateHierarchy:implicitStates:stateId:stateValue:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithId:(NSString *)id component:(NSString *)component properties:(NSDictionary<NSString *, id> * _Nullable)properties rawChildren:(NSArray<NimbusCoreRenderNode *> * _Nullable)rawChildren children:(NSArray<NimbusCoreRenderNode *> * _Nullable)children rawProperties:(NSDictionary<NSString *, id> * _Nullable)rawProperties stateHierarchy:(NSArray<NimbusCoreServerDrivenState *> * _Nullable)stateHierarchy implicitStates:(NSDictionary<NSString *, id> * _Nullable)implicitStates stateId:(NSString * _Nullable)stateId stateValue:(id _Nullable)stateValue dirty:(BOOL)dirty __attribute__((swift_name("init(id:component:properties:rawChildren:children:rawProperties:stateHierarchy:implicitStates:stateId:stateValue:dirty:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) NimbusCoreRenderNodeCompanion *companion __attribute__((swift_name("companion")));
 - (NimbusCoreRenderNode * _Nullable)findByIdId:(NSString *)id __attribute__((swift_name("findById(id:)")));
 - (NimbusCoreRenderNode * _Nullable)updateNewNode:(NimbusCoreRenderNode *)newNode anchor:(NSString *)anchor mode:(NimbusCoreTreeUpdateMode *)mode __attribute__((swift_name("update(newNode:anchor:mode:)")));
 @property NSArray<NimbusCoreRenderNode *> * _Nullable children __attribute__((swift_name("children")));
 @property (readonly) NSString *component __attribute__((swift_name("component")));
+@property BOOL dirty __attribute__((swift_name("dirty")));
 @property (readonly) NSString *id __attribute__((swift_name("id")));
 @property (readonly) NSArray<NimbusCoreServerDrivenState *> * _Nullable implicitStates __attribute__((swift_name("implicitStates")));
 @property BOOL isRendered __attribute__((swift_name("isRendered")));
