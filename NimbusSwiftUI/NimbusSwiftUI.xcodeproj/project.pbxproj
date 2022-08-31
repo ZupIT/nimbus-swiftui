@@ -32,7 +32,6 @@
 		93FF9D59282ADD2A00C36CE9 /* ViewDidLoadModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9D58282ADD2A00C36CE9 /* ViewDidLoadModifier.swift */; };
 		93FF9D5B282AE06E00C36CE9 /* NimbusCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9D5A282AE06E00C36CE9 /* NimbusCore.swift */; };
 		AFDB646D28BE7E8900D47893 /* UpdateManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDB646C28BE7E8900D47893 /* UpdateManagement.swift */; };
-		AFDB646F28BE7F1300D47893 /* ServerDrivenNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDB646E28BE7F1300D47893 /* ServerDrivenNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +72,6 @@
 		93FF9D58282ADD2A00C36CE9 /* ViewDidLoadModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDidLoadModifier.swift; sourceTree = "<group>"; };
 		93FF9D5A282AE06E00C36CE9 /* NimbusCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusCore.swift; sourceTree = "<group>"; };
 		AFDB646C28BE7E8900D47893 /* UpdateManagement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateManagement.swift; sourceTree = "<group>"; };
-		AFDB646E28BE7F1300D47893 /* ServerDrivenNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerDrivenNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,7 +200,6 @@
 		93FF9D4F282A9A9000C36CE9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				AFDB646E28BE7F1300D47893 /* ServerDrivenNode.swift */,
 				93FF9D53282A9ACA00C36CE9 /* Binding.swift */,
 				93FF9D51282A9AB400C36CE9 /* NavigationLink.swift */,
 				93FF9D5A282AE06E00C36CE9 /* NimbusCore.swift */,
@@ -355,7 +352,6 @@
 				9323D5CE282EF29E002EB6ED /* Aliases.swift in Sources */,
 				93FF9D59282ADD2A00C36CE9 /* ViewDidLoadModifier.swift in Sources */,
 				93FF9D5B282AE06E00C36CE9 /* NimbusCore.swift in Sources */,
-				AFDB646F28BE7F1300D47893 /* ServerDrivenNode.swift in Sources */,
 				93A5039D2816E92200269B03 /* NimbusView.swift in Sources */,
 				93FF9D54282A9ACA00C36CE9 /* Binding.swift in Sources */,
 				93D096A32875C05F00193F72 /* Deserializable.swift in Sources */,
