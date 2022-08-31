@@ -54,7 +54,8 @@ extension RenderNode {
       stateHierarchy: nil,
       implicitStates: nil,
       stateId: nil,
-      stateValue: nil
+      stateValue: nil,
+      dirty: true
     )
   }
   

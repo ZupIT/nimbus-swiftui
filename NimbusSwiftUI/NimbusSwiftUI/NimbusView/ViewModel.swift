@@ -15,10 +15,12 @@
  */
 
 import NimbusCore
+import Combine
 
 class ViewModel: ObservableObject {
   
   @Published var state: State = .loading
+  
   enum State {
     case loading
     case error(Error)
