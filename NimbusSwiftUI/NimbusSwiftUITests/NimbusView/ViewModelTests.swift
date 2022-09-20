@@ -147,18 +147,14 @@ class ViewModelTests: XCTestCase {
     // Given
     let fetch = XCTestExpectation(description: "ViewClient.fetch()")
     let onInit = XCTestExpectation(description: "View.onChange()")
-    let response = dummyNode
+    let response = RootNode()
     let clientSpy = ViewClientSpy(fetch, response)
     let core = NimbusCore.Nimbus(viewClient: clientSpy)
     let sut = ViewModel(mode: .remote(.init("remoteUrl")), core: core)
-    sut.view = core.createView(getNavigator: { sut }, states: [], description: sut.url)
-    sut.view?.onInit { node in
-      //sut.state = .view(ObservableNode(node))
-      onInit.fulfill()
-    }
+    sut.view = ServerDrivenView(nimbus: core, states: nil, description: sut.url) { sut }
     
     // When
-    sut.load()
+    sut.load() { onInit.fulfill() }
     
     // Then
     wait(for: [fetch, onInit], timeout: 3)
@@ -166,8 +162,8 @@ class ViewModelTests: XCTestCase {
       XCTFail("Expected .view(ObservableNode), but was \(String(describing: sut.state))")
       return
     }
-    XCTAssertEqual(observedNode.node.id, response["id"])
-    XCTAssertEqual(observedNode.node.component, response["component"])
+    XCTAssertEqual(observedNode.node.id, response.id)
+    XCTAssertEqual(observedNode.node.component, response.component)
   }
   
   func testLoadFromJson() throws {
@@ -196,8 +192,10 @@ class ViewModelTests: XCTestCase {
       XCTFail("Expected .view(ObervableNode), but was \(String(describing: sut.state))")
       return
     }
-    XCTAssertEqual(observedNode.node.component, component)
-    XCTAssertEqual(observedNode.node.properties?["text"] as? String, text)
+    XCTAssertEqual(observedNode.node.id, "nimbus:root")
+    let content = observedNode.node.children?.first
+    XCTAssertEqual(content?.component, component)
+    XCTAssertEqual(content?.properties?["text"] as? String, text)
   }
 }
 
@@ -214,14 +212,14 @@ extension ViewModel.Navigation: Equatable {
 
 class ViewClientSpy: ViewClient {
   let expectation: XCTestExpectation
-  let response: [String : Any]
+  let response: RootNode
   
-  init(_ expectation: XCTestExpectation, _ response: [String : Any]) {
+  init(_ expectation: XCTestExpectation, _ response: RootNode) {
     self.expectation = expectation
     self.response = response
   }
   
-  func fetch(request: ViewRequest) async throws -> [String : Any] {
+  func fetch(request: ViewRequest) async throws -> RootNode {
     expectation.fulfill()
     return response
   }

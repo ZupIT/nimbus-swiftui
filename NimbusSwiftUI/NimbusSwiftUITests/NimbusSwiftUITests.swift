@@ -42,6 +42,6 @@ class NimbusSwiftUITests: XCTestCase {
 
 
 let myAppUI = NimbusSwiftUILibrary("material")
-  .addComponent(name: "text") { (element, _) in
+  .addComponent("text") { (element, _) in
     AnyView(Text(try getMapProperty(map: element.properties, name: "text") as String))
   }

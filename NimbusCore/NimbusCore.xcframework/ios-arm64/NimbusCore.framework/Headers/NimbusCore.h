@@ -616,6 +616,7 @@ __attribute__((swift_name("ServerDrivenEvent")))
 @required
 - (void)run __attribute__((swift_name("run()")));
 - (void)runImplicitStateValue:(id _Nullable)implicitStateValue __attribute__((swift_name("run(implicitStateValue:)")));
+@property (readonly) NSArray<id<NimbusCoreServerDrivenAction>> *actions __attribute__((swift_name("actions")));
 @property (readonly) NSString *name __attribute__((swift_name("name")));
 @property (readonly) NimbusCoreNimbus *nimbus __attribute__((swift_name("nimbus")));
 @property (readonly) id<NimbusCoreServerDrivenNode> node __attribute__((swift_name("node")));
@@ -653,6 +654,7 @@ __attribute__((swift_name("DynamicEvent")))
 - (void)initializeScope:(id<NimbusCoreScope>)scope __attribute__((swift_name("initialize(scope:)")));
 - (void)run __attribute__((swift_name("run()")));
 - (void)runImplicitStateValue:(id _Nullable)implicitStateValue __attribute__((swift_name("run(implicitStateValue:)")));
+@property NSArray<NimbusCoreDynamicAction *> *actions __attribute__((swift_name("actions")));
 @property (readonly) NSString *name __attribute__((swift_name("name")));
 @property (readonly) NimbusCoreNimbus *nimbus __attribute__((swift_name("nimbus")));
 @property (readonly) id<NimbusCoreServerDrivenNode> node __attribute__((swift_name("node")));

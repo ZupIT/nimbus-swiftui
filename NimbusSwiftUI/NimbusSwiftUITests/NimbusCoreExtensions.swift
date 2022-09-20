@@ -25,31 +25,21 @@ extension NimbusCore.Nimbus {
         baseUrl: "base",
         platform: "iOS",
         ui: nil,
+        coreUILibrary: nil,
         logger: LoggerDummy(),
         urlBuilder: { _ in UrlBuilderDummy() },
         httpClient: HttpClientDummy(),
         viewClient: { _ in viewClient },
-        idManager: IdManagerDummy()
+        idManager: IdManagerDummy(),
+        states: nil
       )
     )
   }
 }
 
 // MARK: - Node mocks
-  
-let dummyNode = [
-  "id": "0",
-  "component": "dummy"
-]
 
-let textNode: [String : Any] = [
-  "id": "0",
-  "component": "material:text",
-  "properties": [
-    "text": "value"
-  ]
-]
-extension ServerDrivenNode {
+extension DynamicNode {
   convenience init(
       id: String,
       component: String,
@@ -58,14 +48,13 @@ extension ServerDrivenNode {
       self.init(
         id: id,
         component: component,
-        properties: properties,
-        children: nil,
         states: nil,
-        parent: nil
+        polymorphic: false
       )
+      self.properties = properties
     }
   
-  static let text = ServerDrivenNode(
+  static let text = DynamicNode(
       id: "0",
       component: "material:text",
       properties: [
@@ -103,8 +92,8 @@ class HttpClientDummy: HttpClient {
 }
 
 class ViewClientDummy: ViewClient {
-  func fetch(request: ViewRequest) async throws -> [String : Any] {
-    return dummyNode
+  func fetch(request: ViewRequest) async throws -> RootNode {
+    return RootNode()
   }
   
   func preFetch(request: ViewRequest) { }

@@ -64,7 +64,7 @@ class ViewModel: ObservableObject {
 // MARK: - load
 
 extension ViewModel {
-  func load() {
+  func load(callback: (() -> Void)? = nil) {
     state = .loading
     
     if view == nil {
@@ -80,9 +80,10 @@ extension ViewModel {
     
     switch mode {
     case let .remote(request: request):
-      load(from: request)
+      load(from: request, callback: callback)
     case let .local(json: json):
       load(from: json)
+      if let callback = callback { callback() }
     }
   }
   
@@ -99,7 +100,7 @@ extension ViewModel {
     }
   }
   
-  private func load(from request: ViewRequest) {
+  private func load(from request: ViewRequest, callback: (() -> Void)? = nil) {
     core.viewClient.fetch(request: request) { [weak self] tree, error in
       DispatchQueue.main.async {
         if let tree = tree {
@@ -111,6 +112,7 @@ extension ViewModel {
         } else if let error = error {
           self?.state = .error(error)
         }
+        if let callback = callback { callback() }
       }
     }
   }
