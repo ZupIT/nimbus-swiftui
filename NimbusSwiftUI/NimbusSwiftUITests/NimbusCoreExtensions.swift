@@ -24,53 +24,54 @@ extension NimbusCore.Nimbus {
       config: ServerDrivenConfig(
         baseUrl: "base",
         platform: "iOS",
-        actions: nil,
-        actionObservers: nil,
-        operations: nil,
+        ui: nil,
         logger: LoggerDummy(),
-        urlBuilder: UrlBuilderDummy(),
+        urlBuilder: { _ in UrlBuilderDummy() },
         httpClient: HttpClientDummy(),
-        viewClient: viewClient,
+        viewClient: { _ in viewClient },
         idManager: IdManagerDummy()
       )
     )
   }
 }
 
-// MARK: - RenderNode
-extension RenderNode {
+// MARK: - Node mocks
+  
+let dummyNode = [
+  "id": "0",
+  "component": "dummy"
+]
+
+let textNode: [String : Any] = [
+  "id": "0",
+  "component": "material:text",
+  "properties": [
+    "text": "value"
+  ]
+]
+extension ServerDrivenNode {
   convenience init(
-    id: String,
-    component: String,
-    properties: [String : Any]? = nil
-  ) {
-    self.init(
-      id: id,
-      component: component,
-      properties: properties,
-      rawChildren: nil,
-      children: nil,
-      rawProperties: nil,
-      stateHierarchy: nil,
-      implicitStates: nil,
-      stateId: nil,
-      stateValue: nil,
-      dirty: true
+      id: String,
+      component: String,
+      properties: [String : Any]? = nil
+    ) {
+      self.init(
+        id: id,
+        component: component,
+        properties: properties,
+        children: nil,
+        states: nil,
+        parent: nil
+      )
+    }
+  
+  static let text = ServerDrivenNode(
+      id: "0",
+      component: "material:text",
+      properties: [
+        "text": "value"
+      ]
     )
-  }
-  
-  static let dummy = RenderNode(
-    id: "0",
-    component: "dummy"
-  )
-  
-  static let text = RenderNode(
-    id: "0",
-    component: "material:text",
-    properties: [
-      "text": "value"
-    ]
-  )
 }
   
 // MARK: - Dependencies
@@ -102,8 +103,8 @@ class HttpClientDummy: HttpClient {
 }
 
 class ViewClientDummy: ViewClient {
-  func fetch(request: ViewRequest) async throws -> RenderNode {
-    .dummy
+  func fetch(request: ViewRequest) async throws -> [String : Any] {
+    return dummyNode
   }
   
   func preFetch(request: ViewRequest) { }

@@ -32,8 +32,6 @@ struct Dependencies {
   var loading: () -> AnyView = {
     AnyView(ActivityIndicator(isAnimating: .constant(true)))
   }
-  
-  var components: [String: ComponentBuilder] = [:]
 }
 
 struct DependenciesKey: EnvironmentKey {
@@ -49,18 +47,17 @@ extension EnvironmentValues {
 
 // MARK: - Core
 
-typealias Core = NimbusCore.Nimbus
+public typealias Core = NimbusCore.Nimbus
 
 struct CoreDependencies {
   var baseUrl: String
-  var actions: [String : Action] = [:]
-  var actionObservers: [Action]?
-  var operations: [String : Operation] = [:]
+  var ui: [UILibrary]?
   var logger: Logger?
-  var urlBuilder: UrlBuilder?
+  var urlBuilder: ((String) -> UrlBuilder)?
   var httpClient: HttpClient?
-  var viewClient: ViewClient?
+  var viewClient: ((Core) -> ViewClient)?
   var idManager: IdManager?
+  var states: [ServerDrivenState]?
 }
 
 struct CoreKey: EnvironmentKey {
@@ -68,14 +65,15 @@ struct CoreKey: EnvironmentKey {
     config: ServerDrivenConfig(
       baseUrl: "",
       platform: "iOS",
-      actions: nil,
-      actionObservers: nil,
-      operations: nil,
+      ui: nil,
+      coreUILibrary: nil,
       logger: nil,
       urlBuilder: nil,
       httpClient: nil,
       viewClient: nil,
-      idManager: nil)
+      idManager: nil,
+      states: nil
+    )
   )
 }
 

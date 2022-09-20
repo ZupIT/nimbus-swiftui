@@ -32,7 +32,7 @@ class NimbusSwiftUITests: XCTestCase {
       }
       """)
     }
-      .components(components)
+      .ui([myAppUI])
       .frame(width: 100, height: 100)
     
     assertSnapshot(matching: view, as: .image)
@@ -40,8 +40,8 @@ class NimbusSwiftUITests: XCTestCase {
 
 }
 
-let components: [String: ComponentBuilder] = [
-  "material:text": { (element, _) in
+
+let myAppUI = NimbusSwiftUILibrary("material")
+  .addComponent(name: "text") { (element, _) in
     AnyView(Text(try getMapProperty(map: element.properties, name: "text") as String))
   }
-]

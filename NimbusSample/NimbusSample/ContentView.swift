@@ -37,7 +37,7 @@ struct ContentView: View {
       }
       """)
     }
-    .components(components)
+    .ui([material, layout])
   }
 }
 

@@ -51,7 +51,7 @@ class NimbusViewTests: XCTestCase {
   
   func testShowView() throws {
     assertSnapshot(with: viewModel) {
-      self.viewModel.state = .view(RenderNode.text)
+      self.viewModel.state = .view(ObservableNode(ServerDrivenNode.text))
     }
   }
   
@@ -80,7 +80,7 @@ class NimbusViewTests: XCTestCase {
       Nimbus(baseUrl: "base") {
         NimbusView(viewModel: viewModel)
       }
-      .components(components)
+      .ui([myAppUI])
       .onAppear {
         onAppear()
       }

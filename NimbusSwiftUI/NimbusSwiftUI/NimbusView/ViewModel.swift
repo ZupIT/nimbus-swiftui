@@ -22,7 +22,7 @@ class ViewModel: ObservableObject {
   enum State {
     case loading
     case error(Error)
-    case view(ServerDrivenNode)
+    case view(ObservableNode)
   }
   
   weak var prev: ViewModel?
@@ -59,26 +59,9 @@ class ViewModel: ObservableObject {
     self.mode = mode
     self.core = core
   }
-  
-  deinit {
-    view?.destroy()
-  }
 }
 
 // MARK: - load
-
-
-extension RenderNode: CustomStringConvertible {
-  public override var description: String {
-    var result = "{\n\"component\":\"\(component)\",\n\"id\":\"\(id)\",\n\"children\":["
-    children?.forEach { result += "\($0),"}
-    if result.last == "," {
-      result.removeLast()
-    }
-    result += "\n]}"
-    return result
-  }
-}
 
 extension ViewModel {
   func load() {
@@ -86,17 +69,12 @@ extension ViewModel {
     
     if view == nil {
 //      TODO: Verify lifecycle
-      view = core.createView(
-        getNavigator: {
-          [unowned self] in self
-        },
+      view = ServerDrivenView(
+        nimbus: core,
+        states: nil,
         description: url
-      )
-      view?.onChange { [weak self] node in
-//      TODO: Fix dispatch main on nimbus core
-//        DispatchQueue.main.async {
-          self?.state = .view(node)
-//        }
+      ) {
+        [unowned self] in self
       }
     }
     
@@ -110,21 +88,25 @@ extension ViewModel {
   
   private func load(from json: String) {
     do {
-      let node = try core.createNodeFromJson(json: json)
-      try view?.renderer.paint(tree: node, anchor: nil, mode: .replace)
+      // TODO: Fix dispatch main on nimbus core
+      let tree = try core.nodeBuilder.buildFromJsonString(json: json)
+      if let view = view {
+        tree.initialize(scope: view)
+        state = .view(ObservableNode(tree))
+      }
     } catch {
       state = .error(error)
     }
   }
   
   private func load(from request: ViewRequest) {
-    core.viewClient.fetch(request: request) { [weak self] node, error in
+    core.viewClient.fetch(request: request) { [weak self] tree, error in
       DispatchQueue.main.async {
-        if let node = node {
-          do {
-            try self?.view?.renderer.paint(tree: node, anchor: nil, mode: .replace)
-          } catch {
-            self?.state = .error(error)
+        if let tree = tree {
+          // TODO: Fix dispatch main on nimbus core
+          if let view = self?.view {
+            tree.initialize(scope: view)
+            self?.state = .view(ObservableNode(tree))
           }
         } else if let error = error {
           self?.state = .error(error)

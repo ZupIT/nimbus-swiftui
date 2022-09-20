@@ -24,16 +24,16 @@ class OpenUrlTests: XCTestCase {
     let url = "schema://url"
     let spy = SpyOpener()
     NimbusSwiftUI.opener = spy
-    let result = openUrl(ActionEvent(
-      action: OpenActionMock(url),
-      name: "openUrl",
-      node: RenderNode(id: "mock", component: "mock"),
-      view: ServerDrivenView(nimbusInstance: Nimbus(), getNavigator: {
-        NavigatorStub()
-      }, description: nil)
-    ))
+    let nimbus = Nimbus()
+    let navigator = NavigatorStub()
+    let view = nimbus.createView(getNavigator: { navigator }, states: [], description: nil)
+    let viewScope = ViewScopeImpl(parent: nimbus.scope, view: view, navigator: navigator)
+    let node = ServerDrivenNode(id: "mock", component: "mock")
+    let event = ServerDrivenEvent(name: "onPress", parent: node, viewScope: viewScope)
+    let action = OpenActionMock(url)
+    event.actions = [action]
+    event.run()
     
-    XCTAssertNil(result)
     XCTAssertEqual(spy.canOpenURLParam, URL(string: url))
     XCTAssertEqual(spy.openURLParam, URL(string: url))
     
@@ -58,7 +58,12 @@ class SpyOpener: UrlOpener {
 }
 
 class OpenActionMock: ServerDrivenAction {
-  var action: String = "openUrl"
+  var handler: (ActionTriggeredEvent) -> Void = openUrl
+  
+  var name = "openUrl"
+  
+  func update() {}
+  
   var metadata: [String : Any]? = [:]
   var properties: [String : Any]?
   

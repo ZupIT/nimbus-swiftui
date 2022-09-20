@@ -19,12 +19,15 @@ import NimbusCore
 
 // MARK: - public
 
-public typealias Action = @convention(block) (ActionEvent) -> KotlinUnit?
+public typealias Action = @convention(block) (ActionTriggeredEvent) -> Void
+public typealias ActionInitializationHandler = @convention(block) (ActionInitializedEvent) -> Void
 public typealias Operation = @convention(block) ([Any]) -> Any?
 public typealias ServerDrivenNode = NimbusCore.ServerDrivenNode
 public typealias ComponentBuilder = (
   ServerDrivenNode,
-  @escaping () -> ForEach<[ServerDrivenNode], String, RenderedNode>
+  @escaping () -> ForEach<[ObservableNode], String, RenderedNode>
 ) throws -> AnyView
 
 public typealias ViewRequest = NimbusCore.ViewRequest
+public typealias Dependent = NimbusCore.Dependent
+public typealias ServerDrivenEvent = NimbusCore.ServerDrivenEvent

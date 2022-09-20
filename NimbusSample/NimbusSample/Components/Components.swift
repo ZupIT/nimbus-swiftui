@@ -19,14 +19,15 @@ import NimbusSwiftUI
 
 // TODO: Serialization Task
 
-typealias Function = @convention(block) (Any?) -> Void
-
-let components: [String: ComponentBuilder] = [
-  "material:text": { element, _ in
-    AnyView(Text(try getMapProperty(map: element.properties, name: "text")))
-  },
-  "layout:container": { (_, children) in AnyView(Container(children: children)) },
-  "material:button": { (element, _) in
+let material = NimbusSwiftUILibrary("material")
+  .addComponent("button") { (element, _) in
     AnyView(try CustomButton(from: element.properties))
   }
-]
+  .addComponent("text") { (element, _) in
+    AnyView(Text(try getMapProperty(map: element.properties, name: "text")))
+  }
+
+let layout = NimbusSwiftUILibrary("layout")
+  .addComponent("container") { (_, children) in
+    AnyView(Container(children: children))
+  }

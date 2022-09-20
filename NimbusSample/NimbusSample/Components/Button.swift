@@ -34,7 +34,7 @@ extension CustomButton: Deserializable {
   init(from map: [String : Any]?) throws {
     self.text = try getMapProperty(map: map, name: "text")
     self.enabled = try getMapPropertyDefault(map: map, name: "enabled", default: true)
-    let function = getMapFunction(map: map, name: "onPress")
-    self.onPress = { function(nil) }
+    let event = getMapEvent(map: map, name: "onPress")
+    self.onPress = { event?.run() }
   }
 }

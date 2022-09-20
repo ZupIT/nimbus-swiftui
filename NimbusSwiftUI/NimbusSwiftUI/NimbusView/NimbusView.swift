@@ -19,12 +19,7 @@ import SwiftUI
 struct NimbusView: View {
   
   @Environment(\.dependencies) private var dependencies: Dependencies
-  
   @ObservedObject var viewModel: ViewModel
-  
-  @StateObject var update = ForcefulUpdate()
-  
-  @State private var memoizedRenderNode = MemoizedView<RenderedNode>()
   
   init(viewModel: ViewModel) {
     self.viewModel = viewModel
@@ -48,9 +43,7 @@ struct NimbusView: View {
       case let .error(error):
         dependencies.error(error, retry)
       case let .view(node: node):
-        memoizedRenderNode.remember {
-          RenderedNode(node: node, onError: onError)
-        }
+        RenderedNode(observableNode: node, onError: onError)
       }
     }
     .sheet(unwrap: $viewModel.next.case(ViewModel.Navigation.presentCasePath)) { viewModel in
@@ -62,61 +55,9 @@ struct NimbusView: View {
     .onLoad {
       viewModel.load()
     }
-    .onReceive(viewModel.objectWillChange) {
-      update.force()
-    }
-    .environmentObject(update)
   }
   
   func retry() {
     viewModel.load()
-  }
-}
-
-public struct RenderedNode: View {
-  var node: ServerDrivenNode
-  var onError: (Error) -> AnyView
-  
-  @Environment(\.dependencies) private var dependencies: Dependencies
-  @EnvironmentObject var forcefulUpdate: ForcefulUpdate
-  @State private var memoizedView = MemoizedView<AnyView>()
-  
-  func render() -> AnyView {
-    if let function = dependencies.components[node.component] {
-      do {
-        let children = {
-          ForEach(node.children ?? [], id: \.id) { child in
-            RenderedNode(node: child, onError: onError)
-          }
-        }
-        // TODO: create a map [String: Deserializable.Type]
-        return try function(node, children)
-      } catch {
-        return onError(error)
-      }
-    } else {
-      return onError(RenderingError.notRegistered(node.component))
-    }
-  }
-  
-  public var body: AnyView {
-    // we only update the view if we have never calculated it before or if the ServerDrivenNode is dirty,
-    // i.e., needs to be rerendered.
-    if (node.dirty) {
-      memoizedView.invalidate()
-      node.dirty = false
-    }
-    return memoizedView.remember(builder: render)
-  }
-}
-
-enum RenderingError: LocalizedError {
-  case notRegistered(String)
-  
-  var errorDescription: String? {
-    switch self {
-    case .notRegistered(let string):
-      return "\(string) not registered!"
-    }
   }
 }
