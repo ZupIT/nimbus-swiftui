@@ -24,53 +24,43 @@ extension NimbusCore.Nimbus {
       config: ServerDrivenConfig(
         baseUrl: "base",
         platform: "iOS",
-        actions: nil,
-        actionObservers: nil,
-        operations: nil,
+        ui: nil,
+        coreUILibrary: nil,
         logger: LoggerDummy(),
-        urlBuilder: UrlBuilderDummy(),
+        urlBuilder: { _ in UrlBuilderDummy() },
         httpClient: HttpClientDummy(),
-        viewClient: viewClient,
-        idManager: IdManagerDummy()
+        viewClient: { _ in viewClient },
+        idManager: IdManagerDummy(),
+        states: nil
       )
     )
   }
 }
 
-// MARK: - RenderNode
-extension RenderNode {
+// MARK: - Node mocks
+
+extension DynamicNode {
   convenience init(
-    id: String,
-    component: String,
-    properties: [String : Any]? = nil
-  ) {
-    self.init(
-      id: id,
-      component: component,
-      properties: properties,
-      rawChildren: nil,
-      children: nil,
-      rawProperties: nil,
-      stateHierarchy: nil,
-      implicitStates: nil,
-      stateId: nil,
-      stateValue: nil,
-      dirty: true
+      id: String,
+      component: String,
+      properties: [String : Any]? = nil
+    ) {
+      self.init(
+        id: id,
+        component: component,
+        states: nil,
+        polymorphic: false
+      )
+      self.properties = properties
+    }
+  
+  static let text = DynamicNode(
+      id: "0",
+      component: "material:text",
+      properties: [
+        "text": "value"
+      ]
     )
-  }
-  
-  static let dummy = RenderNode(
-    id: "0",
-    component: "dummy"
-  )
-  
-  static let text = RenderNode(
-    id: "0",
-    component: "material:text",
-    properties: [
-      "text": "value"
-    ]
-  )
 }
   
 // MARK: - Dependencies
@@ -102,8 +92,8 @@ class HttpClientDummy: HttpClient {
 }
 
 class ViewClientDummy: ViewClient {
-  func fetch(request: ViewRequest) async throws -> RenderNode {
-    .dummy
+  func fetch(request: ViewRequest) async throws -> RootNode {
+    return RootNode()
   }
   
   func preFetch(request: ViewRequest) { }

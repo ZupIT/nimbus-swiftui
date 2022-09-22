@@ -146,28 +146,24 @@ class ViewModelTests: XCTestCase {
   func testLoadFromRequest() throws {
     // Given
     let fetch = XCTestExpectation(description: "ViewClient.fetch()")
-    let onChange = XCTestExpectation(description: "View.onChange()")
-    let response = RenderNode.dummy
+    let onInit = XCTestExpectation(description: "View.onChange()")
+    let response = RootNode()
     let clientSpy = ViewClientSpy(fetch, response)
     let core = NimbusCore.Nimbus(viewClient: clientSpy)
     let sut = ViewModel(mode: .remote(.init("remoteUrl")), core: core)
-    sut.view = core.createView(getNavigator: { sut }, description: sut.url)
-    sut.view?.onChange { node in
-      sut.state = .view(node)
-      onChange.fulfill()
-    }
+    sut.view = ServerDrivenView(nimbus: core, states: nil, description: sut.url) { sut }
     
     // When
-    sut.load()
+    sut.load() { onInit.fulfill() }
     
     // Then
-    wait(for: [fetch, onChange], timeout: 3)
-    guard case let .view(node) = sut.state else {
-      XCTFail("Expected .view(RenderNode), but was \(String(describing: sut.state))")
+    wait(for: [fetch, onInit], timeout: 3)
+    guard case let .view(observedNode) = sut.state else {
+      XCTFail("Expected .view(ObservableNode), but was \(String(describing: sut.state))")
       return
     }
-    XCTAssertEqual(node.id, response.id)
-    XCTAssertEqual(node.component, response.component)
+    XCTAssertEqual(observedNode.node.id, response.id)
+    XCTAssertEqual(observedNode.node.component, response.component)
   }
   
   func testLoadFromJson() throws {
@@ -192,12 +188,14 @@ class ViewModelTests: XCTestCase {
     sut.load()
     
     // Then
-    guard case let .view(node) = sut.state else {
-      XCTFail("Expected .view(RenderNode), but was \(String(describing: sut.state))")
+    guard case let .view(observedNode) = sut.state else {
+      XCTFail("Expected .view(ObervableNode), but was \(String(describing: sut.state))")
       return
     }
-    XCTAssertEqual(node.component, component)
-    XCTAssertEqual(node.properties?["text"] as? String, text)
+    XCTAssertEqual(observedNode.node.id, "nimbus:root")
+    let content = observedNode.node.children?.first
+    XCTAssertEqual(content?.component, component)
+    XCTAssertEqual(content?.properties?["text"] as? String, text)
   }
 }
 
@@ -214,14 +212,14 @@ extension ViewModel.Navigation: Equatable {
 
 class ViewClientSpy: ViewClient {
   let expectation: XCTestExpectation
-  let response: RenderNode
+  let response: RootNode
   
-  init(_ expectation: XCTestExpectation, _ response: RenderNode) {
+  init(_ expectation: XCTestExpectation, _ response: RootNode) {
     self.expectation = expectation
     self.response = response
   }
   
-  func fetch(request: ViewRequest) async throws -> RenderNode {
+  func fetch(request: ViewRequest) async throws -> RootNode {
     expectation.fulfill()
     return response
   }

@@ -31,7 +31,11 @@
 		93FF9D56282A9B3800C36CE9 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9D55282A9B3800C36CE9 /* ActivityIndicator.swift */; };
 		93FF9D59282ADD2A00C36CE9 /* ViewDidLoadModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9D58282ADD2A00C36CE9 /* ViewDidLoadModifier.swift */; };
 		93FF9D5B282AE06E00C36CE9 /* NimbusCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9D5A282AE06E00C36CE9 /* NimbusCore.swift */; };
-		AFDB646D28BE7E8900D47893 /* UpdateManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDB646C28BE7E8900D47893 /* UpdateManagement.swift */; };
+		AFCE758C28CF5C2A004EF849 /* NimbusSwiftUILibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE758B28CF5C2A004EF849 /* NimbusSwiftUILibrary.swift */; };
+		AFCE758E28CF5C55004EF849 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE758D28CF5C55004EF849 /* String.swift */; };
+		AFCE759128CF5E22004EF849 /* CoreUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE759028CF5E22004EF849 /* CoreUI.swift */; };
+		AFCE759328CFA417004EF849 /* ObservableNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE759228CFA417004EF849 /* ObservableNode.swift */; };
+		AFCE759528CFA584004EF849 /* RenderedNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE759428CFA584004EF849 /* RenderedNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +75,11 @@
 		93FF9D55282A9B3800C36CE9 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		93FF9D58282ADD2A00C36CE9 /* ViewDidLoadModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDidLoadModifier.swift; sourceTree = "<group>"; };
 		93FF9D5A282AE06E00C36CE9 /* NimbusCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusCore.swift; sourceTree = "<group>"; };
-		AFDB646C28BE7E8900D47893 /* UpdateManagement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateManagement.swift; sourceTree = "<group>"; };
+		AFCE758B28CF5C2A004EF849 /* NimbusSwiftUILibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusSwiftUILibrary.swift; sourceTree = "<group>"; };
+		AFCE758D28CF5C55004EF849 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		AFCE759028CF5E22004EF849 /* CoreUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreUI.swift; sourceTree = "<group>"; };
+		AFCE759228CFA417004EF849 /* ObservableNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableNode.swift; sourceTree = "<group>"; };
+		AFCE759428CFA584004EF849 /* RenderedNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderedNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +125,7 @@
 		93093688281330070028EA2C /* NimbusSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				9318BAA528639D6200198798 /* Actions */,
+				AFCE758F28CF5DB1004EF849 /* UI */,
 				9323D5C5282EED9D002EB6ED /* CasePath */,
 				93FF9D4F282A9A9000C36CE9 /* Extensions */,
 				9323D5C8282EEF10002EB6ED /* NimbusView */,
@@ -145,14 +153,6 @@
 			path = NimbusSwiftUITests;
 			sourceTree = "<group>";
 		};
-		9318BAA528639D6200198798 /* Actions */ = {
-			isa = PBXGroup;
-			children = (
-				9318BAA628639D7900198798 /* OpenUrl.swift */,
-			);
-			path = Actions;
-			sourceTree = "<group>";
-		};
 		9318BAA82863AD9700198798 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,9 +172,10 @@
 		9323D5C8282EEF10002EB6ED /* NimbusView */ = {
 			isa = PBXGroup;
 			children = (
-				AFDB646C28BE7E8900D47893 /* UpdateManagement.swift */,
 				93A5039C2816E92200269B03 /* NimbusView.swift */,
 				9323D5CB282EF0E6002EB6ED /* ViewModel.swift */,
+				AFCE759228CFA417004EF849 /* ObservableNode.swift */,
+				AFCE759428CFA584004EF849 /* RenderedNode.swift */,
 			);
 			path = NimbusView;
 			sourceTree = "<group>";
@@ -204,6 +205,7 @@
 				93FF9D51282A9AB400C36CE9 /* NavigationLink.swift */,
 				93FF9D5A282AE06E00C36CE9 /* NimbusCore.swift */,
 				9323D5C3282EED4E002EB6ED /* View.swift */,
+				AFCE758D28CF5C55004EF849 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -222,6 +224,16 @@
 				93FF9D58282ADD2A00C36CE9 /* ViewDidLoadModifier.swift */,
 			);
 			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		AFCE758F28CF5DB1004EF849 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9318BAA628639D7900198798 /* OpenUrl.swift */,
+				AFCE759028CF5E22004EF849 /* CoreUI.swift */,
+				AFCE758B28CF5C2A004EF849 /* NimbusSwiftUILibrary.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,16 +352,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				9318BAA728639D7900198798 /* OpenUrl.swift in Sources */,
-				AFDB646D28BE7E8900D47893 /* UpdateManagement.swift in Sources */,
 				9323D5C4282EED4E002EB6ED /* View.swift in Sources */,
 				9323D5CA282EEF86002EB6ED /* NimbusNavigator.swift in Sources */,
 				931B066D286B6E670005C249 /* Dependencies.swift in Sources */,
 				93FF9D52282A9AB400C36CE9 /* NavigationLink.swift in Sources */,
 				9323D5CC282EF0E6002EB6ED /* ViewModel.swift in Sources */,
 				9323D5C7282EEDB4002EB6ED /* CasePath.swift in Sources */,
+				AFCE759128CF5E22004EF849 /* CoreUI.swift in Sources */,
+				AFCE759528CFA584004EF849 /* RenderedNode.swift in Sources */,
 				93FF9D56282A9B3800C36CE9 /* ActivityIndicator.swift in Sources */,
 				931B066B286B6E550005C249 /* Nimbus.swift in Sources */,
+				AFCE758C28CF5C2A004EF849 /* NimbusSwiftUILibrary.swift in Sources */,
 				9323D5CE282EF29E002EB6ED /* Aliases.swift in Sources */,
+				AFCE759328CFA417004EF849 /* ObservableNode.swift in Sources */,
+				AFCE758E28CF5C55004EF849 /* String.swift in Sources */,
 				93FF9D59282ADD2A00C36CE9 /* ViewDidLoadModifier.swift in Sources */,
 				93FF9D5B282AE06E00C36CE9 /* NimbusCore.swift in Sources */,
 				93A5039D2816E92200269B03 /* NimbusView.swift in Sources */,

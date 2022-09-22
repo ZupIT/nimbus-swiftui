@@ -92,12 +92,11 @@ public typealias CoreFunction = @convention(block) (Any?) -> Void
 /// }
 /// ```
 ///
-public func getMapFunction(map: [String: Any]?, name: String) -> CoreFunction {
-  // TODO: refactor this to a safe cast
-  unsafeBitCast(
-    map?[name] as AnyObject,
-    to: CoreFunction.self
-  )
+public func getMapEvent(map: [String: Any]?, name: String) -> ServerDrivenEvent? {
+  if let event = map?[name] as? ServerDrivenEvent {
+    return event
+  }
+  return nil
 }
 
 /// Used for deserialization of a property with default value.

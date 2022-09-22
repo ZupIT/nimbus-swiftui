@@ -25,7 +25,7 @@ public struct Nimbus<Content: View>: View {
   var content: Content
   
   public init(baseUrl: String, @ViewBuilder content: () -> Content) {
-    coreDependencies = CoreDependencies(baseUrl: baseUrl, actions: ["openUrl": openUrl])
+    coreDependencies = CoreDependencies(baseUrl: baseUrl)
     self.content = content()
   }
     
@@ -36,14 +36,15 @@ public struct Nimbus<Content: View>: View {
         config: ServerDrivenConfig(
           baseUrl: coreDependencies.baseUrl,
           platform: "iOS",
-          actions: coreDependencies.actions,
-          actionObservers: coreDependencies.actionObservers,
-          operations: coreDependencies.operations,
+          ui: coreDependencies.ui,
+          coreUILibrary: coreUILibrary,
           logger: coreDependencies.logger,
           urlBuilder: coreDependencies.urlBuilder,
           httpClient: coreDependencies.httpClient,
           viewClient: coreDependencies.viewClient,
-          idManager: coreDependencies.idManager)
+          idManager: coreDependencies.idManager,
+          states: coreDependencies.states
+        )
       ))
   }
   
@@ -58,11 +59,6 @@ public struct Nimbus<Content: View>: View {
 // MARK: - Dependencies
 
 extension Nimbus {
-  public func components(_ components: [String: ComponentBuilder]) -> Nimbus {
-    let mergedComponents = dependencies.components.merging(components) { $1 }
-    return set(keypath: \.dependencies.components, value: mergedComponents)
-  }
-  
   public func error<ErrorView: View>(@ViewBuilder error: @escaping (Error, @escaping () -> Void) -> ErrorView) -> Nimbus {
     set(keypath: \.dependencies.error, value: { (errorParam, retry) in
       AnyView(error(errorParam, retry))
@@ -77,25 +73,15 @@ extension Nimbus {
 // MARK: - Core
 
 extension Nimbus {
-  public func actions(_ actions: [String : Action]) -> Nimbus {
-    let mergedActions = coreDependencies.actions.merging(actions) { $1 }
-    return set(keypath: \.coreDependencies.actions, value: mergedActions)
-  }
-  
-  public func actionObservers(_ actionObservers: [Action]) -> Nimbus {
-    set(keypath: \.coreDependencies.actionObservers, value: actionObservers)
-  }
-  
-  public func operations(_ operations: [String : Operation]) -> Nimbus {
-    let mergedOperations = coreDependencies.operations.merging(operations) { $1 }
-    return set(keypath: \.coreDependencies.operations, value: mergedOperations)
+  public func ui(_ ui: [NimbusSwiftUILibrary]) -> Nimbus {
+    set(keypath: \.coreDependencies.ui, value: ui)
   }
   
   public func logger(_ logger: Logger) -> Nimbus {
     set(keypath: \.coreDependencies.logger, value: logger)
   }
   
-  public func urlBuilder(_ urlBuilder: UrlBuilder) -> Nimbus {
+  public func urlBuilder(_ urlBuilder: @escaping ((String) -> UrlBuilder)) -> Nimbus {
     set(keypath: \.coreDependencies.urlBuilder, value: urlBuilder)
   }
   
@@ -103,7 +89,7 @@ extension Nimbus {
     set(keypath: \.coreDependencies.httpClient, value: httpClient)
   }
   
-  public func viewClient(_ viewClient: ViewClient) -> Nimbus {
+  public func viewClient(_ viewClient: @escaping ((Core) -> ViewClient)) -> Nimbus {
     set(keypath: \.coreDependencies.viewClient, value: viewClient)
   }
   
