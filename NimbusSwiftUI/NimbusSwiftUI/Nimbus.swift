@@ -77,6 +77,10 @@ extension Nimbus {
     set(keypath: \.coreDependencies.ui, value: ui)
   }
   
+  public func states(_ states: [ServerDrivenState]) -> Nimbus {
+    set(keypath: \.coreDependencies.states, value: states)
+  }
+  
   public func logger(_ logger: Logger) -> Nimbus {
     set(keypath: \.coreDependencies.logger, value: logger)
   }

@@ -31,3 +31,4 @@ public typealias ComponentBuilder = (
 public typealias ViewRequest = NimbusCore.ViewRequest
 public typealias Dependent = NimbusCore.Dependent
 public typealias ServerDrivenEvent = NimbusCore.ServerDrivenEvent
+public typealias ServerDrivenState = NimbusCore.ServerDrivenState
