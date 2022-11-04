@@ -17,17 +17,15 @@
 import SwiftUI
 import NimbusSwiftUI
 
-// TODO: Serialization Task
-
 let material = NimbusSwiftUILibrary("material")
-  .addComponent("button") { (element, _) in
-    AnyView(try CustomButton(from: element.properties))
+  .addComponent("button") { node in
+    try NimbusDecoder.decode(CustomButton.self, from: node)
   }
-  .addComponent("text") { (element, _) in
-    AnyView(Text(try getMapProperty(map: element.properties, name: "text")))
+  .addComponent("text") { node in
+    try NimbusDecoder.decode(Text.self, from: node)
   }
 
 let layout = NimbusSwiftUILibrary("layout")
-  .addComponent("container") { (_, children) in
-    AnyView(Container(children: children))
+  .addComponent("container") { node in
+    try NimbusDecoder.decode(Container<AnyView>.self, from: node)
   }

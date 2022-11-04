@@ -14,30 +14,30 @@
  * limitations under the License.
  */
 
-import Foundation
-import SwiftUI
+//import Foundation
+//import SwiftUI
 
 /// Used for component mapping
-public protocol Deserializable {
-  init(from map: [String : Any]?) throws
-}
+//public protocol Deserializable {
+//  init(from map: [String : Any]?) throws
+//}
 
-extension Deserializable {
-  public init(from map: [String : Any]?) throws {
-    try self.init(from: map)
-  }
-}
+//extension Deserializable {
+//  public init(from map: [String : Any]?) throws {
+//    try self.init(from: map)
+//  }
+//}
 
-enum DeserializationError: LocalizedError {
-  case propertyOfType(String, type: String)
-  
-  var errorDescription: String? {
-    switch self {
-    case .propertyOfType(let string, let type):
-      return "property \(string) of \(type) not found"
-    }
-  }
-}
+//enum DeserializationError: LocalizedError {
+//  case propertyOfType(String, type: String)
+//
+//  var errorDescription: String? {
+//    switch self {
+//    case .propertyOfType(let string, let type):
+//      return "property \(string) of \(type) not found"
+//    }
+//  }
+//}
 
 /// This is the general case for property deserialization, can be used for optional properties too.
 ///
@@ -55,26 +55,28 @@ enum DeserializationError: LocalizedError {
 /// }
 /// ```
 ///
-public func getMapProperty<T>(map: [String: Any]?, name: String) throws -> T {
-  let map: [String: Any] = map ?? [:]
-  guard let value = map[name] as? T else {
-    throw DeserializationError.propertyOfType(name, type: String(describing: T.self))
-  }
-  return value
-}
+///
+//public func getMapProperty<T>(map: [String: Any]?, name: String) throws -> T {
+//  let map: [String: Any] = map ?? [:]
+//  guard let value = map[name] as? T else {
+//    throw DeserializationError.propertyOfType(name, type: String(describing: T.self))
+//  }
+//  return value
+//}
 
-public func getMapProperty(map: [String: Any]?, name: String) throws -> String {
-  let map: [String: Any] = map ?? [:]
-  guard let value = map[name] else {
-    throw DeserializationError.propertyOfType(name, type: String(describing: String.self))
-  }
-  if value is NSNull {
-    return ""
-  }
-  return "\(value)"
-}
+// TODO: coercion on String
+//public func getMapProperty(map: [String: Any]?, name: String) throws -> String {
+//  let map: [String: Any] = map ?? [:]
+//  guard let value = map[name] else {
+//    throw DeserializationError.propertyOfType(name, type: String(describing: String.self))
+//  }
+//  if value is NSNull {
+//    return ""
+//  }
+//  return "\(value)"
+//}
 
-public typealias CoreFunction = @convention(block) (Any?) -> Void
+//public typealias CoreFunction = @convention(block) (Any?) -> Void
 
 
 /// Used for function deserialization.
@@ -92,12 +94,12 @@ public typealias CoreFunction = @convention(block) (Any?) -> Void
 /// }
 /// ```
 ///
-public func getMapEvent(map: [String: Any]?, name: String) -> ServerDrivenEvent? {
-  if let event = map?[name] as? ServerDrivenEvent {
-    return event
-  }
-  return nil
-}
+//public func getMapEvent(map: [String: Any]?, name: String) -> ServerDrivenEvent? {
+//  if let event = map?[name] as? ServerDrivenEvent {
+//    return event
+//  }
+//  return nil
+//}
 
 /// Used for deserialization of a property with default value.
 ///
@@ -113,10 +115,10 @@ public func getMapEvent(map: [String: Any]?, name: String) -> ServerDrivenEvent?
 /// }
 /// ```
 ///
-public func getMapPropertyDefault<T>(map: [String: Any]?, name: String, default: T) throws -> T {
-  let value: T? = try getMapProperty(map: map, name: name)
-  return value ?? `default`
-}
+//public func getMapPropertyDefault<T>(map: [String: Any]?, name: String, default: T) throws -> T {
+//  let value: T? = try getMapProperty(map: map, name: name)
+//  return value ?? `default`
+//}
 
 /// Used for deserialization of a enum property with default value.
 ///
@@ -136,7 +138,7 @@ public func getMapPropertyDefault<T>(map: [String: Any]?, name: String, default:
 /// }
 /// ```
 ///
-public func getMapEnumDefault<T, RawValue>(map: [String: Any]?, name: String, default: T) throws -> T where T: RawRepresentable, RawValue == T.RawValue {
-  let value: RawValue? = try getMapProperty(map: map, name: name)
-  return T(rawValue: value ?? `default`.rawValue) ?? `default`
-}
+//public func getMapEnumDefault<T, RawValue>(map: [String: Any]?, name: String, default: T) throws -> T where T: RawRepresentable, RawValue == T.RawValue {
+//  let value: RawValue? = try getMapProperty(map: map, name: name)
+//  return T(rawValue: value ?? `default`.rawValue) ?? `default`
+//}

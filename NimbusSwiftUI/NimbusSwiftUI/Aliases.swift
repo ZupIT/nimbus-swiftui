@@ -24,8 +24,7 @@ public typealias ActionInitializationHandler = @convention(block) (ActionInitial
 public typealias Operation = @convention(block) ([Any]) -> Any?
 public typealias ServerDrivenNode = NimbusCore.ServerDrivenNode
 public typealias ComponentBuilder = (
-  ServerDrivenNode,
-  @escaping () -> ForEach<[ObservableNode], String, RenderedNode>
+  ServerDrivenNode
 ) throws -> AnyView
 
 public typealias ViewRequest = NimbusCore.ViewRequest

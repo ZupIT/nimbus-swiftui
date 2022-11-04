@@ -19,23 +19,22 @@ import SwiftUI
 
 public struct RenderedNode: View {
   @ObservedObject var observableNode: ObservableNode
+  
   @Environment(\.core) private var core: Core
+  
+  // TODO: notify NimbusView on error
   var onError: (Error) -> AnyView
   
-  public var body: AnyView {
+  public var body: some View {
     if let function = core.uiLibraryManager.getComponent(identifier: observableNode.node.component) {
       do {
-        let children = {
-          ForEach(observableNode.children ?? [], id: \.node.id) { child in
-            RenderedNode(observableNode: child, onError: onError)
-          }
-        }
-        return try function(observableNode.node, children)
+        return try function(observableNode.node)
       } catch {
-        return onError(error)
+        fatalError()
       }
     } else {
-      return onError(RenderingError.notRegistered(observableNode.node.component))
+//      return dependencies.error(RenderingError.notRegistered(observableNode.node.component), {})
+      fatalError()
     }
   }
 }

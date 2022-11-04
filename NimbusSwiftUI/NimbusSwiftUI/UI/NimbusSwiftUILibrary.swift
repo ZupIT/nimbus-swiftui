@@ -32,6 +32,19 @@ public class NimbusSwiftUILibrary: UILibrary {
     super.addAction(name: name, handler: handler)
     return self
   }
+  
+  public func addAction<T: Decodable>(_ name: String, handler: @escaping (T) -> Void) -> NimbusSwiftUILibrary {
+    super.addAction(name: name) { event in
+      do {
+        let action = try NimbusDecoder.decode(T.self, from: event.action.properties ?? [:])
+        handler(action)
+      } catch {
+        // log error
+        fatalError()
+      }
+    }
+    return self
+  }
 
   public func addActionInitializer(_ name: String, handler: @escaping ActionInitializationHandler) -> NimbusSwiftUILibrary {
     super.addActionInitializer(name: name, handler: handler)
@@ -42,9 +55,22 @@ public class NimbusSwiftUILibrary: UILibrary {
     super.addActionObserver(observer: observer)
     return self
   }
-
+  
   public func addOperation(_ name: String, handler: @escaping Operation) -> NimbusSwiftUILibrary {
     super.addOperation(name: name, handler: handler)
+    return self
+  }
+
+  public func addOperation<T: OperationDecodable>(_ name: String, handler: @escaping (T) -> Any?) -> NimbusSwiftUILibrary {
+    super.addOperation(name: name) { array in
+      do {
+        let operation = try NimbusDecoder.decode(T.self, from: array)
+        return handler(operation)
+      } catch {
+        // log error
+        fatalError()
+      }
+    }
     return self
   }
   

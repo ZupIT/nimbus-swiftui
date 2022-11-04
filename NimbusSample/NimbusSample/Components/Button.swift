@@ -17,9 +17,11 @@
 import SwiftUI
 import NimbusSwiftUI
 
-struct CustomButton: View {
+struct CustomButton: View, Decodable {
   var text: String
-  var enabled: Bool = true
+  var enabled: Bool
+  
+  @Event
   var onPress: () -> Void
   
   var body: some View {
@@ -27,14 +29,5 @@ struct CustomButton: View {
       onPress()
     }
     .disabled(!enabled)
-  }
-}
-
-extension CustomButton: Deserializable {
-  init(from map: [String : Any]?) throws {
-    self.text = try getMapProperty(map: map, name: "text")
-    self.enabled = try getMapPropertyDefault(map: map, name: "enabled", default: true)
-    let event = getMapEvent(map: map, name: "onPress")
-    self.onPress = { event?.run() }
   }
 }

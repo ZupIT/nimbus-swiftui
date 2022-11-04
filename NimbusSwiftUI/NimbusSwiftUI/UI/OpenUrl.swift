@@ -20,12 +20,14 @@ import SwiftUI
 // TODO: Actions dependency structure
 var opener: UrlOpener = UIApplication.shared
 
-let openUrl: Action = { event in
-  if let urlString = event.action.properties?["url"] as? String, let url = URL(string: urlString) {
-    if opener.canOpenURL(url) {
-      _ = opener.openURL(url)
-    }
+let openUrl: (OpenUrl) -> Void = { action in
+  if opener.canOpenURL(action.url) {
+    _ = opener.openURL(action.url)
   }
+}
+
+struct OpenUrl: Decodable {
+  var url: URL
 }
 
 protocol UrlOpener {

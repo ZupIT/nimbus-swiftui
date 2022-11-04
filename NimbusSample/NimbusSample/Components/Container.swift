@@ -17,12 +17,9 @@
 import SwiftUI
 import NimbusSwiftUI
 
-struct Container<Content> : View where Content : View {
-  private let children: () -> Content
-  
-  init(@ViewBuilder children: @escaping () -> Content) {
-    self.children = children
-  }
+struct Container<Content: View>: View, Decodable {
+  @Children
+  var children: () -> Content
   
   var body: some View {
     children()
