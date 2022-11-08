@@ -14,17 +14,12 @@
  * limitations under the License.
  */
 
-import Foundation
 import NimbusCore
 
 public class NimbusSwiftUILibrary: UILibrary {
   var components: [String: ComponentBuilder] = [:]
   
-  public init() {
-    super.init(namespace: "")
-  }
-  
-  public init(_ namespace: String) {
+  public init(_ namespace: String = "") {
     super.init(namespace: namespace)
   }
   
@@ -60,7 +55,7 @@ public class NimbusSwiftUILibrary: UILibrary {
     super.addOperation(name: name, handler: handler)
     return self
   }
-
+  
   public func addOperation<T: OperationDecodable>(_ name: String, handler: @escaping (T) -> Any?) -> NimbusSwiftUILibrary {
     super.addOperation(name: name) { array in
       do {
@@ -70,6 +65,13 @@ public class NimbusSwiftUILibrary: UILibrary {
         // log error
         fatalError()
       }
+    }
+    return self
+  }
+  
+  public func addComponent<T: NimbusComponent>(_ name: String, _ type: T.Type) -> NimbusSwiftUILibrary {
+    components[name] = { node in
+      try NimbusDecoder.decode(type, from: node)
     }
     return self
   }
@@ -106,4 +108,3 @@ extension UILibraryManager {
     return nil
   }
 }
-

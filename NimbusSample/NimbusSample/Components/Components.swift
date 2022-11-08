@@ -18,14 +18,8 @@ import SwiftUI
 import NimbusSwiftUI
 
 let material = NimbusSwiftUILibrary("material")
-  .addComponent("button") { node in
-    try NimbusDecoder.decode(CustomButton.self, from: node)
-  }
-  .addComponent("text") { node in
-    try NimbusDecoder.decode(Text.self, from: node)
-  }
+  .addComponent("button", CustomButton.self)
+  .addComponent("text", Text.self)
 
 let layout = NimbusSwiftUILibrary("layout")
-  .addComponent("container") { node in
-    try NimbusDecoder.decode(Container<AnyView>.self, from: node)
-  }
+  .addComponent("container", Container<AnyView>.self)

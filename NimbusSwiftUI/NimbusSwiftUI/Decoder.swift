@@ -29,7 +29,7 @@ extension State: Decodable where Value: Decodable {
 }
 
 extension Optional where Wrapped == Array<ServerDrivenNode> {
-  var asView: AnyView {
+  public var asView: AnyView {
     AnyView(ForEach(self ?? [], id: \.id) { child in
       RenderedNode(observableNode: ObservableNode(child), onError: { _ in AnyView(Text("error")) })
     })
@@ -70,9 +70,10 @@ struct DecError: Error {
   
 }
 
+public typealias NimbusComponent = View & Decodable
+
 // MARK: - Decoder
 public struct NimbusDecoder {
-  public typealias NimbusComponent = View & Decodable
   
   public static func decode<T: NimbusComponent>(_ type: T.Type, from node: ServerDrivenNode) throws -> AnyView {
     AnyView(try NimbusDecoderImpl(codingPath: [], userInfo: [:], value: node.properties, children: node.children).unwrap(as: T.self))
@@ -129,17 +130,13 @@ struct NimbusDecoderImpl: Decoder {
   }
   
   func unwrapEvent() -> Event<() -> Void> {
-    guard let event = value as? ServerDrivenEvent else {
-      fatalError("asdf")
-    }
-    return Event(wrappedValue: { event.run() })
+    let event = value as? ServerDrivenEvent
+    return Event(wrappedValue: { event?.run() })
   }
   
   func unwrapEventParameter<T>(_ type: T.Type) -> Event<(T) -> Void> {
-    guard let event = value as? ServerDrivenEvent else {
-      fatalError("asdf")
-    }
-    return Event(wrappedValue: { value in event.run(implicitStateValue: value) })
+    let event = value as? ServerDrivenEvent
+    return Event(wrappedValue: { value in event?.run(implicitStateValue: value) })
   }
   
   func unwrapChildren() -> Children<AnyView> {
@@ -176,7 +173,6 @@ extension NimbusDecoderImpl {
     
     func decode(_ type: Bool.Type) throws -> Bool {
       guard let bool = value as? Bool else {
-//        fatalError("type mismatch")
         throw DecError()
       }
       return bool
@@ -408,6 +404,14 @@ extension NimbusDecoderImpl {
     var isAtEnd: Bool { currentIndex >= count ?? 0 }
     var currentIndex = 0
     
+    mutating func decodeNil() throws -> Bool {
+      fatalError()
+    }
+    
+    mutating func decode(_ type: Bool.Type) throws -> Bool {
+      fatalError()
+    }
+    
     mutating func decode(_ type: String.Type) throws -> String {
       fatalError()
     }
@@ -464,20 +468,8 @@ extension NimbusDecoderImpl {
       let newDecoder = try decoderForNextElement(ofType: T.self)
       let result = try newDecoder.unwrap(as: T.self)
       
-      // Because of the requirement that the index not be incremented unless
-      // decoding the desired result type succeeds, it can not be a tail call.
-      // Hopefully the compiler still optimizes well enough that the result
-      // doesn't get copied around.
-      self.currentIndex += 1
+      currentIndex += 1
       return result
-    }
-    
-    mutating func decode(_ type: Bool.Type) throws -> Bool {
-      fatalError()
-    }
-    
-    mutating func decodeNil() throws -> Bool {
-      fatalError()
     }
     
     mutating func nestedContainer<NestedKey>(keyedBy type: NestedKey.Type) throws -> KeyedDecodingContainer<NestedKey> where NestedKey : CodingKey {

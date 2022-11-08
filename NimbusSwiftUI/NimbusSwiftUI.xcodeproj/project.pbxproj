@@ -27,6 +27,7 @@
 		93B90747283C1EA7000299DD /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B90746283C1EA7000299DD /* ViewModelTests.swift */; };
 		93B90749283C224F000299DD /* NimbusViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B90748283C224F000299DD /* NimbusViewTests.swift */; };
 		93D096A32875C05F00193F72 /* Deserializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D096A22875C05F00193F72 /* Deserializable.swift */; };
+		93F4C205291A89F6003A868B /* DecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F4C204291A89F6003A868B /* DecoderTests.swift */; };
 		93FF9D52282A9AB400C36CE9 /* NavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9D51282A9AB400C36CE9 /* NavigationLink.swift */; };
 		93FF9D54282A9ACA00C36CE9 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9D53282A9ACA00C36CE9 /* Binding.swift */; };
 		93FF9D56282A9B3800C36CE9 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9D55282A9B3800C36CE9 /* ActivityIndicator.swift */; };
@@ -72,6 +73,7 @@
 		93CCDB91283D65F10091B86A /* __Snapshots__ */ = {isa = PBXFileReference; lastKnownFileType = folder; path = __Snapshots__; sourceTree = "<group>"; };
 		93CCDB92283D679B0091B86A /* __Snapshots__ */ = {isa = PBXFileReference; lastKnownFileType = folder; path = __Snapshots__; sourceTree = "<group>"; };
 		93D096A22875C05F00193F72 /* Deserializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deserializable.swift; sourceTree = "<group>"; };
+		93F4C204291A89F6003A868B /* DecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderTests.swift; sourceTree = "<group>"; };
 		93FF9D51282A9AB400C36CE9 /* NavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLink.swift; sourceTree = "<group>"; };
 		93FF9D53282A9ACA00C36CE9 /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
 		93FF9D55282A9B3800C36CE9 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				93B90745283C1E83000299DD /* NimbusView */,
 				93417C2A283D4E34007A014F /* NimbusCoreExtensions.swift */,
 				93093695281330070028EA2C /* NimbusSwiftUITests.swift */,
+				93F4C204291A89F6003A868B /* DecoderTests.swift */,
 			);
 			path = NimbusSwiftUITests;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				93B90747283C1EA7000299DD /* ViewModelTests.swift in Sources */,
 				9318BAAA2863ADB000198798 /* OpenUrlTests.swift in Sources */,
 				93093696281330070028EA2C /* NimbusSwiftUITests.swift in Sources */,
+				93F4C205291A89F6003A868B /* DecoderTests.swift in Sources */,
 				93B90749283C224F000299DD /* NimbusViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

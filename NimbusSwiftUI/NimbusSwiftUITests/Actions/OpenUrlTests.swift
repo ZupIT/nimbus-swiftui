@@ -15,7 +15,6 @@
  */
 
 import XCTest
-@testable import NimbusCore
 @testable import NimbusSwiftUI
 
 class OpenUrlTests: XCTestCase {
@@ -23,17 +22,13 @@ class OpenUrlTests: XCTestCase {
   func testOpenUrl() {
     let url = "schema://url"
     let spy = SpyOpener()
-    NimbusSwiftUI.opener = spy
-    let event = DynamicEvent(name: "onPress")
-    let action = DynamicAction(name: "openUrl", handler: openUrl)
-    action.properties = ["url": url]
-    event.actions = [action]
-    event.run()
+    opener = spy
+    openUrl(OpenUrl(url: URL(string: url)!))
     
     XCTAssertEqual(spy.canOpenURLParam, URL(string: url))
     XCTAssertEqual(spy.openURLParam, URL(string: url))
     
-    NimbusSwiftUI.opener = UIApplication.shared
+    opener = UIApplication.shared
   }
 
 }

@@ -15,9 +15,7 @@
  */
 
 import UIKit
-import SwiftUI
 
-// TODO: Actions dependency structure
 var opener: UrlOpener = UIApplication.shared
 
 let openUrl: (OpenUrl) -> Void = { action in
