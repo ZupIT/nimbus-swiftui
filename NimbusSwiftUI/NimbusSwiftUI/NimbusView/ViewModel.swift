@@ -92,16 +92,9 @@ extension ViewModel {
   }
     
   private func getStatesFromRequest(request: ViewRequest?) -> [ServerDrivenState]? {
-    if (request != nil && request!.params != nil && !request!.params!.isEmpty) {
-      var viewStates: [ServerDrivenState] = []
-      for (key, value) in request!.params! {
-        viewStates.append(ServerDrivenState(id: key, value: value))
-      }
-      return viewStates
-    }
-    return nil
+    request?.params?.map { (key, value) in ServerDrivenState(id: key, value: value) }
   }
-  
+    
   private func load(from json: String) {
     do {
       // TODO: Fix dispatch main on nimbus core
