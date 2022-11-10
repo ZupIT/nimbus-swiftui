@@ -35,8 +35,31 @@ class ViewModelTests: XCTestCase {
       XCTFail("Expected .push(ViewModel), but was \(String(describing: sut.next))")
       return
     }
+    
     XCTAssertEqual(nextVm.url, "next")
     XCTAssertTrue(nextVm.prev === sut)
+      
+    nextVm.load()
+    XCTAssertEqual(nextVm.view?.states, nil)
+  }
+    
+  func testPushWithParams() throws {
+    // Given
+    let sut = ViewModel(mode: .remote(.init("remoteUrl")), core: core)
+    
+    // When
+    sut.push(request: ViewRequest("next", params: ["testParamState": "test state param value"]))
+      
+    // Then
+    guard case let .push(nextVm) = sut.next else {
+      XCTFail("Expected .push(ViewModel), but was \(String(describing: sut.next))")
+      return
+    }
+    
+    nextVm.load()
+    XCTAssertEqual(nextVm.view?.states?.count, 1)
+    XCTAssertEqual(nextVm.view?.states?.first?.id, "testParamState")
+    XCTAssertEqual(nextVm.view?.states?.first?.value(forKey: "") as? String, "test state param value")
   }
   
   func testPresent() throws {
@@ -53,6 +76,28 @@ class ViewModelTests: XCTestCase {
     }
     XCTAssertEqual(nextVm.url, "next")
     XCTAssertTrue(nextVm.prev === sut)
+      
+    nextVm.load()
+    XCTAssertEqual(nextVm.view?.states, nil)
+  }
+    
+  func testPresentWithParams() throws {
+    // Given
+    let sut = ViewModel(mode: .remote(.init("remoteUrl")), core: core)
+      
+    // When
+    sut.present(request: ViewRequest("next", params: ["testParamState": "test state param value"]))
+      
+    // Then
+    guard case let .present(nextVm) = sut.next else {
+      XCTFail("Expected .present(ViewModel), but was \(String(describing: sut.next))")
+      return
+    }
+    
+    nextVm.load()
+    XCTAssertEqual(nextVm.view?.states?.count, 1)
+    XCTAssertEqual(nextVm.view?.states?.first?.id, "testParamState")
+    XCTAssertEqual(nextVm.view?.states?.first?.value(forKey: "") as? String, "test state param value")
   }
   
   func testPop() throws {
