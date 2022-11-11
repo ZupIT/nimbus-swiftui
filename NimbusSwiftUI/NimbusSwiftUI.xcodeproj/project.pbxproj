@@ -42,6 +42,7 @@
 		AFCE759128CF5E22004EF849 /* CoreUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE759028CF5E22004EF849 /* CoreUI.swift */; };
 		AFCE759328CFA417004EF849 /* ObservableNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE759228CFA417004EF849 /* ObservableNode.swift */; };
 		AFCE759528CFA584004EF849 /* RenderedNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE759428CFA584004EF849 /* RenderedNode.swift */; };
+		BFDBC0AA2915987B005ECE84 /* NimbusCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBC0A92915987B005ECE84 /* NimbusCore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		AFCE759028CF5E22004EF849 /* CoreUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreUI.swift; sourceTree = "<group>"; };
 		AFCE759228CFA417004EF849 /* ObservableNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableNode.swift; sourceTree = "<group>"; };
 		AFCE759428CFA584004EF849 /* RenderedNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderedNode.swift; sourceTree = "<group>"; };
+		BFDBC0A92915987B005ECE84 /* NimbusCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusCore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				93F4C20D291E904F003A868B /* Decoder */,
+				BFDBC0A82915985E005ECE84 /* Extensions */,
 				9318BAA82863AD9700198798 /* Actions */,
 				93CCDB91283D65F10091B86A /* __Snapshots__ */,
 				93B90745283C1E83000299DD /* NimbusView */,
@@ -270,6 +273,14 @@
 				AFCE758B28CF5C2A004EF849 /* NimbusSwiftUILibrary.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		BFDBC0A82915985E005ECE84 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BFDBC0A92915987B005ECE84 /* NimbusCore.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,6 +428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFDBC0AA2915987B005ECE84 /* NimbusCore.swift in Sources */,
 				93417C2B283D4E34007A014F /* NimbusCoreExtensions.swift in Sources */,
 				93B90747283C1EA7000299DD /* ViewModelTests.swift in Sources */,
 				9318BAAA2863ADB000198798 /* OpenUrlTests.swift in Sources */,

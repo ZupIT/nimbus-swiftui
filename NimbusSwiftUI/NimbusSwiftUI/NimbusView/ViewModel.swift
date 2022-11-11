@@ -67,26 +67,34 @@ extension ViewModel {
   func load(callback: (() -> Void)? = nil) {
     state = .loading
     
+    switch mode {
+      case let .remote(request: request):
+        createViewToLoad(request: request)
+        load(from: request, callback: callback)
+      case let .local(json: json):
+        createViewToLoad(request: nil)
+        load(from: json)
+        if let callback = callback { callback() }
+    }
+  }
+     
+  private func createViewToLoad(request: ViewRequest?) {
     if view == nil {
-//      TODO: Verify lifecycle
+      // TODO: Verify lifecycle
       view = ServerDrivenView(
         nimbus: core,
-        states: nil,
+        states: getStatesFromRequest(request: request),
         description: url
       ) {
         [unowned self] in self
       }
     }
-    
-    switch mode {
-    case let .remote(request: request):
-      load(from: request, callback: callback)
-    case let .local(json: json):
-      load(from: json)
-      if let callback = callback { callback() }
-    }
   }
-  
+    
+  private func getStatesFromRequest(request: ViewRequest?) -> [ServerDrivenState]? {
+    request?.params?.map { (key, value) in ServerDrivenState(id: key, value: value) }
+  }
+    
   private func load(from json: String) {
     do {
       // TODO: Fix dispatch main on nimbus core
