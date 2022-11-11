@@ -15,19 +15,11 @@
  */
 
 import SwiftUI
-import NimbusSwiftUI
 
-struct CustomButton: View, Decodable {
-  var text: String
-  var enabled: Bool?
-  
-  @Event
-  var onPress: () -> Void
-  
-  var body: some View {
-    Button(text) {
-      onPress()
-    }
-    .disabled(!(enabled ?? true))
+extension Optional where Wrapped == Array<ServerDrivenNode> {
+  public var asView: AnyView {
+    AnyView(ForEach(self ?? [], id: \.id) { child in
+      RenderedNode(observableNode: ObservableNode(child))
+    })
   }
 }

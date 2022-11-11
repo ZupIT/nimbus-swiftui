@@ -16,7 +16,7 @@
 
 import Foundation
 
-public class ObservableNode: ObservableObject, Dependent {
+class ObservableNode: ObservableObject, Dependent {
   let node: ServerDrivenNode
   var children: [ObservableNode]? = nil
   private var memoizedChildren: [String : ObservableNode] = [:]
@@ -25,10 +25,13 @@ public class ObservableNode: ObservableObject, Dependent {
     self.node = node
     update()
     node.addDependent(dependent: self)
-    // we might want to remove this dependency when the node ceases to exist.
   }
   
-  public func update() {
+  deinit {
+    node.removeDependent(dependent: self)
+  }
+  
+  func update() {
     children = node.children?.map { child in
       if (memoizedChildren[child.id] == nil) {
         memoizedChildren[child.id] = ObservableNode(child)

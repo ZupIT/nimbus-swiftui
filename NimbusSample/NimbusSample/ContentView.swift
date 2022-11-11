@@ -27,14 +27,13 @@ struct ContentView: View {
           {
             "_:component": "material:text",
             "properties": {
-              "text": "Sample"
+              "text": "Sample:"
             }
           },
           {
             "_:component": "material:button",
             "properties": {
-              "text": "Button",
-              "enabled": true,
+              "text": "openUrl",
               "onPress": [
                 {
                   "_:action": "openUrl",

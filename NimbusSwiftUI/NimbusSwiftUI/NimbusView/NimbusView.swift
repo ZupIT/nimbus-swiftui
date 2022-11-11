@@ -25,11 +25,6 @@ struct NimbusView: View {
     self.viewModel = viewModel
   }
   
-  func onError(error: Error) -> AnyView {
-    viewModel.state = .error(error)
-    return AnyView(EmptyView())
-  }
-  
   var body: some View {
     VStack {
       NavigationLink(unwrap: $viewModel.next.case(ViewModel.Navigation.pushCasePath)) { viewModel in
@@ -43,7 +38,7 @@ struct NimbusView: View {
       case let .error(error):
         dependencies.error(error, retry)
       case let .view(node: node):
-        RenderedNode(observableNode: node, onError: onError)
+        RenderedNode(observableNode: node)
       }
     }
     .sheet(unwrap: $viewModel.next.case(ViewModel.Navigation.presentCasePath)) { viewModel in

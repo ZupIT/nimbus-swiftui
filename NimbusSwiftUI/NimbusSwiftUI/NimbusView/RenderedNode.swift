@@ -17,25 +17,31 @@
 import Foundation
 import SwiftUI
 
-public struct RenderedNode: View {
+struct RenderedNode: View {
   @ObservedObject var observableNode: ObservableNode
-  
   @Environment(\.core) private var core: Core
   
-  // TODO: notify NimbusView on error
-  var onError: (Error) -> AnyView
-  
-  public var body: some View {
+  var body: some View {
     if let function = core.uiLibraryManager.getComponent(identifier: observableNode.node.component) {
       do {
         return try function(observableNode.node)
       } catch {
-        fatalError()
+        return showError(error)
       }
     } else {
-//      return dependencies.error(RenderingError.notRegistered(observableNode.node.component), {})
-      fatalError()
+      return showError(RenderingError.notRegistered(observableNode.node.component))
     }
+  }
+  
+  private func showError(_ error: Error) -> AnyView {
+    core.logger.log(message: "Error: \(error)", level: .error)
+    let description: String = error is RenderingError ? error.localizedDescription :
+      "Error while deserializing component. Check the logs for details."
+    #if DEBUG
+      return AnyView(ErrorView(errorDescription: description))
+    #else
+      return AnyView(EmptyView())
+    #endif
   }
 }
 
@@ -44,8 +50,18 @@ enum RenderingError: LocalizedError {
   
   var errorDescription: String? {
     switch self {
-    case .notRegistered(let string):
-      return "\(string) not registered!"
+    case .notRegistered(let name):
+      return "Could not find any component named \(name)."
     }
+  }
+}
+
+struct ErrorView: View {
+  var errorDescription: String
+  
+  var body: some View {
+    Text(errorDescription)
+      .foregroundColor(.red)
+      .background(Color.yellow)
   }
 }

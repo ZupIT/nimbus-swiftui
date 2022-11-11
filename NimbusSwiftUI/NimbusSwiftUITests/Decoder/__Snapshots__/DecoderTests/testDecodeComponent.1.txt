@@ -1,0 +1,7 @@
+▿ AnyView
+  ▿ storage: AnyViewStorage<ComponentModel>
+    ▿ view: ComponentModel
+      ▿ values: 1 key/value pair
+        ▿ (2 elements)
+          - key: "key1"
+          - value: "value1"

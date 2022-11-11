@@ -43,7 +43,8 @@ extension DynamicNode {
   convenience init(
       id: String,
       component: String,
-      properties: [String : Any]? = nil
+      properties: [String : Any]? = nil,
+      children: [DynamicNode]? = nil
     ) {
       self.init(
         id: id,
@@ -52,6 +53,7 @@ extension DynamicNode {
         polymorphic: false
       )
       self.properties = properties
+      self.children = children
     }
   
   static let text = DynamicNode(

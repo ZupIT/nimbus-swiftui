@@ -26,8 +26,12 @@
 		93B907442835941E000299DD /* NimbusCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93B907432835941E000299DD /* NimbusCore.xcframework */; };
 		93B90747283C1EA7000299DD /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B90746283C1EA7000299DD /* ViewModelTests.swift */; };
 		93B90749283C224F000299DD /* NimbusViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B90748283C224F000299DD /* NimbusViewTests.swift */; };
-		93D096A32875C05F00193F72 /* Deserializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D096A22875C05F00193F72 /* Deserializable.swift */; };
 		93F4C205291A89F6003A868B /* DecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F4C204291A89F6003A868B /* DecoderTests.swift */; };
+		93F4C208291E89F6003A868B /* DecodableWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F4C207291E89F6003A868B /* DecodableWrappers.swift */; };
+		93F4C20A291E8A08003A868B /* SwiftUIWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F4C209291E8A08003A868B /* SwiftUIWrappers.swift */; };
+		93F4C20C291E8B19003A868B /* ServerDrivenNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F4C20B291E8B19003A868B /* ServerDrivenNode.swift */; };
+		93F4C210291E90E5003A868B /* DecodableWrappersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F4C20F291E90E5003A868B /* DecodableWrappersTests.swift */; };
+		93F4C212291E912F003A868B /* SwiftUIWrappersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F4C211291E912F003A868B /* SwiftUIWrappersTests.swift */; };
 		93FF9D52282A9AB400C36CE9 /* NavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9D51282A9AB400C36CE9 /* NavigationLink.swift */; };
 		93FF9D54282A9ACA00C36CE9 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9D53282A9ACA00C36CE9 /* Binding.swift */; };
 		93FF9D56282A9B3800C36CE9 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9D55282A9B3800C36CE9 /* ActivityIndicator.swift */; };
@@ -72,8 +76,13 @@
 		93B90748283C224F000299DD /* NimbusViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusViewTests.swift; sourceTree = "<group>"; };
 		93CCDB91283D65F10091B86A /* __Snapshots__ */ = {isa = PBXFileReference; lastKnownFileType = folder; path = __Snapshots__; sourceTree = "<group>"; };
 		93CCDB92283D679B0091B86A /* __Snapshots__ */ = {isa = PBXFileReference; lastKnownFileType = folder; path = __Snapshots__; sourceTree = "<group>"; };
-		93D096A22875C05F00193F72 /* Deserializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deserializable.swift; sourceTree = "<group>"; };
 		93F4C204291A89F6003A868B /* DecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderTests.swift; sourceTree = "<group>"; };
+		93F4C207291E89F6003A868B /* DecodableWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableWrappers.swift; sourceTree = "<group>"; };
+		93F4C209291E8A08003A868B /* SwiftUIWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIWrappers.swift; sourceTree = "<group>"; };
+		93F4C20B291E8B19003A868B /* ServerDrivenNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerDrivenNode.swift; sourceTree = "<group>"; };
+		93F4C20E291E9096003A868B /* __Snapshots__ */ = {isa = PBXFileReference; lastKnownFileType = folder; path = __Snapshots__; sourceTree = "<group>"; };
+		93F4C20F291E90E5003A868B /* DecodableWrappersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableWrappersTests.swift; sourceTree = "<group>"; };
+		93F4C211291E912F003A868B /* SwiftUIWrappersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIWrappersTests.swift; sourceTree = "<group>"; };
 		93FF9D51282A9AB400C36CE9 /* NavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLink.swift; sourceTree = "<group>"; };
 		93FF9D53282A9ACA00C36CE9 /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
 		93FF9D55282A9B3800C36CE9 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
@@ -129,6 +138,7 @@
 		93093688281330070028EA2C /* NimbusSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				93F4C206291E89D5003A868B /* Decoder */,
 				AFCE758F28CF5DB1004EF849 /* UI */,
 				9323D5C5282EED9D002EB6ED /* CasePath */,
 				93FF9D4F282A9A9000C36CE9 /* Extensions */,
@@ -136,8 +146,6 @@
 				93FF9D57282ADD0E00C36CE9 /* ViewModifiers */,
 				93FF9D50282A9A9800C36CE9 /* Views */,
 				9323D5CD282EF29E002EB6ED /* Aliases.swift */,
-				938363E229158651007F4FC4 /* Decoder.swift */,
-				93D096A22875C05F00193F72 /* Deserializable.swift */,
 				931B066A286B6E550005C249 /* Nimbus.swift */,
 				931B066C286B6E670005C249 /* Dependencies.swift */,
 				9323D5C9282EEF86002EB6ED /* NimbusNavigator.swift */,
@@ -149,12 +157,12 @@
 		93093694281330070028EA2C /* NimbusSwiftUITests */ = {
 			isa = PBXGroup;
 			children = (
+				93F4C20D291E904F003A868B /* Decoder */,
 				9318BAA82863AD9700198798 /* Actions */,
 				93CCDB91283D65F10091B86A /* __Snapshots__ */,
 				93B90745283C1E83000299DD /* NimbusView */,
 				93417C2A283D4E34007A014F /* NimbusCoreExtensions.swift */,
 				93093695281330070028EA2C /* NimbusSwiftUITests.swift */,
-				93F4C204291A89F6003A868B /* DecoderTests.swift */,
 			);
 			path = NimbusSwiftUITests;
 			sourceTree = "<group>";
@@ -204,6 +212,27 @@
 			path = NimbusView;
 			sourceTree = "<group>";
 		};
+		93F4C206291E89D5003A868B /* Decoder */ = {
+			isa = PBXGroup;
+			children = (
+				938363E229158651007F4FC4 /* Decoder.swift */,
+				93F4C207291E89F6003A868B /* DecodableWrappers.swift */,
+				93F4C209291E8A08003A868B /* SwiftUIWrappers.swift */,
+			);
+			path = Decoder;
+			sourceTree = "<group>";
+		};
+		93F4C20D291E904F003A868B /* Decoder */ = {
+			isa = PBXGroup;
+			children = (
+				93F4C20E291E9096003A868B /* __Snapshots__ */,
+				93F4C204291A89F6003A868B /* DecoderTests.swift */,
+				93F4C20F291E90E5003A868B /* DecodableWrappersTests.swift */,
+				93F4C211291E912F003A868B /* SwiftUIWrappersTests.swift */,
+			);
+			path = Decoder;
+			sourceTree = "<group>";
+		};
 		93FF9D4F282A9A9000C36CE9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +241,7 @@
 				93FF9D5A282AE06E00C36CE9 /* NimbusCore.swift */,
 				9323D5C3282EED4E002EB6ED /* View.swift */,
 				AFCE758D28CF5C55004EF849 /* String.swift */,
+				93F4C20B291E8B19003A868B /* ServerDrivenNode.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -360,10 +390,12 @@
 				9318BAA728639D7900198798 /* OpenUrl.swift in Sources */,
 				9323D5C4282EED4E002EB6ED /* View.swift in Sources */,
 				9323D5CA282EEF86002EB6ED /* NimbusNavigator.swift in Sources */,
+				93F4C20A291E8A08003A868B /* SwiftUIWrappers.swift in Sources */,
 				931B066D286B6E670005C249 /* Dependencies.swift in Sources */,
 				938363E329158651007F4FC4 /* Decoder.swift in Sources */,
 				93FF9D52282A9AB400C36CE9 /* NavigationLink.swift in Sources */,
 				9323D5CC282EF0E6002EB6ED /* ViewModel.swift in Sources */,
+				93F4C208291E89F6003A868B /* DecodableWrappers.swift in Sources */,
 				9323D5C7282EEDB4002EB6ED /* CasePath.swift in Sources */,
 				AFCE759128CF5E22004EF849 /* CoreUI.swift in Sources */,
 				AFCE759528CFA584004EF849 /* RenderedNode.swift in Sources */,
@@ -376,8 +408,8 @@
 				93FF9D59282ADD2A00C36CE9 /* ViewDidLoadModifier.swift in Sources */,
 				93FF9D5B282AE06E00C36CE9 /* NimbusCore.swift in Sources */,
 				93A5039D2816E92200269B03 /* NimbusView.swift in Sources */,
+				93F4C20C291E8B19003A868B /* ServerDrivenNode.swift in Sources */,
 				93FF9D54282A9ACA00C36CE9 /* Binding.swift in Sources */,
-				93D096A32875C05F00193F72 /* Deserializable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,7 +422,9 @@
 				9318BAAA2863ADB000198798 /* OpenUrlTests.swift in Sources */,
 				93093696281330070028EA2C /* NimbusSwiftUITests.swift in Sources */,
 				93F4C205291A89F6003A868B /* DecoderTests.swift in Sources */,
+				93F4C210291E90E5003A868B /* DecodableWrappersTests.swift in Sources */,
 				93B90749283C224F000299DD /* NimbusViewTests.swift in Sources */,
+				93F4C212291E912F003A868B /* SwiftUIWrappersTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
