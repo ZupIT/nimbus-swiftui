@@ -346,7 +346,21 @@ extension NimbusDecoderImpl {
     }
     
     func superDecoder(forKey key: K) throws -> Decoder {
-      fatalError()
+      let value: Any?
+      do {
+        value = try getValue(forKey: key)
+      } catch {
+        value = nil
+      }
+      
+      var newPath = self.codingPath
+      newPath.append(key)
+      
+      return NimbusDecoderImpl(
+        codingPath: newPath,
+        userInfo: impl.userInfo,
+        value: value
+      )
     }
     
     private func decoderForKey<LocalKey: CodingKey>(_ key: LocalKey) throws -> NimbusDecoderImpl {

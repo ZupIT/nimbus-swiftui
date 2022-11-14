@@ -44,13 +44,3 @@ class SwiftUIWrappersTests: XCTestCase {
   }
   
 }
-
-extension DynamicNode {
-  static let stateComponentMock = DynamicNode(
-    id: "0",
-    component: "componentModel",
-    properties: [
-      "url": "url"
-    ]
-  )
-}

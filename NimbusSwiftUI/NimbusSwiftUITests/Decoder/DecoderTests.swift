@@ -236,8 +236,46 @@ class DecoderTests: XCTestCase {
     XCTAssertEqual(value, "value1")
   }
   
-  func testDecodeKeyedSuper() {
+  func testDecodeKeyedSuper() throws {
+    class Base: Decodable {
+      var id: String
+    }
+    class Model: Base {
+      var value: Int
+      
+      required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: DictionaryKey.self)
+        value = try container.decode(Int.self, forKey: "value")
+        try super.init(from: container.superDecoder())
+      }
+    }
     
+    let model = try NimbusDecoder.decode(Model.self, from: ["id": "1", "value": 1])
+    XCTAssertEqual(model.id, "1")
+    XCTAssertEqual(model.value, 1)
+  }
+  
+  func testDecodeKeyedSuperForKey() throws {
+    class Base: Decodable {
+      var id: String
+    }
+    class Model: Base {
+      var value: Int
+      
+      required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: DictionaryKey.self)
+        value = try container.decode(Int.self, forKey: "value")
+        try super.init(from: container.superDecoder(forKey: "super"))
+      }
+    }
+    
+    let model = try NimbusDecoder.decode(Model.self, from: ["super": ["id": "1"], "value": 1])
+    XCTAssertEqual(model.id, "1")
+    XCTAssertEqual(model.value, 1)
+    
+    XCTAssertThrowsError(try NimbusDecoder.decode(Model.self, from: ["value": 1])) { error in
+      XCTAssertEqual(extractContext(from: error)?.debugDescription, "No value associated with key CodingKeys(stringValue: \"id\", intValue: nil) (\"id\").")
+    }
   }
   
   func testDecodeKeyedValueErros() throws {
@@ -247,6 +285,10 @@ class DecoderTests: XCTestCase {
     
     XCTAssertThrowsError(try NimbusDecoderImpl(codingPath: [], userInfo: [:], value: [:]).unwrap(as: Model.self)) { error in
       XCTAssertEqual(extractContext(from: error)?.debugDescription, "No value associated with key CodingKeys(stringValue: \"value\", intValue: nil) (\"value\").")
+    }
+    
+    XCTAssertThrowsError(try NimbusDecoderImpl(codingPath: [], userInfo: [:], value: ["value": NSNull()]).unwrap(as: Model.self)) { error in
+      XCTAssertEqual(extractContext(from: error)?.debugDescription, "Expected to decode String but found Optional<Any> instead.")
     }
   }
   
@@ -301,8 +343,14 @@ class DecoderTests: XCTestCase {
     XCTAssertEqual(value, "value1")
   }
   
-  func testDecodeUnkeyedSuper() {
+  func testDecodeUnkeyedSuper() throws {
+    let impl = NimbusDecoderImpl(codingPath: [], userInfo: [:])
+    var container = NimbusDecoderImpl.UnkeyedContainer(impl: impl, codingPath: [], array: [["value1"]])
     
+    let `super` = try container.superDecoder()
+    let array = try Array<String>(from: `super`)
+    
+    XCTAssertEqual(array, ["value1"])
   }
   
   func testDecodeUnkeyedErrors() throws {
