@@ -31,7 +31,7 @@ public class NimbusSwiftUILibrary: UILibrary {
   public func addAction<T: Decodable>(_ name: String, handler: @escaping (T) -> Void) -> NimbusSwiftUILibrary {
     super.addAction(name: name) { event in
       do {
-        let action = try NimbusDecoder.decode(T.self, from: event.action.properties ?? [:])
+        let action = try NimbusDecoder.decode(T.self, from: event)
         handler(action)
       } catch {
         // log error

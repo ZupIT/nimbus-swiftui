@@ -84,9 +84,28 @@ class DecodableWrappersTests: XCTestCase {
     wait(for: [eventExpectation!, statefulEventExpectation!], timeout: 3)
   }
   
-  // TODO: Injecao de dependencia em action (component?)
   func testDecodeActionDependency() {
+    let view = Nimbus(baseUrl: "base") {
+      NimbusNavigator(json: """
+      {
+        "_:component": "actionDependency:component",
+        "properties": {
+          "event": [
+            {
+              "_:action": "actionDependency:action"
+            }
+          ]
+        }
+      }
+      """)
+    }
+      .ui([actionDependency])
+      .frame(width: 100, height: 100)
+      .core { core in
+        core.set(key: "dependency", value: "Dependency")
+      }
     
+    assertSnapshot(matching: view, as: .image)
   }
   
   func testWrapperErrors() throws {
@@ -104,6 +123,14 @@ class DecodableWrappersTests: XCTestCase {
     
     XCTAssertThrowsError(try AnyServerDrivenEvent(from: DummyDecoder())) { error in
       XCTAssertEqual(extractContext(from: error)?.debugDescription, "The event cannot be configured. Make sure this value is decoded using NimbusDecoder.")
+    }
+    
+    XCTAssertThrowsError(try CoreAction(from: DummyDecoder())) { error in
+      XCTAssertEqual(extractContext(from: error)?.debugDescription, "The action cannot be configured. Make sure this value is decoded using NimbusDecoder.")
+    }
+    
+    XCTAssertThrowsError(try NimbusDecoder.decode(ActionDependency.self, from: [:])) { error in
+      XCTAssertEqual(extractContext(from: error)?.debugDescription, "ActionTriggeredEvent not found.")
     }
   }
 }
@@ -156,6 +183,28 @@ private let eventTest = NimbusSwiftUILibrary("eventTest")
     if action.value == "parameter" { statefulEventExpectation?.fulfill() }
   }
   .addComponent("component", EventComponent.self)
+
+// MARK: - ActionDependency
+struct ActionDependencyComponent: NimbusComponent {
+  @Event var event: () -> Void
+  
+  var body: some View {
+    Text("dependency")
+      .onAppear {
+        event()
+      }
+  }
+}
+
+struct ActionDependency: Decodable {
+  @CoreAction var action: ActionTriggeredEvent
+}
+
+private let actionDependency = NimbusSwiftUILibrary("actionDependency")
+  .addAction("action") { (action: ActionDependency) in
+    XCTAssertEqual(action.action.scope.get(key: "dependency") as! String, "Dependency")
+  }
+  .addComponent("component", ActionDependencyComponent.self)
 
 // MARK: - Errors
 

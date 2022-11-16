@@ -20,6 +20,7 @@ import NimbusCore
 // MARK: - public
 
 public typealias Action = @convention(block) (ActionTriggeredEvent) -> Void
+public typealias ActionTriggeredEvent = NimbusCore.ActionTriggeredEvent
 public typealias ActionInitializationHandler = @convention(block) (ActionInitializedEvent) -> Void
 public typealias Operation = @convention(block) ([Any]) -> Any?
 public typealias ServerDrivenNode = NimbusCore.ServerDrivenNode

@@ -25,12 +25,16 @@ public typealias NimbusComponent = View & Decodable
 // MARK: - Decoder
 struct NimbusDecoder {
   
+  static func decode<T: Decodable>(_ type: T.Type, from dictionary: [String: Any]) throws -> T {
+    try NimbusDecoderImpl(codingPath: [], userInfo: [:], value: dictionary).unwrap(as: T.self)
+  }
+  
   static func decode<T: NimbusComponent>(_ type: T.Type, from node: ServerDrivenNode) throws -> AnyView {
     AnyView(try NimbusDecoderImpl(codingPath: [], userInfo: [:], value: node.properties, children: node.children).unwrap(as: T.self))
   }
   
-  static func decode<T: Decodable>(_ type: T.Type, from dictionary: [String: Any]) throws -> T {
-    try NimbusDecoderImpl(codingPath: [], userInfo: [:], value: dictionary).unwrap(as: T.self)
+  static func decode<T: Decodable>(_ type: T.Type, from action: ActionTriggeredEvent) throws -> T {
+    try NimbusDecoderImpl(codingPath: [], userInfo: [:], value: action.action.properties, action: action).unwrap(as: T.self)
   }
   
   static func decode<T: OperationDecodable>(_ type: T.Type, from array: [Any]) throws -> T {
@@ -56,6 +60,8 @@ struct NimbusDecoderImpl: Decoder {
   var value: Any?
   var children: [ServerDrivenNode]?
   
+  var action: ActionTriggeredEvent?
+  
   func container<Key>(keyedBy type: Key.Type) throws -> KeyedDecodingContainer<Key> where Key : CodingKey {
     let container = KeyedContainer<Key>(impl: self, codingPath: codingPath, dictionary: value as? [String: Any])
     return KeyedDecodingContainer(container)
@@ -77,6 +83,9 @@ struct NimbusDecoderImpl: Decoder {
     if type == Children<AnyView>.self {
       return unwrapChildren() as! T
     }
+    if type == CoreAction.self {
+      return try unwrapCoreAction() as! T
+    }
     if type == URL.self {
       return try unwrapURL() as! T
     }
@@ -91,6 +100,14 @@ struct NimbusDecoderImpl: Decoder {
     Children {
       children.asView
     }
+  }
+  
+  func unwrapCoreAction() throws -> CoreAction {
+    guard let action = action else {
+      throw DecodingError.dataCorrupted(DecodingError.Context(codingPath: codingPath,
+                                                              debugDescription: "ActionTriggeredEvent not found."))
+    }
+    return CoreAction(wrappedValue: action)
   }
   
   func unwrapURL() throws -> URL {
@@ -341,7 +358,8 @@ extension NimbusDecoderImpl {
       NimbusDecoderImpl(
         codingPath: codingPath,
         userInfo: impl.userInfo,
-        value: dictionary
+        value: dictionary,
+        action: impl.action
       )
     }
     

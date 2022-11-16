@@ -98,3 +98,27 @@ extension KeyedDecodingContainer {
     return StatefulEvent { value in anyEvent.value?.run(implicitStateValue: value) }
   }
 }
+
+@propertyWrapper
+public struct CoreAction {
+  public var wrappedValue: ActionTriggeredEvent
+  
+  public init(wrappedValue: ActionTriggeredEvent) {
+    self.wrappedValue = wrappedValue
+  }
+}
+
+extension CoreAction: Decodable {
+  public init(from decoder: Decoder) throws {
+    throw DecodingError.dataCorrupted(DecodingError.Context(
+      codingPath: decoder.codingPath,
+      debugDescription: "The action cannot be configured. Make sure this value is decoded using NimbusDecoder.")
+    )
+  }
+}
+
+extension KeyedDecodingContainer {
+  public func decode(_ type: CoreAction.Type, forKey key: Self.Key) throws -> CoreAction {
+    try superDecoder().singleValueContainer().decode(CoreAction.self)
+  }
+}
