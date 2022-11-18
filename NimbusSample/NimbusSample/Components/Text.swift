@@ -16,13 +16,9 @@
 
 import SwiftUI
 
-struct Text: View {
+struct Text: View, Decodable {
   var text: String
   var body: some View {
     SwiftUI.Text(text)
-  }
-  
-  init(_ text: String) {
-    self.text = text
   }
 }

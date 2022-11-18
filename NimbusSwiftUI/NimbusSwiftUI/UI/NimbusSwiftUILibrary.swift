@@ -14,22 +14,30 @@
  * limitations under the License.
  */
 
-import Foundation
 import NimbusCore
 
 public class NimbusSwiftUILibrary: UILibrary {
   var components: [String: ComponentBuilder] = [:]
   
-  public init() {
-    super.init(namespace: "")
-  }
-  
-  public init(_ namespace: String) {
+  public init(_ namespace: String = "") {
     super.init(namespace: namespace)
   }
   
   public func addAction(_ name: String, handler: @escaping Action) -> NimbusSwiftUILibrary {
     super.addAction(name: name, handler: handler)
+    return self
+  }
+  
+  public func addAction<T: Decodable>(_ name: String, handler: @escaping (T) -> Void) -> NimbusSwiftUILibrary {
+    super.addAction(name: name) { event in
+      do {
+        let action = try NimbusDecoder.decode(T.self, from: event)
+        handler(action)
+      } catch {
+        // log error
+        fatalError()
+      }
+    }
     return self
   }
 
@@ -42,9 +50,29 @@ public class NimbusSwiftUILibrary: UILibrary {
     super.addActionObserver(observer: observer)
     return self
   }
-
+  
   public func addOperation(_ name: String, handler: @escaping Operation) -> NimbusSwiftUILibrary {
     super.addOperation(name: name, handler: handler)
+    return self
+  }
+  
+  public func addOperation<T: OperationDecodable>(_ name: String, handler: @escaping (T) -> Any?) -> NimbusSwiftUILibrary {
+    super.addOperation(name: name) { array in
+      do {
+        let operation = try NimbusDecoder.decode(T.self, from: array)
+        return handler(operation)
+      } catch {
+        // log error
+        fatalError()
+      }
+    }
+    return self
+  }
+  
+  public func addComponent<T: NimbusComponent>(_ name: String, _ type: T.Type) -> NimbusSwiftUILibrary {
+    components[name] = { node in
+      try NimbusDecoder.decode(type, from: node)
+    }
     return self
   }
   
@@ -80,4 +108,3 @@ extension UILibraryManager {
     return nil
   }
 }
-

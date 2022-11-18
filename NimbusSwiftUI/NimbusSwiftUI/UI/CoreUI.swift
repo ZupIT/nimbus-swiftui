@@ -14,13 +14,16 @@
  * limitations under the License.
  */
 
-import Foundation
 import SwiftUI
 import NimbusCore
 
 let coreUILibrary = NimbusSwiftUILibrary()
-  .addAction("openUrl") { event in openUrl(event) }
-  .addComponent("fragment") { _, children in
-    AnyView(VStack(alignment: .leading, spacing: 0, content: children))
+  .addAction("openUrl", handler: openUrl)
+  .addComponent("fragment") { node in
+    AnyView(
+      VStack(alignment: .leading, spacing: 0) {
+        node.children.asView
+      }
+    )
   }
   .merge(other: CoreUILibraryKt.coreUILibrary)

@@ -17,17 +17,9 @@
 import SwiftUI
 import NimbusSwiftUI
 
-// TODO: Serialization Task
-
 let material = NimbusSwiftUILibrary("material")
-  .addComponent("button") { (element, _) in
-    AnyView(try CustomButton(from: element.properties))
-  }
-  .addComponent("text") { (element, _) in
-    AnyView(Text(try getMapProperty(map: element.properties, name: "text")))
-  }
+  .addComponent("button", CustomButton.self)
+  .addComponent("text", Text.self)
 
 let layout = NimbusSwiftUILibrary("layout")
-  .addComponent("container") { (_, children) in
-    AnyView(Container(children: children))
-  }
+  .addComponent("container", Container<AnyView>.self)

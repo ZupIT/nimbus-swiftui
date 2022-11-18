@@ -37,11 +37,43 @@ class NimbusSwiftUITests: XCTestCase {
     
     assertSnapshot(matching: view, as: .image)
   }
+  
+  func testComponentNotFound() {
+    let view = Nimbus(baseUrl: "base") {
+      NimbusNavigator(json: """
+      {
+        "_:component": "text"
+      }
+      """)
+    }
+      .ui([myAppUI])
+      .frame(width: 200, height: 100)
+    
+    assertSnapshot(matching: view, as: .image)
+  }
+  
+  func testDecoderError() {
+    let view = Nimbus(baseUrl: "base") {
+      NimbusNavigator(json: """
+      {
+        "_:component": "material:text"
+      }
+      """)
+    }
+      .ui([myAppUI])
+      .frame(width: 200, height: 100)
+    
+    assertSnapshot(matching: view, as: .image)
+  }
 
 }
 
+struct TextComponent: NimbusComponent {
+  var text: String
+  var body: some View {
+    Text(text)
+  }
+}
 
 let myAppUI = NimbusSwiftUILibrary("material")
-  .addComponent("text") { (element, _) in
-    AnyView(Text(try getMapProperty(map: element.properties, name: "text") as String))
-  }
+  .addComponent("text", TextComponent.self)

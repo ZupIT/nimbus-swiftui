@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-import Foundation
-
-extension String {
-  func substring(with nsrange: NSRange?) -> String? {
-    if let nsrange = nsrange {
-      guard let range = Range(nsrange, in: self) else { return nil }
-      let substr = self[range]
-      return String(substr)
-    } else { return nil }
-  }
-}
+//import Foundation
+//
+//extension String {
+//  func substring(with nsrange: NSRange?) -> String? {
+//    if let nsrange = nsrange {
+//      guard let range = Range(nsrange, in: self) else { return nil }
+//      let substr = self[range]
+//      return String(substr)
+//    } else { return nil }
+//  }
+//}
