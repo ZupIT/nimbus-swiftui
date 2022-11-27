@@ -25,7 +25,7 @@ import SnapshotTesting
 class DecoderTests: XCTestCase {
   
   func testDecodeComponent() throws {
-    struct ComponentModel: NimbusComponent, Equatable {
+    struct ComponentModel: ViewDecodable, Equatable {
       var values: [String: String]
       
       var body: some View {
@@ -51,6 +51,10 @@ class DecoderTests: XCTestCase {
       var value1: Int
       var value2: String
       static let properties = ["value1", "value2"]
+      
+      func execute() -> String {
+        "dummy"
+      }
     }
     
     let operation = try NimbusDecoder.decode(OperationModel.self, from: [1, "string2"])
@@ -62,6 +66,10 @@ class DecoderTests: XCTestCase {
       var value1: Int
       var value2: String
       static let properties = ["value1", "value2", "value3"]
+      
+      func execute() -> String {
+        "dummy"
+      }
     }
     
     XCTAssertThrowsError(try NimbusDecoder.decode(OperationModel.self, from: [1, "string2"])) { error in

@@ -23,7 +23,7 @@ import NimbusCore
 class SwiftUIWrappersTests: XCTestCase {
   
   func testDecodeState() throws {
-    struct ComponentModel: NimbusComponent {
+    struct ComponentModel: ViewDecodable {
       @State var url: URL
       @State var string: String?
       

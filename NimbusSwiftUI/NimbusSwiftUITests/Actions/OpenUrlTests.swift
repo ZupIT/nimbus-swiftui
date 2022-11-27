@@ -23,7 +23,7 @@ class OpenUrlTests: XCTestCase {
     let url = "schema://url"
     let spy = SpyOpener()
     opener = spy
-    openUrl(OpenUrl(url: URL(string: url)!))
+    OpenUrl(url: URL(string: url)!).execute()
     
     XCTAssertEqual(spy.canOpenURLParam, URL(string: url))
     XCTAssertEqual(spy.openURLParam, URL(string: url))

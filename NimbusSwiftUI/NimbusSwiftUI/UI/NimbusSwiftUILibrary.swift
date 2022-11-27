@@ -28,11 +28,11 @@ public class NimbusSwiftUILibrary: UILibrary {
     return self
   }
   
-  public func addAction<T: Decodable>(_ name: String, handler: @escaping (T) -> Void) -> NimbusSwiftUILibrary {
+  public func addAction<T: ActionDecodable>(_ name: String, _ type: T.Type) -> NimbusSwiftUILibrary {
     super.addAction(name: name) { event in
       do {
         let action = try NimbusDecoder.decode(T.self, from: event)
-        handler(action)
+        action.execute()
       } catch {
         // log error
         fatalError()
@@ -56,11 +56,11 @@ public class NimbusSwiftUILibrary: UILibrary {
     return self
   }
   
-  public func addOperation<T: OperationDecodable>(_ name: String, handler: @escaping (T) -> Any?) -> NimbusSwiftUILibrary {
+  public func addOperation<T: OperationDecodable>(_ name: String, _ type: T.Type) -> NimbusSwiftUILibrary {
     super.addOperation(name: name) { array in
       do {
         let operation = try NimbusDecoder.decode(T.self, from: array)
-        return handler(operation)
+        return operation.execute()
       } catch {
         // log error
         fatalError()
@@ -69,7 +69,7 @@ public class NimbusSwiftUILibrary: UILibrary {
     return self
   }
   
-  public func addComponent<T: NimbusComponent>(_ name: String, _ type: T.Type) -> NimbusSwiftUILibrary {
+  public func addComponent<T: ViewDecodable>(_ name: String, _ type: T.Type) -> NimbusSwiftUILibrary {
     components[name] = { node in
       try NimbusDecoder.decode(type, from: node)
     }

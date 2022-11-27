@@ -16,21 +16,21 @@
 
 import UIKit
 
-var opener: UrlOpener = UIApplication.shared
-
-let openUrl: (OpenUrl) -> Void = { action in
-  if opener.canOpenURL(action.url) {
-    _ = opener.openURL(action.url)
-  }
-}
-
-struct OpenUrl: Decodable {
-  var url: URL
-}
-
 protocol UrlOpener {
   func canOpenURL(_ url: URL) -> Bool
   func openURL(_ url: URL) -> Bool
 }
 
 extension UIApplication: UrlOpener {}
+
+var opener: UrlOpener = UIApplication.shared
+
+struct OpenUrl: ActionDecodable {
+  var url: URL
+  
+  func execute() {
+    if opener.canOpenURL(url) {
+      _ = opener.openURL(url)
+    }
+  }
+}

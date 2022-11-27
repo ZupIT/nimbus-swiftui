@@ -68,7 +68,7 @@ class NimbusSwiftUITests: XCTestCase {
 
 }
 
-struct TextComponent: NimbusComponent {
+struct TextComponent: ViewDecodable {
   var text: String
   var body: some View {
     Text(text)

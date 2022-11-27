@@ -137,7 +137,7 @@ class DecodableWrappersTests: XCTestCase {
 
 // MARK: - Children
 
-private struct Container<Content: View>: NimbusComponent {
+private struct Container<Content: View>: ViewDecodable {
   @Children
   var children: () -> Content
   
@@ -154,7 +154,7 @@ private let childrenTest = NimbusSwiftUILibrary("childrenTest")
 
 // MARK: - Event
 
-struct EventComponent: NimbusComponent {
+struct EventComponent: ViewDecodable {
   @Event var event: () -> Void
   @StatefulEvent var statefulEvent: (String) -> Void
   
@@ -167,25 +167,29 @@ struct EventComponent: NimbusComponent {
   }
 }
 
-struct Action: Decodable {}
-struct ActionParameter: Decodable {
-  var value: String?
-}
-
 fileprivate var eventExpectation: XCTestExpectation?
 fileprivate var statefulEventExpectation: XCTestExpectation?
 
-private let eventTest = NimbusSwiftUILibrary("eventTest")
-  .addAction("action") { (action: Action) in
+struct Action: ActionDecodable {
+  func execute() {
     eventExpectation?.fulfill()
   }
-  .addAction("actionParameter") { (action: ActionParameter) in
-    if action.value == "parameter" { statefulEventExpectation?.fulfill() }
+}
+struct ActionParameter: ActionDecodable {
+  var value: String?
+  
+  func execute() {
+    if value == "parameter" { statefulEventExpectation?.fulfill() }
   }
+}
+
+private let eventTest = NimbusSwiftUILibrary("eventTest")
+  .addAction("action", Action.self)
+  .addAction("actionParameter", ActionParameter.self)
   .addComponent("component", EventComponent.self)
 
 // MARK: - ActionDependency
-struct ActionDependencyComponent: NimbusComponent {
+struct ActionDependencyComponent: ViewDecodable {
   @Event var event: () -> Void
   
   var body: some View {
@@ -196,14 +200,16 @@ struct ActionDependencyComponent: NimbusComponent {
   }
 }
 
-struct ActionDependency: Decodable {
+struct ActionDependency: ActionDecodable {
   @CoreAction var action: ActionTriggeredEvent
+  
+  func execute() {
+    XCTAssertEqual(action.scope.get(key: "dependency") as! String, "Dependency")
+  }
 }
 
 private let actionDependency = NimbusSwiftUILibrary("actionDependency")
-  .addAction("action") { (action: ActionDependency) in
-    XCTAssertEqual(action.action.scope.get(key: "dependency") as! String, "Dependency")
-  }
+  .addAction("action", ActionDependency.self)
   .addComponent("component", ActionDependencyComponent.self)
 
 // MARK: - Errors
