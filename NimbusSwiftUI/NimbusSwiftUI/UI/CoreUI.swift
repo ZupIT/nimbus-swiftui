@@ -18,7 +18,7 @@ import SwiftUI
 import NimbusCore
 
 let coreUILibrary = NimbusSwiftUILibrary()
-  .addAction("openUrl", handler: openUrl)
+  .addAction("openUrl", OpenUrl.self)
   .addComponent("fragment") { node in
     AnyView(
       VStack(alignment: .leading, spacing: 0) {

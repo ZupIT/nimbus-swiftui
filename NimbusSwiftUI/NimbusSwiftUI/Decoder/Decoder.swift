@@ -16,11 +16,18 @@
 
 import SwiftUI
 
+public protocol ActionDecodable: Decodable {
+  func execute()
+}
+
 public protocol OperationDecodable: Decodable {
+  associatedtype Return
+  func execute() -> Return
+  
   static var properties: [String] { get }
 }
 
-public typealias NimbusComponent = View & Decodable
+public typealias ViewDecodable = View & Decodable
 
 // MARK: - Decoder
 struct NimbusDecoder {
@@ -29,11 +36,11 @@ struct NimbusDecoder {
     try NimbusDecoderImpl(codingPath: [], userInfo: [:], value: dictionary).unwrap(as: T.self)
   }
   
-  static func decode<T: NimbusComponent>(_ type: T.Type, from node: ServerDrivenNode) throws -> AnyView {
+  static func decode<T: ViewDecodable>(_ type: T.Type, from node: ServerDrivenNode) throws -> AnyView {
     AnyView(try NimbusDecoderImpl(codingPath: [], userInfo: [:], value: node.properties, children: node.children).unwrap(as: T.self))
   }
   
-  static func decode<T: Decodable>(_ type: T.Type, from action: ActionTriggeredEvent) throws -> T {
+  static func decode<T: ActionDecodable>(_ type: T.Type, from action: ActionTriggeredEvent) throws -> T {
     try NimbusDecoderImpl(codingPath: [], userInfo: [:], value: action.action.properties, action: action).unwrap(as: T.self)
   }
   
