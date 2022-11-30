@@ -89,11 +89,17 @@ extension AnyServerDrivenEvent: Decodable {
 
 extension KeyedDecodingContainer {
   public func decode(_ type: Event.Type, forKey key: Self.Key) throws -> Event {
+    guard contains(key) else {
+      return Event { }
+    }
     let anyEvent = try decode(AnyServerDrivenEvent.self, forKey: key)
     return Event { anyEvent.value?.run() }
   }
   
   public func decode<T>(_ type: StatefulEvent<T>.Type, forKey key: Self.Key) throws -> StatefulEvent<T> {
+    guard contains(key) else {
+      return StatefulEvent { _ in }
+    }
     let anyEvent = try decode(AnyServerDrivenEvent.self, forKey: key)
     return StatefulEvent { value in anyEvent.value?.run(implicitStateValue: value) }
   }

@@ -108,6 +108,18 @@ class DecodableWrappersTests: XCTestCase {
     assertSnapshot(matching: view, as: .image)
   }
   
+  func testDecodeEmptyAction() throws {
+    let container = try NimbusDecoderImpl(codingPath: [], userInfo: [:], value: [:]).container(keyedBy: DictionaryKey.self)
+    
+    let event = try container.decode(Event.self, forKey: "event")
+    event.wrappedValue()
+    XCTAssertNotNil(event)
+    
+    let statefulEvent = try container.decode(StatefulEvent<String>.self, forKey: "event")
+    statefulEvent.wrappedValue("dummy")
+    XCTAssertNotNil(statefulEvent)
+  }
+  
   func testWrapperErrors() throws {
     XCTAssertThrowsError(try Children<AnyView>(from: DummyDecoder())) { error in
       XCTAssertEqual(extractContext(from: error)?.debugDescription, "The children cannot be configured. Make sure this value is decoded using NimbusDecoder.")
