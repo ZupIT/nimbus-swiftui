@@ -33,9 +33,12 @@ public class NimbusSwiftUILibrary: UILibrary {
       do {
         let action = try NimbusDecoder.decode(T.self, from: event)
         action.execute()
+      } catch let error as DecodingError {
+        let actionError = ActionDeserializationError(event: event, message: "\(error)")
+        event.scope.nimbus.logger.error(message: actionError.message)
       } catch {
-        // log error
-        fatalError()
+        let actionError = ActionExecutionError(event: event, message: "\(error)")
+        event.scope.nimbus.logger.error(message: actionError.message)
       }
     }
     return self
@@ -62,8 +65,10 @@ public class NimbusSwiftUILibrary: UILibrary {
         let operation = try NimbusDecoder.decode(T.self, from: array)
         return operation.execute()
       } catch {
-        // log error
-        fatalError()
+//      FIXME: We need support to throwing lambdas in the kmm to handle this error in NimbusCore.
+//        https://youtrack.jetbrains.com/issue/KT-53111/Support-throwing-lambdas
+        print(error)
+        return nil
       }
     }
     return self
