@@ -37,7 +37,9 @@ jobs:
       # TODO: DerivedData Cache
 
       - name: swiftlint
-        run: swiftlint
+        run: |
+          cd NimbusSwiftUI
+          swiftlint
 
       - name: xcodebuild
         run: set -o pipefail && xcodebuild test -scheme NimbusSwiftUI -workspace Nimbus.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 13 mini,OS=15.2' | xcpretty
