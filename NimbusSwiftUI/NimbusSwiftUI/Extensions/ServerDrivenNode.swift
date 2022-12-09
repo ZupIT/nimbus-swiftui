@@ -16,7 +16,7 @@
 
 import SwiftUI
 
-extension Optional where Wrapped == Array<ServerDrivenNode> {
+extension Optional where Wrapped == [ServerDrivenNode] {
   public var asView: AnyView {
     AnyView(ForEach(self ?? [], id: \.id) { child in
       RenderedNode(observableNode: ObservableNode(child))

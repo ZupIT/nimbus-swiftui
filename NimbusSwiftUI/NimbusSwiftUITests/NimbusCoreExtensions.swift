@@ -43,7 +43,7 @@ extension DynamicNode {
   convenience init(
       id: String,
       component: String,
-      properties: [String : Any]? = nil,
+      properties: [String: Any]? = nil,
       children: [DynamicNode]? = nil
     ) {
       self.init(

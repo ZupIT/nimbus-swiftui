@@ -39,7 +39,10 @@ class SwiftUIWrappersTests: XCTestCase {
   
   func testDecodeDefaultImpl() throws {
     XCTAssertThrowsError(try State<String>(from: DummyDecoder())) { error in
-      XCTAssertEqual(extractContext(from: error)?.debugDescription, "Unimplemented. Make sure this value is decoded using a KeyedDecodingContainer.")
+      XCTAssertEqual(
+        extractContext(from: error)?.debugDescription,
+        "Unimplemented. Make sure this value is decoded using a KeyedDecodingContainer."
+      )
     }
   }
   

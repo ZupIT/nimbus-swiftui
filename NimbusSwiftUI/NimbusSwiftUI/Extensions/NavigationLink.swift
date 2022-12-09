@@ -22,8 +22,7 @@ extension NavigationLink {
     onNavigate: @escaping (Bool) -> Void = { _ in },
     @ViewBuilder destination: @escaping (Binding<Value>) -> WrappedDestination
   )
-  where Destination == WrappedDestination?, Label == EmptyView
-  {
+  where Destination == WrappedDestination?, Label == EmptyView {
     self.init(
       isActive: optionalValue.isPresent().didSet(onNavigate),
       destination: {

@@ -226,7 +226,11 @@ class DecoderTests: XCTestCase {
 
   func testDecodeKeyedNestedKeyed() throws {
     let impl = NimbusDecoderImpl(codingPath: [], userInfo: [:])
-    let container = NimbusDecoderImpl.KeyedContainer<DictionaryKey>(impl: impl, codingPath: [], dictionary: ["nested": ["key1": "value1"]])
+    let container = NimbusDecoderImpl.KeyedContainer<DictionaryKey>(
+      impl: impl,
+      codingPath: [],
+      dictionary: ["nested": ["key1": "value1"]]
+    )
     
     let nested = try container.nestedContainer(keyedBy: DictionaryKey.self, forKey: "nested")
     let value = try nested.decode(String.self, forKey: "key1")
@@ -236,7 +240,11 @@ class DecoderTests: XCTestCase {
   
   func testDecodeKeyedNestedUnkeyed() throws {
     let impl = NimbusDecoderImpl(codingPath: [], userInfo: [:])
-    let container = NimbusDecoderImpl.KeyedContainer<DictionaryKey>(impl: impl, codingPath: [], dictionary: ["nested": ["value1"]])
+    let container = NimbusDecoderImpl.KeyedContainer<DictionaryKey>(
+      impl: impl,
+      codingPath: [],
+      dictionary: ["nested": ["value1"]]
+    )
     
     var nested = try container.nestedUnkeyedContainer(forKey: "nested")
     let value = try nested.decode(String.self)
@@ -282,7 +290,10 @@ class DecoderTests: XCTestCase {
     XCTAssertEqual(model.value, 1)
     
     XCTAssertThrowsError(try NimbusDecoder.decode(Model.self, from: ["value": 1])) { error in
-      XCTAssertEqual(extractContext(from: error)?.debugDescription, "No value associated with key CodingKeys(stringValue: \"id\", intValue: nil) (\"id\").")
+      XCTAssertEqual(
+        extractContext(from: error)?.debugDescription,
+        "No value associated with key CodingKeys(stringValue: \"id\", intValue: nil) (\"id\")."
+      )
     }
   }
   
@@ -292,10 +303,15 @@ class DecoderTests: XCTestCase {
     }
     
     XCTAssertThrowsError(try NimbusDecoderImpl(codingPath: [], userInfo: [:], value: [:]).unwrap(as: Model.self)) { error in
-      XCTAssertEqual(extractContext(from: error)?.debugDescription, "No value associated with key CodingKeys(stringValue: \"value\", intValue: nil) (\"value\").")
+      XCTAssertEqual(
+        extractContext(from: error)?.debugDescription,
+        "No value associated with key CodingKeys(stringValue: \"value\", intValue: nil) (\"value\")."
+      )
     }
     
-    XCTAssertThrowsError(try NimbusDecoderImpl(codingPath: [], userInfo: [:], value: ["value": NSNull()]).unwrap(as: Model.self)) { error in
+    XCTAssertThrowsError(
+      try NimbusDecoderImpl(codingPath: [], userInfo: [:], value: ["value": NSNull()]).unwrap(as: Model.self)
+    ) { error in
       XCTAssertEqual(extractContext(from: error)?.debugDescription, "Expected to decode String but found Optional<Any> instead.")
     }
   }
@@ -356,7 +372,7 @@ class DecoderTests: XCTestCase {
     var container = NimbusDecoderImpl.UnkeyedContainer(impl: impl, codingPath: [], array: [["value1"]])
     
     let `super` = try container.superDecoder()
-    let array = try Array<String>(from: `super`)
+    let array = try [String](from: `super`)
     
     XCTAssertEqual(array, ["value1"])
   }
@@ -367,7 +383,11 @@ class DecoderTests: XCTestCase {
     }
   }
   
-  private func testUnkeyedContainer<T: Equatable>(array: [Any], reference: T, execute: (inout UnkeyedDecodingContainer) throws -> T) throws {
+  private func testUnkeyedContainer<T: Equatable>(
+    array: [Any],
+    reference: T,
+    execute: (inout UnkeyedDecodingContainer) throws -> T
+  ) throws {
     let impl = NimbusDecoderImpl(codingPath: [], userInfo: [:])
     var container: UnkeyedDecodingContainer = NimbusDecoderImpl.UnkeyedContainer(impl: impl, codingPath: [], array: array)
     let decoded = try execute(&container)
@@ -389,7 +409,7 @@ extension DynamicNode {
 }
 
 func extractContext(from error: Error) -> DecodingError.Context? {
-  switch (error as! DecodingError) {
+  switch error as! DecodingError {
   case let .typeMismatch(_, context), let .dataCorrupted(context), let .keyNotFound(_, context), let .valueNotFound(_, context):
     return context
   @unknown default:

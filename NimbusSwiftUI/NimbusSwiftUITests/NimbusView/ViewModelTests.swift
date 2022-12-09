@@ -199,7 +199,7 @@ class ViewModelTests: XCTestCase {
     sut.view = ServerDrivenView(nimbus: core, states: nil, description: sut.url) { sut }
     
     // When
-    sut.load() { onInit.fulfill() }
+    sut.load { onInit.fulfill() }
     
     // Then
     wait(for: [fetch, onInit], timeout: 3)

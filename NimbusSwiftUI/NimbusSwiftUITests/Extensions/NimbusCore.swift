@@ -17,7 +17,7 @@
 import NimbusCore
 
 extension ViewRequest {
-    convenience init(_ url: String, params: [String:Any]?) {
-      self.init(url: url, method: .get, headers: nil, body: nil, fallback: nil, params: params)
+  convenience init(_ url: String, params: [String: Any]?) {
+    self.init(url: url, method: .get, headers: nil, body: nil, fallback: nil, params: params)
   }
 }

@@ -68,25 +68,24 @@ extension ViewModel {
     state = .loading
     
     switch mode {
-      case let .remote(request: request):
-        createViewToLoad(request: request)
-        load(from: request, callback: callback)
-      case let .local(json: json):
-        createViewToLoad(request: nil)
-        load(from: json)
-        if let callback = callback { callback() }
+    case let .remote(request: request):
+      createViewToLoad(request: request)
+      load(from: request, callback: callback)
+    case let .local(json: json):
+      createViewToLoad(request: nil)
+      load(from: json)
+      if let callback = callback { callback() }
     }
   }
      
   private func createViewToLoad(request: ViewRequest?) {
     if view == nil {
-      // TODO: Verify lifecycle
       view = ServerDrivenView(
         nimbus: core,
         states: getStatesFromRequest(request: request),
         description: url
-      ) {
-        [unowned self] in self
+      ) { [unowned self] in
+        self
       }
     }
   }
@@ -97,7 +96,6 @@ extension ViewModel {
     
   private func load(from json: String) {
     do {
-      // TODO: Fix dispatch main on nimbus core
       let tree = try core.nodeBuilder.buildFromJsonString(json: json)
       if let view = view {
         tree.initialize(scope: view)
@@ -112,7 +110,6 @@ extension ViewModel {
     core.viewClient.fetch(request: request) { [weak self] tree, error in
       DispatchQueue.main.async {
         if let tree = tree {
-          // TODO: Fix dispatch main on nimbus core
           if let view = self?.view {
             tree.initialize(scope: view)
             self?.state = .view(ObservableNode(tree))

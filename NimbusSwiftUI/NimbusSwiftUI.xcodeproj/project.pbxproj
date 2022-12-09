@@ -38,7 +38,6 @@
 		93FF9D59282ADD2A00C36CE9 /* ViewDidLoadModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9D58282ADD2A00C36CE9 /* ViewDidLoadModifier.swift */; };
 		93FF9D5B282AE06E00C36CE9 /* NimbusCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9D5A282AE06E00C36CE9 /* NimbusCore.swift */; };
 		AFCE758C28CF5C2A004EF849 /* NimbusSwiftUILibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE758B28CF5C2A004EF849 /* NimbusSwiftUILibrary.swift */; };
-		AFCE758E28CF5C55004EF849 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE758D28CF5C55004EF849 /* String.swift */; };
 		AFCE759128CF5E22004EF849 /* CoreUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE759028CF5E22004EF849 /* CoreUI.swift */; };
 		AFCE759328CFA417004EF849 /* ObservableNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE759228CFA417004EF849 /* ObservableNode.swift */; };
 		AFCE759528CFA584004EF849 /* RenderedNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE759428CFA584004EF849 /* RenderedNode.swift */; };
@@ -90,7 +89,6 @@
 		93FF9D58282ADD2A00C36CE9 /* ViewDidLoadModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDidLoadModifier.swift; sourceTree = "<group>"; };
 		93FF9D5A282AE06E00C36CE9 /* NimbusCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusCore.swift; sourceTree = "<group>"; };
 		AFCE758B28CF5C2A004EF849 /* NimbusSwiftUILibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusSwiftUILibrary.swift; sourceTree = "<group>"; };
-		AFCE758D28CF5C55004EF849 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		AFCE759028CF5E22004EF849 /* CoreUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreUI.swift; sourceTree = "<group>"; };
 		AFCE759228CFA417004EF849 /* ObservableNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableNode.swift; sourceTree = "<group>"; };
 		AFCE759428CFA584004EF849 /* RenderedNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderedNode.swift; sourceTree = "<group>"; };
@@ -243,7 +241,6 @@
 				93FF9D51282A9AB400C36CE9 /* NavigationLink.swift */,
 				93FF9D5A282AE06E00C36CE9 /* NimbusCore.swift */,
 				9323D5C3282EED4E002EB6ED /* View.swift */,
-				AFCE758D28CF5C55004EF849 /* String.swift */,
 				93F4C20B291E8B19003A868B /* ServerDrivenNode.swift */,
 			);
 			path = Extensions;
@@ -303,6 +300,7 @@
 			buildPhases = (
 				93093681281330070028EA2C /* Headers */,
 				93093682281330070028EA2C /* Sources */,
+				93BCD905294234A100751085 /* ShellScript */,
 				93093683281330070028EA2C /* Frameworks */,
 				93093684281330070028EA2C /* Resources */,
 			);
@@ -393,6 +391,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		93BCD905294234A100751085 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		93093682281330070028EA2C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -415,7 +434,6 @@
 				AFCE758C28CF5C2A004EF849 /* NimbusSwiftUILibrary.swift in Sources */,
 				9323D5CE282EF29E002EB6ED /* Aliases.swift in Sources */,
 				AFCE759328CFA417004EF849 /* ObservableNode.swift in Sources */,
-				AFCE758E28CF5C55004EF849 /* String.swift in Sources */,
 				93FF9D59282ADD2A00C36CE9 /* ViewDidLoadModifier.swift in Sources */,
 				93FF9D5B282AE06E00C36CE9 /* NimbusCore.swift in Sources */,
 				93A5039D2816E92200269B03 /* NimbusView.swift in Sources */,

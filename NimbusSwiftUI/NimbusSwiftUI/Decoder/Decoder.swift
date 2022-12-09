@@ -37,7 +37,9 @@ struct NimbusDecoder {
   }
   
   static func decode<T: ViewDecodable>(_ type: T.Type, from node: ServerDrivenNode) throws -> AnyView {
-    AnyView(try NimbusDecoderImpl(codingPath: [], userInfo: [:], value: node.properties, children: node.children).unwrap(as: T.self))
+    AnyView(
+      try NimbusDecoderImpl(codingPath: [], userInfo: [:], value: node.properties, children: node.children
+    ).unwrap(as: T.self))
   }
   
   static func decode<T: ActionDecodable>(_ type: T.Type, from action: ActionTriggeredEvent) throws -> T {
@@ -69,7 +71,7 @@ struct NimbusDecoderImpl: Decoder {
   
   var action: ActionTriggeredEvent?
   
-  func container<Key>(keyedBy type: Key.Type) throws -> KeyedDecodingContainer<Key> where Key : CodingKey {
+  func container<Key>(keyedBy type: Key.Type) throws -> KeyedDecodingContainer<Key> where Key: CodingKey {
     let container = KeyedContainer<Key>(impl: self, codingPath: codingPath, dictionary: value as? [String: Any])
     return KeyedDecodingContainer(container)
   }
@@ -84,6 +86,7 @@ struct NimbusDecoderImpl: Decoder {
   
   // MARK: Special case handling
   func unwrap<T: Decodable>(as type: T.Type) throws -> T {
+    // swiftlint:disable force_cast
     if type == AnyServerDrivenEvent.self {
       return unwrapAnyEvent() as! T
     }
@@ -96,6 +99,7 @@ struct NimbusDecoderImpl: Decoder {
     if type == URL.self {
       return try unwrapURL() as! T
     }
+    // swiftlint:enable force_cast
     return try T(from: self)
   }
   
@@ -257,7 +261,7 @@ extension NimbusDecoderImpl {
       try impl.unwrapFixedWidthInteger(from: value)
     }
     
-    func decode<T>(_ type: T.Type) throws -> T where T : Decodable {
+    func decode<T>(_ type: T.Type) throws -> T where T: Decodable {
       try impl.unwrap(as: T.self)
     }
     
@@ -268,7 +272,6 @@ extension NimbusDecoderImpl {
 
 extension NimbusDecoderImpl {
   struct KeyedContainer<K: CodingKey>: KeyedDecodingContainerProtocol {
-    typealias Key = K
     
     var impl: NimbusDecoderImpl
     var codingPath: [CodingKey]
@@ -344,7 +347,7 @@ extension NimbusDecoderImpl {
       try decodeFixedWidthInteger(key: key)
     }
     
-    func decode<T>(_ type: T.Type, forKey key: K) throws -> T where T : Decodable {
+    func decode<T>(_ type: T.Type, forKey key: K) throws -> T where T: Decodable {
       if type == Children<AnyView>.self {
         return try impl.unwrap(as: T.self)
       }
@@ -353,7 +356,10 @@ extension NimbusDecoderImpl {
       return try newDecoder.unwrap(as: T.self)
     }
     
-    func nestedContainer<NestedKey>(keyedBy type: NestedKey.Type, forKey key: K) throws -> KeyedDecodingContainer<NestedKey> where NestedKey : CodingKey {
+    func nestedContainer<NestedKey: CodingKey>(
+      keyedBy type: NestedKey.Type,
+      forKey key: K
+    ) throws -> KeyedDecodingContainer<NestedKey> {
       try decoderForKey(key).container(keyedBy: type)
     }
     
@@ -511,7 +517,7 @@ extension NimbusDecoderImpl {
       try decodeFixedWidthInteger()
     }
     
-    mutating func decode<T>(_ type: T.Type) throws -> T where T : Decodable {
+    mutating func decode<T>(_ type: T.Type) throws -> T where T: Decodable {
       let newDecoder = try decoderForNextElement(ofType: T.self)
       let result = try newDecoder.unwrap(as: T.self)
       
@@ -519,7 +525,9 @@ extension NimbusDecoderImpl {
       return result
     }
     
-    mutating func nestedContainer<NestedKey>(keyedBy type: NestedKey.Type) throws -> KeyedDecodingContainer<NestedKey> where NestedKey : CodingKey {
+    mutating func nestedContainer<NestedKey: CodingKey>(
+      keyedBy type: NestedKey.Type
+    ) throws -> KeyedDecodingContainer<NestedKey> {
       let decoder = try decoderForNextElement(ofType: KeyedDecodingContainer<NestedKey>.self)
       let container = try decoder.container(keyedBy: type)
       
