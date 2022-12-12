@@ -22,8 +22,8 @@
 		93417C2B283D4E34007A014F /* NimbusCoreExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93417C2A283D4E34007A014F /* NimbusCoreExtensions.swift */; };
 		93417C2E283D4FBC007A014F /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 93417C2D283D4FBC007A014F /* SnapshotTesting */; };
 		938363E329158651007F4FC4 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938363E229158651007F4FC4 /* Decoder.swift */; };
+		9397609F2947B69E003E106A /* NimbusCore in Frameworks */ = {isa = PBXBuildFile; productRef = 9397609E2947B69E003E106A /* NimbusCore */; };
 		93A5039D2816E92200269B03 /* NimbusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5039C2816E92200269B03 /* NimbusView.swift */; };
-		93B907442835941E000299DD /* NimbusCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93B907432835941E000299DD /* NimbusCore.xcframework */; };
 		93B90747283C1EA7000299DD /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B90746283C1EA7000299DD /* ViewModelTests.swift */; };
 		93B90749283C224F000299DD /* NimbusViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B90748283C224F000299DD /* NimbusViewTests.swift */; };
 		93F4C205291A89F6003A868B /* DecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F4C204291A89F6003A868B /* DecoderTests.swift */; };
@@ -100,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93B907442835941E000299DD /* NimbusCore.xcframework in Frameworks */,
+				9397609F2947B69E003E106A /* NimbusCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,7 +124,9 @@
 				93B9074228358D78000299DD /* Frameworks */,
 				93093687281330070028EA2C /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		93093687281330070028EA2C /* Products */ = {
 			isa = PBXGroup;
@@ -157,10 +159,10 @@
 		93093694281330070028EA2C /* NimbusSwiftUITests */ = {
 			isa = PBXGroup;
 			children = (
+				93CCDB91283D65F10091B86A /* __Snapshots__ */,
 				93F4C20D291E904F003A868B /* Decoder */,
 				BFDBC0A82915985E005ECE84 /* Extensions */,
 				9318BAA82863AD9700198798 /* Actions */,
-				93CCDB91283D65F10091B86A /* __Snapshots__ */,
 				93B90745283C1E83000299DD /* NimbusView */,
 				93417C2A283D4E34007A014F /* NimbusCoreExtensions.swift */,
 				93093695281330070028EA2C /* NimbusSwiftUITests.swift */,
@@ -309,6 +311,9 @@
 			dependencies = (
 			);
 			name = NimbusSwiftUI;
+			packageProductDependencies = (
+				9397609E2947B69E003E106A /* NimbusCore */,
+			);
 			productName = NimbusSwiftUI;
 			productReference = 93093686281330070028EA2C /* NimbusSwiftUI.framework */;
 			productType = "com.apple.product-type.framework";
@@ -363,6 +368,7 @@
 			mainGroup = 9309367C281330070028EA2C;
 			packageReferences = (
 				93417C2C283D4FBC007A014F /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+				9397609D2947B69E003E106A /* XCRemoteSwiftPackageReference "nimbus-core" */,
 			);
 			productRefGroup = 93093687281330070028EA2C /* Products */;
 			projectDirPath = "";
@@ -520,7 +526,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -577,7 +583,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -613,7 +619,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.zup.NimbusSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -645,7 +653,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.zup.NimbusSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -664,9 +674,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.zup.NimbusSwiftUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -682,9 +695,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.zup.NimbusSwiftUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -729,6 +745,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		9397609D2947B69E003E106A /* XCRemoteSwiftPackageReference "nimbus-core" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ZupIT/nimbus-core.git";
+			requirement = {
+				branch = "spm-test";
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -736,6 +760,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 93417C2C283D4FBC007A014F /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
 			productName = SnapshotTesting;
+		};
+		9397609E2947B69E003E106A /* NimbusCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9397609D2947B69E003E106A /* XCRemoteSwiftPackageReference "nimbus-core" */;
+			productName = NimbusCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
