@@ -78,7 +78,7 @@ struct CoreKey: EnvironmentKey {
 }
 
 extension EnvironmentValues {
-  var core: Core {
+  public var core: Core {
     get { self[CoreKey.self] }
     set { self[CoreKey.self] = newValue }
   }
