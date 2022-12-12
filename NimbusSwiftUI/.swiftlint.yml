@@ -1,20 +1,30 @@
-# rule identifiers turned on by default to exclude from running
+#
+# Copyright 2022 ZUP IT SERVICOS EM TECNOLOGIA E INOVACAO SA
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
 disabled_rules:
   - void_function_in_ternary
 
-# some rules are turned off by default, so you need to opt-in
 opt_in_rules:
 
-# paths to include during linting. `--path` is ignored if present.
 included:
 
-# paths to ignore during linting. Takes precedence over `included`.
 excluded:
 
-# Rules run by `swiftlint analyze`
 analyzer_rules: 
 
-# configurable rules can be customized from this configuration file
 trailing_whitespace:
   ignores_empty_lines: true
 
@@ -35,23 +45,7 @@ function_body_length:
   warning: 80
   error: 100
 
-# naming rules can set warnings/errors for min_length and max_length
-# additionally they can set excluded names
-# type_name:
-#   min_length: 4 # only warning
-#   max_length: # warning and error
-#     warning: 40
-#     error: 50
-#   excluded: iPhone # excluded via string
-#   allowed_symbols: ["_"] # these are allowed in type names
-
 identifier_name:
-  min_length: # only min_length
-    warning: 2 # only error
-    error: 2 # only error
-#   excluded: # excluded via string array
-#     - id
-#     - URL
-#     - GlobalAPIKey
-
-reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, codeclimate, junit, html, emoji, sonarqube, markdown, github-actions-logging)
+  min_length:
+    warning: 2
+    error: 2
