@@ -29,10 +29,6 @@ let package = Package(
   ],
   dependencies: [
     .package(
-      url: "https://github.com/pointfreeco/swift-snapshot-testing.git",
-      from: "1.9.0"
-    ),
-    .package(
       url: "https://github.com/ZupIT/nimbus-core.git",
       .branch("spm-test")
     )
@@ -44,14 +40,6 @@ let package = Package(
         .product(name: "NimbusCore", package: "nimbus-core")
       ],
       path: "NimbusSwiftUI/NimbusSwiftUI"
-    ),
-    .testTarget(
-      name: "NimbusSwiftUITests",
-      dependencies: [
-        "NimbusSwiftUI",
-        .product(name: "SnapshotTesting", package: "swift-snapshot-testing")
-      ],
-      path: "NimbusSwiftUI/NimbusSwiftUITests"
     )
   ]
 )
