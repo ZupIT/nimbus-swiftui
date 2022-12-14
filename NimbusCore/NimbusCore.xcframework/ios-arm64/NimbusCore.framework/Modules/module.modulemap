@@ -1,8 +1,0 @@
-framework module NimbusCore {
-    umbrella header "NimbusCore.h"
-
-    export *
-    module * { export * }
-
-    use Foundation
-}
