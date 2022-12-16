@@ -1,24 +1,23 @@
-# **Nimbus SwiftUI**
+# Nimbus SwiftUI
 
-Nimbus is the codename (or actual name) for the next version of Beagle (Zup's Server Driven UI library).
+Nimbus SwiftUI is a library for implementing Server Driven UI in projects built with SwiftUI.
 
-Nimbus will be first released with support for SwiftUI and Compose, this repo holds the SwiftUI implementation.
+To know more about Nimbus SDUI as a whole, please check our [main documentation](https://github.com/ZupIT/nimbus-docs/blob/main/readme.md).
 
-## **Requirements**
+To get started with Nimbus SwiftUI, please check the [documentation for Nimbus SwiftUI](https://github.com/ZupIT/nimbus-docs/blob/main/swiftui/index.md).
 
-Before start to running the NimbusSample project, it’s important to check out if you have installed all the current versions of the following programs:
+# Development stage
+Nimbus SwiftUI is currently in beta.
 
-- Xcode 12.0+ (iOS 13.0+, Swift 5.5+)
-- Cocoapods 1.10+
-
-## **Running the sample project**
-
-1. Clone the repo
-2. Clone the [core](https://github.com/ZupIT/nimbus-core) project in the same level of the nimbus-swiftui folder
-3. Execute _pod_ _install_ in the root folder
-4. Open the Nimbus.xcworkspace
-5. Select the NimbusSample scheme and run with command + R
+# Useful links
+- [Introductory article](https://medium.com/p/9a0d95686fd9/): blog post introducing Nimbus SDUI.
+- [Documentation](https://github.com/ZupIT/nimbus-docs): the documentation for both the frontend and backend libraries. This is not in a website format yet, but you can read everything through GitHub.
+- [Nimbus](https://github.com/ZupIT/nimbus): the common code between Nimbus SwiftUI and Nimbus Compose. This has been built using Kotlin Multiplatform Mobile (KMM).
+- [Nimbus Compose](https://github.com/ZupIT/nimbus-compose): all modules necessary to run Nimbus in a Jetpack Compose project.
+- [Nimbus SwiftUI](https://github.com/ZupIT/nimbus-swiftui): all modules necessary to run Nimbus in a SwiftUI project.
+- [Nimbus Compose Layout](https://github.com/ZupIT/nimbus-layout-compose): layout components for Nimbus Compose.
+- [Nimbus SwiftUI Layout](https://github.com/ZupIT/nimbus-layout-swiftui): layout components for Nimbus SwiftUI.
+- [Nimbus Backend TS](https://github.com/ZupIT/nimbus-backend-ts): modules for the backend in Typescript.
 
 ## **License**
-
 [**Apache License 2.0**](https://github.com/ZupIT/nimbus-swiftui/blob/main/LICENSE.txt).
