@@ -37,7 +37,7 @@ let package = Package(
     .target(
       name: "NimbusSwiftUI",
       dependencies: [
-        .product(name: "NimbusCore", package: "nimbus-core")
+        .product(name: "NimbusCore", package: "nimbus")
       ],
       path: "NimbusSwiftUI/NimbusSwiftUI"
     )
