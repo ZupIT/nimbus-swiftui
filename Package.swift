@@ -29,7 +29,7 @@ let package = Package(
   ],
   dependencies: [
     .package(
-      url: "https://github.com/ZupIT/nimbus-core.git",
+      url: "https://github.com/ZupIT/nimbus.git",
       .branch("spm-test")
     )
   ],
