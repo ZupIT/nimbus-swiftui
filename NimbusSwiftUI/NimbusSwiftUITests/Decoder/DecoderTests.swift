@@ -147,44 +147,41 @@ class DecoderTests: XCTestCase {
     let url = try container.decode(URL.self)
     XCTAssertEqual(url, URL(string: "url")!)
   }
+
+  func testDecodeWithCoercion() throws {
+    try assertDecoded(String.self, value: 1, expected: "1")
+    try assertDecoded(Int.self, value: 1.1, expected: 1)
+    try assertDecoded(Int.self, value: "1", expected: 1)
+    try assertDecoded(Int.self, value: "1.1", expected: 1)
+    try assertDecoded(Int64.self, value: "1671827106011123", expected: 1671827106011123)
+    try assertDecoded(Double.self, value: "1.1", expected: 1.1)
+    try assertDecoded(Float.self, value: "1", expected: 1)
+  }
+
+  private func assertDecoded<T: Decodable & Equatable>(_ type: T.Type, value: Any, expected: T) throws {
+    let value = try NimbusDecoderImpl(codingPath: [], userInfo: [:], value: value).unwrap(as: T.self)
+    XCTAssertEqual(value, expected)
+  }
   
   func testDecodeSingleValueErrors() throws {
     XCTAssertThrowsError(try NimbusDecoderImpl(codingPath: [], userInfo: [:], value: 2).unwrap(as: Bool.self)) { error in
       XCTAssertEqual(extractContext(from: error)?.debugDescription, "Expected to decode Bool but found Optional<Any> instead.")
     }
-    
+
     XCTAssertThrowsError(try NimbusDecoderImpl(codingPath: [], userInfo: [:], value: nil).unwrap(as: String.self)) { error in
       XCTAssertEqual(extractContext(from: error)?.debugDescription, "Expected to decode String but found Optional<Any> instead.")
     }
-    
+
     XCTAssertThrowsError(try NimbusDecoderImpl(codingPath: [], userInfo: [:], value: true).unwrap(as: Double.self)) { error in
       XCTAssertEqual(extractContext(from: error)?.debugDescription, "Expected to decode Double but found Optional<Any> instead.")
     }
-    
+
     XCTAssertThrowsError(try NimbusDecoderImpl(codingPath: [], userInfo: [:], value: "int").unwrap(as: Int.self)) { error in
       XCTAssertEqual(extractContext(from: error)?.debugDescription, "Expected to decode Int but found Optional<Any> instead.")
     }
   }
   
   func testDecodeKeyedValue() throws {
-    struct Model: Decodable, Equatable {
-      var `nil`: Bool?
-      var bool: Bool
-      var string: String
-      var double: Double
-      var float: Float
-      var int: Int
-      var uint: UInt
-      var int8: Int8
-      var uint8: UInt8
-      var int16: Int16
-      var uint16: UInt16
-      var int32: Int32
-      var uint32: UInt32
-      var int64: Int64
-      var uint64: UInt64
-    }
-    
     let doubleValue: Double = 1.1
     let intValue: Int = 1
     let properties: [String: Any] = [
@@ -205,8 +202,8 @@ class DecoderTests: XCTestCase {
       "uint64": intValue
     ]
     
-    let object = try NimbusDecoderImpl(codingPath: [], userInfo: [:], value: properties).unwrap(as: Model.self)
-    XCTAssertEqual(object, Model(
+    let object = try NimbusDecoderImpl(codingPath: [], userInfo: [:], value: properties).unwrap(as: KeyedModel.self)
+    XCTAssertEqual(object, KeyedModel(
       bool: false,
       string: "string",
       double: 1.1,
@@ -394,6 +391,24 @@ class DecoderTests: XCTestCase {
     XCTAssertEqual(decoded, reference)
   }
   
+}
+
+struct KeyedModel: Decodable, Equatable {
+  var `nil`: Bool?
+  var bool: Bool
+  var string: String
+  var double: Double
+  var float: Float
+  var int: Int
+  var uint: UInt
+  var int8: Int8
+  var uint8: UInt8
+  var int16: Int16
+  var uint16: UInt16
+  var int32: Int32
+  var uint32: UInt32
+  var int64: Int64
+  var uint64: UInt64
 }
 
 extension DynamicNode {

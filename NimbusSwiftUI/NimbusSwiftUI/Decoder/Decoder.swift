@@ -159,11 +159,14 @@ struct NimbusDecoderImpl: Decoder {
     for additionalKey: CodingKey? = nil,
     as type: T.Type = T.self
   ) throws -> T {
-    guard let number = value as? Double else {
-      throw createTypeMismatchError(T.self, for: additionalKey, value: value)
+    if let number = value as? Double {
+      return T(number)
     }
-    
-    return T(number)
+    if let number = value as? String, let result = T(number) {
+      return result
+    }
+
+    throw createTypeMismatchError(T.self, for: additionalKey, value: value)
   }
   
   func unwrapFixedWidthInteger<T: FixedWidthInteger>(
@@ -171,11 +174,17 @@ struct NimbusDecoderImpl: Decoder {
     for additionalKey: CodingKey? = nil,
     as type: T.Type = T.self
   ) throws -> T {
-    guard let number = value as? Int else {
-      throw createTypeMismatchError(T.self, for: additionalKey, value: value)
+    if let number = value as? Int {
+      return T(number)
     }
-  
-    return T(number)
+    if let number = value as? Double {
+      return T(number)
+    }
+    if let number = value as? String, let doubleValue = Double(number) {
+      return T(doubleValue)
+    }
+
+    throw createTypeMismatchError(T.self, for: additionalKey, value: value)
   }
   
   func createTypeMismatchError(_ returnType: Any.Type, for additionalKey: CodingKey? = nil, value: Any?) -> DecodingError {
