@@ -375,7 +375,7 @@ __attribute__((swift_name("LazilyScoped")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Operation")))
 @interface NimbusCoreOperation : NimbusCoreCommonDependency <NimbusCoreExpression, NimbusCoreDependent, NimbusCoreLazilyScoped>
-- (instancetype)initWithHandler:(id _Nullable (^)(NSArray<id> *))handler arguments:(NSArray<id<NimbusCoreExpression>> *)arguments __attribute__((swift_name("init(handler:arguments:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithHandler:(id _Nullable (^)(NSArray<id> *))handler arguments:(NSArray<id<NimbusCoreExpression>> *)arguments detached:(BOOL)detached __attribute__((swift_name("init(handler:arguments:detached:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
 + (instancetype)new __attribute__((unavailable));
 - (NimbusCoreOperation *)clone __attribute__((swift_name("clone()")));
@@ -430,8 +430,8 @@ __attribute__((swift_name("ExpressionParser")))
 @interface NimbusCoreExpressionParser : NimbusCoreBase
 - (instancetype)initWithNimbus:(NimbusCoreNimbus *)nimbus __attribute__((swift_name("init(nimbus:)"))) __attribute__((objc_designated_initializer));
 - (BOOL)containsExpressionString:(NSString *)string __attribute__((swift_name("containsExpression(string:)")));
-- (id<NimbusCoreExpression>)parseExpressionCode:(NSString *)code __attribute__((swift_name("parseExpression(code:)")));
-- (id<NimbusCoreExpression>)parseStringStringContainingExpression:(NSString *)stringContainingExpression __attribute__((swift_name("parseString(stringContainingExpression:)")));
+- (id<NimbusCoreExpression>)parseExpressionCode:(NSString *)code detached:(BOOL)detached __attribute__((swift_name("parseExpression(code:detached:)")));
+- (id<NimbusCoreExpression>)parseStringStringContainingExpression:(NSString *)stringContainingExpression detached:(BOOL)detached __attribute__((swift_name("parseString(stringContainingExpression:detached:)")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -448,7 +448,7 @@ __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("OperationParser")))
 @interface NimbusCoreOperationParser : NimbusCoreBase
 - (instancetype)initWithNimbus:(NimbusCoreNimbus *)nimbus __attribute__((swift_name("init(nimbus:)"))) __attribute__((objc_designated_initializer));
-- (id<NimbusCoreExpression>)parseCode:(NSString *)code __attribute__((swift_name("parse(code:)")));
+- (id<NimbusCoreExpression>)parseCode:(NSString *)code detached:(BOOL)detached __attribute__((swift_name("parse(code:detached:)")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -462,7 +462,7 @@ __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("StringTemplateParser")))
 @interface NimbusCoreStringTemplateParser : NimbusCoreBase
 - (instancetype)initWithNimbus:(NimbusCoreNimbus *)nimbus __attribute__((swift_name("init(nimbus:)"))) __attribute__((objc_designated_initializer));
-- (NimbusCoreStringTemplate *)parseStringContainingExpression:(NSString *)stringContainingExpression __attribute__((swift_name("parse(stringContainingExpression:)")));
+- (NimbusCoreStringTemplate *)parseStringContainingExpression:(NSString *)stringContainingExpression detached:(BOOL)detached __attribute__((swift_name("parse(stringContainingExpression:detached:)")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -1057,7 +1057,7 @@ __attribute__((swift_name("NodeContainer")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("PropertyContainer")))
 @interface NimbusCorePropertyContainer : NimbusCoreCommonDependency <NimbusCoreLazilyScoped, NimbusCoreDependent>
-- (instancetype)initWithProperties:(NSDictionary<NSString *, id> *)properties nimbus:(NimbusCoreNimbus *)nimbus __attribute__((swift_name("init(properties:nimbus:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithProperties:(NSDictionary<NSString *, id> *)properties nimbus:(NimbusCoreNimbus *)nimbus detached:(BOOL)detached __attribute__((swift_name("init(properties:nimbus:detached:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
 + (instancetype)new __attribute__((unavailable));
 - (NimbusCorePropertyContainer *)clone __attribute__((swift_name("clone()")));
