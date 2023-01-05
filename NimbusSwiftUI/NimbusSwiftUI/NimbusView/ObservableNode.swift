@@ -18,13 +18,9 @@ import Foundation
 
 class ObservableNode: ObservableObject, Dependent {
   let node: ServerDrivenNode
-
-//  var children: [ObservableNode]?
-//  private var memoizedChildren: [String: ObservableNode] = [:]
   
   init(_ node: ServerDrivenNode) {
     self.node = node
-    update()
     node.addDependent(dependent: self)
   }
   
@@ -33,14 +29,6 @@ class ObservableNode: ObservableObject, Dependent {
   }
   
   func update() {
-    
-//    children = node.children?.map { child in
-//      if memoizedChildren[child.id] == nil {
-//        memoizedChildren[child.id] = ObservableNode(child)
-//      }
-//      return memoizedChildren[child.id]!
-//    }
-
     objectWillChange.send()
   }
 }
