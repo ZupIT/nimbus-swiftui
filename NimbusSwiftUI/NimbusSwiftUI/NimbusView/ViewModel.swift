@@ -83,6 +83,7 @@ extension ViewModel {
       view = ServerDrivenView(
         nimbus: core,
         states: getStatesFromRequest(request: request),
+        events: request?.events,
         description: url
       ) { [unowned self] in
         self
@@ -91,7 +92,7 @@ extension ViewModel {
   }
     
   private func getStatesFromRequest(request: ViewRequest?) -> [ServerDrivenState]? {
-    request?.params?.map { (key, value) in ServerDrivenState(id: key, value: value) }
+    request?.state?.map { (key, value) in ServerDrivenState(id: key, value: value) }
   }
     
   private func load(from json: String) {
