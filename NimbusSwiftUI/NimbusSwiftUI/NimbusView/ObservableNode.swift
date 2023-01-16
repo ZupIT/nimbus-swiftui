@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 ZUP IT SERVICOS EM TECNOLOGIA E INOVACAO SA
+ * Copyright 2023 ZUP IT SERVICOS EM TECNOLOGIA E INOVACAO SA
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,12 +18,9 @@ import Foundation
 
 class ObservableNode: ObservableObject, Dependent {
   let node: ServerDrivenNode
-  var children: [ObservableNode]? = nil
-  private var memoizedChildren: [String : ObservableNode] = [:]
   
   init(_ node: ServerDrivenNode) {
     self.node = node
-    update()
     node.addDependent(dependent: self)
   }
   
@@ -32,12 +29,12 @@ class ObservableNode: ObservableObject, Dependent {
   }
   
   func update() {
-    children = node.children?.map { child in
-      if (memoizedChildren[child.id] == nil) {
-        memoizedChildren[child.id] = ObservableNode(child)
-      }
-      return memoizedChildren[child.id]!
-    }
     objectWillChange.send()
+  }
+}
+
+extension ObservableNode: Equatable {
+  static func == (lhs: ObservableNode, rhs: ObservableNode) -> Bool {
+    lhs.node.id == rhs.node.id
   }
 }

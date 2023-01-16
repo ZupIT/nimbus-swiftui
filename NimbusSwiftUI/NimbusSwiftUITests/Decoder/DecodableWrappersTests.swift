@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 ZUP IT SERVICOS EM TECNOLOGIA E INOVACAO SA
+ * Copyright 2023 ZUP IT SERVICOS EM TECNOLOGIA E INOVACAO SA
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -43,10 +43,10 @@ class DecodableWrappersTests: XCTestCase {
     }
       .ui([childrenTest])
       .frame(width: 100, height: 100)
-    
+
     assertSnapshot(matching: view, as: .image)
   }
-  
+
   func testDecodeEvent() {
     eventExpectation = nil
     statefulEventExpectation = nil
@@ -122,23 +122,38 @@ class DecodableWrappersTests: XCTestCase {
   
   func testWrapperErrors() throws {
     XCTAssertThrowsError(try Children<AnyView>(from: DummyDecoder())) { error in
-      XCTAssertEqual(extractContext(from: error)?.debugDescription, "The children cannot be configured. Make sure this value is decoded using NimbusDecoder.")
+      XCTAssertEqual(
+        extractContext(from: error)?.debugDescription,
+        "The children cannot be configured. Make sure this value is decoded using NimbusDecoder."
+      )
     }
     
     XCTAssertThrowsError(try Event(from: DummyDecoder())) { error in
-      XCTAssertEqual(extractContext(from: error)?.debugDescription, "The event cannot be configured. Make sure this value is decoded using NimbusDecoder.")
+      XCTAssertEqual(
+        extractContext(from: error)?.debugDescription,
+        "The event cannot be configured. Make sure this value is decoded using NimbusDecoder."
+      )
     }
     
     XCTAssertThrowsError(try StatefulEvent<String>(from: DummyDecoder())) { error in
-      XCTAssertEqual(extractContext(from: error)?.debugDescription, "The event cannot be configured. Make sure this value is decoded using NimbusDecoder.")
+      XCTAssertEqual(
+        extractContext(from: error)?.debugDescription,
+        "The event cannot be configured. Make sure this value is decoded using NimbusDecoder."
+      )
     }
     
     XCTAssertThrowsError(try AnyServerDrivenEvent(from: DummyDecoder())) { error in
-      XCTAssertEqual(extractContext(from: error)?.debugDescription, "The event cannot be configured. Make sure this value is decoded using NimbusDecoder.")
+      XCTAssertEqual(
+        extractContext(from: error)?.debugDescription,
+        "The event cannot be configured. Make sure this value is decoded using NimbusDecoder."
+      )
     }
     
     XCTAssertThrowsError(try CoreAction(from: DummyDecoder())) { error in
-      XCTAssertEqual(extractContext(from: error)?.debugDescription, "The action cannot be configured. Make sure this value is decoded using NimbusDecoder.")
+      XCTAssertEqual(
+        extractContext(from: error)?.debugDescription,
+        "The action cannot be configured. Make sure this value is decoded using NimbusDecoder."
+      )
     }
     
     XCTAssertThrowsError(try NimbusDecoder.decode(ActionDependency.self, from: [:])) { error in
@@ -179,8 +194,8 @@ struct EventComponent: ViewDecodable {
   }
 }
 
-fileprivate var eventExpectation: XCTestExpectation?
-fileprivate var statefulEventExpectation: XCTestExpectation?
+private var eventExpectation: XCTestExpectation?
+private var statefulEventExpectation: XCTestExpectation?
 
 struct Action: ActionDecodable {
   func execute() {
@@ -228,9 +243,9 @@ private let actionDependency = NimbusSwiftUILibrary("actionDependency")
 
 struct DummyDecoder: Decoder {
   var codingPath: [CodingKey] = []
-  var userInfo: [CodingUserInfoKey : Any] = [:]
+  var userInfo: [CodingUserInfoKey: Any] = [:]
   
-  func container<Key>(keyedBy type: Key.Type) throws -> KeyedDecodingContainer<Key> where Key : CodingKey {
+  func container<Key>(keyedBy type: Key.Type) throws -> KeyedDecodingContainer<Key> where Key: CodingKey {
     fatalError("unimplemented")
   }
   

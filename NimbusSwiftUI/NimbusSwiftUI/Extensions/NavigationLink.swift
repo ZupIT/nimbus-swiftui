@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 ZUP IT SERVICOS EM TECNOLOGIA E INOVACAO SA
+ * Copyright 2023 ZUP IT SERVICOS EM TECNOLOGIA E INOVACAO SA
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,8 +22,7 @@ extension NavigationLink {
     onNavigate: @escaping (Bool) -> Void = { _ in },
     @ViewBuilder destination: @escaping (Binding<Value>) -> WrappedDestination
   )
-  where Destination == WrappedDestination?, Label == EmptyView
-  {
+  where Destination == WrappedDestination?, Label == EmptyView {
     self.init(
       isActive: optionalValue.isPresent().didSet(onNavigate),
       destination: {

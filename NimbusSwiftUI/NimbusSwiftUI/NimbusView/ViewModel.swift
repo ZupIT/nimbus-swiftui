@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 ZUP IT SERVICOS EM TECNOLOGIA E INOVACAO SA
+ * Copyright 2023 ZUP IT SERVICOS EM TECNOLOGIA E INOVACAO SA
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -68,36 +68,35 @@ extension ViewModel {
     state = .loading
     
     switch mode {
-      case let .remote(request: request):
-        createViewToLoad(request: request)
-        load(from: request, callback: callback)
-      case let .local(json: json):
-        createViewToLoad(request: nil)
-        load(from: json)
-        if let callback = callback { callback() }
+    case let .remote(request: request):
+      createViewToLoad(request: request)
+      load(from: request, callback: callback)
+    case let .local(json: json):
+      createViewToLoad(request: nil)
+      load(from: json)
+      if let callback = callback { callback() }
     }
   }
      
   private func createViewToLoad(request: ViewRequest?) {
     if view == nil {
-      // TODO: Verify lifecycle
       view = ServerDrivenView(
         nimbus: core,
         states: getStatesFromRequest(request: request),
+        events: request?.events,
         description: url
-      ) {
-        [unowned self] in self
+      ) { [unowned self] in
+        self
       }
     }
   }
     
   private func getStatesFromRequest(request: ViewRequest?) -> [ServerDrivenState]? {
-    request?.params?.map { (key, value) in ServerDrivenState(id: key, value: value) }
+    request?.state?.map { (key, value) in ServerDrivenState(id: key, value: value) }
   }
     
   private func load(from json: String) {
     do {
-      // TODO: Fix dispatch main on nimbus core
       let tree = try core.nodeBuilder.buildFromJsonString(json: json)
       if let view = view {
         tree.initialize(scope: view)
@@ -112,7 +111,6 @@ extension ViewModel {
     core.viewClient.fetch(request: request) { [weak self] tree, error in
       DispatchQueue.main.async {
         if let tree = tree {
-          // TODO: Fix dispatch main on nimbus core
           if let view = self?.view {
             tree.initialize(scope: view)
             self?.state = .view(ObservableNode(tree))

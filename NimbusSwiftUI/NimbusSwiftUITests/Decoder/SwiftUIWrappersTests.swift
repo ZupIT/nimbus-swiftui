@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 ZUP IT SERVICOS EM TECNOLOGIA E INOVACAO SA
+ * Copyright 2023 ZUP IT SERVICOS EM TECNOLOGIA E INOVACAO SA
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -39,7 +39,10 @@ class SwiftUIWrappersTests: XCTestCase {
   
   func testDecodeDefaultImpl() throws {
     XCTAssertThrowsError(try State<String>(from: DummyDecoder())) { error in
-      XCTAssertEqual(extractContext(from: error)?.debugDescription, "Unimplemented. Make sure this value is decoded using a KeyedDecodingContainer.")
+      XCTAssertEqual(
+        extractContext(from: error)?.debugDescription,
+        "Unimplemented. Make sure this value is decoded using a KeyedDecodingContainer."
+      )
     }
   }
   

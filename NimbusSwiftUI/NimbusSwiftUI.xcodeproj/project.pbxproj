@@ -23,7 +23,6 @@
 		93417C2E283D4FBC007A014F /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 93417C2D283D4FBC007A014F /* SnapshotTesting */; };
 		938363E329158651007F4FC4 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938363E229158651007F4FC4 /* Decoder.swift */; };
 		93A5039D2816E92200269B03 /* NimbusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5039C2816E92200269B03 /* NimbusView.swift */; };
-		93B907442835941E000299DD /* NimbusCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93B907432835941E000299DD /* NimbusCore.xcframework */; };
 		93B90747283C1EA7000299DD /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B90746283C1EA7000299DD /* ViewModelTests.swift */; };
 		93B90749283C224F000299DD /* NimbusViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B90748283C224F000299DD /* NimbusViewTests.swift */; };
 		93F4C205291A89F6003A868B /* DecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F4C204291A89F6003A868B /* DecoderTests.swift */; };
@@ -38,10 +37,10 @@
 		93FF9D59282ADD2A00C36CE9 /* ViewDidLoadModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9D58282ADD2A00C36CE9 /* ViewDidLoadModifier.swift */; };
 		93FF9D5B282AE06E00C36CE9 /* NimbusCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9D5A282AE06E00C36CE9 /* NimbusCore.swift */; };
 		AFCE758C28CF5C2A004EF849 /* NimbusSwiftUILibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE758B28CF5C2A004EF849 /* NimbusSwiftUILibrary.swift */; };
-		AFCE758E28CF5C55004EF849 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE758D28CF5C55004EF849 /* String.swift */; };
 		AFCE759128CF5E22004EF849 /* CoreUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE759028CF5E22004EF849 /* CoreUI.swift */; };
 		AFCE759328CFA417004EF849 /* ObservableNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE759228CFA417004EF849 /* ObservableNode.swift */; };
 		AFCE759528CFA584004EF849 /* RenderedNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE759428CFA584004EF849 /* RenderedNode.swift */; };
+		AFD72FCB2975900F008D7FBF /* NimbusCore in Frameworks */ = {isa = PBXBuildFile; productRef = AFD72FCA2975900F008D7FBF /* NimbusCore */; };
 		BFDBC0AA2915987B005ECE84 /* NimbusCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBC0A92915987B005ECE84 /* NimbusCore.swift */; };
 /* End PBXBuildFile section */
 
@@ -90,7 +89,6 @@
 		93FF9D58282ADD2A00C36CE9 /* ViewDidLoadModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDidLoadModifier.swift; sourceTree = "<group>"; };
 		93FF9D5A282AE06E00C36CE9 /* NimbusCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusCore.swift; sourceTree = "<group>"; };
 		AFCE758B28CF5C2A004EF849 /* NimbusSwiftUILibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusSwiftUILibrary.swift; sourceTree = "<group>"; };
-		AFCE758D28CF5C55004EF849 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		AFCE759028CF5E22004EF849 /* CoreUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreUI.swift; sourceTree = "<group>"; };
 		AFCE759228CFA417004EF849 /* ObservableNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableNode.swift; sourceTree = "<group>"; };
 		AFCE759428CFA584004EF849 /* RenderedNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderedNode.swift; sourceTree = "<group>"; };
@@ -102,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93B907442835941E000299DD /* NimbusCore.xcframework in Frameworks */,
+				AFD72FCB2975900F008D7FBF /* NimbusCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +124,9 @@
 				93B9074228358D78000299DD /* Frameworks */,
 				93093687281330070028EA2C /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		93093687281330070028EA2C /* Products */ = {
 			isa = PBXGroup;
@@ -159,10 +159,10 @@
 		93093694281330070028EA2C /* NimbusSwiftUITests */ = {
 			isa = PBXGroup;
 			children = (
+				93CCDB91283D65F10091B86A /* __Snapshots__ */,
 				93F4C20D291E904F003A868B /* Decoder */,
 				BFDBC0A82915985E005ECE84 /* Extensions */,
 				9318BAA82863AD9700198798 /* Actions */,
-				93CCDB91283D65F10091B86A /* __Snapshots__ */,
 				93B90745283C1E83000299DD /* NimbusView */,
 				93417C2A283D4E34007A014F /* NimbusCoreExtensions.swift */,
 				93093695281330070028EA2C /* NimbusSwiftUITests.swift */,
@@ -243,7 +243,6 @@
 				93FF9D51282A9AB400C36CE9 /* NavigationLink.swift */,
 				93FF9D5A282AE06E00C36CE9 /* NimbusCore.swift */,
 				9323D5C3282EED4E002EB6ED /* View.swift */,
-				AFCE758D28CF5C55004EF849 /* String.swift */,
 				93F4C20B291E8B19003A868B /* ServerDrivenNode.swift */,
 			);
 			path = Extensions;
@@ -303,6 +302,7 @@
 			buildPhases = (
 				93093681281330070028EA2C /* Headers */,
 				93093682281330070028EA2C /* Sources */,
+				93BCD905294234A100751085 /* ShellScript */,
 				93093683281330070028EA2C /* Frameworks */,
 				93093684281330070028EA2C /* Resources */,
 			);
@@ -311,6 +311,9 @@
 			dependencies = (
 			);
 			name = NimbusSwiftUI;
+			packageProductDependencies = (
+				AFD72FCA2975900F008D7FBF /* NimbusCore */,
+			);
 			productName = NimbusSwiftUI;
 			productReference = 93093686281330070028EA2C /* NimbusSwiftUI.framework */;
 			productType = "com.apple.product-type.framework";
@@ -365,6 +368,7 @@
 			mainGroup = 9309367C281330070028EA2C;
 			packageReferences = (
 				93417C2C283D4FBC007A014F /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+				AFD72FC92975900F008D7FBF /* XCRemoteSwiftPackageReference "nimbus-core-binaries" */,
 			);
 			productRefGroup = 93093687281330070028EA2C /* Products */;
 			projectDirPath = "";
@@ -393,6 +397,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		93BCD905294234A100751085 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		93093682281330070028EA2C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -415,7 +440,6 @@
 				AFCE758C28CF5C2A004EF849 /* NimbusSwiftUILibrary.swift in Sources */,
 				9323D5CE282EF29E002EB6ED /* Aliases.swift in Sources */,
 				AFCE759328CFA417004EF849 /* ObservableNode.swift in Sources */,
-				AFCE758E28CF5C55004EF849 /* String.swift in Sources */,
 				93FF9D59282ADD2A00C36CE9 /* ViewDidLoadModifier.swift in Sources */,
 				93FF9D5B282AE06E00C36CE9 /* NimbusCore.swift in Sources */,
 				93A5039D2816E92200269B03 /* NimbusView.swift in Sources */,
@@ -502,7 +526,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -559,7 +583,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -595,7 +619,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.zup.NimbusSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -627,7 +653,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.zup.NimbusSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -646,9 +674,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.zup.NimbusSwiftUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -664,9 +695,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.zup.NimbusSwiftUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -711,6 +745,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		AFD72FC92975900F008D7FBF /* XCRemoteSwiftPackageReference "nimbus-core-binaries" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ZupIT/nimbus-core-binaries";
+			requirement = {
+				kind = exactVersion;
+				version = "1.0.0-alpha.1";
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -718,6 +760,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 93417C2C283D4FBC007A014F /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
 			productName = SnapshotTesting;
+		};
+		AFD72FCA2975900F008D7FBF /* NimbusCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFD72FC92975900F008D7FBF /* XCRemoteSwiftPackageReference "nimbus-core-binaries" */;
+			productName = NimbusCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

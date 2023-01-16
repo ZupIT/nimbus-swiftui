@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 ZUP IT SERVICOS EM TECNOLOGIA E INOVACAO SA
+ * Copyright 2023 ZUP IT SERVICOS EM TECNOLOGIA E INOVACAO SA
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 import NimbusCore
 
 extension ViewRequest {
-    convenience init(_ url: String, params: [String:Any]?) {
-      self.init(url: url, method: .get, headers: nil, body: nil, fallback: nil, params: params)
+  convenience init(_ url: String, state: [String: Any]?) {
+    self.init(url: url, method: .get, headers: nil, body: nil, fallback: nil, state: state, events: nil)
   }
 }

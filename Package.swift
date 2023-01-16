@@ -1,7 +1,7 @@
 // swift-tools-version: 5.5
 
 /*
- * Copyright 2022 ZUP IT SERVICOS EM TECNOLOGIA E INOVACAO SA
+ * Copyright 2023 ZUP IT SERVICOS EM TECNOLOGIA E INOVACAO SA
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,27 +29,17 @@ let package = Package(
   ],
   dependencies: [
     .package(
-      url: "https://github.com/pointfreeco/swift-snapshot-testing.git",
-      from: "1.9.0"
+      url: "https://github.com/ZupIT/nimbus-core-binaries.git",
+      from: "1.0.0-alpha.1"
     )
   ],
   targets: [
-    .binaryTarget(
-      name: "NimbusCore",
-      path: "NimbusCore/NimbusCore.xcframework"
-    ),
     .target(
       name: "NimbusSwiftUI",
-      dependencies: ["NimbusCore"],
-      path: "NimbusSwiftUI/NimbusSwiftUI"
-    ),
-    .testTarget(
-      name: "NimbusSwiftUITests",
       dependencies: [
-        "NimbusSwiftUI",
-        .product(name: "SnapshotTesting", package: "swift-snapshot-testing")
+        .product(name: "NimbusCore", package: "nimbus")
       ],
-      path: "NimbusSwiftUI/NimbusSwiftUITests"
+      path: "NimbusSwiftUI/NimbusSwiftUI"
     )
   ]
 )

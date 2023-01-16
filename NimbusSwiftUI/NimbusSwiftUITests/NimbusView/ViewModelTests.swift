@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 ZUP IT SERVICOS EM TECNOLOGIA E INOVACAO SA
+ * Copyright 2023 ZUP IT SERVICOS EM TECNOLOGIA E INOVACAO SA
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -48,7 +48,7 @@ class ViewModelTests: XCTestCase {
     let sut = ViewModel(mode: .remote(.init("remoteUrl")), core: core)
     
     // When
-    sut.push(request: ViewRequest("next", params: ["testParamState": "test state param value"]))
+    sut.push(request: ViewRequest("next", state: ["testParamState": "test state param value"]))
       
     // Then
     guard case let .push(nextVm) = sut.next else {
@@ -86,7 +86,7 @@ class ViewModelTests: XCTestCase {
     let sut = ViewModel(mode: .remote(.init("remoteUrl")), core: core)
       
     // When
-    sut.present(request: ViewRequest("next", params: ["testParamState": "test state param value"]))
+    sut.present(request: ViewRequest("next", state: ["testParamState": "test state param value"]))
       
     // Then
     guard case let .present(nextVm) = sut.next else {
@@ -196,10 +196,10 @@ class ViewModelTests: XCTestCase {
     let clientSpy = ViewClientSpy(fetch, response)
     let core = NimbusCore.Nimbus(viewClient: clientSpy)
     let sut = ViewModel(mode: .remote(.init("remoteUrl")), core: core)
-    sut.view = ServerDrivenView(nimbus: core, states: nil, description: sut.url) { sut }
+    sut.view = ServerDrivenView(nimbus: core, states: nil, events: nil, description: sut.url) { sut }
     
     // When
-    sut.load() { onInit.fulfill() }
+    sut.load { onInit.fulfill() }
     
     // Then
     wait(for: [fetch, onInit], timeout: 3)
