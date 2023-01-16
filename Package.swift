@@ -29,8 +29,8 @@ let package = Package(
   ],
   dependencies: [
     .package(
-      url: "https://github.com/ZupIT/nimbus.git",
-      .branch("spm-test")
+      url: "https://github.com/ZupIT/nimbus-core-binaries.git",
+      from: "1.0.0-alpha.1"
     )
   ],
   targets: [
