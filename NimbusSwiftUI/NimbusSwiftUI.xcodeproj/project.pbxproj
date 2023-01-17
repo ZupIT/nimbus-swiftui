@@ -36,11 +36,11 @@
 		93FF9D56282A9B3800C36CE9 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9D55282A9B3800C36CE9 /* ActivityIndicator.swift */; };
 		93FF9D59282ADD2A00C36CE9 /* ViewDidLoadModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9D58282ADD2A00C36CE9 /* ViewDidLoadModifier.swift */; };
 		93FF9D5B282AE06E00C36CE9 /* NimbusCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9D5A282AE06E00C36CE9 /* NimbusCore.swift */; };
+		AFB086FC2977363800DDD5CE /* NimbusCore in Frameworks */ = {isa = PBXBuildFile; productRef = AFB086FB2977363800DDD5CE /* NimbusCore */; };
 		AFCE758C28CF5C2A004EF849 /* NimbusSwiftUILibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE758B28CF5C2A004EF849 /* NimbusSwiftUILibrary.swift */; };
 		AFCE759128CF5E22004EF849 /* CoreUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE759028CF5E22004EF849 /* CoreUI.swift */; };
 		AFCE759328CFA417004EF849 /* ObservableNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE759228CFA417004EF849 /* ObservableNode.swift */; };
 		AFCE759528CFA584004EF849 /* RenderedNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE759428CFA584004EF849 /* RenderedNode.swift */; };
-		AFD72FCB2975900F008D7FBF /* NimbusCore in Frameworks */ = {isa = PBXBuildFile; productRef = AFD72FCA2975900F008D7FBF /* NimbusCore */; };
 		BFDBC0AA2915987B005ECE84 /* NimbusCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBC0A92915987B005ECE84 /* NimbusCore.swift */; };
 /* End PBXBuildFile section */
 
@@ -100,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFD72FCB2975900F008D7FBF /* NimbusCore in Frameworks */,
+				AFB086FC2977363800DDD5CE /* NimbusCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +312,7 @@
 			);
 			name = NimbusSwiftUI;
 			packageProductDependencies = (
-				AFD72FCA2975900F008D7FBF /* NimbusCore */,
+				AFB086FB2977363800DDD5CE /* NimbusCore */,
 			);
 			productName = NimbusSwiftUI;
 			productReference = 93093686281330070028EA2C /* NimbusSwiftUI.framework */;
@@ -368,7 +368,7 @@
 			mainGroup = 9309367C281330070028EA2C;
 			packageReferences = (
 				93417C2C283D4FBC007A014F /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
-				AFD72FC92975900F008D7FBF /* XCRemoteSwiftPackageReference "nimbus-core-binaries" */,
+				AFB086FA2977363800DDD5CE /* XCRemoteSwiftPackageReference "nimbus-core-binaries" */,
 			);
 			productRefGroup = 93093687281330070028EA2C /* Products */;
 			projectDirPath = "";
@@ -745,12 +745,12 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		AFD72FC92975900F008D7FBF /* XCRemoteSwiftPackageReference "nimbus-core-binaries" */ = {
+		AFB086FA2977363800DDD5CE /* XCRemoteSwiftPackageReference "nimbus-core-binaries" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ZupIT/nimbus-core-binaries";
 			requirement = {
-				kind = exactVersion;
-				version = "1.0.0-alpha.1";
+				kind = upToNextMajorVersion;
+				minimumVersion = "1.0.0-beta.1";
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -761,9 +761,9 @@
 			package = 93417C2C283D4FBC007A014F /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
 			productName = SnapshotTesting;
 		};
-		AFD72FCA2975900F008D7FBF /* NimbusCore */ = {
+		AFB086FB2977363800DDD5CE /* NimbusCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AFD72FC92975900F008D7FBF /* XCRemoteSwiftPackageReference "nimbus-core-binaries" */;
+			package = AFB086FA2977363800DDD5CE /* XCRemoteSwiftPackageReference "nimbus-core-binaries" */;
 			productName = NimbusCore;
 		};
 /* End XCSwiftPackageProductDependency section */
